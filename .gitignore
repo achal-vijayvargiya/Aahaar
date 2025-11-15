@@ -1,0 +1,120 @@
+# Root-level .gitignore for BaseVeda Monorepo
+
+# Python (Backend)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+*.db
+*.sqlite3
+
+# Virtual Environment (Root level)
+venv/
+ENV/
+env/
+.venv/
+
+# Node.js (Frontend & Mobile)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+package-lock.json
+yarn.lock
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+dist-ssr/
+build/
+*.tsbuildinfo
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+.DS_Store
+
+# Expo (Mobile)
+.expo/
+.expo-shared/
+web-build/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+
+# Database files
+*.db
+*.sqlite3
+
+# Large data files (FAISS indices - can be regenerated)
+backend/kb_data/faiss/*.index
+backend/kb_data/faiss/*.pkl
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Coverage reports
+coverage/
+.nyc_output/
+
+# Misc
+*.local
+.cache/
+
+
