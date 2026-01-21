@@ -1,0 +1,125 @@
+========================================
+DrAssistent Installation Commands
+Copy and paste these commands one by one
+========================================
+
+STEP 1: Check Python (run in PowerShell)
+------------------------------------------
+python --version
+
+If not installed, download from: https://www.python.org/downloads/
+Make sure to check "Add Python to PATH" during installation
+
+
+STEP 2: Check Docker (run in PowerShell)
+------------------------------------------
+docker --version
+
+If not installed, download from: https://www.docker.com/products/docker-desktop/
+Restart computer after installation
+
+
+STEP 3: Navigate to project folder
+------------------------------------------
+cd D:\code\DrAssistent
+
+
+STEP 4: Create virtual environment
+------------------------------------------
+python -m venv venv
+
+
+STEP 5: Activate virtual environment
+------------------------------------------
+.\venv\Scripts\Activate.ps1
+
+If that fails, try:
+venv\Scripts\activate.bat
+
+
+STEP 6: Upgrade pip
+------------------------------------------
+python -m pip install --upgrade pip
+
+
+STEP 7: Install dependencies (takes 10-20 minutes)
+------------------------------------------
+pip install -r requirements.txt
+
+
+STEP 8: Start PostgreSQL database
+------------------------------------------
+cd backend
+docker-compose up -d db
+
+Wait 30 seconds, then check:
+docker ps
+
+
+STEP 9: Create .env file
+------------------------------------------
+Create file: backend\.env
+
+Copy this content into it:
+DATABASE_URL=postgresql://postgres:postgres@localhost:5432/drassistent
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+POSTGRES_DB=drassistent
+API_V1_PREFIX=/api/v1
+PROJECT_NAME=DrAssistent API
+DEBUG=True
+ENVIRONMENT=development
+SECRET_KEY=your-secret-key-here-change-in-production
+ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+OPENROUTER_API_KEY=sk-or-v1-placeholder-get-from-openrouter-ai
+DIET_PLAN_MODEL=anthropic/claude-3.5-sonnet
+DIET_PLAN_TEMPERATURE=0.7
+FOOD_ENRICHMENT_MODEL=qwen/qwen-2.5-72b-instruct
+FOOD_ENRICHMENT_TEMPERATURE=0.3
+LOG_LEVEL=INFO
+LOG_FILE=logs/app.log
+
+IMPORTANT: Update OPENROUTER_API_KEY with your actual key from https://openrouter.ai/
+
+
+STEP 10: Run database migrations
+------------------------------------------
+cd backend
+..\venv\Scripts\python.exe -m alembic upgrade head
+
+
+STEP 11: Start the application
+------------------------------------------
+# Make sure you're in backend folder and venv is activated
+uvicorn app.main:app --reload
+
+The API will be available at: http://localhost:8000
+API docs at: http://localhost:8000/docs
+
+
+========================================
+TROUBLESHOOTING COMMANDS
+========================================
+
+Check if database is running:
+docker ps
+
+Check database logs:
+docker logs drassistent-db
+
+Restart database:
+docker restart drassistent-db
+
+Check if virtual environment is active:
+# You should see (venv) in your prompt
+
+Re-activate virtual environment:
+.\venv\Scripts\Activate.ps1
+
+Check installed packages:
+pip list
+
+Check if ports are in use:
+netstat -ano | findstr :5432
+netstat -ano | findstr :8000
