@@ -1,0 +1,86 @@
+
+================================================================================
+BATCH: Pages 1 to 2
+================================================================================
+=== PAGE 1 ===
+Table 2. WATER SOLUBLE VITAMINS
+(All values are expressed per 100g edible portion; All blank space in the table represent below detectable limit)
+Thiamine Riboflavin Niacin Pantothenic Biotin T o t a l Folates T otal Ascorbic
+Total B6 (B1) (B2) (B3) Acid (B5) (B7) (B9) Acid
+mg µg mg
+THIA RIBF NIA PANTAC VITB6A BIOT FOLSUM VITC
+A CEREALS AND MILLETS
+A001 Amaranth seed, black (Amaranthus cruentus) 1 0.04 0.04 0.45 0.24 0.50 1.92 27.44
+Amaranth seed, pale brown (Amaranthus
+A002 6 0.04±0.007 0.04±0.007 0.52±0.05 0.28±0.03 0.33±0.023 1.87±0.24 24.65±3.21
+cruentus)
+A003 Bajra (Pennisetum typhoideum) 6 0.25±0.044 0.20±0.038 0.86±0.10 0.50±0.05 0.27±0.009 0.64±0.05 36.11±5.05
+A004 Barley (Hordeum vulgare) 6 0.36±0.059 0.18±0.030 2.84±0.08 0.14±0.02 0.31±0.026 2.38±0.11 31.58±3.79
+A005 Jowar (Sorghum vulgare) 6 0.35±0.039 0.14±0.014 2.10±0.09 0.27±0.02 0.28±0.023 0.70±0.06 39.42±3.13
+A006 Maize, dry (Zea mays) 6 0.33±0.032 0.09±0.009 2.69±0.06 0.34±0.03 0.34±0.017 0.49±0.05 25.81±1.44
+A007 Maize, tender, local (Zea mays) 6 0.17±0.024 0.12±0.021 1.13±0.02 0.35±0.04 0.45±0.033 1.70±0.27 62.96±5.66 4.26±0.55
+A008 Maize, tender, sweet (Zea mays) 4 0.10±0.008 0.14±0.007 1.14±0.02 0.32±0.04 0.38±0.084 1.91±0.30 59.71±7.70 5.72±0.76
+A009 Quinoa(Chenopodium quinoa) 1 0.83 0.22 1.70 0.62 0.21 0.62 173
+A010 Ragi (Eleusine coracana) 5 0.37±0.041 0.17±0.008 1.34±0.02 0.29±0.19 0.05±0.007 0.88±0.05 34.66±4.97
+A011 Rice flakes (Oryza sativa ) 6 0.12±0.020 0.04±0.006 1.60±0.09 0.48±0.06 0.02±0.002 0.39±0.09 8.46±0.93
+A012 Rice puffed (Oryza sativa ) 6 0.11±0.018 0.04±0.017 1.87±0.10 0.38±0.03 0.07±0.005 1.26±0.08
+A013 Rice, raw, brown (Oryza sativa ) 6 0.27±0.023 0.06±0.011 3.40±0.12 0.61±0.04 0.37±0.035 1.38±0.21 11.51±1.69
+A014 Rice, parboiled, milled (Oryza sativa ) 6 0.17±0.023 0.06±0.018 2.51±0.49 0.55±0.06 0.22±0.017 0.31±0.02 9.75±2.10
+A015 Rice, raw, milled (Oryza sativa ) 6 0.05±0.019 0.05±0.006 1.69±0.13 0.57±0.05 0.12±0.012 0.60±0.12 9.32±1.93
+A016 Samai (Panicum miliare) 6 0.26±0.042 0.05±0.008 1.29±0.02 0.60±0.07 0.04±0.005 6.03±0.57 36.20±7.04
+A017 Varagu (Paspalum scrobiculatum) 5 0.29±0.054 0.20±0.018 1.49±0.08 0.63±0.07 0.07±0.017 1.49±0.18 39.49±4.52
+A018 Wheat flour, refined (Triticum aestivum) 6 0.15±0.017 0.06±0.008 0.77±0.07 0.72±0.08 0.08±0.008 0.58±0.09 16.25±2.62
+edoc
+dooF
+Food Name
+33
+Table
+2.
+Water
+Soluble
+Vitamins
+snoigeR
+fo
+.oN
+
+---PAGE BREAK---
+
+=== PAGE 2 ===
+Thiamine Riboflavin Niacin Pantothenic Biotin T o t a l Folates T otal Ascorbic
+Total B6 (B1) (B2) (B3) Acid (B5) (B7) (B9) Acid
+mg
+THIA RIBF NIA PANTAC VITB6A BIOT FOLSUM VITC
+edoc
+dooF
+Food Name
+snoigeR
+fo
+.oN
+A019 Wheat flour, atta (Triticum aestivum) 6 0.42±0.044 0.15±0.010 2.37±0.10 0.87±0.04 0.25±0.032 0.76±0.12 29.22±1.92
+A020 Wheat, whole (Triticum aestivum) 6 0.46±0.067 0.15±0.041 2.68±0.19 1.08±0.21 0.26±0.036 1.03±0.58 30.09±3.79
+A021 Wheat, bulgur (Triticum aestivum) 6 0.24±0.027 0.12±0.004 2.05±0.05 0.84±0.03 0.24±0.011 2.50±0.35 26.30±3.61
+A022 Wheat, semolina (Triticum aestivum) 6 0.29±0.025 0.04±0.004 1.13±0.10 0.75±0.08 0.11±0.010 0.44±0.04 25.68±3.64
+A023 Wheat, vermicelli (Triticum aestivum) 6 0.13±0.011 0.01±0.003 0.86±0.02 0.52±0.05 0.03±0.004 2.00±0.19 14.35±2.38
+A024 Wheat, vermicelli, roasted (Triticum aestivum) 6 0.12±0.012 0.01±0.002 0.67±0.05 0.49±0.05 0.03±0.001 1.34±0.18 13.21±2.15
+B GRAIN LEGUMES
+B001 Bengal gram, dal (Cicer arietinum) 6 0.35±0.029 0.15±0.003 1.87±0.06 1.60±0.24 0.19±0.008 0.81±0.09 182±4.5
+B002 Bengal gram, whole (Cicer arietinum) 6 0.37±0.040 0.24±0.011 2.10±0.06 2.38±0.26 0.36±0.025 0.93±0.07 233±12.9
+B003 Black gram, dal (Phaseolus mungo) 6 0.21±0.005 0.09±0.003 1.76±0.09 2.95±0.26 0.22±0.029 0.81±0.13 88.75±2.35
+B004 Black gram, whole (Phaseolus mungo) 6 0.32±0.024 0.11±0.008 1.85±0.13 3.98±0.70 0.53±0.039 1.28±0.18 134±14.2
+B005 Cowpea, brown (Vigna catjang) 6 0.33±0.087 0.09±0.009 1.64±0.03 1.47±0.31 0.30±0.033 3.97±0.12 231±27.3
+B006 Cowpea, white (Vigna catjang) 1 0.34 0.09 1.51 1.66 0.26 4.28 249
+B007 Field bean, black (Phaseolus vulgaris) 1 0.35 0.07 1.88 0.85 0.35 0.66 291
+B008 Field bean, brown (Phaseolus vulgaris) 1 0.32 0.07 2.04 0.97 0.37 0.76 292
+B009 Field bean, white (Phaseolus vulgaris) 5 0.37±0.082 0.07±0.009 1.96±0.09 0.92±0.19 0.38±0.017 0.68±0.11 289±27.0
+B010 Green gram, dal (Vigna radiata) 6 0.35±0.071 0.12±0.016 1.84±0.23 1.68±0.17 0.19±0.011 0.65±0.06 92.11±5.11
+B011 Green gram, whole (Vigna radiata) 6 0.45±0.027 0.27±0.011 2.16±0.13 2.02±0.24 0.35±0.034 1.35±0.16 145±5.4
+B012 Horse gram, whole (Dolichos biflorus) 6 0.32±0.002 0.24±0.033 1.82±0.26 1.58±0.06 0.21±0.017 0.59±0.07 163±5.3
+B013 Lentil dal (Lens culinaris) 6 0.34±0.034 0.16±0.005 1.81±0.02 1.32±0.03 0.18±0.022 1.25±0.20 49.99±4.91
+Table
+2.
+Water
+Soluble
+Vitamins
+mg µg
+34
+... (truncated)

@@ -1,0 +1,394 @@
+[
+  {
+    "frame_id": "breakfast_cereal_based",
+    "meal_type": "breakfast",
+    "main_dish_type": "cereal_based_breakfast",
+    "structure": [
+      {
+        "role": "cereal",
+        "category": "cereal",
+        "exchange": 2
+      },
+      {
+        "role": "milk",
+        "category": "milk",
+        "exchange": 1
+      },
+      {
+        "role": "nuts",
+        "category": "fat",
+        "exchange": 1,
+        "optional": true
+      }
+    ],
+    "exchange_tolerance": {
+      "cereal": 1,
+      "milk": 1,
+      "fat": 1
+    }
+  },
+  {
+    "frame_id": "breakfast_milk_based",
+    "meal_type": "breakfast",
+    "main_dish_type": "milk_based_breakfast",
+    "structure": [
+      {
+        "role": "milk",
+        "category": "milk",
+        "exchange": 2
+      },
+      {
+        "role": "cereal",
+        "category": "cereal",
+        "exchange": 1
+      },
+      {
+        "role": "fruit",
+        "category": "fruit",
+        "exchange": 1,
+        "optional": true
+      }
+    ],
+    "exchange_tolerance": {
+      "milk": 1,
+      "cereal": 1,
+      "fruit": 1
+    }
+  },
+  {
+    "frame_id": "breakfast_light",
+    "meal_type": "breakfast",
+    "main_dish_type": "light_breakfast",
+    "structure": [
+      {
+        "role": "fruit",
+        "category": "fruit",
+        "exchange": 1
+      },
+      {
+        "role": "nuts",
+        "category": "fat",
+        "exchange": 1
+      }
+    ],
+    "exchange_tolerance": {
+      "fruit": 1,
+      "fat": 1
+    }
+  },
+  {
+    "frame_id": "lunch_roti_based",
+    "meal_type": "lunch",
+    "main_dish_type": "roti_meal",
+    "structure": [
+      {
+        "role": "roti",
+        "category": "cereal",
+        "exchange": 2
+      },
+      {
+        "role": "dal",
+        "category": "pulse",
+        "exchange": 1
+      },
+      {
+        "role": "sabzi",
+        "category": "veg",
+        "exchange": 1
+      },
+      {
+        "role": "fat",
+        "category": "fat",
+        "exchange": 1,
+        "optional": true
+      }
+    ],
+    "exchange_tolerance": {
+      "cereal": 1,
+      "pulse": 1,
+      "veg": 1,
+      "fat": 1
+    }
+  },
+  {
+    "frame_id": "lunch_roti_based_large",
+    "meal_type": "lunch",
+    "main_dish_type": "roti_meal",
+    "structure": [
+      {
+        "role": "roti",
+        "category": "cereal",
+        "exchange": 3
+      },
+      {
+        "role": "dal",
+        "category": "pulse",
+        "exchange": 2
+      },
+      {
+        "role": "sabzi",
+        "category": "veg",
+        "exchange": 2
+      },
+      {
+        "role": "fat",
+        "category": "fat",
+        "exchange": 1
+      }
+    ],
+    "exchange_tolerance": {
+      "cereal": 1,
+      "pulse": 1,
+      "veg": 1,
+      "fat": 1
+    }
+  },
+  {
+    "frame_id": "lunch_rice_based",
+    "meal_type": "lunch",
+    "main_dish_type": "rice_meal",
+    "structure": [
+      {
+        "role": "rice",
+        "category": "cereal",
+        "exchange": 2
+      },
+      {
+        "role": "dal",
+        "category": "pulse",
+        "exchange": 1
+      },
+      {
+        "role": "veg",
+        "category": "veg",
+        "exchange": 1
+      },
+      {
+        "role": "fat",
+        "category": "fat",
+        "exchange": 1,
+        "optional": true
+      }
+    ],
+    "exchange_tolerance": {
+      "cereal": 1,
+      "pulse": 1,
+      "veg": 1,
+      "fat": 1
+    }
+  },
+  {
+    "frame_id": "lunch_rice_based_large",
+    "meal_type": "lunch",
+    "main_dish_type": "rice_meal",
+    "structure": [
+      {
+        "role": "rice",
+        "category": "cereal",
+        "exchange": 3
+      },
+      {
+        "role": "dal",
+        "category": "pulse",
+        "exchange": 2
+      },
+      {
+        "role": "veg",
+        "category": "veg",
+        "exchange": 2
+      },
+      {
+        "role": "fat",
+        "category": "fat",
+        "exchange": 1
+      }
+    ],
+    "exchange_tolerance": {
+      "cereal": 1,
+      "pulse": 1,
+      "veg": 1,
+      "fat": 1
+    }
+  },
+  {
+    "frame_id": "lunch_one_pot",
+    "meal_type": "lunch",
+    "main_dish_type": "one_pot_meal",
+    "structure": [
+      {
+        "role": "khichdi",
+        "category": ["cereal", "pulse"],
+        "exchange": {
+          "cereal": 1,
+          "pulse": 1
+        }
+      },
+      {
+        "role": "veg",
+        "category": "veg",
+        "exchange": 1,
+        "optional": true
+      },
+      {
+        "role": "fat",
+        "category": "fat",
+        "exchange": 1,
+        "optional": true
+      }
+    ],
+    "exchange_tolerance": {
+      "cereal": 1,
+      "pulse": 1,
+      "veg": 1,
+      "fat": 1
+    }
+  },
+  {
+    "frame_id": "dinner_roti_based",
+    "meal_type": "dinner",
+    "main_dish_type": "roti_meal",
+    "structure": [
+      {
+        "role": "roti",
+        "category": "cereal",
+        "exchange": 2
+      },
+      {
+        "role": "dal",
+        "category": "pulse",
+        "exchange": 1
+      },
+      {
+        "role": "sabzi",
+        "category": "veg",
+        "exchange": 1
+      }
+    ],
+    "exchange_tolerance": {
+      "cereal": 1,
+      "pulse": 1,
+      "veg": 1
+    }
+  },
+  {
+    "frame_id": "dinner_rice_based",
+    "meal_type": "dinner",
+    "main_dish_type": "rice_meal",
+    "structure": [
+      {
+        "role": "rice",
+        "category": "cereal",
+        "exchange": 2
+      },
+      {
+        "role": "dal",
+        "category": "pulse",
+        "exchange": 1
+      },
+      {
+        "role": "veg",
+        "category": "veg",
+        "exchange": 1
+      }
+    ],
+    "exchange_tolerance": {
+      "cereal": 1,
+      "pulse": 1,
+      "veg": 1
+    }
+  },
+  {
+    "frame_id": "dinner_light",
+    "meal_type": "dinner",
+    "main_dish_type": "light_dinner",
+    "structure": [
+      {
+        "role": "soup",
+        "category": "veg",
+        "exchange": 1
+      },
+      {
+        "role": "protein",
+        "category": "pulse",
+        "exchange": 1
+      },
+      {
+        "role": "cereal",
+        "category": "cereal",
+        "exchange": 1,
+        "optional": true
+      }
+    ],
+    "exchange_tolerance": {
+      "veg": 1,
+      "pulse": 1,
+      "cereal": 1
+    }
+  },
+  {
+    "frame_id": "snack_fruit_based",
+    "meal_type": "snack",
+    "main_dish_type": "light_snack",
+    "structure": [
+      {
+        "role": "fruit",
+        "category": "fruit",
+        "exchange": 1
+      },
+      {
+        "role": "nuts",
+        "category": "fat",
+        "exchange": 1,
+        "optional": true
+      }
+    ],
+    "exchange_tolerance": {
+      "fruit": 1,
+      "fat": 1
+    }
+  },
+  {
+    "frame_id": "snack_cereal_based",
+    "meal_type": "snack",
+    "main_dish_type": "light_snack",
+    "structure": [
+      {
+        "role": "cereal",
+        "category": "cereal",
+        "exchange": 1
+      },
+      {
+        "role": "milk",
+        "category": "milk",
+        "exchange": 1,
+        "optional": true
+      }
+    ],
+    "exchange_tolerance": {
+      "cereal": 1,
+      "milk": 1
+    }
+  },
+  {
+    "frame_id": "snack_protein_based",
+    "meal_type": "snack",
+    "main_dish_type": "light_snack",
+    "structure": [
+      {
+        "role": "protein",
+        "category": "pulse",
+        "exchange": 1
+      },
+      {
+        "role": "veg",
+        "category": "veg",
+        "exchange": 1,
+        "optional": true
+      }
+    ],
+    "exchange_tolerance": {
+      "pulse": 1,
+      "veg": 1
+    }
+  }
+]

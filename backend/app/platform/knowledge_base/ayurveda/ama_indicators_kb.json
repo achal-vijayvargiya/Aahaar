@@ -1,0 +1,100 @@
+[
+  {
+    "indicator_id": "3.1_tongue",
+    "indicator_text": "Tongue coating",
+    "scoring": {
+      "A": {
+        "text": "Clean",
+        "ama_score": 0
+      },
+      "B": {
+        "text": "Yellowish",
+        "ama_score": 1
+      },
+      "C": {
+        "text": "Thick white",
+        "ama_score": 2
+      }
+    },
+    "source": "Charaka Samhita",
+    "source_reference": "Ama Assessment - Tongue Coating",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "indicator_id": "3.3_mental_clarity",
+    "indicator_text": "Mental clarity",
+    "scoring": {
+      "A": {
+        "text": "Clear",
+        "ama_score": 0
+      },
+      "B": {
+        "text": "Moderate",
+        "ama_score": 0
+      },
+      "C": {
+        "text": "Brain fog",
+        "ama_score": 1
+      }
+    },
+    "source": "Charaka Samhita",
+    "source_reference": "Ama Assessment - Mental Clarity",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "indicator_id": "3.4_post_meal_feeling",
+    "indicator_text": "Post-meal feeling",
+    "scoring": {
+      "A": {
+        "text": "Light and energetic",
+        "ama_score": 0
+      },
+      "B": {
+        "text": "Satisfied",
+        "ama_score": 0
+      },
+      "C": {
+        "text": "Heavy and sleepy",
+        "ama_score": 1
+      }
+    },
+    "source": "Charaka Samhita",
+    "source_reference": "Ama Assessment - Post-Meal Feeling",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "indicator_id": "8.6_lethargy",
+    "indicator_text": "Lethargy complaint",
+    "scoring": {
+      "Yes": {
+        "text": "Yes",
+        "ama_score": 1
+      }
+    },
+    "source": "Charaka Samhita",
+    "source_reference": "Ama Assessment - Lethargy",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "indicator_id": "8.9_mucus_congestion",
+    "indicator_text": "Mucus and congestion complaint",
+    "scoring": {
+      "Yes": {
+        "text": "Yes",
+        "ama_score": 1
+      }
+    },
+    "source": "Charaka Samhita",
+    "source_reference": "Ama Assessment - Mucus",
+    "version": "1.0",
+    "status": "active"
+  }
+]
+
+
+
+

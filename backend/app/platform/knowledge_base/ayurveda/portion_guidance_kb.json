@@ -1,0 +1,84 @@
+[
+  {
+    "condition_id": "default",
+    "condition_type": "default",
+    "portion_guidance": "moderate",
+    "description": "Moderate portions for balanced digestion",
+    "recommendations": {
+      "meal_size": "Normal portion size",
+      "meal_frequency": "3 meals per day",
+      "eating_speed": "Moderate pace"
+    },
+    "source": "Charaka Samhita",
+    "source_reference": "General Portion Guidance",
+    "version": "1.0",
+    "status": "active",
+    "is_default": true
+  },
+  {
+    "condition_id": "high_ama",
+    "condition_type": "ama_level",
+    "portion_guidance": "small",
+    "description": "Smaller portions for high Ama",
+    "recommendations": {
+      "meal_size": "50-60% of normal portion",
+      "meal_frequency": "4-5 small meals per day",
+      "eating_speed": "Slow, mindful eating"
+    },
+    "source": "Charaka Samhita",
+    "source_reference": "High Ama Portion Guidance",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "condition_id": "manda_agni",
+    "condition_type": "agni_type",
+    "portion_guidance": "small",
+    "description": "Smaller portions for slow Agni",
+    "recommendations": {
+      "meal_size": "50-60% of normal portion",
+      "meal_frequency": "4-5 small meals per day",
+      "eating_speed": "Slow, mindful eating"
+    },
+    "source": "Charaka Samhita",
+    "source_reference": "Manda Agni Portion Guidance",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "condition_id": "vishama_agni",
+    "condition_type": "agni_type",
+    "portion_guidance": "moderate",
+    "description": "Moderate, fixed portions for irregular Agni",
+    "recommendations": {
+      "meal_size": "Normal portion size",
+      "meal_frequency": "3 fixed meals per day",
+      "eating_speed": "Moderate pace, at fixed times"
+    },
+    "source": "Charaka Samhita",
+    "source_reference": "Vishama Agni Portion Guidance",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "condition_id": "tikshna_agni",
+    "condition_type": "agni_type",
+    "portion_guidance": "moderate",
+    "description": "Regular portions for strong Agni",
+    "recommendations": {
+      "meal_size": "Normal portion size",
+      "meal_frequency": "3 meals + snacks",
+      "eating_speed": "Moderate pace"
+    },
+    "source": "Charaka Samhita",
+    "source_reference": "Tikshna Agni Portion Guidance",
+    "version": "1.0",
+    "status": "active"
+  }
+]
+
+
+
+
+
+

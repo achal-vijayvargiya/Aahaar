@@ -1,0 +1,13 @@
+code,Food Name,,PROTCNT,FATCE,FIBTG,CHOAVLDF,ENERC,Exchange
+I001,"Jaggery, cane (Saccharum officinarum)",6,1.85±0.19,0.16±0.02,,84.87±0.63,1480±9,SUGARS
+I002,"Sugarcane, juice (Saccharum officinarum)",6,0.16±0.03,0.40±0.05,0.56±0.09,13.11±0.93,242±18,SUGARS
+J001,"Button mushroom, fresh (Agaricus sp.)",1,3.68,0.42,3.11,1.98,115,MUSHROOMS
+J002,"Chicken mushroom, fresh (Lactiporus sp.)",1,1.84,0.25,1.99,2.76,89,MUSHROOMS
+J003,"Shiitake mushroom, fresh (Lentinula sp.)",1,3.19,0.76,3.02,8.98,243,MUSHROOMS
+J004,"Oyster mushroom, dried (Pleurotus sp.)",1,19.04,2.86,39.12,33.07,1019,MUSHROOMS
+K001,Toddy (Borassus flabellifer),10,0.18±0.05,0.03±0.01,,5.72±0.55,101±10,MISCELLANEOUS FOODS
+K002,Coconut Water (Cocos nucifera),6,0.26±0.04,0.16±0.02,,3.16±0.39,64±7,MISCELLANEOUS FOODS
+L001,"Milk, whole, Buffalo",6,3.68±0.13,6.58±0.20,,8.39±0.71,449±9,MILK AND MILK PRODUCTS
+L002,"Milk, whole, Cow",6,3.26±0.06,4.48±0.29,,4.94±1.02,305±23,MILK AND MILK PRODUCTS
+L003,Paneer,6,18.86±0.75,24.78±0.17,,2.41±0.12,1278±61,MILK AND MILK PRODUCTS
+L004,Khoa,6,16.34±0.61,20.62±0.83,,16.53±1.26,1322±14,MILK AND MILK PRODUCTS

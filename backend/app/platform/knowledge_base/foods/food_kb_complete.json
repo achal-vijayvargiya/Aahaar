@@ -1,0 +1,1341 @@
+[
+  {
+    "food_id": "brown_rice_cooked",
+    "display_name": "Brown Rice (Cooked)",
+    "aliases": ["brown rice", "whole grain rice", "unpolished rice", "chawal"],
+    
+    "basic_info": {
+      "category": "cereal",
+      "food_type": "grain",
+      "region": "pan_india",
+      "diet_type": ["vegetarian", "vegan"],
+      "cooking_state": "cooked",
+      "common_serving_unit": "cup",
+      "common_serving_size_g": 195
+    },
+    
+    "exchange_mapping": {
+      "exchange_category": "cereal",
+      "serving_size_per_exchange_g": 65,
+      "exchanges_per_common_serving": 3.0,
+      "notes": "1 exchange = 65g cooked brown rice ≈ 80 kcal"
+    },
+    
+    "nutrition_per_100g": {
+      "calories_kcal": 111.0,
+      "macros": {
+        "protein_g": 2.6,
+        "carbs_g": 23.0,
+        "fat_g": 0.9,
+        "fiber_g": 1.8,
+        "sugar_g": 0.4,
+        "saturated_fat_g": 0.2,
+        "trans_fat_g": 0.0,
+        "added_sugar_g": 0.0
+      },
+      "micros": {
+        "sodium_mg": 5.0,
+        "potassium_mg": 43.0,
+        "calcium_mg": 10.0,
+        "iron_mg": 0.8,
+        "magnesium_mg": 43.0,
+        "phosphorus_mg": 83.0,
+        "zinc_mg": 0.6,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_iu": 0.0,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 9.0,
+        "selenium_mcg": 19.1,
+        "iodine_mcg": 0.0
+      },
+      "glycemic_properties": {
+        "glycemic_index": 55,
+        "glycemic_load_per_100g": 12.7,
+        "glycemic_classification": "low_gi"
+      },
+      "calorie_density_kcal_per_g": 1.11,
+      "protein_density_g_per_100kcal": 2.34
+    },
+    
+    "mnt_compatibility": {
+      "macro_compliance": {
+        "low_carb_friendly": true,
+        "moderate_carb_friendly": true,
+        "high_fiber": false,
+        "low_fat": true,
+        "high_protein": false,
+        "low_saturated_fat": true,
+        "zero_trans_fat": true,
+        "low_added_sugar": true
+      },
+      "micro_compliance": {
+        "low_sodium": true,
+        "low_potassium": true,
+        "low_phosphorus": true,
+        "iron_rich": false,
+        "calcium_rich": false,
+        "selenium_rich": false
+      },
+      "medical_tags": {
+        "diabetic_safe": true,
+        "prediabetic_safe": true,
+        "cardiac_safe": true,
+        "hypertension_safe": true,
+        "renal_safe_stage_1_2": true,
+        "renal_safe_stage_3_5": true,
+        "ibd_safe_remission": true,
+        "ibs_safe": true,
+        "gerd_safe": true,
+        "gastritis_safe": true,
+        "obesity_safe": true,
+        "pcos_safe": true,
+        "fatty_liver_safe": true
+      },
+      "food_exclusion_tags": [],
+      "food_inclusion_tags": ["whole_grains", "fiber_rich_foods", "low_gi_foods"],
+      "contraindications": [],
+      "preferred_conditions": [
+        "diabetes",
+        "prediabetes",
+        "hypertension",
+        "metabolic_syndrome",
+        "obesity",
+        "overweight"
+      ]
+    },
+    
+    "ayurvedic_properties": {
+      "dosha_effects": {
+        "vata": "pacifying",
+        "pitta": "neutral",
+        "kapha": "neutral_to_aggravating"
+      },
+      "guna": "sattvic",
+      "rasa": ["sweet"],
+      "virya": "cooling",
+      "vipaka": "sweet",
+      "agni_effect": "neutral",
+      "digestive_load": "moderate",
+      "food_temperature_preference": "warm",
+      "cooking_method_preference": ["steamed", "boiled"],
+      "meal_timing_preference": ["lunch", "dinner"],
+      "season_preference": ["all_seasons"]
+    },
+    
+    "dietary_properties": {
+      "fodmap_level": "low",
+      "gluten_free": true,
+      "lactose_free": true,
+      "allergen_free": true,
+      "common_allergens": [],
+      "oxalate_level": "low",
+      "histamine_level": "low",
+      "goitrogen_present": false
+    },
+    
+    "retrieval_scoring": {
+      "nutritional_density_score": 65,
+      "health_benefit_score": 75,
+      "versatility_score": 90,
+      "palatability_score": 70,
+      "cost_accessibility_score": 85
+    },
+    
+    "recipe_compatibility": {
+      "primary_recipe_types": [
+        "rice_bowl",
+        "pilaf",
+        "khichdi",
+        "biryani",
+        "fried_rice"
+      ],
+      "pairing_foods": [
+        "dal",
+        "vegetables",
+        "curry",
+        "paneer",
+        "eggs"
+      ],
+      "spice_compatibility": "high",
+      "texture_profile": "soft_grainy"
+    },
+    
+    "version": "1.0",
+    "status": "active",
+    "source": "IFCT 2017 / USDA",
+    "source_reference": "Indian Food Composition Tables 2017",
+    "last_reviewed": "2025-01-15"
+  },
+  {
+    "food_id": "moong_dal_cooked",
+    "display_name": "Moong Dal (Cooked)",
+    "aliases": ["green gram dal", "yellow moong dal", "mung dal", "split green gram"],
+    
+    "basic_info": {
+      "category": "pulse",
+      "food_type": "legume",
+      "region": "pan_india",
+      "diet_type": ["vegetarian", "vegan"],
+      "cooking_state": "cooked",
+      "common_serving_unit": "cup",
+      "common_serving_size_g": 200
+    },
+    
+    "exchange_mapping": {
+      "exchange_category": "pulse",
+      "serving_size_per_exchange_g": 100,
+      "exchanges_per_common_serving": 2.0,
+      "notes": "1 exchange = 100g cooked moong dal ≈ 100 kcal, 7g protein"
+    },
+    
+    "nutrition_per_100g": {
+      "calories_kcal": 100.0,
+      "macros": {
+        "protein_g": 7.0,
+        "carbs_g": 15.0,
+        "fat_g": 2.0,
+        "fiber_g": 7.0,
+        "sugar_g": 2.0,
+        "saturated_fat_g": 0.3,
+        "trans_fat_g": 0.0,
+        "added_sugar_g": 0.0
+      },
+      "micros": {
+        "sodium_mg": 2.0,
+        "potassium_mg": 266.0,
+        "calcium_mg": 27.0,
+        "iron_mg": 1.4,
+        "magnesium_mg": 48.0,
+        "phosphorus_mg": 99.0,
+        "zinc_mg": 0.8,
+        "vitamin_c_mg": 1.0,
+        "vitamin_d_iu": 0.0,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 159.0,
+        "selenium_mcg": 8.2,
+        "iodine_mcg": 0.0
+      },
+      "glycemic_properties": {
+        "glycemic_index": 38,
+        "glycemic_load_per_100g": 5.7,
+        "glycemic_classification": "low_gi"
+      },
+      "calorie_density_kcal_per_g": 1.0,
+      "protein_density_g_per_100kcal": 7.0
+    },
+    
+    "mnt_compatibility": {
+      "macro_compliance": {
+        "low_carb_friendly": true,
+        "moderate_carb_friendly": true,
+        "high_fiber": true,
+        "low_fat": true,
+        "high_protein": true,
+        "low_saturated_fat": true,
+        "zero_trans_fat": true,
+        "low_added_sugar": true
+      },
+      "micro_compliance": {
+        "low_sodium": true,
+        "low_potassium": false,
+        "low_phosphorus": true,
+        "iron_rich": false,
+        "calcium_rich": false,
+        "folate_rich": true
+      },
+      "medical_tags": {
+        "diabetic_safe": true,
+        "prediabetic_safe": true,
+        "cardiac_safe": true,
+        "hypertension_safe": true,
+        "renal_safe_stage_1_2": true,
+        "renal_safe_stage_3_5": false,
+        "ibd_safe_remission": true,
+        "ibs_safe": true,
+        "gerd_safe": true,
+        "gastritis_safe": true,
+        "obesity_safe": true,
+        "pcos_safe": true,
+        "fatty_liver_safe": true,
+        "anemia_safe": true
+      },
+      "food_exclusion_tags": [],
+      "food_inclusion_tags": ["whole_grains", "fiber_rich_foods", "low_gi_foods", "lean_proteins", "plant_proteins"],
+      "contraindications": ["ckd_stage_4_5"],
+      "preferred_conditions": [
+        "diabetes",
+        "prediabetes",
+        "hypertension",
+        "obesity",
+        "pcos",
+        "anemia",
+        "inadequate_protein_intake"
+      ]
+    },
+    
+    "ayurvedic_properties": {
+      "dosha_effects": {
+        "vata": "pacifying",
+        "pitta": "pacifying",
+        "kapha": "neutral"
+      },
+      "guna": "sattvic",
+      "rasa": ["sweet", "astringent"],
+      "virya": "cooling",
+      "vipaka": "sweet",
+      "agni_effect": "improving",
+      "digestive_load": "light",
+      "food_temperature_preference": "warm",
+      "cooking_method_preference": ["boiled", "steamed"],
+      "meal_timing_preference": ["lunch", "dinner"],
+      "season_preference": ["all_seasons"]
+    },
+    
+    "dietary_properties": {
+      "fodmap_level": "low",
+      "gluten_free": true,
+      "lactose_free": true,
+      "allergen_free": true,
+      "common_allergens": [],
+      "oxalate_level": "low",
+      "histamine_level": "low",
+      "goitrogen_present": false
+    },
+    
+    "retrieval_scoring": {
+      "nutritional_density_score": 85,
+      "health_benefit_score": 90,
+      "versatility_score": 95,
+      "palatability_score": 75,
+      "cost_accessibility_score": 90
+    },
+    
+    "recipe_compatibility": {
+      "primary_recipe_types": [
+        "dal",
+        "khichdi",
+        "soup",
+        "curry",
+        "salad"
+      ],
+      "pairing_foods": [
+        "rice",
+        "roti",
+        "vegetables",
+        "spices"
+      ],
+      "spice_compatibility": "very_high",
+      "texture_profile": "soft_creamy"
+    },
+    
+    "version": "1.0",
+    "status": "active",
+    "source": "IFCT 2017",
+    "source_reference": "Indian Food Composition Tables 2017",
+    "last_reviewed": "2025-01-15"
+  },
+  {
+    "food_id": "spinach_cooked",
+    "display_name": "Spinach (Cooked)",
+    "aliases": ["palak", "cooked spinach", "saag"],
+    
+    "basic_info": {
+      "category": "vegetable_non_starchy",
+      "food_type": "leafy_green",
+      "region": "pan_india",
+      "diet_type": ["vegetarian", "vegan"],
+      "cooking_state": "cooked",
+      "common_serving_unit": "cup",
+      "common_serving_size_g": 180
+    },
+    
+    "exchange_mapping": {
+      "exchange_category": "vegetable_non_starchy",
+      "serving_size_per_exchange_g": 90,
+      "exchanges_per_common_serving": 2.0,
+      "notes": "1 exchange = 90g cooked spinach ≈ 25 kcal"
+    },
+    
+    "nutrition_per_100g": {
+      "calories_kcal": 23.0,
+      "macros": {
+        "protein_g": 2.9,
+        "carbs_g": 3.6,
+        "fat_g": 0.4,
+        "fiber_g": 2.2,
+        "sugar_g": 0.4,
+        "saturated_fat_g": 0.1,
+        "trans_fat_g": 0.0,
+        "added_sugar_g": 0.0
+      },
+      "micros": {
+        "sodium_mg": 79.0,
+        "potassium_mg": 466.0,
+        "calcium_mg": 99.0,
+        "iron_mg": 3.6,
+        "magnesium_mg": 87.0,
+        "phosphorus_mg": 49.0,
+        "zinc_mg": 0.5,
+        "vitamin_c_mg": 9.8,
+        "vitamin_d_iu": 0.0,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 146.0,
+        "selenium_mcg": 1.0,
+        "iodine_mcg": 0.0
+      },
+      "glycemic_properties": {
+        "glycemic_index": 15,
+        "glycemic_load_per_100g": 0.5,
+        "glycemic_classification": "very_low_gi"
+      },
+      "calorie_density_kcal_per_g": 0.23,
+      "protein_density_g_per_100kcal": 12.6
+    },
+    
+    "mnt_compatibility": {
+      "macro_compliance": {
+        "low_carb_friendly": true,
+        "moderate_carb_friendly": true,
+        "high_fiber": false,
+        "low_fat": true,
+        "high_protein": false,
+        "low_saturated_fat": true,
+        "zero_trans_fat": true,
+        "low_added_sugar": true
+      },
+      "micro_compliance": {
+        "low_sodium": true,
+        "low_potassium": false,
+        "low_phosphorus": true,
+        "iron_rich": true,
+        "calcium_rich": false,
+        "folate_rich": true,
+        "vitamin_c_rich": false
+      },
+      "medical_tags": {
+        "diabetic_safe": true,
+        "prediabetic_safe": true,
+        "cardiac_safe": true,
+        "hypertension_safe": true,
+        "renal_safe_stage_1_2": false,
+        "renal_safe_stage_3_5": false,
+        "ibd_safe_remission": true,
+        "ibs_safe": true,
+        "gerd_safe": true,
+        "gastritis_safe": true,
+        "obesity_safe": true,
+        "pcos_safe": true,
+        "fatty_liver_safe": true,
+        "anemia_safe": true
+      },
+      "food_exclusion_tags": [],
+      "food_inclusion_tags": ["vegetables", "fiber_rich_foods", "low_gi_foods", "low_calorie_high_volume_foods", "nutrient_dense_foods", "iron_rich_foods"],
+      "contraindications": ["ckd_stage_3_5"],
+      "preferred_conditions": [
+        "diabetes",
+        "prediabetes",
+        "obesity",
+        "anemia",
+        "iron_deficiency_anemia",
+        "inadequate_fiber_intake"
+      ]
+    },
+    
+    "ayurvedic_properties": {
+      "dosha_effects": {
+        "vata": "neutral",
+        "pitta": "pacifying",
+        "kapha": "pacifying"
+      },
+      "guna": "sattvic",
+      "rasa": ["bitter", "astringent"],
+      "virya": "cooling",
+      "vipaka": "pungent",
+      "agni_effect": "improving",
+      "digestive_load": "light",
+      "food_temperature_preference": "cooked_warm",
+      "cooking_method_preference": ["steamed", "sautéed"],
+      "meal_timing_preference": ["lunch", "dinner"],
+      "season_preference": ["winter", "spring"]
+    },
+    
+    "dietary_properties": {
+      "fodmap_level": "low",
+      "gluten_free": true,
+      "lactose_free": true,
+      "allergen_free": true,
+      "common_allergens": [],
+      "oxalate_level": "moderate",
+      "histamine_level": "low",
+      "goitrogen_present": true
+    },
+    
+    "retrieval_scoring": {
+      "nutritional_density_score": 95,
+      "health_benefit_score": 95,
+      "versatility_score": 85,
+      "palatability_score": 70,
+      "cost_accessibility_score": 90
+    },
+    
+    "recipe_compatibility": {
+      "primary_recipe_types": [
+        "sabzi",
+        "dal",
+        "soup",
+        "curry",
+        "smoothie"
+      ],
+      "pairing_foods": [
+        "dal",
+        "paneer",
+        "potatoes",
+        "onions",
+        "garlic"
+      ],
+      "spice_compatibility": "very_high",
+      "texture_profile": "soft_leafy"
+    },
+    
+    "version": "1.0",
+    "status": "active",
+    "source": "IFCT 2017 / USDA",
+    "source_reference": "Indian Food Composition Tables 2017",
+    "last_reviewed": "2025-01-15"
+  },
+  {
+    "food_id": "whole_wheat_roti",
+    "display_name": "Whole Wheat Roti",
+    "aliases": ["chapati", "phulka", "whole wheat bread", "gehun ki roti"],
+    
+    "basic_info": {
+      "category": "cereal",
+      "food_type": "flatbread",
+      "region": "pan_india",
+      "diet_type": ["vegetarian", "vegan"],
+      "cooking_state": "cooked",
+      "common_serving_unit": "piece",
+      "common_serving_size_g": 40
+    },
+    
+    "exchange_mapping": {
+      "exchange_category": "cereal",
+      "serving_size_per_exchange_g": 30,
+      "exchanges_per_common_serving": 1.33,
+      "notes": "1 exchange = 1 medium roti (30g) ≈ 80 kcal"
+    },
+    
+    "nutrition_per_100g": {
+      "calories_kcal": 297.0,
+      "macros": {
+        "protein_g": 11.5,
+        "carbs_g": 58.0,
+        "fat_g": 2.0,
+        "fiber_g": 10.7,
+        "sugar_g": 2.0,
+        "saturated_fat_g": 0.4,
+        "trans_fat_g": 0.0,
+        "added_sugar_g": 0.0
+      },
+      "micros": {
+        "sodium_mg": 5.0,
+        "potassium_mg": 363.0,
+        "calcium_mg": 41.0,
+        "iron_mg": 4.9,
+        "magnesium_mg": 138.0,
+        "phosphorus_mg": 306.0,
+        "zinc_mg": 2.9,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_iu": 0.0,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 44.0,
+        "selenium_mcg": 70.7,
+        "iodine_mcg": 0.0
+      },
+      "glycemic_properties": {
+        "glycemic_index": 62,
+        "glycemic_load_per_100g": 36.0,
+        "glycemic_classification": "medium_gi"
+      },
+      "calorie_density_kcal_per_g": 2.97,
+      "protein_density_g_per_100kcal": 3.87
+    },
+    
+    "mnt_compatibility": {
+      "macro_compliance": {
+        "low_carb_friendly": false,
+        "moderate_carb_friendly": true,
+        "high_fiber": true,
+        "low_fat": true,
+        "high_protein": false,
+        "low_saturated_fat": true,
+        "zero_trans_fat": true,
+        "low_added_sugar": true
+      },
+      "micro_compliance": {
+        "low_sodium": true,
+        "low_potassium": false,
+        "low_phosphorus": false,
+        "iron_rich": true,
+        "calcium_rich": false,
+        "selenium_rich": true
+      },
+      "medical_tags": {
+        "diabetic_safe": true,
+        "prediabetic_safe": true,
+        "cardiac_safe": true,
+        "hypertension_safe": true,
+        "renal_safe_stage_1_2": false,
+        "renal_safe_stage_3_5": false,
+        "ibd_safe_remission": true,
+        "ibs_safe": true,
+        "gerd_safe": true,
+        "gastritis_safe": true,
+        "obesity_safe": true,
+        "pcos_safe": true,
+        "fatty_liver_safe": true,
+        "anemia_safe": true
+      },
+      "food_exclusion_tags": [],
+      "food_inclusion_tags": ["whole_grains", "fiber_rich_foods"],
+      "contraindications": ["ckd_stage_4_5", "celiac_disease"],
+      "preferred_conditions": [
+        "diabetes",
+        "prediabetes",
+        "hypertension",
+        "anemia",
+        "inadequate_fiber_intake"
+      ]
+    },
+    
+    "ayurvedic_properties": {
+      "dosha_effects": {
+        "vata": "pacifying",
+        "pitta": "neutral",
+        "kapha": "neutral_to_aggravating"
+      },
+      "guna": "sattvic",
+      "rasa": ["sweet"],
+      "virya": "heating",
+      "vipaka": "sweet",
+      "agni_effect": "improving",
+      "digestive_load": "moderate",
+      "food_temperature_preference": "hot_fresh",
+      "cooking_method_preference": ["roasted", "griddled"],
+      "meal_timing_preference": ["breakfast", "lunch", "dinner"],
+      "season_preference": ["all_seasons"]
+    },
+    
+    "dietary_properties": {
+      "fodmap_level": "low",
+      "gluten_free": false,
+      "lactose_free": true,
+      "allergen_free": false,
+      "common_allergens": ["gluten", "wheat"],
+      "oxalate_level": "low",
+      "histamine_level": "low",
+      "goitrogen_present": false
+    },
+    
+    "retrieval_scoring": {
+      "nutritional_density_score": 80,
+      "health_benefit_score": 85,
+      "versatility_score": 95,
+      "palatability_score": 90,
+      "cost_accessibility_score": 95
+    },
+    
+    "recipe_compatibility": {
+      "primary_recipe_types": [
+        "roti_with_curry",
+        "roti_with_dal",
+        "wraps",
+        "rolls"
+      ],
+      "pairing_foods": [
+        "dal",
+        "vegetables",
+        "curry",
+        "paneer",
+        "pickle"
+      ],
+      "spice_compatibility": "very_high",
+      "texture_profile": "soft_chewy"
+    },
+    
+    "version": "1.0",
+    "status": "active",
+    "source": "IFCT 2017",
+    "source_reference": "Indian Food Composition Tables 2017",
+    "last_reviewed": "2025-01-15"
+  },
+  {
+    "food_id": "low_fat_milk",
+    "display_name": "Low Fat Milk (Cow)",
+    "aliases": ["toned milk", "2% milk", "skimmed milk"],
+    
+    "basic_info": {
+      "category": "milk",
+      "food_type": "dairy",
+      "region": "pan_india",
+      "diet_type": ["vegetarian"],
+      "cooking_state": "raw",
+      "common_serving_unit": "cup",
+      "common_serving_size_g": 250
+    },
+    
+    "exchange_mapping": {
+      "exchange_category": "milk",
+      "serving_size_per_exchange_g": 250,
+      "exchanges_per_common_serving": 1.0,
+      "notes": "1 exchange = 1 cup (250ml) low fat milk ≈ 100 kcal, 6g protein"
+    },
+    
+    "nutrition_per_100g": {
+      "calories_kcal": 42.0,
+      "macros": {
+        "protein_g": 3.4,
+        "carbs_g": 5.0,
+        "fat_g": 1.0,
+        "fiber_g": 0.0,
+        "sugar_g": 5.0,
+        "saturated_fat_g": 0.6,
+        "trans_fat_g": 0.0,
+        "added_sugar_g": 0.0
+      },
+      "micros": {
+        "sodium_mg": 44.0,
+        "potassium_mg": 150.0,
+        "calcium_mg": 125.0,
+        "iron_mg": 0.03,
+        "magnesium_mg": 11.0,
+        "phosphorus_mg": 95.0,
+        "zinc_mg": 0.38,
+        "vitamin_c_mg": 1.0,
+        "vitamin_d_iu": 51.0,
+        "vitamin_b12_mcg": 0.5,
+        "folate_mcg": 5.0,
+        "selenium_mcg": 3.7,
+        "iodine_mcg": 0.0
+      },
+      "glycemic_properties": {
+        "glycemic_index": 31,
+        "glycemic_load_per_100g": 1.6,
+        "glycemic_classification": "low_gi"
+      },
+      "calorie_density_kcal_per_g": 0.42,
+      "protein_density_g_per_100kcal": 8.1
+    },
+    
+    "mnt_compatibility": {
+      "macro_compliance": {
+        "low_carb_friendly": true,
+        "moderate_carb_friendly": true,
+        "high_fiber": false,
+        "low_fat": true,
+        "high_protein": false,
+        "low_saturated_fat": true,
+        "zero_trans_fat": true,
+        "low_added_sugar": false
+      },
+      "micro_compliance": {
+        "low_sodium": true,
+        "low_potassium": true,
+        "low_phosphorus": false,
+        "iron_rich": false,
+        "calcium_rich": true,
+        "vitamin_d_rich": false,
+        "vitamin_b12_rich": false
+      },
+      "medical_tags": {
+        "diabetic_safe": true,
+        "prediabetic_safe": true,
+        "cardiac_safe": true,
+        "hypertension_safe": true,
+        "renal_safe_stage_1_2": false,
+        "renal_safe_stage_3_5": false,
+        "ibd_safe_remission": true,
+        "ibs_safe": false,
+        "gerd_safe": true,
+        "gastritis_safe": true,
+        "obesity_safe": true,
+        "pcos_safe": true,
+        "fatty_liver_safe": true,
+        "osteoporosis_safe": true
+      },
+      "food_exclusion_tags": [],
+      "food_inclusion_tags": ["dairy_proteins", "calcium_rich_foods"],
+      "contraindications": ["ckd_stage_4_5", "lactose_intolerance", "milk_allergy"],
+      "preferred_conditions": [
+        "osteoporosis",
+        "inadequate_protein_intake",
+        "inadequate_calcium_intake"
+      ]
+    },
+    
+    "ayurvedic_properties": {
+      "dosha_effects": {
+        "vata": "pacifying",
+        "pitta": "neutral",
+        "kapha": "aggravating"
+      },
+      "guna": "sattvic",
+      "rasa": ["sweet"],
+      "virya": "cooling",
+      "vipaka": "sweet",
+      "agni_effect": "neutral",
+      "digestive_load": "moderate",
+      "food_temperature_preference": "warm",
+      "cooking_method_preference": ["warmed"],
+      "meal_timing_preference": ["breakfast", "evening"],
+      "season_preference": ["winter"]
+    },
+    
+    "dietary_properties": {
+      "fodmap_level": "high",
+      "gluten_free": true,
+      "lactose_free": false,
+      "allergen_free": false,
+      "common_allergens": ["lactose", "milk_protein"],
+      "oxalate_level": "low",
+      "histamine_level": "low",
+      "goitrogen_present": false
+    },
+    
+    "retrieval_scoring": {
+      "nutritional_density_score": 70,
+      "health_benefit_score": 75,
+      "versatility_score": 80,
+      "palatability_score": 85,
+      "cost_accessibility_score": 90
+    },
+    
+    "recipe_compatibility": {
+      "primary_recipe_types": [
+        "beverage",
+        "smoothie",
+        "porridge",
+        "kheer",
+        "curry_base"
+      ],
+      "pairing_foods": [
+        "cereal",
+        "fruits",
+        "nuts",
+        "spices"
+      ],
+      "spice_compatibility": "medium",
+      "texture_profile": "liquid_creamy"
+    },
+    
+    "version": "1.0",
+    "status": "active",
+    "source": "IFCT 2017",
+    "source_reference": "Indian Food Composition Tables 2017",
+    "last_reviewed": "2025-01-15"
+  },
+  {
+    "food_id": "apple",
+    "display_name": "Apple (Raw)",
+    "aliases": ["seb", "fresh apple"],
+    
+    "basic_info": {
+      "category": "fruit",
+      "food_type": "fruit",
+      "region": "pan_india",
+      "diet_type": ["vegetarian", "vegan"],
+      "cooking_state": "raw",
+      "common_serving_unit": "medium",
+      "common_serving_size_g": 182
+    },
+    
+    "exchange_mapping": {
+      "exchange_category": "fruit",
+      "serving_size_per_exchange_g": 120,
+      "exchanges_per_common_serving": 1.5,
+      "notes": "1 exchange = 1 medium apple (120g) ≈ 60 kcal"
+    },
+    
+    "nutrition_per_100g": {
+      "calories_kcal": 52.0,
+      "macros": {
+        "protein_g": 0.3,
+        "carbs_g": 14.0,
+        "fat_g": 0.2,
+        "fiber_g": 2.4,
+        "sugar_g": 10.4,
+        "saturated_fat_g": 0.0,
+        "trans_fat_g": 0.0,
+        "added_sugar_g": 0.0
+      },
+      "micros": {
+        "sodium_mg": 1.0,
+        "potassium_mg": 107.0,
+        "calcium_mg": 6.0,
+        "iron_mg": 0.1,
+        "magnesium_mg": 5.0,
+        "phosphorus_mg": 11.0,
+        "zinc_mg": 0.0,
+        "vitamin_c_mg": 4.6,
+        "vitamin_d_iu": 0.0,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 3.0,
+        "selenium_mcg": 0.0,
+        "iodine_mcg": 0.0
+      },
+      "glycemic_properties": {
+        "glycemic_index": 36,
+        "glycemic_load_per_100g": 5.0,
+        "glycemic_classification": "low_gi"
+      },
+      "calorie_density_kcal_per_g": 0.52,
+      "protein_density_g_per_100kcal": 0.58
+    },
+    
+    "mnt_compatibility": {
+      "macro_compliance": {
+        "low_carb_friendly": false,
+        "moderate_carb_friendly": true,
+        "high_fiber": false,
+        "low_fat": true,
+        "high_protein": false,
+        "low_saturated_fat": true,
+        "zero_trans_fat": true,
+        "low_added_sugar": false
+      },
+      "micro_compliance": {
+        "low_sodium": true,
+        "low_potassium": true,
+        "low_phosphorus": true,
+        "iron_rich": false,
+        "calcium_rich": false,
+        "vitamin_c_rich": false
+      },
+      "medical_tags": {
+        "diabetic_safe": true,
+        "prediabetic_safe": true,
+        "cardiac_safe": true,
+        "hypertension_safe": true,
+        "renal_safe_stage_1_2": true,
+        "renal_safe_stage_3_5": true,
+        "ibd_safe_remission": true,
+        "ibs_safe": true,
+        "gerd_safe": true,
+        "gastritis_safe": true,
+        "obesity_safe": true,
+        "pcos_safe": true,
+        "fatty_liver_safe": true
+      },
+      "food_exclusion_tags": [],
+      "food_inclusion_tags": ["fruits", "low_gi_foods"],
+      "contraindications": [],
+      "preferred_conditions": [
+        "diabetes",
+        "prediabetes",
+        "hypertension",
+        "obesity"
+      ]
+    },
+    
+    "ayurvedic_properties": {
+      "dosha_effects": {
+        "vata": "pacifying",
+        "pitta": "pacifying",
+        "kapha": "neutral"
+      },
+      "guna": "sattvic",
+      "rasa": ["sweet", "astringent"],
+      "virya": "cooling",
+      "vipaka": "sweet",
+      "agni_effect": "neutral",
+      "digestive_load": "light",
+      "food_temperature_preference": "room_temperature",
+      "cooking_method_preference": ["raw"],
+      "meal_timing_preference": ["breakfast", "mid_morning", "evening"],
+      "season_preference": ["winter", "spring"]
+    },
+    
+    "dietary_properties": {
+      "fodmap_level": "low",
+      "gluten_free": true,
+      "lactose_free": true,
+      "allergen_free": true,
+      "common_allergens": [],
+      "oxalate_level": "low",
+      "histamine_level": "low",
+      "goitrogen_present": false
+    },
+    
+    "retrieval_scoring": {
+      "nutritional_density_score": 60,
+      "health_benefit_score": 70,
+      "versatility_score": 75,
+      "palatability_score": 90,
+      "cost_accessibility_score": 85
+    },
+    
+    "recipe_compatibility": {
+      "primary_recipe_types": [
+        "fresh_fruit",
+        "fruit_salad",
+        "smoothie",
+        "dessert"
+      ],
+      "pairing_foods": [
+        "nuts",
+        "yogurt",
+        "cinnamon"
+      ],
+      "spice_compatibility": "low",
+      "texture_profile": "crisp_juicy"
+    },
+    
+    "version": "1.0",
+    "status": "active",
+    "source": "IFCT 2017 / USDA",
+    "source_reference": "Indian Food Composition Tables 2017",
+    "last_reviewed": "2025-01-15"
+  },
+  {
+    "food_id": "mustard_oil",
+    "display_name": "Mustard Oil",
+    "aliases": ["sarson ka tel", "rapeseed oil"],
+    
+    "basic_info": {
+      "category": "fat",
+      "food_type": "oil",
+      "region": "pan_india",
+      "diet_type": ["vegetarian", "vegan"],
+      "cooking_state": "raw",
+      "common_serving_unit": "tsp",
+      "common_serving_size_g": 5
+    },
+    
+    "exchange_mapping": {
+      "exchange_category": "fat",
+      "serving_size_per_exchange_g": 5,
+      "exchanges_per_common_serving": 1.0,
+      "notes": "1 exchange = 1 tsp (5g) oil ≈ 45 kcal, 5g fat"
+    },
+    
+    "nutrition_per_100g": {
+      "calories_kcal": 884.0,
+      "macros": {
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 100.0,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "saturated_fat_g": 12.0,
+        "trans_fat_g": 0.0,
+        "added_sugar_g": 0.0,
+        "monounsaturated_fat_g": 60.0,
+        "polyunsaturated_fat_g": 21.0,
+        "omega_3_mg": 5700.0,
+        "omega_6_mg": 15000.0
+      },
+      "micros": {
+        "sodium_mg": 0.0,
+        "potassium_mg": 0.0,
+        "calcium_mg": 0.0,
+        "iron_mg": 0.0,
+        "magnesium_mg": 0.0,
+        "phosphorus_mg": 0.0,
+        "zinc_mg": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_iu": 0.0,
+        "vitamin_e_mg": 19.5,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 0.0,
+        "selenium_mcg": 0.0,
+        "iodine_mcg": 0.0
+      },
+      "glycemic_properties": {
+        "glycemic_index": 0,
+        "glycemic_load_per_100g": 0.0,
+        "glycemic_classification": "no_gi"
+      },
+      "calorie_density_kcal_per_g": 8.84,
+      "protein_density_g_per_100kcal": 0.0
+    },
+    
+    "mnt_compatibility": {
+      "macro_compliance": {
+        "low_carb_friendly": true,
+        "moderate_carb_friendly": true,
+        "high_fiber": false,
+        "low_fat": false,
+        "high_protein": false,
+        "low_saturated_fat": true,
+        "zero_trans_fat": true,
+        "low_added_sugar": true,
+        "high_monounsaturated_fat": true,
+        "omega_3_rich": true
+      },
+      "micro_compliance": {
+        "low_sodium": true,
+        "low_potassium": true,
+        "low_phosphorus": true,
+        "iron_rich": false,
+        "calcium_rich": false
+      },
+      "medical_tags": {
+        "diabetic_safe": true,
+        "prediabetic_safe": true,
+        "cardiac_safe": true,
+        "hypertension_safe": true,
+        "renal_safe_stage_1_2": true,
+        "renal_safe_stage_3_5": true,
+        "ibd_safe_remission": true,
+        "ibs_safe": true,
+        "gerd_safe": false,
+        "gastritis_safe": false,
+        "obesity_safe": false,
+        "pcos_safe": true,
+        "fatty_liver_safe": true,
+        "dyslipidemia_safe": true
+      },
+      "food_exclusion_tags": [],
+      "food_inclusion_tags": ["monounsaturated_fats", "omega_3_sources", "plant_based_fats"],
+      "contraindications": ["gerd", "gastritis"],
+      "preferred_conditions": [
+        "dyslipidemia",
+        "metabolic_syndrome",
+        "pcos",
+        "fatty_liver_disease"
+      ]
+    },
+    
+    "ayurvedic_properties": {
+      "dosha_effects": {
+        "vata": "pacifying",
+        "pitta": "neutral_to_aggravating",
+        "kapha": "pacifying"
+      },
+      "guna": "rajasic",
+      "rasa": ["pungent"],
+      "virya": "heating",
+      "vipaka": "pungent",
+      "agni_effect": "improving",
+      "digestive_load": "light",
+      "food_temperature_preference": "heated",
+      "cooking_method_preference": ["tempering", "sautéing"],
+      "meal_timing_preference": ["lunch", "dinner"],
+      "season_preference": ["winter"]
+    },
+    
+    "dietary_properties": {
+      "fodmap_level": "low",
+      "gluten_free": true,
+      "lactose_free": true,
+      "allergen_free": true,
+      "common_allergens": [],
+      "oxalate_level": "low",
+      "histamine_level": "low",
+      "goitrogen_present": false
+    },
+    
+    "retrieval_scoring": {
+      "nutritional_density_score": 40,
+      "health_benefit_score": 70,
+      "versatility_score": 95,
+      "palatability_score": 80,
+      "cost_accessibility_score": 90
+    },
+    
+    "recipe_compatibility": {
+      "primary_recipe_types": [
+        "tempering",
+        "sautéing",
+        "curry_base",
+        "pickling"
+      ],
+      "pairing_foods": [
+        "vegetables",
+        "dal",
+        "spices"
+      ],
+      "spice_compatibility": "very_high",
+      "texture_profile": "liquid_oily"
+    },
+    
+    "version": "1.0",
+    "status": "active",
+    "source": "IFCT 2017",
+    "source_reference": "Indian Food Composition Tables 2017",
+    "last_reviewed": "2025-01-15"
+  },
+  {
+    "food_id": "almonds",
+    "display_name": "Almonds (Raw)",
+    "aliases": ["badam", "raw almonds"],
+    
+    "basic_info": {
+      "category": "nuts_seeds",
+      "food_type": "nuts",
+      "region": "pan_india",
+      "diet_type": ["vegetarian", "vegan"],
+      "cooking_state": "raw",
+      "common_serving_unit": "pieces",
+      "common_serving_size_g": 10
+    },
+    
+    "exchange_mapping": {
+      "exchange_category": "nuts_seeds",
+      "serving_size_per_exchange_g": 10,
+      "exchanges_per_common_serving": 1.0,
+      "notes": "1 exchange = 10 almonds (10g) ≈ 70 kcal, 3g protein, 6g fat"
+    },
+    
+    "nutrition_per_100g": {
+      "calories_kcal": 579.0,
+      "macros": {
+        "protein_g": 21.2,
+        "carbs_g": 21.6,
+        "fat_g": 49.9,
+        "fiber_g": 12.5,
+        "sugar_g": 4.4,
+        "saturated_fat_g": 3.8,
+        "trans_fat_g": 0.0,
+        "added_sugar_g": 0.0,
+        "monounsaturated_fat_g": 31.6,
+        "polyunsaturated_fat_g": 12.3
+      },
+      "micros": {
+        "sodium_mg": 1.0,
+        "potassium_mg": 733.0,
+        "calcium_mg": 269.0,
+        "iron_mg": 3.7,
+        "magnesium_mg": 270.0,
+        "phosphorus_mg": 481.0,
+        "zinc_mg": 3.1,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_iu": 0.0,
+        "vitamin_e_mg": 25.6,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 44.0,
+        "selenium_mcg": 4.1,
+        "iodine_mcg": 0.0
+      },
+      "glycemic_properties": {
+        "glycemic_index": 15,
+        "glycemic_load_per_100g": 3.2,
+        "glycemic_classification": "very_low_gi"
+      },
+      "calorie_density_kcal_per_g": 5.79,
+      "protein_density_g_per_100kcal": 3.66
+    },
+    
+    "mnt_compatibility": {
+      "macro_compliance": {
+        "low_carb_friendly": true,
+        "moderate_carb_friendly": true,
+        "high_fiber": true,
+        "low_fat": false,
+        "high_protein": true,
+        "low_saturated_fat": true,
+        "zero_trans_fat": true,
+        "low_added_sugar": true,
+        "high_monounsaturated_fat": true
+      },
+      "micro_compliance": {
+        "low_sodium": true,
+        "low_potassium": false,
+        "low_phosphorus": false,
+        "iron_rich": true,
+        "calcium_rich": true,
+        "magnesium_rich": true,
+        "vitamin_e_rich": true
+      },
+      "medical_tags": {
+        "diabetic_safe": true,
+        "prediabetic_safe": true,
+        "cardiac_safe": true,
+        "hypertension_safe": true,
+        "renal_safe_stage_1_2": false,
+        "renal_safe_stage_3_5": false,
+        "ibd_safe_remission": true,
+        "ibs_safe": true,
+        "gerd_safe": true,
+        "gastritis_safe": true,
+        "obesity_safe": false,
+        "pcos_safe": true,
+        "fatty_liver_safe": true,
+        "anemia_safe": true,
+        "osteoporosis_safe": true
+      },
+      "food_exclusion_tags": [],
+      "food_inclusion_tags": ["nuts_seeds", "omega_3_sources", "monounsaturated_fats", "plant_based_fats", "protein_rich_foods"],
+      "contraindications": ["ckd_stage_4_5", "nut_allergy"],
+      "preferred_conditions": [
+        "diabetes",
+        "prediabetes",
+        "hypertension",
+        "pcos",
+        "anemia",
+        "osteoporosis",
+        "inadequate_protein_intake"
+      ]
+    },
+    
+    "ayurvedic_properties": {
+      "dosha_effects": {
+        "vata": "pacifying",
+        "pitta": "neutral",
+        "kapha": "aggravating"
+      },
+      "guna": "sattvic",
+      "rasa": ["sweet"],
+      "virya": "heating",
+      "vipaka": "sweet",
+      "agni_effect": "improving",
+      "digestive_load": "moderate",
+      "food_temperature_preference": "soaked_overnight",
+      "cooking_method_preference": ["soaked", "roasted"],
+      "meal_timing_preference": ["breakfast", "mid_morning"],
+      "season_preference": ["winter"]
+    },
+    
+    "dietary_properties": {
+      "fodmap_level": "low",
+      "gluten_free": true,
+      "lactose_free": true,
+      "allergen_free": false,
+      "common_allergens": ["tree_nuts"],
+      "oxalate_level": "moderate",
+      "histamine_level": "low",
+      "goitrogen_present": false
+    },
+    
+    "retrieval_scoring": {
+      "nutritional_density_score": 95,
+      "health_benefit_score": 95,
+      "versatility_score": 80,
+      "palatability_score": 85,
+      "cost_accessibility_score": 70
+    },
+    
+    "recipe_compatibility": {
+      "primary_recipe_types": [
+        "snack",
+        "dessert",
+        "granola",
+        "smoothie_topping"
+      ],
+      "pairing_foods": [
+        "fruits",
+        "yogurt",
+        "milk"
+      ],
+      "spice_compatibility": "low",
+      "texture_profile": "crunchy_nutty"
+    },
+    
+    "version": "1.0",
+    "status": "active",
+    "source": "IFCT 2017 / USDA",
+    "source_reference": "Indian Food Composition Tables 2017",
+    "last_reviewed": "2025-01-15"
+  }
+]
+

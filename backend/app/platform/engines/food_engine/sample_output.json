@@ -1,0 +1,550 @@
+{
+  "meal_plan": {
+    "meals": {
+      "breakfast": {
+        "exchanges": {
+          "cereal": 2,
+          "milk": 1,
+          "nuts_seeds": 1
+        },
+        "category_wise_foods": {
+          "cereal": [
+            {
+              "food_id": "oats_cooked",
+              "display_name": "Oats, cooked",
+              "aliases": ["oatmeal", "porridge"],
+              "category": "cereal",
+              "food_type": "grain",
+              "region": "pan_india",
+              "diet_type": ["vegetarian", "vegan"],
+              "cooking_state": "cooked",
+              "common_serving_unit": "bowl",
+              "common_serving_size_g": 150.0,
+              "exchange_category": "cereal",
+              "serving_size_per_exchange_g": 60.0,
+              "exchanges_per_common_serving": 2.5,
+              "nutrition": {
+                "calories": 389.0,
+                "carbs_g": 66.0,
+                "protein_g": 17.0,
+                "fat_g": 7.0,
+                "fiber_g": 10.6,
+                "sodium_mg": 2.0,
+                "calorie_density_kcal_per_g": 3.89,
+                "protein_density_g_per_100kcal": 4.37,
+                "macros": {
+                  "carbs_g": 66.0,
+                  "protein_g": 17.0,
+                  "fat_g": 7.0,
+                  "fiber_g": 10.6
+                },
+                "micros": {
+                  "sodium_mg": 2.0
+                },
+                "glycemic_properties": {
+                  "glycemic_index": 55,
+                  "glycemic_load": 33
+                }
+              },
+              "mnt_profile": {
+                "macro_compliance": {
+                  "low_carb": false,
+                  "high_fiber": true,
+                  "low_fat": true
+                },
+                "micro_compliance": {
+                  "low_sodium": true,
+                  "high_fiber": true
+                },
+                "medical_tags": {
+                  "diabetic_safe": true,
+                  "hypertension_safe": true,
+                  "heart_healthy": true
+                },
+                "food_exclusion_tags": [],
+                "food_inclusion_tags": ["whole_grain", "high_fiber"],
+                "contraindications": [],
+                "preferred_conditions": ["diabetes", "hypertension"]
+              }
+            },
+            {
+              "food_id": "brown_rice_cooked",
+              "display_name": "Brown rice, cooked",
+              "aliases": ["brown rice", "unpolished rice"],
+              "category": "cereal",
+              "food_type": "grain",
+              "region": "pan_india",
+              "diet_type": ["vegetarian", "vegan"],
+              "cooking_state": "cooked",
+              "common_serving_unit": "katori",
+              "common_serving_size_g": 100.0,
+              "exchange_category": "cereal",
+              "serving_size_per_exchange_g": 30.0,
+              "exchanges_per_common_serving": 3.33,
+              "nutrition": {
+                "calories": 360.0,
+                "carbs_g": 76.0,
+                "protein_g": 8.0,
+                "fat_g": 2.7,
+                "fiber_g": 3.5,
+                "sodium_mg": 5.0,
+                "calorie_density_kcal_per_g": 3.6,
+                "protein_density_g_per_100kcal": 2.22,
+                "macros": {
+                  "carbs_g": 76.0,
+                  "protein_g": 8.0,
+                  "fat_g": 2.7,
+                  "fiber_g": 3.5
+                },
+                "micros": {
+                  "sodium_mg": 5.0
+                },
+                "glycemic_properties": {
+                  "glycemic_index": 68,
+                  "glycemic_load": 52
+                }
+              },
+              "mnt_profile": {
+                "macro_compliance": {
+                  "low_carb": false,
+                  "high_fiber": true,
+                  "low_fat": true
+                },
+                "micro_compliance": {
+                  "low_sodium": true,
+                  "high_fiber": true
+                },
+                "medical_tags": {
+                  "diabetic_safe": true,
+                  "hypertension_safe": true
+                },
+                "food_exclusion_tags": [],
+                "food_inclusion_tags": ["whole_grain"],
+                "contraindications": [],
+                "preferred_conditions": ["diabetes"]
+              }
+            }
+          ],
+          "milk": [
+            {
+              "food_id": "milk_toned",
+              "display_name": "Milk, toned",
+              "aliases": ["toned milk", "low fat milk"],
+              "category": "milk",
+              "food_type": "dairy",
+              "region": "pan_india",
+              "diet_type": ["vegetarian"],
+              "cooking_state": "raw",
+              "common_serving_unit": "glass",
+              "common_serving_size_g": 250.0,
+              "exchange_category": "milk",
+              "serving_size_per_exchange_g": 250.0,
+              "exchanges_per_common_serving": 1.0,
+              "nutrition": {
+                "calories": 60.0,
+                "carbs_g": 5.0,
+                "protein_g": 3.2,
+                "fat_g": 2.0,
+                "fiber_g": 0.0,
+                "sodium_mg": 44.0,
+                "calorie_density_kcal_per_g": 0.24,
+                "protein_density_g_per_100kcal": 5.33,
+                "macros": {
+                  "carbs_g": 5.0,
+                  "protein_g": 3.2,
+                  "fat_g": 2.0
+                },
+                "micros": {
+                  "sodium_mg": 44.0,
+                  "calcium_mg": 300.0
+                },
+                "glycemic_properties": {}
+              },
+              "mnt_profile": {
+                "macro_compliance": {
+                  "low_carb": false,
+                  "high_protein": true,
+                  "low_fat": true
+                },
+                "micro_compliance": {
+                  "high_calcium": true
+                },
+                "medical_tags": {
+                  "diabetic_safe": true,
+                  "hypertension_safe": true
+                },
+                "food_exclusion_tags": [],
+                "food_inclusion_tags": ["high_protein", "calcium_rich"],
+                "contraindications": ["lactose_intolerance"],
+                "preferred_conditions": []
+              }
+            }
+          ],
+          "nuts_seeds": [
+            {
+              "food_id": "almonds_raw",
+              "display_name": "Almonds, raw",
+              "aliases": ["badam", "almond"],
+              "category": "nuts_seeds",
+              "food_type": "nut",
+              "region": "pan_india",
+              "diet_type": ["vegetarian", "vegan"],
+              "cooking_state": "raw",
+              "common_serving_unit": "tbsp",
+              "common_serving_size_g": 15.0,
+              "exchange_category": "nuts_seeds",
+              "serving_size_per_exchange_g": 15.0,
+              "exchanges_per_common_serving": 1.0,
+              "nutrition": {
+                "calories": 579.0,
+                "carbs_g": 21.6,
+                "protein_g": 21.1,
+                "fat_g": 49.9,
+                "fiber_g": 12.5,
+                "sodium_mg": 1.0,
+                "calorie_density_kcal_per_g": 5.79,
+                "protein_density_g_per_100kcal": 3.64,
+                "macros": {
+                  "carbs_g": 21.6,
+                  "protein_g": 21.1,
+                  "fat_g": 49.9,
+                  "fiber_g": 12.5
+                },
+                "micros": {
+                  "sodium_mg": 1.0,
+                  "calcium_mg": 269.0,
+                  "magnesium_mg": 270.0
+                },
+                "glycemic_properties": {}
+              },
+              "mnt_profile": {
+                "macro_compliance": {
+                  "low_carb": false,
+                  "high_fiber": true,
+                  "high_fat": true
+                },
+                "micro_compliance": {
+                  "low_sodium": true,
+                  "high_fiber": true
+                },
+                "medical_tags": {
+                  "diabetic_safe": true,
+                  "hypertension_safe": true,
+                  "heart_healthy": true
+                },
+                "food_exclusion_tags": [],
+                "food_inclusion_tags": ["healthy_fats", "high_fiber"],
+                "contraindications": ["nut_allergy"],
+                "preferred_conditions": ["diabetes", "heart_disease"]
+              }
+            }
+          ]
+        }
+      },
+      "lunch": {
+        "exchanges": {
+          "cereal": 3,
+          "pulse": 2,
+          "vegetable_non_starchy": 2,
+          "fat": 1
+        },
+        "category_wise_foods": {
+          "cereal": [
+            {
+              "food_id": "brown_rice_cooked",
+              "display_name": "Brown rice, cooked",
+              "exchange_category": "cereal",
+              "serving_size_per_exchange_g": 30.0,
+              "nutrition": {
+                "calories": 360.0,
+                "carbs_g": 76.0,
+                "protein_g": 8.0,
+                "fat_g": 2.7
+              },
+              "mnt_profile": {
+                "medical_tags": {
+                  "diabetic_safe": true
+                }
+              }
+            }
+          ],
+          "pulse": [
+            {
+              "food_id": "dal_tur_cooked",
+              "display_name": "Dal, tur (pigeon pea), cooked",
+              "exchange_category": "pulse",
+              "serving_size_per_exchange_g": 65.0,
+              "nutrition": {
+                "calories": 116.0,
+                "carbs_g": 20.0,
+                "protein_g": 9.0,
+                "fat_g": 0.4
+              },
+              "mnt_profile": {
+                "medical_tags": {
+                  "diabetic_safe": true,
+                  "high_protein": true
+                }
+              }
+            }
+          ],
+          "vegetable_non_starchy": [
+            {
+              "food_id": "spinach_cooked",
+              "display_name": "Spinach, cooked",
+              "exchange_category": "vegetable_non_starchy",
+              "serving_size_per_exchange_g": 100.0,
+              "nutrition": {
+                "calories": 23.0,
+                "carbs_g": 3.6,
+                "protein_g": 2.9,
+                "fat_g": 0.4
+              },
+              "mnt_profile": {
+                "medical_tags": {
+                  "diabetic_safe": true,
+                  "low_calorie": true
+                }
+              }
+            }
+          ],
+          "fat": [
+            {
+              "food_id": "ghee",
+              "display_name": "Ghee",
+              "exchange_category": "fat",
+              "serving_size_per_exchange_g": 5.0,
+              "nutrition": {
+                "calories": 900.0,
+                "carbs_g": 0.0,
+                "protein_g": 0.0,
+                "fat_g": 100.0
+              },
+              "mnt_profile": {
+                "medical_tags": {
+                  "high_saturated_fat": true
+                }
+              }
+            }
+          ]
+        }
+      },
+      "snack": {
+        "exchanges": {
+          "fruit": 1
+        },
+        "category_wise_foods": {
+          "fruit": [
+            {
+              "food_id": "apple_medium",
+              "display_name": "Apple, medium",
+              "exchange_category": "fruit",
+              "serving_size_per_exchange_g": 150.0,
+              "nutrition": {
+                "calories": 52.0,
+                "carbs_g": 13.8,
+                "protein_g": 0.3,
+                "fat_g": 0.2
+              },
+              "mnt_profile": {
+                "medical_tags": {
+                  "diabetic_safe": true
+                }
+              }
+            }
+          ]
+        }
+      },
+      "dinner": {
+        "exchanges": {
+          "cereal": 2,
+          "meat_fish_egg": 2,
+          "vegetable_non_starchy": 1
+        },
+        "category_wise_foods": {
+          "cereal": [
+            {
+              "food_id": "roti_whole_wheat",
+              "display_name": "Roti, whole wheat",
+              "exchange_category": "cereal",
+              "serving_size_per_exchange_g": 30.0,
+              "nutrition": {
+                "calories": 300.0,
+                "carbs_g": 60.0,
+                "protein_g": 10.0,
+                "fat_g": 4.0
+              },
+              "mnt_profile": {
+                "medical_tags": {
+                  "diabetic_safe": true
+                }
+              }
+            }
+          ],
+          "meat_fish_egg": [
+            {
+              "food_id": "chicken_breast_grilled",
+              "display_name": "Chicken breast, grilled",
+              "exchange_category": "meat_fish_egg",
+              "serving_size_per_exchange_g": 50.0,
+              "nutrition": {
+                "calories": 165.0,
+                "carbs_g": 0.0,
+                "protein_g": 31.0,
+                "fat_g": 3.6
+              },
+              "mnt_profile": {
+                "medical_tags": {
+                  "high_protein": true,
+                  "low_fat": true
+                }
+              }
+            }
+          ],
+          "vegetable_non_starchy": [
+            {
+              "food_id": "cabbage_cooked",
+              "display_name": "Cabbage, cooked",
+              "exchange_category": "vegetable_non_starchy",
+              "serving_size_per_exchange_g": 100.0,
+              "nutrition": {
+                "calories": 23.0,
+                "carbs_g": 5.8,
+                "protein_g": 1.3,
+                "fat_g": 0.1
+              },
+              "mnt_profile": {
+                "medical_tags": {
+                  "diabetic_safe": true,
+                  "low_calorie": true
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "exchange_allocations": {
+      "breakfast": {
+        "cereal": 2,
+        "milk": 1,
+        "nuts_seeds": 1
+      },
+      "lunch": {
+        "cereal": 3,
+        "pulse": 2,
+        "vegetable_non_starchy": 2,
+        "fat": 1
+      },
+      "snack": {
+        "fruit": 1
+      },
+      "dinner": {
+        "cereal": 2,
+        "meat_fish_egg": 2,
+        "vegetable_non_starchy": 1
+      }
+    }
+  },
+  "explanations": {
+    "notes": [],
+    "constraints_snapshot": {
+      "mnt": {
+        "macro_constraints": {
+          "carbohydrates_percent": {
+            "max": 50
+          }
+        },
+        "micro_constraints": {
+          "sodium_mg": {
+            "max": 2000
+          }
+        },
+        "food_exclusions": []
+      },
+      "targets": {
+        "calories_target": 2000.0,
+        "macros": {
+          "protein_g": 90.0,
+          "carbs_g": 250.0,
+          "fat_g": 65.0
+        },
+        "key_micros": {}
+      },
+      "exchange_allocations": {
+        "breakfast": {
+          "cereal": 2,
+          "milk": 1,
+          "nuts_seeds": 1
+        },
+        "lunch": {
+          "cereal": 3,
+          "pulse": 2,
+          "vegetable_non_starchy": 2,
+          "fat": 1
+        },
+        "snack": {
+          "fruit": 1
+        },
+        "dinner": {
+          "cereal": 2,
+          "meat_fish_egg": 2,
+          "vegetable_non_starchy": 1
+        }
+      },
+      "ayurveda": {
+        "dosha_primary": "pitta",
+        "food_preferences_applied": true
+      }
+    }
+  },
+  "constraints_snapshot": {
+    "mnt": {
+      "macro_constraints": {
+        "carbohydrates_percent": {
+          "max": 50
+        }
+      },
+      "micro_constraints": {
+        "sodium_mg": {
+          "max": 2000
+        }
+      },
+      "food_exclusions": []
+    },
+    "targets": {
+      "calories_target": 2000.0,
+      "macros": {
+        "protein_g": 90.0,
+        "carbs_g": 250.0,
+        "fat_g": 65.0
+      },
+      "key_micros": {}
+    },
+    "exchange_allocations": {
+      "breakfast": {
+        "cereal": 2,
+        "milk": 1,
+        "nuts_seeds": 1
+      },
+      "lunch": {
+        "cereal": 3,
+        "pulse": 2,
+        "vegetable_non_starchy": 2,
+        "fat": 1
+      },
+      "snack": {
+        "fruit": 1
+      },
+      "dinner": {
+        "cereal": 2,
+        "meat_fish_egg": 2,
+        "vegetable_non_starchy": 1
+      }
+    },
+    "ayurveda": {
+      "dosha_primary": "pitta",
+      "food_preferences_applied": true
+    }
+  }
+}

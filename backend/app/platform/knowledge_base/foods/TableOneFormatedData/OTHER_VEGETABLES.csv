@@ -1,0 +1,79 @@
+code,Food Name,,PROTCNT,FATCE,FIBTG,CHOAVLDF,ENERC,Exchange
+D001,Ash gourd (Benincasa hispida),6,0.79±0.06,0.14±0.02,3.37±0.23,2.84±0.22,73±4,OTHER VEGETABLES
+D002,"Bamboo shoot, tender (Bambusa vulgaris)",1,1.33,0.35,1.55,1.67,68,OTHER VEGETABLES
+D003,"Bean scarlet, tender (Phaseolus coccineus)",5,2.86±0.27,0.99±0.06,4.50±0.25,5.16±1.45,179±21,OTHER VEGETABLES
+D004,"Bitter gourd, jagged, teeth ridges, elongate (Momordica charantia)",6,1.44±0.17,0.24±0.01,3.78±0.16,2.82±0.32,87±6,OTHER VEGETABLES
+D005,"Bitter gourd, jagged, teeth ridges, short (Momordica charantia)",4,1.34±0.12,0.24±0.01,3.49±0.18,2.53±0.26,79±5,OTHER VEGETABLES
+D006,"Bitter gourd, jagged, smooth ridges, elongate (Momordica charantia)",1,1.61,0.26,3.72,2.29,81,OTHER VEGETABLES
+D007,"Bottle gourd, elongate, pale green (Lagenaria vulgaris)",6,0.53±0.05,0.13±0.02,2.12±0.07,1.68±0.33,46±6,OTHER VEGETABLES
+D008,"Bottle gourd, round, pale green (Lagenaria vulgaris)",5,0.42±0.02,0.12±0.03,2.10±0.15,2.53±0.21,57±3,OTHER VEGETABLES
+D009,"Bottle gourd, elongate, dark green (Lagenaria vulgaris)",1,0.49,0.13,2.11,2.25,54,OTHER VEGETABLES
+D010,Brinjal-1 (Solanum melongena),1,1.77,0.39,3.57,3.49,114,OTHER VEGETABLES
+D011,Brinjal-2 (Solanum melongena),1,1.82,0.34,4.01,2.71,99,OTHER VEGETABLES
+D012,Brinjal-3 (Solanum melongena),2,1.36,0.33,4.26,3.38,102,OTHER VEGETABLES
+D013,Brinjal-4 (Solanum melongena),4,1.51±0.24,0.31±0.03,4.04±0.65,3.19±0.86,100±18,OTHER VEGETABLES
+D014,Brinjal-5 (Solanum melongena),3,1.38±0.26,0.29±0.06,4.13±0.70,4.02±2.01,111±38,OTHER VEGETABLES
+D015,Brinjal-6 (Solanum melongena),2,1.46,0.29,3.68,3.29,97,OTHER VEGETABLES
+D016,Brinjal-7 (Solanum melongena),1,1.4,0.37,3.32,3.1,98,OTHER VEGETABLES
+D017,Brinjal-8 (Solanum melongena),3,1.82±0.16,0.33±0.04,4.01±0.48,3.75±0.18,117±2,OTHER VEGETABLES
+D018,Brinjal-9 (Solanum melongena) ,2,1.47,0.35,4,3.52,106,OTHER VEGETABLES
+D019,Brinjal-10 (Solanum melongena),2,1.68,0.25,3.9,4.08,116,OTHER VEGETABLES
+D020,Brinjal-11 (Solanum melongena),6,1.43±0.20,0.31±0.04,4.12±0.52,3.53±1.01,105±16,OTHER VEGETABLES
+D021,Brinjal-12 (Solanum melongena),2,1.6,0.27,3.89,2.73,93,OTHER VEGETABLES
+D022,Brinjal-13 (Solanum melongena),1,1.49,0.31,3.92,4.51,124,OTHER VEGETABLES
+D023,Brinjal-14 (Solanum melongena),3,1.56±0.19,0.35±0.03,3.87±0.59,3.27±0.39,106±9,OTHER VEGETABLES
+D024,Brinjal-15 (Solanum melongena),4,1.58±0.27,0.29±0.03,3.99±0.79,3.96±0.19,114±6,OTHER VEGETABLES
+D025,Brinjal-16 (Solanum melongena),1,1.26,0.34,3.74,3.46,103,OTHER VEGETABLES
+D026,Brinjal-17 (Solanum melongena),1,1.18,0.36,3.94,2.89,91,OTHER VEGETABLES
+D027,Brinjal-18 (Solanum melongena),3,1.47±0.15,0.33±0.06,4.38±0.25,4.10±0.88,116±18,OTHER VEGETABLES
+D028,Brinjal-19 (Solanum melongena),3,1.26±0.06,0.31±0.02,3.97±0.18,3.39±0.36,100±8,OTHER VEGETABLES
+D029,Brinjal-20 (Solanum melongena),5,1.44±0.21,0.34±0.04,3.73±0.21,3.15±0.60,99±10,OTHER VEGETABLES
+D030,Brinjal-21 (Solanum melongena),2,1.36,0.35,3.85,3.93,113,OTHER VEGETABLES
+D031,Brinjal - all varieties (Solanum melongena),6,1.48±0.22,0.32±0.04,3.98±0.49,3.52±0.80,106±15,OTHER VEGETABLES
+D032,Broad beans (Vicia faba),3,3.85±0.13,0.15±0.01,8.63±0.15,2.11±0.11,123±4,OTHER VEGETABLES
+D033,"Capsicum, green (Capsicum annuum)",6,1.11±0.11,0.34±0.03,2.06±0.22,1.84±0.32,68±6,OTHER VEGETABLES
+D034,"Capsicum, red (Capsicum annuum)",4,1.47±0.36,0.47±0.05,2.19±0.17,2.14±1.06,83±24,OTHER VEGETABLES
+D035,"Capsicum, yellow (Capsicum annuum)",4,1.35±0.35,0.41±0.02,2.19±0.13,1.95±0.16,78±4,OTHER VEGETABLES
+D036,Cauliflower (Brassica oleracea var. botrytis),6,2.15±0.15,0.44±0.03,3.71±0.27,2.03±0.22,96±5,OTHER VEGETABLES
+D037,Celery stalk (Apium graveolens),3,0.98±0.13,0.24±0.04,2.09±0.13,2.33±0.23,69±6,OTHER VEGETABLES
+D038,Cho-cho-marrow (Sechium edule),4,0.66±0.07,0.15±0.03,1.55±0.08,3.47±0.18,79±2,OTHER VEGETABLES
+D039,Cluster beans (Cyamopsis tetragonoloba),6,3.55±0.38,0.37±0.04,4.83±0.54,4.91±0.58,168±15,OTHER VEGETABLES
+D040,"Colocasia, stem, black (Colocasia esculenta)",1,0.76,0.34,3.01,3.83,100,OTHER VEGETABLES
+D041,"Colocasia, stem, green (Colocasia esculenta)",5,0.91±0.16,0.22±0.02,2.33±0.06,2.86±0.34,81±7,OTHER VEGETABLES
+D042,"Corn, baby (Zea mays)",6,2.69±0.23,1.33±0.23,6.09±0.50,11.66±1.40,306±18,OTHER VEGETABLES
+D043,"Cucumber, green, elongate (Cucumis sativus)",6,0.71±0.11,0.16±0.04,2.14±0.42,3.48±0.47,82±8,OTHER VEGETABLES
+D044,"Cucumber, green, short (Cucumis sativus)",6,0.83±0.14,0.18±0.05,2.13±0.26,2.82±0.49,73±10,OTHER VEGETABLES
+D045,"Cucumber, orange, round (Cucumis sativus)",2,0.98,0.24,2.46,3.01,82,OTHER VEGETABLES
+D046,Drumstick (Moringa oleifera),6,2.62±0.22,0.12±0.01,6.83±0.22,3.76±0.70,123±11,OTHER VEGETABLES
+D047,"Field beans, tender, broad (Vicia faba)",2,3.06,0.64,5.64,2.75,129,OTHER VEGETABLES
+D048,"Field beans, tender, lean (Vicia faba)",6,3.71±0.62,0.60±0.02,6.19±0.47,2.85±0.32,140±15,OTHER VEGETABLES
+D049,"French beans, country (Phaseolus vulgaris)",5,2.49±0.21,0.26±0.02,4.38±0.41,2.68±0.48,102±8,OTHER VEGETABLES
+D050,"French beans, hybrid  (Phaseolus vulgaris)",2,2.12,0.19,4.18,2.63,93,OTHER VEGETABLES
+D051,"Jack fruit, raw (Artocarpus heterophyllus)",5,1.98±0.16,0.35±0.05,7.69±0.20,3.48±0.70,110±15,OTHER VEGETABLES
+D052,"Jack fruit, seed, mature (Artocarpus heterophyllus)",5,5.79±0.14,0.44±0.03,8.63±0.09,11.81±0.74,322±10,OTHER VEGETABLES
+D053,Knol - Khol (Brassica oleracea),6,1.58±0.24,0.35±0.02,2.75±0.07,1.39±0.21,67±4,OTHER VEGETABLES
+D054,"Kovai, big (Coccinia cordifolia)",6,1.39±0.23,0.24±0.08,3.00±0.26,2.01±0.54,73±10,OTHER VEGETABLES
+D055,"Kovai, small (Coccinia cordifolia)",1,1.22,0.24,3.25,2.41,80,OTHER VEGETABLES
+D056,Ladies finger (Abelmoschus esculentus),6,2.08±0.37,0.22±0.03,4.08±0.20,3.62±0.26,115±5,OTHER VEGETABLES
+D057,"Mango, green, raw (Mangifera indica)",6,0.69±0.09,0.08±0.02,3.01±0.19,10.59±0.37,205±8,OTHER VEGETABLES
+D058,"Onion, stalk (Allium cepa)",6,2.07±0.21,0.26±0.02,5.21±0.10,2.99±0.50,107±12,OTHER VEGETABLES
+D059,"Papaya, raw (Carica papaya)",6,0.50±0.06,0.23±0.03,2.28±0.05,4.40±0.37,100±7,OTHER VEGETABLES
+D060,Parwar (Trichosanthes dioica),6,1.40±0.10,0.30±0.04,2.61±0.07,3.54±0.32,101±5,OTHER VEGETABLES
+D061,"Peas, fresh (Pisum sativum)",6,7.25±1.03,0.13±0.02,6.32±0.26,11.88±0.67,340±19,OTHER VEGETABLES
+D062,"Plantain, flower (Musa x paradisiaca)",6,1.47±0.12,0.63±0.02,5.25±0.39,2.15±0.43,89±8,OTHER VEGETABLES
+D063,"Plantain, green (Musa x paradisiaca)",6,1.18±0.20,0.23±0.02,3.60±0.27,17.58±0.35,334±6,OTHER VEGETABLES
+D064,"Plantain, stem (Musa x paradisiaca)",6,0.35±0.05,0.16±0.07,2.12±0.04,8.64±0.93,165±15,OTHER VEGETABLES
+D065,"Pumpkin, green, cylindrical (Cucurbita maxima)",1,0.87,0.18,2.53,4.22,103,OTHER VEGETABLES
+D066,"Pumpkin, orange,  round (Cucurbita maxima)",6,0.84±0.21,0.16±0.02,2.56±0.11,4.00±0.64,97±8,OTHER VEGETABLES
+D067,"Red gram, tender, fresh (Cajanus cajan)",1,8.09,0.92,5.9,19.46,520,OTHER VEGETABLES
+D068,Ridge gourd (Luffa acutangula),6,0.91±0.08,0.14±0.01,1.81±0.13,1.72±0.46,55±7,OTHER VEGETABLES
+D069,"Ridge gourd, smooth skin (Luffa acutangula)",3,0.98±0.13,0.13±0.01,1.85±0.28,2.24±0.41,64±8,OTHER VEGETABLES
+D070,"Snake gourd, long, pale green (Trichosanthes anguina)",6,0.98±0.33,0.25±0.01,2.27±0.11,1.27±0.15,52±4,OTHER VEGETABLES
+D071,"Snake gourd, long, dark green (Trichosanthes anguina)",2,0.89,0.25,2.27,1.23,50,OTHER VEGETABLES
+D072,"Snake gourd, short (Trichosanthes anguina)",1,0.54,0.26,2.29,2.15,61,OTHER VEGETABLES
+D073,"Tinda, tender (Praecitrullus fistulosus)",6,1.02±0.04,0.17±0.01,2.00±0.04,1.90±0.37,58±6,OTHER VEGETABLES
+D074,"Tomato, green (Solanum lycopersicum)",6,1.12±0.08,0.27±0.07,1.62±0.08,3.18±0.40,87±7,OTHER VEGETABLES
+D075,"Tomato, ripe, hybrid ((Solanum lycopersicum)",6,0.76±0.03,0.25±0.02,1.58±0.16,3.20±0.30,79±6,OTHER VEGETABLES
+D076,"Tomato, ripe, local (Lycopersicon esculentum)",6,0.90±0.07,0.47±0.06,1.77±0.04,2.71±0.08,82±4,OTHER VEGETABLES
+D077,"Zucchini, green (Cucurbita pepo)",2,1.1,0.51,2.3,2.33,84,OTHER VEGETABLES
+D078,"Zucchini, yellow  (Cucurbita pepo)",2,1.31,0.44,1.84,2.2,79,OTHER VEGETABLES

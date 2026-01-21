@@ -1,0 +1,249 @@
+{
+  "meals": {
+    "breakfast": {
+      "meal_name": "breakfast",
+      "main_dish_type": "cereal_based_breakfast",
+      "meal_frame_id": "breakfast_cereal_based",
+      "is_dynamic_frame": false,
+      "recipes": [
+        {
+          "recipe_id": "recipe_oats_cooked_2ex",
+          "recipe_name": "Oats, cooked",
+          "base_food": {
+            "food_id": "oats_cooked",
+            "display_name": "Oats, cooked",
+            "exchange_category": "cereal"
+          },
+          "slot_role": "cereal",
+          "exchanges": 2,
+          "portion_g": 120.0,
+          "nutrition": {
+            "calories": 466.8,
+            "protein_g": 20.4,
+            "carbs_g": 79.2,
+            "fat_g": 8.4
+          },
+          "cooking_rules": {
+            "cooking_method": "standard",
+            "oil_quantity_g": 5.0,
+            "spice_level": "moderate",
+            "preparation_notes": []
+          },
+          "instructions": [
+            "Take 120.0g of Oats, cooked",
+            "Prepare according to standard method",
+            "Follow cooking rules for your condition"
+          ]
+        },
+        {
+          "recipe_id": "recipe_milk_toned_1ex",
+          "recipe_name": "Milk, toned",
+          "base_food": {
+            "food_id": "milk_toned",
+            "display_name": "Milk, toned",
+            "exchange_category": "milk"
+          },
+          "slot_role": "milk",
+          "exchanges": 1,
+          "portion_g": 250.0,
+          "nutrition": {
+            "calories": 150.0,
+            "protein_g": 8.0,
+            "carbs_g": 12.5,
+            "fat_g": 5.0
+          },
+          "cooking_rules": {
+            "cooking_method": "standard",
+            "oil_quantity_g": 5.0,
+            "spice_level": "moderate",
+            "preparation_notes": []
+          },
+          "instructions": [
+            "Take 250.0g of Milk, toned",
+            "Prepare according to standard method",
+            "Follow cooking rules for your condition"
+          ]
+        },
+        {
+          "recipe_id": "recipe_almonds_raw_1ex",
+          "recipe_name": "Almonds, raw",
+          "base_food": {
+            "food_id": "almonds_raw",
+            "display_name": "Almonds, raw",
+            "exchange_category": "nuts_seeds"
+          },
+          "slot_role": "nuts",
+          "exchanges": 1,
+          "portion_g": 15.0,
+          "nutrition": {
+            "calories": 86.85,
+            "protein_g": 3.17,
+            "carbs_g": 3.24,
+            "fat_g": 7.49
+          },
+          "cooking_rules": {
+            "cooking_method": "standard",
+            "oil_quantity_g": 5.0,
+            "spice_level": "moderate",
+            "preparation_notes": []
+          },
+          "instructions": [
+            "Take 15.0g of Almonds, raw",
+            "Prepare according to standard method",
+            "Follow cooking rules for your condition"
+          ]
+        }
+      ],
+      "total_nutrition": {
+        "calories": 703.65,
+        "protein_g": 31.57,
+        "carbs_g": 94.94,
+        "fat_g": 20.89
+      },
+      "validation": {
+        "is_valid": true,
+        "total_nutrition": {
+          "calories": 703.65,
+          "protein_g": 31.57,
+          "carbs_g": 94.94,
+          "fat_g": 20.89
+        },
+        "deviations": {},
+        "warnings": []
+      },
+      "exchanges_used": {
+        "cereal": 2,
+        "milk": 1,
+        "nuts_seeds": 1
+      }
+    },
+    "lunch": {
+      "meal_name": "lunch",
+      "main_dish_type": "roti_meal",
+      "meal_frame_id": "lunch_roti_based",
+      "is_dynamic_frame": false,
+      "recipes": [
+        {
+          "recipe_id": "recipe_wheat_flour_2ex",
+          "recipe_name": "Roti",
+          "base_food": {
+            "food_id": "wheat_flour",
+            "display_name": "Wheat flour, whole",
+            "exchange_category": "cereal"
+          },
+          "slot_role": "roti",
+          "exchanges": 2,
+          "portion_g": 60.0,
+          "nutrition": {
+            "calories": 216.0,
+            "protein_g": 7.2,
+            "carbs_g": 45.6,
+            "fat_g": 1.62
+          },
+          "cooking_rules": {
+            "cooking_method": "flatbread",
+            "oil_quantity_g": 5.0,
+            "spice_level": "moderate",
+            "preparation_notes": []
+          },
+          "instructions": [
+            "Take 60.0g of Wheat flour, whole",
+            "Add water gradually and knead into soft dough",
+            "Divide into equal portions",
+            "Roll each portion into flat circles",
+            "Cook on tawa/griddle until golden brown spots appear",
+            "Flip and cook the other side"
+          ]
+        },
+        {
+          "recipe_id": "recipe_dal_tur_1ex",
+          "recipe_name": "Dal",
+          "base_food": {
+            "food_id": "dal_tur",
+            "display_name": "Dal, tur (pigeon pea)",
+            "exchange_category": "pulse"
+          },
+          "slot_role": "dal",
+          "exchanges": 1,
+          "portion_g": 65.0,
+          "nutrition": {
+            "calories": 75.4,
+            "protein_g": 5.85,
+            "carbs_g": 13.0,
+            "fat_g": 0.26
+          },
+          "cooking_rules": {
+            "cooking_method": "standard",
+            "oil_quantity_g": 5.0,
+            "spice_level": "moderate",
+            "preparation_notes": []
+          },
+          "instructions": [
+            "Take 65.0g of Dal, tur (pigeon pea)",
+            "Prepare according to standard method",
+            "Follow cooking rules for your condition"
+          ]
+        },
+        {
+          "recipe_id": "recipe_spinach_1ex",
+          "recipe_name": "Sabzi",
+          "base_food": {
+            "food_id": "spinach_cooked",
+            "display_name": "Spinach, cooked",
+            "exchange_category": "vegetable_non_starchy"
+          },
+          "slot_role": "sabzi",
+          "exchanges": 1,
+          "portion_g": 100.0,
+          "nutrition": {
+            "calories": 23.0,
+            "protein_g": 2.9,
+            "carbs_g": 3.6,
+            "fat_g": 0.4
+          },
+          "cooking_rules": {
+            "cooking_method": "steamed",
+            "oil_quantity_g": 3.0,
+            "spice_level": "low",
+            "preparation_notes": ["Low sodium preparation"]
+          },
+          "instructions": [
+            "Take 100.0g of Spinach, cooked",
+            "Wash and prepare",
+            "Steam until tender",
+            "Season lightly"
+          ]
+        }
+      ],
+      "total_nutrition": {
+        "calories": 314.4,
+        "protein_g": 15.95,
+        "carbs_g": 62.2,
+        "fat_g": 2.28
+      },
+      "validation": {
+        "is_valid": true,
+        "total_nutrition": {
+          "calories": 314.4,
+          "protein_g": 15.95,
+          "carbs_g": 62.2,
+          "fat_g": 2.28
+        },
+        "deviations": {},
+        "warnings": []
+      },
+      "exchanges_used": {
+        "cereal": 2,
+        "pulse": 1,
+        "vegetable_non_starchy": 1
+      }
+    }
+  },
+  "total_daily_nutrition": {
+    "calories": 1018.05,
+    "protein_g": 47.52,
+    "carbs_g": 157.14,
+    "fat_g": 23.17
+  }
+}
+

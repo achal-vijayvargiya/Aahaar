@@ -94,6 +94,12 @@ web-build/
 backend/kb_data/faiss/*.index
 backend/kb_data/faiss/*.pkl
 
+# Backend resources (large docs / binaries)
+backend/Resource/
+
+# Markdown docs (ignore all .md files)
+*.md
+
 # Temporary files
 tmp/
 temp/
@@ -116,5 +122,6 @@ coverage/
 # Misc
 *.local
 .cache/
+
 
 

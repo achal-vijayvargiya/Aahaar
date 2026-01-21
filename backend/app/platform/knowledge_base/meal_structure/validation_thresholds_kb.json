@@ -1,0 +1,104 @@
+[
+  {
+    "validation_rule_id": "calorie_tolerance",
+    "display_name": "Calorie Total Tolerance",
+    "description": "Acceptable tolerance for total calorie allocation vs target",
+    "tolerance_type": "percentage",
+    "tolerance_value": 5.0,
+    "direction": "both",
+    "unit": "%",
+    "note": "Total calories must be within ±5% of target",
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Meal Planning Accuracy (2018)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "validation_rule_id": "protein_sufficiency",
+    "display_name": "Protein Sufficiency Threshold",
+    "description": "Minimum protein sufficiency requirement",
+    "min_sufficiency_percent": 95.0,
+    "unit": "%",
+    "note": "Total protein must be at least 95% of target",
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Protein Distribution Across Meals (2016)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "validation_rule_id": "dinner_timing",
+    "display_name": "Dinner Before Sleep Timing",
+    "description": "Minimum time between dinner and sleep",
+    "min_hours_before_sleep": 3.0,
+    "unit": "hours",
+    "note": "Dinner should be at least 3 hours before sleep for optimal digestion and sleep quality",
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Meal Timing and Sleep Quality (2019)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "validation_rule_id": "meal_timing_overlap",
+    "display_name": "Meal Timing Overlap Detection",
+    "description": "Validation for overlapping meal timing windows",
+    "allow_overlap": false,
+    "min_gap_minutes": 30,
+    "unit": "minutes",
+    "note": "Meal timing windows should not overlap, minimum 30 minutes gap",
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Meal Timing and Circadian Rhythms (2018)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "validation_rule_id": "protein_per_meal_minimum",
+    "display_name": "Minimum Protein Per Meal",
+    "description": "Minimum protein per meal for optimal Muscle Protein Synthesis (MPS)",
+    "min_protein_g": 20.0,
+    "unit": "g",
+    "note": "Each meal should contain at least 20-30g protein for optimal MPS. Snacks may be exempt or use lower threshold (15g)",
+    "source": "International Society of Sports Nutrition",
+    "source_reference": "ISSN Position Stand: Protein and Exercise (2017)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "validation_rule_id": "max_calories_per_meal",
+    "display_name": "Maximum Calories Per Meal",
+    "description": "Maximum recommended calories per meal to prevent digestive issues",
+    "max_calories_percent": 45.0,
+    "max_calories_absolute": 1000.0,
+    "unit": "% or kcal",
+    "note": "No single meal should exceed 45% of daily calories or 1000 kcal (whichever is lower) to maintain optimal digestion",
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Meal Size and Digestive Health (2019)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "validation_rule_id": "min_calories_per_meal",
+    "display_name": "Minimum Calories Per Meal",
+    "description": "Minimum calories per meal to ensure satisfaction and adequate nutrient provision",
+    "min_calories_absolute": 200.0,
+    "unit": "kcal",
+    "note": "Each meal should contain at least 200 kcal to be substantial enough for satiety and nutrient adequacy. Snacks may use lower threshold (150 kcal)",
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Meal Planning and Satiety (2018)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "validation_rule_id": "meal_timing_window_duration",
+    "display_name": "Meal Timing Window Duration Limits",
+    "description": "Minimum and maximum duration for meal timing windows",
+    "min_duration_minutes": 30,
+    "max_duration_hours": 2.0,
+    "unit": "minutes/hours",
+    "note": "Meal timing windows should be between 30 minutes and 2 hours to be practical and reasonable",
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Meal Timing and Circadian Rhythms (2018)",
+    "version": "1.0",
+    "status": "active"
+  }
+]
+

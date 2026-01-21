@@ -1,0 +1,207 @@
+[
+  {
+    "rule_id": "protein_first_allocation",
+    "display_name": "Protein-First Allocation",
+    "description": "Allocate protein exchanges first before calorie fulfillment",
+    "allocation_order": [
+      {
+        "step": 1,
+        "exchange_category": "pulse",
+        "priority": "primary",
+        "allocation_logic": "remaining_protein / pulse_protein_per_exchange",
+        "note": "Primary protein source for Indian vegetarian diet"
+      },
+      {
+        "step": 2,
+        "exchange_category": "milk",
+        "priority": "secondary",
+        "allocation_logic": "remaining_protein / milk_protein_per_exchange",
+        "min_protein_threshold_g": 5.0,
+        "max_exchanges": 2,
+        "note": "Allocate milk if protein still needed, limit to 1-2 exchanges"
+      },
+      {
+        "step": 3,
+        "exchange_category": "paneer",
+        "priority": "tertiary",
+        "allocation_logic": "remaining_protein / paneer_protein_per_exchange",
+        "min_protein_threshold_g": 3.0,
+        "max_exchanges": 1,
+        "applies_to_meals": ["lunch"],
+        "note": "Paneer for lunch meals, limit to 1 exchange"
+      },
+      {
+        "step": 4,
+        "exchange_category": "egg_whites",
+        "priority": "tertiary",
+        "allocation_logic": "remaining_protein / egg_whites_protein_per_exchange",
+        "min_protein_threshold_g": 5.0,
+        "max_exchanges": 2,
+        "applies_to_meals": ["dinner"],
+        "note": "Egg whites for dinner, limit to 2 exchanges"
+      }
+    ],
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Protein Distribution Across Meals (2016)",
+    "version": "1.0",
+    "status": "active",
+    "is_default": true
+  },
+  {
+    "rule_id": "mandatory_daily_minimums",
+    "display_name": "Mandatory Daily Minimums",
+    "description": "Allocate mandatory minimum exchanges for vegetables and fruits per day",
+    "allocation_order": [
+      {
+        "step": 1,
+        "exchange_category": "vegetable_non_starchy",
+        "allocation_logic": "fixed_minimum",
+        "min_exchanges": 4.0,
+        "priority": "mandatory",
+        "note": "Minimum 4 non-starchy vegetable exchanges per day for fiber and micronutrients"
+      },
+      {
+        "step": 2,
+        "exchange_category": "fruit",
+        "allocation_logic": "fixed_minimum",
+        "min_exchanges": 1.0,
+        "priority": "mandatory",
+        "note": "Minimum 1 fruit exchange per day for micronutrients and fiber"
+      }
+    ],
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Daily Minimum Requirements (2018)",
+    "version": "1.0",
+    "status": "active",
+    "is_default": true
+  },
+  {
+    "rule_id": "calorie_fulfillment",
+    "display_name": "Calorie Fulfillment",
+    "description": "Allocate exchanges to meet remaining calorie, carbs, and fat targets",
+    "allocation_order": [
+      {
+        "step": 1,
+        "exchange_category": "cereal",
+        "allocation_logic": "remaining_calories / cereal_calories_per_exchange",
+        "consider_carbs": true,
+        "note": "Primary calorie and carb source"
+      },
+      {
+        "step": 2,
+        "exchange_category": "fat",
+        "allocation_logic": "remaining_calories / fat_calories_per_exchange",
+        "consider_fat": true,
+        "min_calorie_threshold": 20.0,
+        "max_exchanges": 3,
+        "note": "Add fat exchanges if calories/fat still short (min 20 kcal remaining)"
+      },
+      {
+        "step": 3,
+        "exchange_category": "nuts_seeds",
+        "allocation_logic": "remaining_calories / nuts_seeds_calories_per_exchange",
+        "consider_fat": true,
+        "min_calorie_threshold": 50.0,
+        "max_exchanges": 1,
+        "note": "Nuts/seeds for additional fat and calories if needed"
+      }
+    ],
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Meal Planning Accuracy (2018)",
+    "version": "1.0",
+    "status": "active",
+    "is_default": true
+  },
+  {
+    "rule_id": "vegetable_floor_rule",
+    "display_name": "Vegetable Floor Rule",
+    "description": "Minimum vegetable exchanges per meal type",
+    "meal_type_requirements": {
+      "lunch": {
+        "min_exchanges": 2,
+        "exchange_category": "vegetable_non_starchy",
+        "note": "Minimum 2 non-starchy vegetable exchanges for lunch"
+      },
+      "dinner": {
+        "min_exchanges": 2,
+        "exchange_category": "vegetable_non_starchy",
+        "note": "Minimum 2 non-starchy vegetable exchanges for dinner"
+      },
+      "breakfast": {
+        "min_exchanges": 1,
+        "exchange_category": "vegetable_non_starchy",
+        "note": "Optional 1 vegetable exchange for breakfast"
+      },
+      "snack": {
+        "min_exchanges": 0,
+        "exchange_category": "vegetable_non_starchy",
+        "note": "No minimum for snacks"
+      }
+    },
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Vegetable Intake Recommendations (2017)",
+    "version": "1.0",
+    "status": "active",
+    "is_default": true
+  },
+  {
+    "rule_id": "supplementary_foods_allocation",
+    "display_name": "Supplementary Foods Allocation",
+    "description": "Allocate nuts, seeds, fruits, jaggery based on meal type and remaining calories",
+    "allocation_order": [
+      {
+        "step": 1,
+        "exchange_category": "nuts_seeds",
+        "allocation_logic": "meal_specific",
+        "applies_to_meals": ["early_morning", "mid_morning", "snack"],
+        "max_exchanges": 0.5,
+        "min_calorie_threshold": 50.0,
+        "note": "Nuts/seeds for morning snacks, 0.5 exchange per meal"
+      },
+      {
+        "step": 2,
+        "exchange_category": "fruit",
+        "allocation_logic": "meal_specific",
+        "applies_to_meals": ["mid_morning", "snack"],
+        "max_exchanges": 1,
+        "min_calorie_threshold": 50.0,
+        "note": "Fruit for mid-morning or snacks, 1 exchange max"
+      },
+      {
+        "step": 3,
+        "exchange_category": "jaggery",
+        "allocation_logic": "meal_specific",
+        "applies_to_meals": ["bedtime"],
+        "max_exchanges": 0.25,
+        "min_calorie_threshold": 20.0,
+        "note": "Jaggery for bedtime, 0.25 exchange"
+      }
+    ],
+    "source": "MSc Practicals Case Study",
+    "source_reference": "Food Exchange List - Supplementary Foods",
+    "version": "1.0",
+    "status": "active",
+    "is_default": false
+  },
+  {
+    "rule_id": "vegetable_b_allocation",
+    "display_name": "Vegetable B Allocation",
+    "description": "Allocate starchy vegetables (Vegetable B) for snacks and dinner",
+    "allocation_order": [
+      {
+        "step": 1,
+        "exchange_category": "vegetable_b",
+        "allocation_logic": "meal_specific",
+        "applies_to_meals": ["snack", "dinner"],
+        "max_exchanges": 0.5,
+        "note": "Vegetable B (starchy) for snacks and dinner, 0.5 exchange per meal"
+      }
+    ],
+    "source": "MSc Practicals Case Study",
+    "source_reference": "Food Exchange List - Vegetable B",
+    "version": "1.0",
+    "status": "active",
+    "is_default": false
+  }
+]
+

@@ -1,0 +1,944 @@
+{
+  "T2D Weight Loss": {
+    "client_id": "4c8f1aba-ba8d-4b33-aa10-2b4cf4066036",
+    "assessment_id": "4ad2e318-bc3a-4428-b670-5d76f82bd127",
+    "plan_id": "d76d7d6e-e799-4b8f-b06d-ea9849b31ba3",
+    "meal_plan": {
+      "plan_overview": {
+        "duration_days": 7,
+        "start_date": "2026-01-16T20:26:24.006140",
+        "meals_per_day": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "meal_timings": {
+          "breakfast": {
+            "recommended_time": "07:30",
+            "time_range": "07:30 - 08:30"
+          },
+          "lunch": {
+            "recommended_time": "12:30",
+            "time_range": "12:30 - 13:30"
+          },
+          "dinner": {
+            "recommended_time": "18:00",
+            "time_range": "18:00 - 19:00"
+          }
+        }
+      },
+      "daily_meal_plans": {
+        "day_1": {
+          "day": 1,
+          "date": "2026-01-16",
+          "day_name": "Friday",
+          "meals": {
+            "breakfast": {
+              "meal_name": "breakfast",
+              "recommended_time": "07:30",
+              "recipes": [
+                {
+                  "recipe_name": "Dal",
+                  "ingredients": [
+                    {
+                      "name": "Soybean, brown (Glycine max)",
+                      "amount": "26.2g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 26.2,
+                    "exchanges": 1
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 26.2g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                },
+                {
+                  "recipe_name": "Star fruit (Averrhoa carambola)",
+                  "ingredients": [
+                    {
+                      "name": "Star fruit (Averrhoa carambola)",
+                      "amount": "228.2g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 228.2,
+                    "exchanges": 1
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 228.2g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                }
+              ]
+            },
+            "lunch": {
+              "meal_name": "lunch",
+              "recommended_time": "12:30",
+              "recipes": [
+                {
+                  "recipe_name": "Dal",
+                  "ingredients": [
+                    {
+                      "name": "Soybean, brown (Glycine max)",
+                      "amount": "52.4g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 52.4,
+                    "exchanges": 2
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 52.4g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                }
+              ]
+            },
+            "dinner": {
+              "meal_name": "dinner",
+              "recommended_time": "18:00",
+              "recipes": [
+                {
+                  "recipe_name": "Dal",
+                  "ingredients": [
+                    {
+                      "name": "Soybean, brown (Glycine max)",
+                      "amount": "26.2g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 26.2,
+                    "exchanges": 1
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 26.2g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                },
+                {
+                  "recipe_name": "Star fruit (Averrhoa carambola)",
+                  "ingredients": [
+                    {
+                      "name": "Star fruit (Averrhoa carambola)",
+                      "amount": "228.2g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 228.2,
+                    "exchanges": 1
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 228.2g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "day_2": {
+          "day": 2,
+          "date": "2026-01-17",
+          "day_name": "Saturday",
+          "meals": {
+            "breakfast": {
+              "meal_name": "breakfast",
+              "recommended_time": "07:30",
+              "recipes": [
+                {
+                  "recipe_name": "Dal",
+                  "ingredients": [
+                    {
+                      "name": "Ricebean (Vigna umbellata )",
+                      "amount": "33.1g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 33.1,
+                    "exchanges": 1
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 33.1g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                },
+                {
+                  "recipe_name": "Dates, dry, dark brown (Phoenix dactylifera)",
+                  "ingredients": [
+                    {
+                      "name": "Dates, dry, dark brown (Phoenix dactylifera)",
+                      "amount": "19.3g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 19.3,
+                    "exchanges": 1
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 19.3g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                }
+              ]
+            },
+            "lunch": {
+              "meal_name": "lunch",
+              "recommended_time": "12:30",
+              "recipes": [
+                {
+                  "recipe_name": "Dal",
+                  "ingredients": [
+                    {
+                      "name": "Ricebean (Vigna umbellata )",
+                      "amount": "66.2g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 66.2,
+                    "exchanges": 2
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 66.2g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                }
+              ]
+            },
+            "dinner": {
+              "meal_name": "dinner",
+              "recommended_time": "18:00",
+              "recipes": [
+                {
+                  "recipe_name": "Dal",
+                  "ingredients": [
+                    {
+                      "name": "Ricebean (Vigna umbellata )",
+                      "amount": "33.1g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 33.1,
+                    "exchanges": 1
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 33.1g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                },
+                {
+                  "recipe_name": "Dates, dry, dark brown (Phoenix dactylifera)",
+                  "ingredients": [
+                    {
+                      "name": "Dates, dry, dark brown (Phoenix dactylifera)",
+                      "amount": "19.3g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 19.3,
+                    "exchanges": 1
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 19.3g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "day_3": {
+          "day": 3,
+          "date": "2026-01-18",
+          "day_name": "Sunday",
+          "meals": {
+            "breakfast": {
+              "meal_name": "breakfast",
+              "recommended_time": "07:30",
+              "recipes": [
+                {
+                  "recipe_name": "Dal",
+                  "ingredients": [
+                    {
+                      "name": "Field bean, brown (Phaseolus vulgaris)",
+                      "amount": "35.3g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 35.3,
+                    "exchanges": 1
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 35.3g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                },
+                {
+                  "recipe_name": "Karonda fruit (Carissa carandas)",
+                  "ingredients": [
+                    {
+                      "name": "Karonda fruit (Carissa carandas)",
+                      "amount": "178.0g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 178.0,
+                    "exchanges": 1
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 178.0g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                }
+              ]
+            },
+            "lunch": {
+              "meal_name": "lunch",
+              "recommended_time": "12:30",
+              "recipes": [
+                {
+                  "recipe_name": "Dal",
+                  "ingredients": [
+                    {
+                      "name": "Field bean, brown (Phaseolus vulgaris)",
+                      "amount": "70.7g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 70.7,
+                    "exchanges": 2
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 70.7g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                }
+              ]
+            },
+            "dinner": {
+              "meal_name": "dinner",
+              "recommended_time": "18:00",
+              "recipes": [
+                {
+                  "recipe_name": "Dal",
+                  "ingredients": [
+                    {
+                      "name": "Field bean, brown (Phaseolus vulgaris)",
+                      "amount": "35.3g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 35.3,
+                    "exchanges": 1
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 35.3g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                },
+                {
+                  "recipe_name": "Karonda fruit (Carissa carandas)",
+                  "ingredients": [
+                    {
+                      "name": "Karonda fruit (Carissa carandas)",
+                      "amount": "178.0g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 178.0,
+                    "exchanges": 1
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 178.0g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "day_4": {
+          "day": 4,
+          "date": "2026-01-19",
+          "day_name": "Monday",
+          "meals": {
+            "breakfast": {
+              "meal_name": "breakfast",
+              "recommended_time": "07:30",
+              "recipes": [
+                {
+                  "recipe_name": "Dal",
+                  "ingredients": [
+                    {
+                      "name": "Black gram, whole (Phaseolus mungo)",
+                      "amount": "34.3g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 34.3,
+                    "exchanges": 1
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 34.3g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                },
+                {
+                  "recipe_name": "Bael fruit (Aegle marmelos)",
+                  "ingredients": [
+                    {
+                      "name": "Bael fruit (Aegle marmelos)",
+                      "amount": "44.1g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 44.1,
+                    "exchanges": 1
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 44.1g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                }
+              ]
+            },
+            "lunch": {
+              "meal_name": "lunch",
+              "recommended_time": "12:30",
+              "recipes": [
+                {
+                  "recipe_name": "Dal",
+                  "ingredients": [
+                    {
+                      "name": "Black gram, whole (Phaseolus mungo)",
+                      "amount": "68.6g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 68.6,
+                    "exchanges": 2
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 68.6g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                }
+              ]
+            },
+            "dinner": {
+              "meal_name": "dinner",
+              "recommended_time": "18:00",
+              "recipes": [
+                {
+                  "recipe_name": "Dal",
+                  "ingredients": [
+                    {
+                      "name": "Black gram, whole (Phaseolus mungo)",
+                      "amount": "34.3g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 34.3,
+                    "exchanges": 1
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 34.3g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                },
+                {
+                  "recipe_name": "Bael fruit (Aegle marmelos)",
+                  "ingredients": [
+                    {
+                      "name": "Bael fruit (Aegle marmelos)",
+                      "amount": "44.1g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 44.1,
+                    "exchanges": 1
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 44.1g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "day_5": {
+          "day": 5,
+          "date": "2026-01-20",
+          "day_name": "Tuesday",
+          "meals": {
+            "breakfast": {
+              "meal_name": "breakfast",
+              "recommended_time": "07:30",
+              "recipes": [
+                {
+                  "recipe_name": "Dal",
+                  "ingredients": [
+                    {
+                      "name": "Red gram, dal (Cajanus cajan)",
+                      "amount": "30.2g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 30.2,
+                    "exchanges": 1
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 30.2g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                },
+                {
+                  "recipe_name": "Water melon, pale green (Citrullus vulgaris)",
+                  "ingredients": [
+                    {
+                      "name": "Water melon, pale green (Citrullus vulgaris)",
+                      "amount": "358.6g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 358.6,
+                    "exchanges": 1
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 358.6g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                }
+              ]
+            },
+            "lunch": {
+              "meal_name": "lunch",
+              "recommended_time": "12:30",
+              "recipes": [
+                {
+                  "recipe_name": "Dal",
+                  "ingredients": [
+                    {
+                      "name": "Red gram, dal (Cajanus cajan)",
+                      "amount": "60.5g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 60.5,
+                    "exchanges": 2
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 60.5g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                }
+              ]
+            },
+            "dinner": {
+              "meal_name": "dinner",
+              "recommended_time": "18:00",
+              "recipes": [
+                {
+                  "recipe_name": "Dal",
+                  "ingredients": [
+                    {
+                      "name": "Red gram, dal (Cajanus cajan)",
+                      "amount": "30.2g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 30.2,
+                    "exchanges": 1
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 30.2g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                },
+                {
+                  "recipe_name": "Water melon, pale green (Citrullus vulgaris)",
+                  "ingredients": [
+                    {
+                      "name": "Water melon, pale green (Citrullus vulgaris)",
+                      "amount": "358.6g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 358.6,
+                    "exchanges": 1
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 358.6g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "day_6": {
+          "day": 6,
+          "date": "2026-01-21",
+          "day_name": "Wednesday",
+          "meals": {
+            "breakfast": {
+              "meal_name": "breakfast",
+              "recommended_time": "07:30",
+              "recipes": [
+                {
+                  "recipe_name": "Dal",
+                  "ingredients": [
+                    {
+                      "name": "Lentil whole, brown (Lens culinaris)",
+                      "amount": "33.4g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 33.4,
+                    "exchanges": 1
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 33.4g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                },
+                {
+                  "recipe_name": "Wood Apple (Limonia acidissima)",
+                  "ingredients": [
+                    {
+                      "name": "Wood Apple (Limonia acidissima)",
+                      "amount": "76.8g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 76.8,
+                    "exchanges": 1
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 76.8g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                }
+              ]
+            },
+            "lunch": {
+              "meal_name": "lunch",
+              "recommended_time": "12:30",
+              "recipes": [
+                {
+                  "recipe_name": "Dal",
+                  "ingredients": [
+                    {
+                      "name": "Lentil whole, brown (Lens culinaris)",
+                      "amount": "66.9g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 66.9,
+                    "exchanges": 2
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 66.9g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                }
+              ]
+            },
+            "dinner": {
+              "meal_name": "dinner",
+              "recommended_time": "18:00",
+              "recipes": [
+                {
+                  "recipe_name": "Dal",
+                  "ingredients": [
+                    {
+                      "name": "Lentil whole, brown (Lens culinaris)",
+                      "amount": "33.4g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 33.4,
+                    "exchanges": 1
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 33.4g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                },
+                {
+                  "recipe_name": "Wood Apple (Limonia acidissima)",
+                  "ingredients": [
+                    {
+                      "name": "Wood Apple (Limonia acidissima)",
+                      "amount": "76.8g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 76.8,
+                    "exchanges": 1
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 76.8g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "day_7": {
+          "day": 7,
+          "date": "2026-01-22",
+          "day_name": "Thursday",
+          "meals": {
+            "breakfast": {
+              "meal_name": "breakfast",
+              "recommended_time": "07:30",
+              "recipes": [
+                {
+                  "recipe_name": "Dal",
+                  "ingredients": [
+                    {
+                      "name": "Bengal gram, whole (Cicer arietinum)",
+                      "amount": "34.8g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 34.8,
+                    "exchanges": 1
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 34.8g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                },
+                {
+                  "recipe_name": "Zizyphus (Zizyphus jujube)",
+                  "ingredients": [
+                    {
+                      "name": "Zizyphus (Zizyphus jujube)",
+                      "amount": "123.0g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 123.0,
+                    "exchanges": 1
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 123.0g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                }
+              ]
+            },
+            "lunch": {
+              "meal_name": "lunch",
+              "recommended_time": "12:30",
+              "recipes": [
+                {
+                  "recipe_name": "Dal",
+                  "ingredients": [
+                    {
+                      "name": "Bengal gram, whole (Cicer arietinum)",
+                      "amount": "69.7g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 69.7,
+                    "exchanges": 2
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 69.7g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                }
+              ]
+            },
+            "dinner": {
+              "meal_name": "dinner",
+              "recommended_time": "18:00",
+              "recipes": [
+                {
+                  "recipe_name": "Dal",
+                  "ingredients": [
+                    {
+                      "name": "Bengal gram, whole (Cicer arietinum)",
+                      "amount": "34.8g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 34.8,
+                    "exchanges": 1
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 34.8g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                },
+                {
+                  "recipe_name": "Zizyphus (Zizyphus jujube)",
+                  "ingredients": [
+                    {
+                      "name": "Zizyphus (Zizyphus jujube)",
+                      "amount": "123.0g"
+                    }
+                  ],
+                  "portion": {
+                    "grams": 123.0,
+                    "exchanges": 1
+                  },
+                  "cooking_method": "standard",
+                  "spice_level": "moderate",
+                  "oil_quantity": 5.0,
+                  "instructions": [
+                    "Take 123.0g of food",
+                    "Prepare according to standard method",
+                    "Follow cooking rules for your condition"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

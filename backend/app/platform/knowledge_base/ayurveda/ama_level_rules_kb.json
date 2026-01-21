@@ -1,0 +1,39 @@
+[
+  {
+    "rule_id": "ama_level_thresholds",
+    "rule_name": "Ama Level Determination",
+    "calculation_method": "sum_of_indicator_scores",
+    "thresholds": {
+      "none": {
+        "min_score": 0,
+        "max_score": 0,
+        "description": "No Ama indicators"
+      },
+      "mild": {
+        "min_score": 1,
+        "max_score": 2,
+        "description": "1-2 Ama indicators"
+      },
+      "moderate": {
+        "min_score": 3,
+        "max_score": 4,
+        "description": "3-4 Ama indicators"
+      },
+      "high": {
+        "min_score": 5,
+        "description": "5+ Ama indicators"
+      }
+    },
+    "source": "Charaka Samhita",
+    "source_reference": "Ama Level Assessment",
+    "version": "1.0",
+    "status": "active",
+    "is_default": true
+  }
+]
+
+
+
+
+
+

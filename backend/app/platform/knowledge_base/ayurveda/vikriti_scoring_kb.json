@@ -1,0 +1,366 @@
+[
+  {
+    "question_id": "2.3_digestive_comfort",
+    "question_text": "Digestive comfort",
+    "section": "digestion",
+    "answer_options": {
+      "A": {
+        "text": "Gas, bloating, discomfort",
+        "dosha_weights": {
+          "Vata": 2,
+          "Pitta": 0,
+          "Kapha": 0
+        }
+      },
+      "B": {
+        "text": "Burning, acidity",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 2,
+          "Kapha": 0
+        }
+      },
+      "C": {
+        "text": "Heaviness, lethargy",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 0,
+          "Kapha": 2
+        }
+      }
+    },
+    "priority": "high",
+    "source": "Charaka Samhita",
+    "source_reference": "Vikriti Assessment - Digestive Symptoms",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "question_id": "2.4_bowel_movements",
+    "question_text": "Bowel movements",
+    "section": "digestion",
+    "answer_options": {
+      "A": {
+        "text": "Dry, hard, constipated",
+        "dosha_weights": {
+          "Vata": 2,
+          "Pitta": 0,
+          "Kapha": 0
+        }
+      },
+      "B": {
+        "text": "Loose or frequent",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 2,
+          "Kapha": 0
+        }
+      },
+      "C": {
+        "text": "Sticky, oily, sluggish",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 0,
+          "Kapha": 2
+        }
+      }
+    },
+    "priority": "high",
+    "source": "Charaka Samhita",
+    "source_reference": "Vikriti Assessment - Bowel Movements",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "question_id": "3.2_energy_levels",
+    "question_text": "Energy levels",
+    "section": "ama_indicators",
+    "answer_options": {
+      "A": {
+        "text": "Fluctuates, crashes easily",
+        "dosha_weights": {
+          "Vata": 1,
+          "Pitta": 0,
+          "Kapha": 0
+        }
+      },
+      "B": {
+        "text": "Intense but burns out",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 1,
+          "Kapha": 0
+        }
+      },
+      "C": {
+        "text": "Low but steady",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 0,
+          "Kapha": 1
+        }
+      }
+    },
+    "priority": "medium",
+    "source": "Charaka Samhita",
+    "source_reference": "Vikriti Assessment - Energy Levels",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "question_id": "4.2_stress_response",
+    "question_text": "Stress response",
+    "section": "mental_emotional",
+    "answer_options": {
+      "A": {
+        "text": "Anxious or fearful",
+        "dosha_weights": {
+          "Vata": 1,
+          "Pitta": 0,
+          "Kapha": 0
+        }
+      },
+      "B": {
+        "text": "Irritable or angry",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 1,
+          "Kapha": 0
+        }
+      },
+      "C": {
+        "text": "Withdrawn or resistant",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 0,
+          "Kapha": 1
+        }
+      }
+    },
+    "priority": "medium",
+    "source": "Charaka Samhita",
+    "source_reference": "Vikriti Assessment - Stress Response",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "question_id": "8.1_dryness",
+    "question_text": "Dryness",
+    "section": "current_complaints",
+    "answer_options": {
+      "Yes": {
+        "text": "Yes",
+        "dosha_weights": {
+          "Vata": 2,
+          "Pitta": 0,
+          "Kapha": 0
+        }
+      }
+    },
+    "priority": "high",
+    "source": "Charaka Samhita",
+    "source_reference": "Vikriti Assessment - Dryness Complaint",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "question_id": "8.2_gas_bloating",
+    "question_text": "Gas and bloating",
+    "section": "current_complaints",
+    "answer_options": {
+      "Yes": {
+        "text": "Yes",
+        "dosha_weights": {
+          "Vata": 2,
+          "Pitta": 0,
+          "Kapha": 0
+        }
+      }
+    },
+    "priority": "high",
+    "source": "Charaka Samhita",
+    "source_reference": "Vikriti Assessment - Gas/Bloating Complaint",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "question_id": "8.3_acidity_heartburn",
+    "question_text": "Acidity and heartburn",
+    "section": "current_complaints",
+    "answer_options": {
+      "Yes": {
+        "text": "Yes",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 2,
+          "Kapha": 0
+        }
+      }
+    },
+    "priority": "high",
+    "source": "Charaka Samhita",
+    "source_reference": "Vikriti Assessment - Acidity Complaint",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "question_id": "8.4_inflammation",
+    "question_text": "Inflammation",
+    "section": "current_complaints",
+    "answer_options": {
+      "Yes": {
+        "text": "Yes",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 2,
+          "Kapha": 0
+        }
+      }
+    },
+    "priority": "high",
+    "source": "Charaka Samhita",
+    "source_reference": "Vikriti Assessment - Inflammation Complaint",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "question_id": "8.5_weight_gain",
+    "question_text": "Weight gain",
+    "section": "current_complaints",
+    "answer_options": {
+      "Yes": {
+        "text": "Yes",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 0,
+          "Kapha": 2
+        }
+      }
+    },
+    "priority": "high",
+    "source": "Charaka Samhita",
+    "source_reference": "Vikriti Assessment - Weight Gain Complaint",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "question_id": "8.6_lethargy",
+    "question_text": "Lethargy",
+    "section": "current_complaints",
+    "answer_options": {
+      "Yes": {
+        "text": "Yes",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 0,
+          "Kapha": 2
+        }
+      }
+    },
+    "priority": "high",
+    "source": "Charaka Samhita",
+    "source_reference": "Vikriti Assessment - Lethargy Complaint",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "question_id": "8.7_anxiety",
+    "question_text": "Anxiety",
+    "section": "current_complaints",
+    "answer_options": {
+      "Yes": {
+        "text": "Yes",
+        "dosha_weights": {
+          "Vata": 1,
+          "Pitta": 0,
+          "Kapha": 0
+        }
+      }
+    },
+    "priority": "medium",
+    "source": "Charaka Samhita",
+    "source_reference": "Vikriti Assessment - Anxiety Complaint",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "question_id": "8.8_anger",
+    "question_text": "Anger",
+    "section": "current_complaints",
+    "answer_options": {
+      "Yes": {
+        "text": "Yes",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 1,
+          "Kapha": 0
+        }
+      }
+    },
+    "priority": "medium",
+    "source": "Charaka Samhita",
+    "source_reference": "Vikriti Assessment - Anger Complaint",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "question_id": "8.9_mucus_congestion",
+    "question_text": "Mucus and congestion",
+    "section": "current_complaints",
+    "answer_options": {
+      "Yes": {
+        "text": "Yes",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 0,
+          "Kapha": 2
+        }
+      }
+    },
+    "priority": "high",
+    "source": "Charaka Samhita",
+    "source_reference": "Vikriti Assessment - Mucus Complaint",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "question_id": "9.2_worst_weather",
+    "question_text": "Worst weather",
+    "section": "seasonal_aggravation",
+    "answer_options": {
+      "A": {
+        "text": "Cold & dry weather",
+        "dosha_weights": {
+          "Vata": 1,
+          "Pitta": 0,
+          "Kapha": 0
+        }
+      },
+      "B": {
+        "text": "Hot weather",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 1,
+          "Kapha": 0
+        }
+      },
+      "C": {
+        "text": "Damp / cloudy weather",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 0,
+          "Kapha": 1
+        }
+      }
+    },
+    "priority": "medium",
+    "source": "Charaka Samhita",
+    "source_reference": "Vikriti Assessment - Seasonal Aggravation",
+    "version": "1.0",
+    "status": "active"
+  }
+]
+
+
+
+

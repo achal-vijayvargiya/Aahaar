@@ -1,0 +1,225 @@
+[
+  {
+    "dosha": "Vata",
+    "food_qualities": {
+      "prefer": [
+        {
+          "quality": "warm",
+          "priority": "high",
+          "reason": "Vata is cold and dry, needs warmth"
+        },
+        {
+          "quality": "oily",
+          "priority": "high",
+          "reason": "Vata needs lubrication"
+        },
+        {
+          "quality": "grounding",
+          "priority": "medium",
+          "reason": "Vata is light and mobile"
+        },
+        {
+          "quality": "moist",
+          "priority": "high",
+          "reason": "Vata is dry"
+        },
+        {
+          "quality": "sweet",
+          "priority": "medium",
+          "reason": "Balances Vata's lightness"
+        },
+        {
+          "quality": "sour",
+          "priority": "medium",
+          "reason": "Stimulates digestion"
+        },
+        {
+          "quality": "salty",
+          "priority": "low",
+          "reason": "In moderation, helps retain moisture"
+        }
+      ],
+      "avoid": [
+        {
+          "quality": "cold",
+          "priority": "high",
+          "reason": "Aggravates Vata's cold nature"
+        },
+        {
+          "quality": "dry",
+          "priority": "high",
+          "reason": "Increases Vata's dryness"
+        },
+        {
+          "quality": "raw",
+          "priority": "high",
+          "reason": "Too cold and hard to digest"
+        },
+        {
+          "quality": "bitter",
+          "priority": "medium",
+          "reason": "Too drying for Vata"
+        },
+        {
+          "quality": "astringent",
+          "priority": "medium",
+          "reason": "Too drying and constricting"
+        },
+        {
+          "quality": "pungent",
+          "priority": "low",
+          "reason": "In excess, too stimulating"
+        }
+      ]
+    },
+    "source": "Charaka Samhita",
+    "source_reference": "Vata Balancing Diet",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "dosha": "Pitta",
+    "food_qualities": {
+      "prefer": [
+        {
+          "quality": "cooling",
+          "priority": "high",
+          "reason": "Pitta is hot, needs cooling"
+        },
+        {
+          "quality": "bitter",
+          "priority": "high",
+          "reason": "Cooling and detoxifying"
+        },
+        {
+          "quality": "sweet",
+          "priority": "medium",
+          "reason": "Cooling in nature"
+        },
+        {
+          "quality": "astringent",
+          "priority": "medium",
+          "reason": "Cooling and balancing"
+        },
+        {
+          "quality": "moist",
+          "priority": "medium",
+          "reason": "Prevents excess heat"
+        }
+      ],
+      "avoid": [
+        {
+          "quality": "spicy",
+          "priority": "high",
+          "reason": "Increases Pitta's heat"
+        },
+        {
+          "quality": "fried",
+          "priority": "high",
+          "reason": "Too heating"
+        },
+        {
+          "quality": "hot",
+          "priority": "high",
+          "reason": "Aggravates Pitta's heat"
+        },
+        {
+          "quality": "pungent",
+          "priority": "high",
+          "reason": "Too heating"
+        },
+        {
+          "quality": "sour",
+          "priority": "medium",
+          "reason": "Increases acidity"
+        },
+        {
+          "quality": "salty",
+          "priority": "medium",
+          "reason": "Increases heat and water retention"
+        }
+      ]
+    },
+    "source": "Charaka Samhita",
+    "source_reference": "Pitta Balancing Diet",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "dosha": "Kapha",
+    "food_qualities": {
+      "prefer": [
+        {
+          "quality": "light",
+          "priority": "high",
+          "reason": "Kapha is heavy, needs lightness"
+        },
+        {
+          "quality": "dry",
+          "priority": "high",
+          "reason": "Kapha is oily, needs dryness"
+        },
+        {
+          "quality": "spicy",
+          "priority": "high",
+          "reason": "Stimulates Kapha's sluggishness"
+        },
+        {
+          "quality": "bitter",
+          "priority": "medium",
+          "reason": "Lightening and detoxifying"
+        },
+        {
+          "quality": "astringent",
+          "priority": "medium",
+          "reason": "Drying and lightening"
+        },
+        {
+          "quality": "warm",
+          "priority": "medium",
+          "reason": "Stimulates metabolism"
+        }
+      ],
+      "avoid": [
+        {
+          "quality": "heavy",
+          "priority": "high",
+          "reason": "Aggravates Kapha's heaviness"
+        },
+        {
+          "quality": "sweet",
+          "priority": "high",
+          "reason": "Increases Kapha's heaviness"
+        },
+        {
+          "quality": "oily",
+          "priority": "high",
+          "reason": "Increases Kapha's oiliness"
+        },
+        {
+          "quality": "cold",
+          "priority": "medium",
+          "reason": "Slows Kapha's metabolism"
+        },
+        {
+          "quality": "salty",
+          "priority": "medium",
+          "reason": "Increases water retention"
+        },
+        {
+          "quality": "sour",
+          "priority": "low",
+          "reason": "In moderation only"
+        }
+      ]
+    },
+    "source": "Charaka Samhita",
+    "source_reference": "Kapha Balancing Diet",
+    "version": "1.0",
+    "status": "active"
+  }
+]
+
+
+
+

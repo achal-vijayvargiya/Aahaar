@@ -1,0 +1,177 @@
+[
+  {
+    "rule_id": "default_protein_distribution",
+    "display_name": "Default Protein Distribution",
+    "description": "Standard protein percentage distribution per meal type",
+    "meal_type_percentages": {
+      "breakfast": {
+        "value": 20,
+        "unit": "%",
+        "note": "Breakfast: 20% of total protein"
+      },
+      "lunch": {
+        "value": 30,
+        "unit": "%",
+        "note": "Lunch: 30% of total protein - highest for muscle synthesis"
+      },
+      "snack": {
+        "value": 15,
+        "unit": "%",
+        "note": "Snack: 15% of total protein"
+      },
+      "dinner": {
+        "value": 25,
+        "unit": "%",
+        "note": "Dinner: 25% of total protein - moderate amount, no stacking"
+      }
+    },
+    "redistribution_rules": {
+      "deficit_allocation": {
+        "description": "When protein deficit needs to be distributed",
+        "lunch": 0.4,
+        "breakfast": 0.35,
+        "dinner": 0.25,
+        "note": "40% to lunch, 35% to breakfast, 25% to dinner"
+      },
+      "no_snacks": {
+        "description": "When no snacks are present, redistribute protein",
+        "lunch": 0.4,
+        "breakfast": 0.35,
+        "dinner": 0.25
+      }
+    },
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Protein Distribution Across Meals (2016)",
+    "version": "1.0",
+    "status": "active",
+    "is_default": true
+  },
+  {
+    "rule_id": "athlete_protein_distribution",
+    "display_name": "Athlete Protein Distribution",
+    "description": "Protein distribution optimized for athletes and muscle synthesis",
+    "meal_type_percentages": {
+      "breakfast": {
+        "value": 25,
+        "unit": "%"
+      },
+      "lunch": {
+        "value": 30,
+        "unit": "%"
+      },
+      "snack": {
+        "value": 20,
+        "unit": "%",
+        "note": "Higher snack protein for recovery"
+      },
+      "dinner": {
+        "value": 25,
+        "unit": "%"
+      }
+    },
+    "applies_to": ["athletes", "very_active"],
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Nutrition and Athletic Performance (2016)",
+    "version": "1.0",
+    "status": "active",
+    "is_default": false
+  },
+  {
+    "rule_id": "elderly_protein_distribution",
+    "display_name": "Elderly Protein Distribution",
+    "description": "Protein distribution optimized for elderly to prevent sarcopenia",
+    "meal_type_percentages": {
+      "breakfast": {
+        "value": 25,
+        "unit": "%",
+        "note": "Higher breakfast protein for muscle preservation"
+      },
+      "lunch": {
+        "value": 30,
+        "unit": "%"
+      },
+      "snack": {
+        "value": 15,
+        "unit": "%"
+      },
+      "dinner": {
+        "value": 30,
+        "unit": "%",
+        "note": "Higher dinner protein for overnight muscle synthesis"
+      }
+    },
+    "applies_to": ["elderly", "age_over_65"],
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Nutrition for Older Adults (2019)",
+    "version": "1.0",
+    "status": "active",
+    "is_default": false
+  },
+  {
+    "rule_id": "weight_loss_protein_distribution",
+    "display_name": "Weight Loss Protein Distribution",
+    "description": "Protein distribution optimized for weight loss with higher protein for satiety and muscle preservation",
+    "applies_to": ["weight_loss", "obesity"],
+    "meal_type_percentages": {
+      "breakfast": {
+        "value": 25,
+        "unit": "%",
+        "note": "Higher breakfast protein for satiety throughout the day"
+      },
+      "lunch": {
+        "value": 30,
+        "unit": "%",
+        "note": "Substantial lunch protein for sustained satiety"
+      },
+      "snack": {
+        "value": 15,
+        "unit": "%",
+        "note": "Snack protein helps prevent overeating"
+      },
+      "dinner": {
+        "value": 30,
+        "unit": "%",
+        "note": "Higher dinner protein for overnight muscle preservation"
+      }
+    },
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Adult Weight Management Evidence-Based Nutrition Practice Guideline (2014)",
+    "version": "1.0",
+    "status": "active",
+    "is_default": false
+  },
+  {
+    "rule_id": "muscle_gain_protein_distribution",
+    "display_name": "Muscle Gain Protein Distribution",
+    "description": "Even protein distribution across meals optimized for muscle building and synthesis",
+    "applies_to": ["muscle_gain", "bodybuilding", "weight_gain"],
+    "meal_type_percentages": {
+      "breakfast": {
+        "value": 25,
+        "unit": "%",
+        "note": "Even distribution for consistent muscle synthesis"
+      },
+      "lunch": {
+        "value": 25,
+        "unit": "%",
+        "note": "Even distribution across all main meals"
+      },
+      "snack": {
+        "value": 20,
+        "unit": "%",
+        "note": "Pre/post-workout snacks important for recovery"
+      },
+      "dinner": {
+        "value": 30,
+        "unit": "%",
+        "note": "Slightly higher dinner for overnight muscle synthesis"
+      }
+    },
+    "source": "International Society of Sports Nutrition",
+    "source_reference": "ISSN Position Stand: Protein and Exercise (2017)",
+    "version": "1.0",
+    "status": "active",
+    "is_default": false
+  }
+]
+

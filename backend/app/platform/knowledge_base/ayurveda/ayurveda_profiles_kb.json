@@ -1,0 +1,130 @@
+[
+  {
+    "dosha": "vata",
+    "profile_name": "Vata Dosha Profile",
+    "favor_spices": [
+      {
+        "spice": "ginger",
+        "reason": "Warming and digestive"
+      },
+      {
+        "spice": "cumin",
+        "reason": "Reduces gas and bloating"
+      }
+    ],
+    "favor_foods": [
+      {
+        "food": "warm_cooked_vegetables",
+        "reason": "Easier to digest than raw"
+      }
+    ],
+    "avoid": [
+      {
+        "food": "raw_salad_cold",
+        "reason": "Too cold and dry for Vata"
+      }
+    ],
+    "meal_timing": "regular_warm_meals",
+    "food_temperature": "warm",
+    "lifestyle": [
+      {
+        "practice": "warmth",
+        "description": "Keep body warm, avoid cold exposure"
+      },
+      {
+        "practice": "early_dinner",
+        "description": "Eat dinner before 7 PM"
+      }
+    ],
+    "source": "Charaka Samhita",
+    "source_reference": "Vata Dosha Lifestyle Guidelines",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "dosha": "pitta",
+    "profile_name": "Pitta Dosha Profile",
+    "favor": [
+      {
+        "food": "cooling_foods",
+        "reason": "Balances Pitta's heat"
+      },
+      {
+        "food": "bitter_greens",
+        "reason": "Cooling and detoxifying"
+      }
+    ],
+    "avoid": [
+      {
+        "food": "very_spicy",
+        "reason": "Increases Pitta's heat"
+      },
+      {
+        "food": "fried",
+        "reason": "Too heating"
+      }
+    ],
+    "meal_timing": "regular_cooling",
+    "food_temperature": "cool_to_room",
+    "lifestyle": [
+      {
+        "practice": "avoid_midday_heat",
+        "description": "Avoid exposure to midday sun"
+      },
+      {
+        "practice": "evening_walk",
+        "description": "Evening walks for cooling"
+      }
+    ],
+    "source": "Charaka Samhita",
+    "source_reference": "Pitta Dosha Lifestyle Guidelines",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "dosha": "kapha",
+    "profile_name": "Kapha Dosha Profile",
+    "favor": [
+      {
+        "food": "light_warm",
+        "reason": "Lightens Kapha's heaviness"
+      },
+      {
+        "food": "spices",
+        "reason": "Stimulates Kapha's sluggishness"
+      }
+    ],
+    "avoid": [
+      {
+        "food": "fried",
+        "reason": "Too heavy and oily"
+      },
+      {
+        "food": "sugary",
+        "reason": "Increases Kapha's heaviness"
+      }
+    ],
+    "meal_timing": "light_dinner",
+    "food_temperature": "warm",
+    "lifestyle": [
+      {
+        "practice": "morning_activity",
+        "description": "Morning exercise to stimulate metabolism"
+      },
+      {
+        "practice": "light_dinner",
+        "description": "Light dinner, early dinner"
+      }
+    ],
+    "source": "Charaka Samhita",
+    "source_reference": "Kapha Dosha Lifestyle Guidelines",
+    "version": "1.0",
+    "status": "active"
+  }
+]
+
+
+
+
+
+

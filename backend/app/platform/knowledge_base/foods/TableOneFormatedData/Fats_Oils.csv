@@ -1,0 +1,15 @@
+code,Food Name,,PROTCNT,FATCE,FIBTG,CHOAVLDF,ENERC,Exchange
+T001,Coconut oil,6,0,100,0,0,900,fat
+T002,Corn oil,1,0,100,0,0,900,fat
+T003,Cotton seed oil,1,0,100,0,0,900,fat
+T004,Gingelly oil,6,0,100,0,0,900,fat
+T005,Groundnut oil,5,0,100,0,0,900,fat
+T006,Mustard oil,6,0,100,0,0,900,fat
+T007,Palm oil,4,0,100,0,0,900,fat
+T008,Rice bran oil,5,0,100,0,0,900,fat
+T009,Safflower oil,3,0,100,0,0,900,fat
+T010,Safflower oil (blended),4,0,100,0,0,900,fat
+T011,Soyabean oil,6,0,100,0,0,900,fat
+T012,Sunflower oil,6,0,100,0,0,900,fat
+T013,Ghee,6,0,100,0,0,900,fat
+T014,Vanaspati,6,0,100,0,0,900,fat

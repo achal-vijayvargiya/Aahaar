@@ -1,0 +1,529 @@
+{
+  "plan_duration_days": 7,
+  "start_date": "2025-01-20T00:00:00",
+  "days": {
+    "day_1": {
+      "day_number": 1,
+      "date": "2025-01-20",
+      "day_name": "Monday",
+      "meals": {
+        "breakfast": {
+          "meal_name": "breakfast",
+          "main_dish_type": "cereal_based",
+          "meal_frame_id": "breakfast_cereal_001",
+          "is_dynamic_frame": false,
+          "recipes": [
+            {
+              "recipe_id": "recipe_oats_cooked_2ex",
+              "recipe_name": "Oats",
+              "base_food": {
+                "food_id": "oats_cooked",
+                "display_name": "Oats (Cooked)",
+                "exchange_category": "cereal"
+              },
+              "slot_role": "cereal",
+              "exchanges": 2,
+              "portion_g": 120.0,
+              "nutrition": {
+                "calories": 150.0,
+                "protein_g": 5.0,
+                "carbs_g": 27.0,
+                "fat_g": 3.0
+              },
+              "cooking_rules": {
+                "oil_quantity_ml": 5.0,
+                "spice_level": "mild"
+              },
+              "instructions": [
+                "Cook 120g oats with water until soft",
+                "Add minimal oil (5ml) for flavor",
+                "Season with mild spices"
+              ]
+            },
+            {
+              "recipe_id": "recipe_milk_whole_1ex",
+              "recipe_name": "Milk",
+              "base_food": {
+                "food_id": "milk_whole",
+                "display_name": "Whole Milk",
+                "exchange_category": "milk"
+              },
+              "slot_role": "milk",
+              "exchanges": 1,
+              "portion_g": 250.0,
+              "nutrition": {
+                "calories": 150.0,
+                "protein_g": 8.0,
+                "carbs_g": 12.0,
+                "fat_g": 8.0
+              },
+              "cooking_rules": {},
+              "instructions": [
+                "Serve 250ml whole milk"
+              ]
+            },
+            {
+              "recipe_id": "recipe_almonds_0.5ex",
+              "recipe_name": "Almonds",
+              "base_food": {
+                "food_id": "almonds",
+                "display_name": "Almonds",
+                "exchange_category": "fat"
+              },
+              "slot_role": "fat",
+              "exchanges": 0.5,
+              "portion_g": 7.5,
+              "nutrition": {
+                "calories": 45.0,
+                "protein_g": 1.5,
+                "carbs_g": 1.5,
+                "fat_g": 4.0
+              },
+              "cooking_rules": {},
+              "instructions": [
+                "Add 7.5g almonds as topping"
+              ]
+            }
+          ],
+          "total_nutrition": {
+            "calories": 345.0,
+            "protein_g": 14.5,
+            "carbs_g": 40.5,
+            "fat_g": 15.0
+          },
+          "validation": {
+            "is_valid": true,
+            "calories_match": true,
+            "protein_match": true,
+            "macro_guardrails_met": true
+          },
+          "exchanges_used": {
+            "cereal": 2,
+            "milk": 1,
+            "fat": 0.5
+          }
+        },
+        "lunch": {
+          "meal_name": "lunch",
+          "main_dish_type": "rice_dal",
+          "meal_frame_id": "lunch_rice_dal_001",
+          "is_dynamic_frame": false,
+          "recipes": [
+            {
+              "recipe_id": "recipe_brown_rice_cooked_2ex",
+              "recipe_name": "Rice",
+              "base_food": {
+                "food_id": "brown_rice_cooked",
+                "display_name": "Brown Rice (Cooked)",
+                "exchange_category": "cereal"
+              },
+              "slot_role": "rice",
+              "exchanges": 2,
+              "portion_g": 120.0,
+              "nutrition": {
+                "calories": 220.0,
+                "protein_g": 5.0,
+                "carbs_g": 46.0,
+                "fat_g": 2.0
+              },
+              "cooking_rules": {
+                "oil_quantity_ml": 5.0,
+                "spice_level": "mild"
+              },
+              "instructions": [
+                "Cook 120g brown rice",
+                "Use minimal oil (5ml) for cooking"
+              ]
+            },
+            {
+              "recipe_id": "recipe_toor_dal_cooked_1ex",
+              "recipe_name": "Dal",
+              "base_food": {
+                "food_id": "toor_dal_cooked",
+                "display_name": "Toor Dal (Cooked)",
+                "exchange_category": "pulse"
+              },
+              "slot_role": "dal",
+              "exchanges": 1,
+              "portion_g": 100.0,
+              "nutrition": {
+                "calories": 120.0,
+                "protein_g": 7.0,
+                "carbs_g": 20.0,
+                "fat_g": 1.0
+              },
+              "cooking_rules": {
+                "oil_quantity_ml": 5.0,
+                "spice_level": "mild"
+              },
+              "instructions": [
+                "Cook 100g toor dal with minimal oil (5ml)",
+                "Season with mild spices"
+              ]
+            },
+            {
+              "recipe_id": "recipe_cauliflower_sabzi_1ex",
+              "recipe_name": "Sabzi",
+              "base_food": {
+                "food_id": "cauliflower_sabzi",
+                "display_name": "Cauliflower Sabzi",
+                "exchange_category": "veg"
+              },
+              "slot_role": "sabzi",
+              "exchanges": 1,
+              "portion_g": 100.0,
+              "nutrition": {
+                "calories": 50.0,
+                "protein_g": 2.0,
+                "carbs_g": 10.0,
+                "fat_g": 1.0
+              },
+              "cooking_rules": {
+                "oil_quantity_ml": 5.0,
+                "spice_level": "mild"
+              },
+              "instructions": [
+                "Cook 100g cauliflower with minimal oil (5ml)",
+                "Season with mild spices"
+              ]
+            }
+          ],
+          "total_nutrition": {
+            "calories": 390.0,
+            "protein_g": 14.0,
+            "carbs_g": 76.0,
+            "fat_g": 4.0
+          },
+          "validation": {
+            "is_valid": true,
+            "calories_match": true,
+            "protein_match": true,
+            "macro_guardrails_met": true
+          },
+          "exchanges_used": {
+            "cereal": 2,
+            "pulse": 1,
+            "veg": 1
+          }
+        },
+        "snack": {
+          "meal_name": "snack",
+          "main_dish_type": "fruit_based",
+          "meal_frame_id": "snack_fruit_001",
+          "is_dynamic_frame": false,
+          "recipes": [
+            {
+              "recipe_id": "recipe_apple_1ex",
+              "recipe_name": "Apple",
+              "base_food": {
+                "food_id": "apple",
+                "display_name": "Apple",
+                "exchange_category": "fruit"
+              },
+              "slot_role": "fruit",
+              "exchanges": 1,
+              "portion_g": 120.0,
+              "nutrition": {
+                "calories": 60.0,
+                "protein_g": 0.3,
+                "carbs_g": 16.0,
+                "fat_g": 0.2
+              },
+              "cooking_rules": {},
+              "instructions": [
+                "Serve 120g fresh apple"
+              ]
+            }
+          ],
+          "total_nutrition": {
+            "calories": 60.0,
+            "protein_g": 0.3,
+            "carbs_g": 16.0,
+            "fat_g": 0.2
+          },
+          "validation": {
+            "is_valid": true,
+            "calories_match": true,
+            "protein_match": true,
+            "macro_guardrails_met": true
+          },
+          "exchanges_used": {
+            "fruit": 1
+          }
+        },
+        "dinner": {
+          "meal_name": "dinner",
+          "main_dish_type": "roti_sabzi",
+          "meal_frame_id": "dinner_roti_sabzi_001",
+          "is_dynamic_frame": false,
+          "recipes": [
+            {
+              "recipe_id": "recipe_wheat_roti_2ex",
+              "recipe_name": "Roti",
+              "base_food": {
+                "food_id": "wheat_roti",
+                "display_name": "Wheat Roti",
+                "exchange_category": "cereal"
+              },
+              "slot_role": "roti",
+              "exchanges": 2,
+              "portion_g": 60.0,
+              "nutrition": {
+                "calories": 200.0,
+                "protein_g": 6.0,
+                "carbs_g": 42.0,
+                "fat_g": 2.0
+              },
+              "cooking_rules": {
+                "oil_quantity_ml": 3.0,
+                "spice_level": "mild"
+              },
+              "instructions": [
+                "Make 2 rotis (60g total) with minimal oil (3ml)"
+              ]
+            },
+            {
+              "recipe_id": "recipe_paneer_sabzi_1ex",
+              "recipe_name": "Sabzi",
+              "base_food": {
+                "food_id": "paneer_sabzi",
+                "display_name": "Paneer Sabzi",
+                "exchange_category": "protein"
+              },
+              "slot_role": "sabzi",
+              "exchanges": 1,
+              "portion_g": 100.0,
+              "nutrition": {
+                "calories": 150.0,
+                "protein_g": 12.0,
+                "carbs_g": 5.0,
+                "fat_g": 10.0
+              },
+              "cooking_rules": {
+                "oil_quantity_ml": 5.0,
+                "spice_level": "mild"
+              },
+              "instructions": [
+                "Cook 100g paneer with minimal oil (5ml)",
+                "Season with mild spices"
+              ]
+            }
+          ],
+          "total_nutrition": {
+            "calories": 350.0,
+            "protein_g": 18.0,
+            "carbs_g": 47.0,
+            "fat_g": 12.0
+          },
+          "validation": {
+            "is_valid": true,
+            "calories_match": true,
+            "protein_match": true,
+            "macro_guardrails_met": true
+          },
+          "exchanges_used": {
+            "cereal": 2,
+            "protein": 1
+          }
+        }
+      },
+      "daily_totals": {
+        "calories": 1145.0,
+        "protein_g": 46.8,
+        "carbs_g": 179.5,
+        "fat_g": 31.2
+      }
+    },
+    "day_2": {
+      "day_number": 2,
+      "date": "2025-01-21",
+      "day_name": "Tuesday",
+      "meals": {
+        "breakfast": {
+          "meal_name": "breakfast",
+          "main_dish_type": "cereal_based",
+          "meal_frame_id": "breakfast_cereal_001",
+          "is_dynamic_frame": false,
+          "recipes": [
+            {
+              "recipe_id": "recipe_brown_rice_cooked_2ex",
+              "recipe_name": "Rice",
+              "base_food": {
+                "food_id": "brown_rice_cooked",
+                "display_name": "Brown Rice (Cooked)",
+                "exchange_category": "cereal"
+              },
+              "slot_role": "cereal",
+              "exchanges": 2,
+              "portion_g": 120.0,
+              "nutrition": {
+                "calories": 220.0,
+                "protein_g": 5.0,
+                "carbs_g": 46.0,
+                "fat_g": 2.0
+              },
+              "cooking_rules": {
+                "oil_quantity_ml": 5.0,
+                "spice_level": "mild"
+              },
+              "instructions": [
+                "Cook 120g brown rice",
+                "Use minimal oil (5ml) for cooking"
+              ]
+            },
+            {
+              "recipe_id": "recipe_milk_whole_1ex",
+              "recipe_name": "Milk",
+              "base_food": {
+                "food_id": "milk_whole",
+                "display_name": "Whole Milk",
+                "exchange_category": "milk"
+              },
+              "slot_role": "milk",
+              "exchanges": 1,
+              "portion_g": 250.0,
+              "nutrition": {
+                "calories": 150.0,
+                "protein_g": 8.0,
+                "carbs_g": 12.0,
+                "fat_g": 8.0
+              },
+              "cooking_rules": {},
+              "instructions": [
+                "Serve 250ml whole milk"
+              ]
+            },
+            {
+              "recipe_id": "recipe_walnuts_0.5ex",
+              "recipe_name": "Walnuts",
+              "base_food": {
+                "food_id": "walnuts",
+                "display_name": "Walnuts",
+                "exchange_category": "fat"
+              },
+              "slot_role": "fat",
+              "exchanges": 0.5,
+              "portion_g": 7.5,
+              "nutrition": {
+                "calories": 50.0,
+                "protein_g": 1.0,
+                "carbs_g": 1.0,
+                "fat_g": 5.0
+              },
+              "cooking_rules": {},
+              "instructions": [
+                "Add 7.5g walnuts as topping"
+              ]
+            }
+          ],
+          "total_nutrition": {
+            "calories": 420.0,
+            "protein_g": 14.0,
+            "carbs_g": 59.0,
+            "fat_g": 15.0
+          },
+          "validation": {
+            "is_valid": true,
+            "calories_match": true,
+            "protein_match": true,
+            "macro_guardrails_met": true
+          },
+          "exchanges_used": {
+            "cereal": 2,
+            "milk": 1,
+            "fat": 0.5
+          }
+        }
+      },
+      "daily_totals": {
+        "calories": 1145.0,
+        "protein_g": 46.8,
+        "carbs_g": 179.5,
+        "fat_g": 31.2
+      }
+    }
+  },
+  "variety_metrics": {
+    "food_repetition": {
+      "breakfast": {
+        "oats_cooked": 2,
+        "brown_rice_cooked": 2,
+        "quinoa_cooked": 1,
+        "milk_whole": 5,
+        "yogurt": 2,
+        "almonds": 2,
+        "walnuts": 2,
+        "cashews": 1
+      },
+      "lunch": {
+        "brown_rice_cooked": 3,
+        "quinoa_cooked": 2,
+        "toor_dal_cooked": 2,
+        "moong_dal_cooked": 2,
+        "cauliflower_sabzi": 2,
+        "brinjal_sabzi": 2,
+        "cabbage_sabzi": 1
+      },
+      "snack": {
+        "apple": 2,
+        "banana": 2,
+        "orange": 1,
+        "pear": 1,
+        "guava": 1
+      },
+      "dinner": {
+        "wheat_roti": 3,
+        "multigrain_roti": 2,
+        "paneer_sabzi": 2,
+        "chicken_curry": 1,
+        "fish_curry": 1,
+        "dal_sabzi": 1
+      }
+    },
+    "variety_score": 0.85,
+    "unique_foods_per_meal": {
+      "breakfast": 8,
+      "lunch": 7,
+      "snack": 5,
+      "dinner": 6
+    },
+    "total_unique_foods": 26,
+    "average_repetition": 1.8
+  },
+  "nutrition_summary": {
+    "average_daily": {
+      "calories": 2000.0,
+      "protein_g": 90.0,
+      "carbs_g": 250.0,
+      "fat_g": 65.0
+    },
+    "daily_variation": {
+      "calories": {
+        "min": 1950.0,
+        "max": 2050.0,
+        "avg": 2000.0,
+        "std": 25.5
+      },
+      "protein_g": {
+        "min": 88.0,
+        "max": 92.0,
+        "avg": 90.0,
+        "std": 1.2
+      },
+      "carbs_g": {
+        "min": 245.0,
+        "max": 255.0,
+        "avg": 250.0,
+        "std": 3.5
+      },
+      "fat_g": {
+        "min": 63.0,
+        "max": 67.0,
+        "avg": 65.0,
+        "std": 1.5
+      }
+    },
+    "all_days_valid": true
+  }
+}
+

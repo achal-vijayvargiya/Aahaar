@@ -1,0 +1,1375 @@
+[
+  {
+    "condition_id": "type_2_diabetes",
+    "display_name": "Type 2 Diabetes",
+    "category": "metabolic",
+    "description": "Chronic hyperglycemia due to insulin resistance and/or relative insulin deficiency. Most common form of diabetes, typically develops in adults but increasingly seen in children.",
+    "critical_labs": ["HbA1c", "FBS", "PPBS", "OGTT"],
+    "severity_thresholds": {
+      "HbA1c": {
+        "mild": {
+          "min": 6.5,
+          "max": 7.0,
+          "unit": "%"
+        },
+        "moderate": {
+          "min": 7.0,
+          "max": 8.0,
+          "unit": "%"
+        },
+        "severe": {
+          "min": 8.0,
+          "max": null,
+          "unit": "%"
+        }
+      },
+      "FBS": {
+        "mild": {
+          "min": 126,
+          "max": 140,
+          "unit": "mg/dL"
+        },
+        "moderate": {
+          "min": 140,
+          "max": 180,
+          "unit": "mg/dL"
+        },
+        "severe": {
+          "min": 180,
+          "max": null,
+          "unit": "mg/dL"
+        }
+      },
+      "PPBS": {
+        "mild": {
+          "min": 200,
+          "max": 250,
+          "unit": "mg/dL"
+        },
+        "moderate": {
+          "min": 250,
+          "max": 300,
+          "unit": "mg/dL"
+        },
+        "severe": {
+          "min": 300,
+          "max": null,
+          "unit": "mg/dL"
+        }
+      }
+    },
+    "associated_risks": [
+      "insulin_resistance",
+      "cardiovascular_disease",
+      "nephropathy",
+      "retinopathy",
+      "neuropathy",
+      "foot_ulcers"
+    ],
+    "nutrition_focus_areas": [
+      "carbohydrate_control",
+      "glycemic_control",
+      "fiber_intake",
+      "meal_timing",
+      "portion_control",
+      "weight_management"
+    ],
+    "red_flags": [
+      "hypoglycemia",
+      "very_high_glucose",
+      "ketoacidosis",
+      "hyperosmolar_hyperglycemic_state"
+    ],
+    "source": "American Diabetes Association",
+    "source_reference": "ADA Standards of Medical Care in Diabetes 2024, Section 2: Classification and Diagnosis of Diabetes",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "condition_id": "prediabetes",
+    "display_name": "Prediabetes",
+    "category": "metabolic",
+    "description": "Blood glucose levels higher than normal but not yet high enough to be diagnosed as diabetes. Increased risk of developing type 2 diabetes, heart disease, and stroke.",
+    "critical_labs": ["HbA1c", "FBS", "OGTT_2h"],
+    "severity_thresholds": {
+      "HbA1c": {
+        "mild": {
+          "min": 5.7,
+          "max": 6.4,
+          "unit": "%"
+        }
+      },
+      "FBS": {
+        "mild": {
+          "min": 100,
+          "max": 125,
+          "unit": "mg/dL"
+        }
+      },
+      "OGTT_2h": {
+        "mild": {
+          "min": 140,
+          "max": 199,
+          "unit": "mg/dL"
+        }
+      }
+    },
+    "associated_risks": [
+      "progression_to_diabetes",
+      "cardiovascular_disease",
+      "metabolic_syndrome"
+    ],
+    "nutrition_focus_areas": [
+      "carbohydrate_control",
+      "weight_management",
+      "physical_activity",
+      "fiber_intake"
+    ],
+    "red_flags": [],
+    "source": "American Diabetes Association",
+    "source_reference": "ADA Standards of Medical Care in Diabetes 2024, Section 2: Classification and Diagnosis of Diabetes",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "condition_id": "type_1_diabetes",
+    "display_name": "Type 1 Diabetes",
+    "category": "metabolic",
+    "description": "Autoimmune condition where the pancreas produces little or no insulin. Requires insulin therapy. Typically diagnosed in children and young adults but can occur at any age.",
+    "critical_labs": ["HbA1c", "FBS", "c_peptide", "autoantibodies"],
+    "eligibility_constraints": {
+      "requires_autoimmune_evidence": true,
+      "age_of_onset_max": 30,
+      "alternative_evidence": ["c_peptide", "autoantibodies", "autoimmune_markers", "insulin_dependence"],
+      "note": "Type 1 diabetes typically requires autoimmune evidence (low c-peptide, autoantibodies) or insulin dependence. Age of onset >30 is less common and requires stronger evidence."
+    },
+    "severity_thresholds": {
+      "HbA1c": {
+        "mild": {
+          "min": 6.5,
+          "max": 7.5,
+          "unit": "%"
+        },
+        "moderate": {
+          "min": 7.5,
+          "max": 9.0,
+          "unit": "%"
+        },
+        "severe": {
+          "min": 9.0,
+          "max": null,
+          "unit": "%"
+        }
+      },
+      "FBS": {
+        "mild": {
+          "min": 126,
+          "max": 160,
+          "unit": "mg/dL"
+        },
+        "moderate": {
+          "min": 160,
+          "max": 200,
+          "unit": "mg/dL"
+        },
+        "severe": {
+          "min": 200,
+          "max": null,
+          "unit": "mg/dL"
+        }
+      },
+      "c_peptide": {
+        "mild": {
+          "min": null,
+          "max": 0.6,
+          "unit": "ng/mL",
+          "note": "Low or absent c-peptide indicates insulin deficiency"
+        }
+      }
+    },
+    "associated_risks": [
+      "diabetic_ketoacidosis",
+      "hypoglycemia",
+      "cardiovascular_disease",
+      "nephropathy",
+      "retinopathy",
+      "neuropathy"
+    ],
+    "nutrition_focus_areas": [
+      "carbohydrate_counting",
+      "insulin_carb_ratio",
+      "glycemic_control",
+      "meal_timing",
+      "hypoglycemia_prevention"
+    ],
+    "red_flags": [
+      "diabetic_ketoacidosis",
+      "severe_hypoglycemia",
+      "very_high_glucose"
+    ],
+    "source": "American Diabetes Association",
+    "source_reference": "ADA Standards of Medical Care in Diabetes 2024, Section 2: Classification and Diagnosis of Diabetes",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "condition_id": "gestational_diabetes",
+    "display_name": "Gestational Diabetes",
+    "category": "metabolic",
+    "description": "Diabetes that develops during pregnancy. Usually diagnosed between 24-28 weeks of pregnancy. Increases risk of complications for both mother and baby.",
+    "critical_labs": ["OGTT_1h", "OGTT_2h", "FBS"],
+    "eligibility_constraints": {
+      "gender": "female",
+      "requires_pregnancy": true,
+      "age_min": 18,
+      "age_max": 45,
+      "gestational_weeks_min": 24,
+      "gestational_weeks_max": 40
+    },
+    "severity_thresholds": {
+      "OGTT_1h": {
+        "mild": {
+          "min": 140,
+          "max": 180,
+          "unit": "mg/dL"
+        },
+        "moderate": {
+          "min": 180,
+          "max": 200,
+          "unit": "mg/dL"
+        },
+        "severe": {
+          "min": 200,
+          "max": null,
+          "unit": "mg/dL"
+        }
+      },
+      "OGTT_2h": {
+        "mild": {
+          "min": 140,
+          "max": 160,
+          "unit": "mg/dL"
+        },
+        "moderate": {
+          "min": 160,
+          "max": 180,
+          "unit": "mg/dL"
+        },
+        "severe": {
+          "min": 180,
+          "max": null,
+          "unit": "mg/dL"
+        }
+      },
+      "FBS": {
+        "mild": {
+          "min": 92,
+          "max": 95,
+          "unit": "mg/dL"
+        },
+        "moderate": {
+          "min": 95,
+          "max": 100,
+          "unit": "mg/dL"
+        },
+        "severe": {
+          "min": 100,
+          "max": null,
+          "unit": "mg/dL"
+        }
+      }
+    },
+    "associated_risks": [
+      "macrosomia",
+      "preterm_birth",
+      "preeclampsia",
+      "cesarean_delivery",
+      "future_type_2_diabetes",
+      "neonatal_hypoglycemia"
+    ],
+    "nutrition_focus_areas": [
+      "carbohydrate_control",
+      "glycemic_control",
+      "adequate_nutrition_for_pregnancy",
+      "meal_timing",
+      "weight_gain_management"
+    ],
+    "red_flags": [
+      "very_high_glucose",
+      "ketonuria",
+      "excessive_weight_gain"
+    ],
+    "source": "American Diabetes Association",
+    "source_reference": "ADA Standards of Medical Care in Diabetes 2024, Section 15: Management of Diabetes in Pregnancy",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "condition_id": "metabolic_syndrome",
+    "display_name": "Metabolic Syndrome",
+    "category": "metabolic",
+    "description": "Cluster of conditions that occur together, increasing risk of heart disease, stroke, and type 2 diabetes. Requires at least 3 of 5 criteria.",
+    "critical_labs": ["waist_circumference", "triglycerides", "hdl", "bp_systolic", "bp_diastolic", "FBS"],
+    "severity_thresholds": {
+      "waist_circumference": {
+        "mild": {
+          "min": 102,
+          "max": null,
+          "unit": "cm",
+          "note": "Men: ≥102cm, Women: ≥88cm"
+        }
+      },
+      "triglycerides": {
+        "mild": {
+          "min": 150,
+          "max": null,
+          "unit": "mg/dL"
+        }
+      },
+      "hdl": {
+        "mild": {
+          "min": null,
+          "max": 40,
+          "unit": "mg/dL",
+          "note": "Men: <40mg/dL, Women: <50mg/dL"
+        }
+      },
+      "bp_systolic": {
+        "mild": {
+          "min": 130,
+          "max": null,
+          "unit": "mmHg"
+        }
+      },
+      "bp_diastolic": {
+        "mild": {
+          "min": 85,
+          "max": null,
+          "unit": "mmHg"
+        }
+      },
+      "FBS": {
+        "mild": {
+          "min": 100,
+          "max": null,
+          "unit": "mg/dL"
+        }
+      }
+    },
+    "associated_risks": [
+      "cardiovascular_disease",
+      "type_2_diabetes",
+      "stroke",
+      "fatty_liver_disease"
+    ],
+    "nutrition_focus_areas": [
+      "weight_management",
+      "carbohydrate_control",
+      "fat_modification",
+      "fiber_intake",
+      "sodium_restriction",
+      "physical_activity"
+    ],
+    "red_flags": [],
+    "source": "National Heart, Lung, and Blood Institute",
+    "source_reference": "NHLBI/AHA Scientific Statement: Diagnosis and Management of Metabolic Syndrome (2005)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "condition_id": "obesity",
+    "display_name": "Obesity",
+    "category": "metabolic",
+    "description": "Excessive body fat accumulation that presents a health risk. Classified by BMI. Associated with increased risk of multiple health conditions.",
+    "critical_labs": [],
+    "severity_thresholds": {
+      "bmi": {
+        "mild": {
+          "min": 30,
+          "max": 34.9,
+          "unit": "kg/m²",
+          "classification": "Class I Obesity"
+        },
+        "moderate": {
+          "min": 35,
+          "max": 39.9,
+          "unit": "kg/m²",
+          "classification": "Class II Obesity"
+        },
+        "severe": {
+          "min": 40,
+          "max": null,
+          "unit": "kg/m²",
+          "classification": "Class III Obesity (Morbid Obesity)"
+        }
+      }
+    },
+    "associated_risks": [
+      "type_2_diabetes",
+      "cardiovascular_disease",
+      "hypertension",
+      "sleep_apnea",
+      "osteoarthritis",
+      "certain_cancers",
+      "depression"
+    ],
+    "nutrition_focus_areas": [
+      "calorie_restriction",
+      "weight_management",
+      "portion_control",
+      "meal_timing",
+      "physical_activity",
+      "behavior_modification"
+    ],
+    "red_flags": [
+      "very_high_bmi",
+      "rapid_weight_gain",
+      "comorbid_conditions"
+    ],
+    "source": "World Health Organization",
+    "source_reference": "WHO: Obesity and Overweight Fact Sheet (2021)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "condition_id": "overweight",
+    "display_name": "Overweight",
+    "category": "metabolic",
+    "description": "Excess body weight relative to height. BMI between 25-29.9 kg/m². Increased risk of developing obesity and related health conditions.",
+    "critical_labs": [],
+    "severity_thresholds": {
+      "bmi": {
+        "mild": {
+          "min": 25,
+          "max": 29.9,
+          "unit": "kg/m²"
+        }
+      }
+    },
+    "associated_risks": [
+      "progression_to_obesity",
+      "type_2_diabetes",
+      "cardiovascular_disease",
+      "hypertension"
+    ],
+    "nutrition_focus_areas": [
+      "weight_management",
+      "calorie_balance",
+      "portion_control",
+      "physical_activity",
+      "preventive_nutrition"
+    ],
+    "red_flags": [],
+    "source": "World Health Organization",
+    "source_reference": "WHO: Obesity and Overweight Fact Sheet (2021)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "condition_id": "underweight",
+    "display_name": "Underweight",
+    "category": "metabolic",
+    "description": "Body weight below what is considered healthy for height. BMI less than 18.5 kg/m². May indicate malnutrition or underlying health conditions.",
+    "critical_labs": [],
+    "severity_thresholds": {
+      "bmi": {
+        "mild": {
+          "min": null,
+          "max": 18.4,
+          "unit": "kg/m²"
+        },
+        "moderate": {
+          "min": null,
+          "max": 16.0,
+          "unit": "kg/m²",
+          "note": "Severe underweight"
+        },
+        "severe": {
+          "min": null,
+          "max": 15.0,
+          "unit": "kg/m²",
+          "note": "Very severe underweight"
+        }
+      }
+    },
+    "associated_risks": [
+      "malnutrition",
+      "weakened_immune_system",
+      "osteoporosis",
+      "fertility_issues",
+      "delayed_wound_healing",
+      "underlying_medical_conditions"
+    ],
+    "nutrition_focus_areas": [
+      "calorie_increase",
+      "nutrient_density",
+      "healthy_weight_gain",
+      "protein_intake",
+      "micronutrient_sufficiency"
+    ],
+    "red_flags": [
+      "severe_underweight",
+      "rapid_weight_loss",
+      "signs_of_malnutrition"
+    ],
+    "source": "World Health Organization",
+    "source_reference": "WHO: BMI Classification (2004)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "condition_id": "pcos",
+    "display_name": "Polycystic Ovary Syndrome",
+    "category": "endocrine",
+    "description": "Hormonal disorder common among women of reproductive age, characterized by hyperandrogenism, ovulatory dysfunction, and polycystic ovaries. Associated with insulin resistance and metabolic risk.",
+    "critical_labs": [
+      "LH",
+      "FSH",
+      "LH_FSH_ratio",
+      "total_testosterone",
+      "fasting_insulin",
+      "HbA1c"
+    ],
+    "severity_thresholds": {
+      "LH_FSH_ratio": {
+        "mild": {
+          "min": 2,
+          "max": 3,
+          "unit": "ratio"
+        },
+        "severe": {
+          "min": 3,
+          "max": null,
+          "unit": "ratio"
+        }
+      }
+    },
+    "associated_risks": [
+      "infertility",
+      "insulin_resistance",
+      "type_2_diabetes",
+      "obesity",
+      "cardiovascular_disease"
+    ],
+    "nutrition_focus_areas": [
+      "glycemic_control",
+      "weight_management",
+      "anti_inflammatory_diet"
+    ],
+    "red_flags": [
+      "amenorrhea"
+    ],
+    "source": "Endocrine Society",
+    "source_reference": "Clinical Practice Guideline on PCOS (2018)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "condition_id": "hypothyroidism",
+    "display_name": "Hypothyroidism",
+    "category": "endocrine",
+    "description": "Condition where the thyroid gland produces insufficient thyroid hormones, leading to slowed metabolism.",
+    "critical_labs": [
+      "TSH",
+      "free_T4"
+    ],
+    "severity_thresholds": {
+      "TSH": {
+        "mild": {
+          "min": 4.5,
+          "max": 10,
+          "unit": "mIU/L"
+        },
+        "severe": {
+          "min": 10,
+          "max": null,
+          "unit": "mIU/L"
+        }
+      }
+    },
+    "associated_risks": [
+      "weight_gain",
+      "fatigue",
+      "dyslipidemia"
+    ],
+    "nutrition_focus_areas": [
+      "iodine_sufficiency",
+      "selenium_intake"
+    ],
+    "red_flags": [
+      "myxedema"
+    ],
+    "source": "American Thyroid Association",
+    "source_reference": "ATA Hypothyroidism Guidelines (2014)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "condition_id": "hypertension",
+    "display_name": "Hypertension",
+    "category": "cardiovascular",
+    "description": "Chronic elevation of arterial blood pressure increasing cardiovascular risk.",
+    "critical_labs": [
+      "bp_systolic",
+      "bp_diastolic"
+    ],
+    "severity_thresholds": {
+      "bp_systolic": {
+        "mild": {
+          "min": 130,
+          "max": 139,
+          "unit": "mmHg"
+        },
+        "moderate": {
+          "min": 140,
+          "max": 159,
+          "unit": "mmHg"
+        },
+        "severe": {
+          "min": 160,
+          "max": null,
+          "unit": "mmHg"
+        }
+      },
+      "bp_diastolic": {
+        "mild": {
+          "min": 80,
+          "max": 89,
+          "unit": "mmHg"
+        },
+        "moderate": {
+          "min": 90,
+          "max": 99,
+          "unit": "mmHg"
+        },
+        "severe": {
+          "min": 100,
+          "max": null,
+          "unit": "mmHg"
+        }
+      }
+    },
+    "associated_risks": [
+      "stroke",
+      "heart_disease",
+      "kidney_disease"
+    ],
+    "nutrition_focus_areas": [
+      "sodium_restriction",
+      "dash_diet"
+    ],
+    "red_flags": [
+      "hypertensive_crisis"
+    ],
+    "source": "American Heart Association",
+    "source_reference": "ACC/AHA Hypertension Guidelines (2017)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "condition_id": "iron_deficiency_anemia",
+    "display_name": "Iron Deficiency Anemia",
+    "category": "hematologic",
+    "description": "Reduced hemoglobin due to insufficient iron, leading to decreased oxygen-carrying capacity.",
+    "critical_labs": [
+      "hemoglobin",
+      "serum_ferritin"
+    ],
+    "severity_thresholds": {
+      "hemoglobin": {
+        "mild": {
+          "min": 10,
+          "max": 11.9,
+          "unit": "g/dL"
+        },
+        "moderate": {
+          "min": 8,
+          "max": 9.9,
+          "unit": "g/dL"
+        },
+        "severe": {
+          "min": null,
+          "max": 7.9,
+          "unit": "g/dL"
+        }
+      }
+    },
+    "associated_risks": [
+      "fatigue",
+      "reduced_immunity"
+    ],
+    "nutrition_focus_areas": [
+      "iron_rich_foods",
+      "vitamin_c_intake"
+    ],
+    "red_flags": [
+      "very_low_hemoglobin"
+    ],
+    "source": "World Health Organization",
+    "source_reference": "WHO Iron Deficiency Anemia Guidelines",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "condition_id": "ibs",
+    "display_name": "Irritable Bowel Syndrome",
+    "category": "gastrointestinal",
+    "description": "Functional gastrointestinal disorder characterized by chronic abdominal pain, bloating, and altered bowel habits without identifiable structural or inflammatory pathology. Symptoms are often triggered by diet, stress, and gut-brain axis dysregulation.",
+    "critical_labs": [],
+    "severity_thresholds": {
+      "symptom_frequency": {
+        "mild": {
+          "min": 1,
+          "max": 3,
+          "unit": "days/week",
+          "note": "Intermittent symptoms"
+        },
+        "moderate": {
+          "min": 4,
+          "max": 5,
+          "unit": "days/week"
+        },
+        "severe": {
+          "min": 6,
+          "max": null,
+          "unit": "days/week",
+          "note": "Daily or near-daily symptoms"
+        }
+      }
+    },
+    "associated_risks": [
+      "chronic_abdominal_pain",
+      "bloating",
+      "diarrhea",
+      "constipation",
+      "anxiety",
+      "reduced_quality_of_life"
+    ],
+    "nutrition_focus_areas": [
+      "low_fodmap_diet",
+      "trigger_food_identification",
+      "meal_timing",
+      "fiber_modulation",
+      "hydration",
+      "stress_management_support"
+    ],
+    "red_flags": [
+      "unintentional_weight_loss",
+      "blood_in_stool",
+      "nocturnal_symptoms",
+      "iron_deficiency_anemia"
+    ],
+    "source": "American College of Gastroenterology",
+    "source_reference": "ACG Clinical Guideline: Management of Irritable Bowel Syndrome (2021)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "condition_id": "ibd",
+    "display_name": "Inflammatory Bowel Disease",
+    "category": "gastrointestinal",
+    "description": "Chronic inflammatory condition of the gastrointestinal tract, primarily including Crohn’s disease and Ulcerative Colitis. Characterized by immune-mediated intestinal inflammation leading to mucosal damage and systemic complications.",
+    "critical_labs": [
+      "CRP",
+      "ESR",
+      "fecal_calprotectin",
+      "hemoglobin",
+      "albumin"
+    ],
+    "severity_thresholds": {
+      "CRP": {
+        "mild": {
+          "min": 5,
+          "max": 10,
+          "unit": "mg/L"
+        },
+        "moderate": {
+          "min": 10,
+          "max": 30,
+          "unit": "mg/L"
+        },
+        "severe": {
+          "min": 30,
+          "max": null,
+          "unit": "mg/L"
+        }
+      },
+      "fecal_calprotectin": {
+        "mild": {
+          "min": 150,
+          "max": 300,
+          "unit": "µg/g"
+        },
+        "moderate": {
+          "min": 300,
+          "max": 500,
+          "unit": "µg/g"
+        },
+        "severe": {
+          "min": 500,
+          "max": null,
+          "unit": "µg/g"
+        }
+      }
+    },
+    "associated_risks": [
+      "intestinal_ulceration",
+      "malnutrition",
+      "anemia",
+      "osteoporosis",
+      "growth_failure",
+      "colorectal_cancer"
+    ],
+    "nutrition_focus_areas": [
+      "anti_inflammatory_diet",
+      "adequate_protein_intake",
+      "micronutrient_repletion",
+      "low_residue_diet_during_flare",
+      "hydration",
+      "energy_density"
+    ],
+    "red_flags": [
+      "persistent_bloody_diarrhea",
+      "severe_abdominal_pain",
+      "fever",
+      "rapid_weight_loss",
+      "bowel_obstruction"
+    ],
+    "source": "European Crohn’s and Colitis Organisation",
+    "source_reference": "ECCO Guidelines on IBD (2023)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "condition_id": "ckd",
+    "display_name": "Chronic Kidney Disease",
+    "category": "renal",
+    "description": "Progressive loss of kidney function over time, defined by reduced glomerular filtration rate (eGFR) and/or markers of kidney damage persisting for more than three months. Impacts fluid, electrolyte, and metabolic balance.",
+    "critical_labs": [
+      "eGFR",
+      "serum_creatinine",
+      "BUN",
+      "serum_potassium",
+      "serum_phosphorus",
+      "serum_sodium",
+      "urine_albumin_creatinine_ratio"
+    ],
+    "severity_thresholds": {
+      "eGFR": {
+        "mild": {
+          "min": 60,
+          "max": 89,
+          "unit": "mL/min/1.73m²",
+          "classification": "Stage 2 CKD"
+        },
+        "moderate": {
+          "min": 30,
+          "max": 59,
+          "unit": "mL/min/1.73m²",
+          "classification": "Stage 3 CKD"
+        },
+        "severe": {
+          "min": 15,
+          "max": 29,
+          "unit": "mL/min/1.73m²",
+          "classification": "Stage 4 CKD"
+        },
+        "end_stage": {
+          "min": null,
+          "max": 14,
+          "unit": "mL/min/1.73m²",
+          "classification": "Stage 5 CKD (ESRD)"
+        }
+      },
+      "serum_potassium": {
+        "mild": {
+          "min": 5.1,
+          "max": 5.5,
+          "unit": "mmol/L"
+        },
+        "severe": {
+          "min": 5.6,
+          "max": null,
+          "unit": "mmol/L",
+          "note": "Hyperkalemia"
+        }
+      },
+      "serum_phosphorus": {
+        "mild": {
+          "min": 4.6,
+          "max": 5.5,
+          "unit": "mg/dL"
+        },
+        "severe": {
+          "min": 5.6,
+          "max": null,
+          "unit": "mg/dL"
+        }
+      }
+    },
+    "associated_risks": [
+      "hypertension",
+      "cardiovascular_disease",
+      "anemia",
+      "mineral_bone_disorder",
+      "fluid_overload",
+      "electrolyte_imbalance"
+    ],
+    "nutrition_focus_areas": [
+      "protein_modulation",
+      "sodium_restriction",
+      "potassium_management",
+      "phosphorus_restriction",
+      "fluid_balance",
+      "energy_sufficiency"
+    ],
+    "red_flags": [
+      "rapid_decline_in_eGFR",
+      "severe_hyperkalemia",
+      "pulmonary_edema",
+      "uremic_symptoms"
+    ],
+    "source": "Kidney Disease: Improving Global Outcomes",
+    "source_reference": "KDIGO Clinical Practice Guideline for the Evaluation and Management of CKD (2023)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "condition_id": "fatty_liver_disease",
+    "display_name": "Fatty Liver Disease (NAFLD / NASH)",
+    "category": "hepatic",
+    "description": "Accumulation of excess fat in liver cells not caused by alcohol. Includes non-alcoholic fatty liver disease (NAFLD) and its progressive inflammatory form, non-alcoholic steatohepatitis (NASH), which may progress to fibrosis and cirrhosis.",
+    "critical_labs": [
+      "ALT",
+      "AST",
+      "AST_ALT_ratio",
+      "GGT",
+      "triglycerides",
+      "HbA1c"
+    ],
+    "severity_thresholds": {
+      "ALT": {
+        "mild": {
+          "min": 41,
+          "max": 80,
+          "unit": "U/L"
+        },
+        "moderate": {
+          "min": 81,
+          "max": 150,
+          "unit": "U/L"
+        },
+        "severe": {
+          "min": 151,
+          "max": null,
+          "unit": "U/L"
+        }
+      },
+      "AST_ALT_ratio": {
+        "mild": {
+          "min": 0.8,
+          "max": 1.0,
+          "unit": "ratio",
+          "note": "Higher ratios may suggest fibrosis"
+        },
+        "severe": {
+          "min": 1.0,
+          "max": null,
+          "unit": "ratio"
+        }
+      }
+    },
+    "associated_risks": [
+      "insulin_resistance",
+      "type_2_diabetes",
+      "dyslipidemia",
+      "hypertension",
+      "liver_fibrosis",
+      "cirrhosis",
+      "cardiovascular_disease"
+    ],
+    "nutrition_focus_areas": [
+      "weight_management",
+      "reduced_simple_sugars",
+      "low_fructose_intake",
+      "healthy_fats",
+      "anti_inflammatory_diet",
+      "physical_activity_support"
+    ],
+    "red_flags": [
+      "persistently_elevated_liver_enzymes",
+      "signs_of_liver_fibrosis",
+      "jaundice",
+      "ascites"
+    ],
+    "source": "American Association for the Study of Liver Diseases",
+    "source_reference": "AASLD Practice Guidance on NAFLD and NASH (2023)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "condition_id": "cardiovascular_disease",
+    "display_name": "Cardiovascular Disease",
+    "category": "cardiovascular",
+    "description": "Group of disorders involving the heart and blood vessels, including coronary artery disease, heart failure, and atherosclerosis. Strongly associated with metabolic risk factors and lifestyle patterns.",
+    "critical_labs": [
+      "LDL",
+      "HDL",
+      "total_cholesterol",
+      "triglycerides",
+      "bp_systolic",
+      "bp_diastolic"
+    ],
+    "severity_thresholds": {
+      "LDL": {
+        "mild": {
+          "min": 100,
+          "max": 129,
+          "unit": "mg/dL"
+        },
+        "moderate": {
+          "min": 130,
+          "max": 159,
+          "unit": "mg/dL"
+        },
+        "severe": {
+          "min": 160,
+          "max": null,
+          "unit": "mg/dL"
+        }
+      },
+      "bp_systolic": {
+        "mild": {
+          "min": 130,
+          "max": 139,
+          "unit": "mmHg"
+        },
+        "moderate": {
+          "min": 140,
+          "max": 159,
+          "unit": "mmHg"
+        },
+        "severe": {
+          "min": 160,
+          "max": null,
+          "unit": "mmHg"
+        }
+      }
+    },
+    "associated_risks": [
+      "myocardial_infarction",
+      "stroke",
+      "heart_failure",
+      "peripheral_artery_disease",
+      "chronic_kidney_disease",
+      "sudden_cardiac_death"
+    ],
+    "nutrition_focus_areas": [
+      "saturated_fat_reduction",
+      "trans_fat_elimination",
+      "sodium_restriction",
+      "omega_3_fatty_acids",
+      "fiber_intake",
+      "weight_management"
+    ],
+    "red_flags": [
+      "chest_pain",
+      "shortness_of_breath",
+      "syncope",
+      "uncontrolled_hypertension"
+    ],
+    "source": "American Heart Association",
+    "source_reference": "AHA/ACC Guideline for the Prevention of Cardiovascular Disease (2019)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "condition_id": "arthritis",
+    "display_name": "Arthritis",
+    "category": "musculoskeletal",
+    "description": "Group of conditions characterized by inflammation of one or more joints, leading to pain, stiffness, swelling, and reduced mobility. Includes osteoarthritis and inflammatory types such as rheumatoid arthritis.",
+    "critical_labs": [
+      "CRP",
+      "ESR",
+      "rheumatoid_factor",
+      "anti_ccp"
+    ],
+    "severity_thresholds": {
+      "CRP": {
+        "mild": {
+          "min": 5,
+          "max": 10,
+          "unit": "mg/L"
+        },
+        "moderate": {
+          "min": 10,
+          "max": 30,
+          "unit": "mg/L"
+        },
+        "severe": {
+          "min": 30,
+          "max": null,
+          "unit": "mg/L"
+        }
+      },
+      "ESR": {
+        "mild": {
+          "min": 20,
+          "max": 40,
+          "unit": "mm/hr"
+        },
+        "severe": {
+          "min": 40,
+          "max": null,
+          "unit": "mm/hr"
+        }
+      }
+    },
+    "associated_risks": [
+      "chronic_pain",
+      "joint_deformity",
+      "reduced_mobility",
+      "osteoporosis",
+      "cardiovascular_disease"
+    ],
+    "nutrition_focus_areas": [
+      "anti_inflammatory_diet",
+      "omega_3_fatty_acids",
+      "weight_management",
+      "antioxidant_rich_foods",
+      "adequate_protein_intake"
+    ],
+    "red_flags": [
+      "severe_joint_swelling",
+      "persistent_morning_stiffness",
+      "rapid_functional_decline"
+    ],
+    "source": "American College of Rheumatology",
+    "source_reference": "ACR Guidelines for the Management of Arthritis (2021)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "condition_id": "anemia",
+    "display_name": "Anemia (Low Hemoglobin)",
+    "category": "hematologic",
+    "description": "Condition characterized by reduced hemoglobin concentration, leading to decreased oxygen-carrying capacity of the blood. Most commonly caused by iron deficiency, but may also result from chronic disease or nutrient deficiencies.",
+    "critical_labs": [
+      "hemoglobin",
+      "serum_ferritin",
+      "serum_iron",
+      "TIBC"
+    ],
+    "severity_thresholds": {
+      "hemoglobin": {
+        "mild": {
+          "min": 10.0,
+          "max": 11.9,
+          "unit": "g/dL"
+        },
+        "moderate": {
+          "min": 8.0,
+          "max": 9.9,
+          "unit": "g/dL"
+        },
+        "severe": {
+          "min": null,
+          "max": 7.9,
+          "unit": "g/dL"
+        }
+      },
+      "serum_ferritin": {
+        "mild": {
+          "min": 15,
+          "max": 30,
+          "unit": "ng/mL"
+        },
+        "severe": {
+          "min": null,
+          "max": 14,
+          "unit": "ng/mL"
+        }
+      }
+    },
+    "associated_risks": [
+      "fatigue",
+      "reduced_work_capacity",
+      "impaired_immunity",
+      "pregnancy_complications",
+      "cognitive_impairment"
+    ],
+    "nutrition_focus_areas": [
+      "iron_rich_foods",
+      "vitamin_c_enhancement",
+      "adequate_protein_intake",
+      "avoid_iron_absorption_inhibitors"
+    ],
+    "red_flags": [
+      "very_low_hemoglobin",
+      "shortness_of_breath",
+      "chest_pain",
+      "syncope"
+    ],
+    "source": "World Health Organization",
+    "source_reference": "WHO Guidelines on Anemia and Iron Deficiency (2020)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "condition_id": "gastritis",
+    "display_name": "Gastritis",
+    "category": "gastrointestinal",
+    "description": "Inflammation of the stomach lining, which may be acute or chronic. Common causes include Helicobacter pylori infection, prolonged NSAID use, alcohol intake, and stress. Can impair digestion and nutrient absorption.",
+    "critical_labs": [
+      "hemoglobin",
+      "H_pylori_test"
+    ],
+    "severity_thresholds": {
+      "hemoglobin": {
+        "mild": {
+          "min": 10.0,
+          "max": 11.9,
+          "unit": "g/dL",
+          "note": "May indicate chronic blood loss"
+        }
+      }
+    },
+    "associated_risks": [
+      "peptic_ulcer_disease",
+      "gastrointestinal_bleeding",
+      "iron_deficiency_anemia",
+      "malabsorption"
+    ],
+    "nutrition_focus_areas": [
+      "bland_diet",
+      "small_frequent_meals",
+      "avoid_gastric_irritants",
+      "adequate_protein_intake",
+      "gut_mucosal_healing"
+    ],
+    "red_flags": [
+      "hematemesis",
+      "melena",
+      "persistent_vomiting",
+      "unintentional_weight_loss"
+    ],
+    "source": "American College of Gastroenterology",
+    "source_reference": "ACG Clinical Guideline: Management of Gastritis (2022)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "condition_id": "gerd",
+    "display_name": "Gastroesophageal Reflux Disease (GERD)",
+    "category": "gastrointestinal",
+    "description": "Chronic condition in which stomach acid or bile flows back into the esophagus, causing symptoms such as heartburn and regurgitation. Often related to dietary habits, obesity, and hiatal hernia.",
+    "critical_labs": [],
+    "severity_thresholds": {
+      "symptom_frequency": {
+        "mild": {
+          "min": 1,
+          "max": 2,
+          "unit": "episodes/week"
+        },
+        "moderate": {
+          "min": 3,
+          "max": 5,
+          "unit": "episodes/week"
+        },
+        "severe": {
+          "min": 6,
+          "max": null,
+          "unit": "episodes/week"
+        }
+      }
+    },
+    "associated_risks": [
+      "esophagitis",
+      "barrett_esophagus",
+      "chronic_cough",
+      "sleep_disturbance",
+      "dental_erosion"
+    ],
+    "nutrition_focus_areas": [
+      "avoid_trigger_foods",
+      "meal_timing",
+      "portion_control",
+      "weight_management",
+      "elevated_head_sleep_position_support"
+    ],
+    "red_flags": [
+      "dysphagia",
+      "odynophagia",
+      "chest_pain",
+      "unintentional_weight_loss"
+    ],
+    "source": "American College of Gastroenterology",
+    "source_reference": "ACG Clinical Guideline for the Diagnosis and Management of GERD (2022)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "condition_id": "osteoporosis",
+    "display_name": "Osteoporosis",
+    "category": "skeletal",
+    "description": "Systemic skeletal disorder characterized by low bone mass and deterioration of bone tissue, leading to increased fracture risk. Common in postmenopausal women and older adults.",
+    "critical_labs": [
+      "DEXA_T_score",
+      "serum_calcium",
+      "vitamin_D"
+    ],
+    "severity_thresholds": {
+      "DEXA_T_score": {
+        "mild": {
+          "min": -2.5,
+          "max": -1.0,
+          "unit": "T-score",
+          "classification": "Osteopenia"
+        },
+        "severe": {
+          "min": null,
+          "max": -2.5,
+          "unit": "T-score",
+          "classification": "Osteoporosis"
+        }
+      },
+      "vitamin_D": {
+        "mild": {
+          "min": 20,
+          "max": 29,
+          "unit": "ng/mL"
+        },
+        "severe": {
+          "min": null,
+          "max": 19,
+          "unit": "ng/mL"
+        }
+      }
+    },
+    "associated_risks": [
+      "fragility_fractures",
+      "vertebral_compression",
+      "chronic_pain",
+      "reduced_mobility"
+    ],
+    "nutrition_focus_areas": [
+      "adequate_calcium_intake",
+      "vitamin_d_sufficiency",
+      "adequate_protein_intake",
+      "weight_bearing_activity_support",
+      "fall_prevention_support"
+    ],
+    "red_flags": [
+      "history_of_low_trauma_fracture",
+      "sudden_back_pain",
+      "height_loss"
+    ],
+    "source": "National Osteoporosis Foundation",
+    "source_reference": "Clinician’s Guide to Prevention and Treatment of Osteoporosis (2022)",
+    "version": "1.0",
+    "status": "active"
+  }
+          
+  
+]
+

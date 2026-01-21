@@ -1,0 +1,35 @@
+code,Food Name,,PROTCNT,FATCE,FIBTG,CHOAVLDF,ENERC,Exchange
+C001,Agathi leaves (Sesbania grandiflora),1,8.01,1.35,8.6,5.21,295,GREEN LEAFY VEGETABLES
+C002,"Amaranth leaves, green (Amaranthus gangeticus)",6,3.29±0.57,0.65±0.07,4.41±0.10,2.28±0.62,128±17,GREEN LEAFY VEGETABLES
+C003,"Amaranth leaves, red (Amaranthus gangeticus)",1,3.93,0.63,4.91,2.37,140,GREEN LEAFY VEGETABLES
+C004,"Amaranth leaves, red and green mix (Amaranthus gangeticus)",4,3.09±0.14,0.53±0.03,4.60±0.36,2.87±0.35,132±6,GREEN LEAFY VEGETABLES
+C005,"Amaranth spined, leaves, green (Amaranthus spinosus)",4,3.54±0.31,0.36±0.02,5.10±0.32,1.61±0.40,110±5,GREEN LEAFY VEGETABLES
+C006,"Amaranth spined, leaves, red and green mix (Amaranthus spinosus)",2,2.8,0.34,5.57,1.45,99,GREEN LEAFY VEGETABLES
+C007,Basella leaves (Basella alba),2,1.57,0.45,2.21,2.01,82,GREEN LEAFY VEGETABLES
+C008,Bathua leaves (Chenopodium album),2,2.5,0.44,4.01,2.56,116,GREEN LEAFY VEGETABLES
+C009,Beet greens (Beta vulgaris),6,2.38±0.35,0.75±0.02,3.64±0.13,3.86±1.63,145±23,GREEN LEAFY VEGETABLES
+C010,"Betel leaves, big (Kolkata) (Piper betle)",6,2.51±0.29,0.75±0.02,2.12±0.20,7.37±0.66,202±14,GREEN LEAFY VEGETABLES
+C011,"Betel leaves, small (Piper betle)",4,2.62±0.28,0.75±0.04,1.97±0.13,6.16±0.33,183±2,GREEN LEAFY VEGETABLES
+C012,Brussels sprouts (Brassica oleracea var.gemmifera),1,4.26,0.5,4.29,5.09,185,GREEN LEAFY VEGETABLES
+C013,"Cabbage, Chinese (Brassica rupa)",1,1.58,0.13,2.01,2.36,75,GREEN LEAFY VEGETABLES
+C014,"Cabbage, collard greens (Brassica oleracea var.viridis)",1,3.63,0.27,2.98,2.79,126,GREEN LEAFY VEGETABLES
+C015,"Cabbage, green (Brassica oleracea var. capitata f. alba)",6,1.36±0.07,0.12±0.01,2.76±0.20,3.25±0.91,90±16,GREEN LEAFY VEGETABLES
+C016,"Cabbage, violet (Brassica oleracea var. capitata f. rubra)",2,1.39,0.21,2.21,3.54,97,GREEN LEAFY VEGETABLES
+C017,Cauliflower leaves (Brassica oleracea var. botrytis),6,3.90±0.87,0.42±0.02,3.43±0.26,3.39±0.70,148±22,GREEN LEAFY VEGETABLES
+C018,"Colocasia leaves, green (Colocasia esculenta)",6,3.42±0.29,1.38±0.09,5.60±0.18,3.69±0.49,182±9,GREEN LEAFY VEGETABLES
+C019,Drumstick leaves (Moringa oleifera),3,6.41±0.35,1.64±0.12,8.21±0.19,5.62±1.44,282±27,GREEN LEAFY VEGETABLES
+C020,Fenugreek leaves (Trigonella foenum graecum),5,3.68±0.36,0.83±0.02,4.90±0.21,2.17±0.32,144±10,GREEN LEAFY VEGETABLES
+C021,Garden cress (Lepidium sativum),2,5.62,0.8,2.6,4.48,208,GREEN LEAFY VEGETABLES
+C022,"Gogu leaves, green (Hibiscus cannabinus)",4,1.86±0.16,1.09±0.03,4.59±0.39,4.06±0.18,152±2,GREEN LEAFY VEGETABLES
+C023,"Gogu leaves, red (Hibiscus cannabinus)",1,1.85,1.07,3.89,4.24,153,GREEN LEAFY VEGETABLES
+C024,"Knol-Khol, leaves (Brassica oleracea var.gongylodes)",2,3.12,0.35,2.76,6.16,178,GREEN LEAFY VEGETABLES
+C025,Lettuce (Lactuca sativa),3,1.54±0.48,0.27±0.03,1.79±0.24,3.01±0.56,91±16,GREEN LEAFY VEGETABLES
+C026,Mustard leaves (Brassica juncea),3,3.52±0.21,0.51±0.05,3.92±0.06,2.41±0.46,127±9,GREEN LEAFY VEGETABLES
+C027,Pak Choi leaves (Brassica rapa var. chinensis),1,1.41,0.25,1.91,1.78,67,GREEN LEAFY VEGETABLES
+C028,Parsley (Petroselinum crispum),3,5.55±0.34,1.14±0.12,3.87±0.05,9.43±1.05,305±18,GREEN LEAFY VEGETABLES
+C029,Ponnaganni (Alternanthera sessilis),2,5.29,0.71,6.74,5.17,213,GREEN LEAFY VEGETABLES
+C030,"Pumpkin leaves, tender (Cucurbita maxima)",6,4.21±0.41,0.74±0.03,2.25±0.09,4.75±1.01,185±15,GREEN LEAFY VEGETABLES
+C031,Radish leaves (Raphanus sativus),6,2.22±0.23,0.51±0.05,1.82±0.10,2.77±0.34,109±9,GREEN LEAFY VEGETABLES
+C032,Rumex leaves (Rumex patientia),2,1.62,0.33,1.27,2.33,82,GREEN LEAFY VEGETABLES
+C033,Spinach (Spinacia oleracea),6,2.14±0.14,0.64±0.03,2.38±0.24,2.05±0.31,102±7,GREEN LEAFY VEGETABLES
+C034,"Tamarind leaves, tender (Tamarindus indica)",3,5.84±0.01,0.49±0.01,10.70±0.02,10.04±0.02,299±1,GREEN LEAFY VEGETABLES

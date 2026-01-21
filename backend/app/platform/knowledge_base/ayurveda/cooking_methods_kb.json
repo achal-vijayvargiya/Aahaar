@@ -1,0 +1,118 @@
+[
+  {
+    "condition_id": "default",
+    "condition_type": "default",
+    "cooking_methods": [
+      {
+        "method": "boiled",
+        "priority": "high",
+        "reason": "Easy to digest"
+      },
+      {
+        "method": "steamed",
+        "priority": "high",
+        "reason": "Preserves nutrients, easy to digest"
+      },
+      {
+        "method": "stewed",
+        "priority": "medium",
+        "reason": "Moist and warming"
+      },
+      {
+        "method": "roasted",
+        "priority": "medium",
+        "reason": "Light and digestible"
+      }
+    ],
+    "avoid_methods": [],
+    "source": "Charaka Samhita",
+    "source_reference": "General Cooking Methods",
+    "version": "1.0",
+    "status": "active",
+    "is_default": true
+  },
+  {
+    "condition_id": "high_ama",
+    "condition_type": "ama_level",
+    "cooking_methods": [
+      {
+        "method": "boiled",
+        "priority": "high",
+        "reason": "Simple, easily digestible"
+      },
+      {
+        "method": "steamed",
+        "priority": "high",
+        "reason": "Light and easy to digest"
+      },
+      {
+        "method": "soup",
+        "priority": "medium",
+        "reason": "Liquid form reduces digestive load"
+      }
+    ],
+    "avoid_methods": ["fried", "deep_fried", "grilled"],
+    "source": "Charaka Samhita",
+    "source_reference": "Ama Reduction Cooking Methods",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "condition_id": "manda_agni",
+    "condition_type": "agni_type",
+    "cooking_methods": [
+      {
+        "method": "boiled",
+        "priority": "high",
+        "reason": "Easy to digest"
+      },
+      {
+        "method": "steamed",
+        "priority": "high",
+        "reason": "Light and digestible"
+      },
+      {
+        "method": "spiced",
+        "priority": "high",
+        "reason": "With digestive spices to enhance Agni"
+      }
+    ],
+    "avoid_methods": ["fried", "raw"],
+    "source": "Charaka Samhita",
+    "source_reference": "Manda Agni Cooking Methods",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "condition_id": "tikshna_agni",
+    "condition_type": "agni_type",
+    "cooking_methods": [
+      {
+        "method": "boiled",
+        "priority": "high",
+        "reason": "Cooling and easy to digest"
+      },
+      {
+        "method": "steamed",
+        "priority": "high",
+        "reason": "Cooling method"
+      },
+      {
+        "method": "cooling",
+        "priority": "medium",
+        "reason": "Cooling methods to balance excess Agni"
+      }
+    ],
+    "avoid_methods": ["fried", "grilled", "spicy"],
+    "source": "Charaka Samhita",
+    "source_reference": "Tikshna Agni Cooking Methods",
+    "version": "1.0",
+    "status": "active"
+  }
+]
+
+
+
+
+
+

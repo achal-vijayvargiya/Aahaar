@@ -1,0 +1,174 @@
+{
+  "food_master": [
+    {
+      "food_id": "Unique identifier for the food item (string)",
+      "display_name": "Human-readable food name with preparation state (string)",
+      "aliases": "Alternative names for the food - regional names, variations (array of strings)",
+      "category": "Exchange system category - cereal, pulse, milk, vegetable_non_starchy, vegetable_starchy, fruit, fat, nuts_seeds (string)",
+      "food_type": "General food type classification - grain, legume, dairy, fruit, vegetable (string)",
+      "region": "Geographic region - pan_india, global (string)",
+      "diet_type": "Dietary compatibility - vegetarian, vegan, non_vegetarian (array of strings)",
+      "cooking_state": "Preparation state - raw, cooked (string)",
+      "common_serving_unit": "Standard serving unit - cup, piece, medium, tbsp, tsp (string)",
+      "common_serving_size_g": "Weight in grams for the common serving unit (number)",
+      "version": "Schema version identifier (string)",
+      "status": "Record status - active, inactive, deprecated (string)",
+      "source": "Data source identifier (string)",
+      "source_reference": "Detailed reference to data source (string)",
+      "last_reviewed": "Last review date in ISO format YYYY-MM-DD (string)"
+    }
+  ],
+  "food_nutrition_base": [
+    {
+      "food_id": "Foreign key reference to food_master.food_id (string)",
+      "calories_kcal": "Energy content per 100g in kilocalories (number)",
+      "macros": {
+        "protein_g": "Protein in grams per 100g (number)",
+        "carbs_g": "Total carbohydrates in grams per 100g (number)",
+        "fat_g": "Total fat in grams per 100g (number)",
+        "fiber_g": "Dietary fiber in grams per 100g (number)",
+        "sugar_g": "Total sugars in grams per 100g (number)",
+        "saturated_fat_g": "Saturated fat in grams per 100g (number)",
+        "trans_fat_g": "Trans fat in grams per 100g (number)",
+        "added_sugar_g": "Added sugars in grams per 100g (number)",
+        "monounsaturated_fat_g": "Monounsaturated fat in grams per 100g (number)",
+        "polyunsaturated_fat_g": "Polyunsaturated fat in grams per 100g (number)",
+        "omega_3_mg": "Omega-3 fatty acids in milligrams per 100g (number)",
+        "omega_6_mg": "Omega-6 fatty acids in milligrams per 100g (number)"
+      },
+      "micros": {
+        "sodium_mg": "Sodium in milligrams per 100g (number)",
+        "potassium_mg": "Potassium in milligrams per 100g (number)",
+        "calcium_mg": "Calcium in milligrams per 100g (number)",
+        "iron_mg": "Iron in milligrams per 100g (number)",
+        "magnesium_mg": "Magnesium in milligrams per 100g (number)",
+        "phosphorus_mg": "Phosphorus in milligrams per 100g (number)",
+        "zinc_mg": "Zinc in milligrams per 100g (number)",
+        "vitamin_c_mg": "Vitamin C in milligrams per 100g (number)",
+        "vitamin_d_iu": "Vitamin D in International Units per 100g (number)",
+        "vitamin_e_mg": "Vitamin E in milligrams per 100g (number)",
+        "vitamin_b12_mcg": "Vitamin B12 in micrograms per 100g (number)",
+        "folate_mcg": "Folate in micrograms per 100g (number)",
+        "selenium_mcg": "Selenium in micrograms per 100g (number)",
+        "iodine_mcg": "Iodine in micrograms per 100g (number)"
+      },
+      "glycemic_properties": {
+        "glycemic_index": "Glycemic Index value 0-100+ (integer)",
+        "glycemic_load_per_100g": "Glycemic Load per 100g serving (number)",
+        "glycemic_classification": "GI classification - very_low_gi, low_gi, medium_gi, high_gi, no_gi (string)"
+      },
+      "calorie_density_kcal_per_g": "Calories per gram calculated as calories_kcal divided by 100 (number)",
+      "protein_density_g_per_100kcal": "Protein grams per 100 kcal - calculated metric for protein efficiency (number)"
+    }
+  ],
+  "food_exchange_profile": [
+    {
+      "food_id": "Foreign key reference to food_master.food_id (string)",
+      "exchange_category": "Exchange system category - cereal, pulse, milk, vegetable_non_starchy, vegetable_starchy, fruit, fat, nuts_seeds (string)",
+      "serving_size_per_exchange_g": "Weight in grams that equals 1 exchange unit for this food (number)",
+      "exchanges_per_common_serving": "Number of exchange units in the common serving size (number)",
+      "notes": "Additional notes about exchange conversion (string)"
+    }
+  ],
+  "food_mnt_profile": [
+    {
+      "food_id": "Foreign key reference to food_master.food_id (string)",
+      "macro_compliance": {
+        "low_carb_friendly": "Suitable for low-carbohydrate diets (boolean)",
+        "moderate_carb_friendly": "Suitable for moderate-carbohydrate diets (boolean)",
+        "high_fiber": "High fiber content typically greater than 5g per 100g (boolean)",
+        "low_fat": "Low fat content typically less than 10g per 100g (boolean)",
+        "high_protein": "High protein content typically greater than 15g per 100g (boolean)",
+        "low_saturated_fat": "Low saturated fat content (boolean)",
+        "zero_trans_fat": "Contains no trans fat (boolean)",
+        "low_added_sugar": "Low or zero added sugar (boolean)",
+        "high_monounsaturated_fat": "High monounsaturated fat heart-healthy (boolean)",
+        "omega_3_rich": "Rich in omega-3 fatty acids (boolean)"
+      },
+      "micro_compliance": {
+        "low_sodium": "Low sodium content less than 100mg per 100g (boolean)",
+        "low_potassium": "Low potassium content for renal diets (boolean)",
+        "low_phosphorus": "Low phosphorus content for renal diets (boolean)",
+        "iron_rich": "Rich in iron typically greater than 2mg per 100g (boolean)",
+        "calcium_rich": "Rich in calcium typically greater than 100mg per 100g (boolean)",
+        "selenium_rich": "Rich in selenium (boolean)",
+        "folate_rich": "Rich in folate (boolean)",
+        "vitamin_c_rich": "Rich in vitamin C (boolean)",
+        "vitamin_d_rich": "Rich in vitamin D (boolean)",
+        "vitamin_b12_rich": "Rich in vitamin B12 (boolean)",
+        "magnesium_rich": "Rich in magnesium (boolean)",
+        "vitamin_e_rich": "Rich in vitamin E (boolean)"
+      },
+      "medical_tags": {
+        "diabetic_safe": "Safe for diabetes management (boolean)",
+        "prediabetic_safe": "Safe for prediabetes management (boolean)",
+        "cardiac_safe": "Safe for cardiac conditions (boolean)",
+        "hypertension_safe": "Safe for hypertension (boolean)",
+        "renal_safe_stage_1_2": "Safe for CKD stages 1-2 (boolean)",
+        "renal_safe_stage_3_5": "Safe for CKD stages 3-5 (boolean)",
+        "ibd_safe_remission": "Safe during IBD remission (boolean)",
+        "ibs_safe": "Safe for IBS (boolean)",
+        "gerd_safe": "Safe for GERD (boolean)",
+        "gastritis_safe": "Safe for gastritis (boolean)",
+        "obesity_safe": "Suitable for obesity management (boolean)",
+        "pcos_safe": "Safe for PCOS (boolean)",
+        "fatty_liver_safe": "Safe for fatty liver disease (boolean)",
+        "anemia_safe": "Suitable for anemia management (boolean)",
+        "osteoporosis_safe": "Suitable for osteoporosis management (boolean)",
+        "dyslipidemia_safe": "Safe for dyslipidemia (boolean)"
+      },
+      "food_exclusion_tags": "Tags that match MNT exclusion rules (array of strings)",
+      "food_inclusion_tags": "Tags that match MNT inclusion recommendations (array of strings)",
+      "contraindications": "Medical conditions where this food should be avoided (array of strings)",
+      "preferred_conditions": "Medical conditions where this food is particularly beneficial (array of strings)"
+    }
+  ],
+  "food_ayurvedic_profile": [
+    {
+      "food_id": "Foreign key reference to food_master.food_id (string)",
+      "dosha_effects": {
+        "vata": "Effect on Vata dosha - pacifying, neutral, aggravating, neutral_to_aggravating (string)",
+        "pitta": "Effect on Pitta dosha - pacifying, neutral, aggravating, neutral_to_aggravating (string)",
+        "kapha": "Effect on Kapha dosha - pacifying, neutral, aggravating, neutral_to_aggravating (string)"
+      },
+      "guna": "Ayurvedic quality - sattvic, rajasic, tamasic (string)",
+      "rasa": "Taste of the food - sweet, sour, salty, bitter, pungent, astringent (array of strings)",
+      "virya": "Heating or cooling property - heating, cooling, neutral (string)",
+      "vipaka": "Post-digestive effect - sweet, sour, pungent (string)",
+      "agni_effect": "Effect on digestive fire - improving, neutral, diminishing (string)",
+      "digestive_load": "Ease of digestion - light, moderate, heavy (string)",
+      "food_temperature_preference": "Recommended temperature for consumption (string)",
+      "cooking_method_preference": "Recommended cooking methods for optimal digestion (array of strings)",
+      "meal_timing_preference": "Optimal meal times - breakfast, mid_morning, lunch, evening, dinner (array of strings)",
+      "season_preference": "Best seasons for consumption - winter, spring, summer, monsoon, all_seasons (array of strings)"
+    }
+  ],
+  "food_recipe_profile": [
+    {
+      "food_id": "Foreign key reference to food_master.food_id (string)",
+      "dietary_properties": {
+        "fodmap_level": "FODMAP classification - low, moderate, high (string)",
+        "gluten_free": "Contains no gluten (boolean)",
+        "lactose_free": "Contains no lactose (boolean)",
+        "allergen_free": "Contains no common allergens (boolean)",
+        "common_allergens": "List of common allergens present (array of strings)",
+        "oxalate_level": "Oxalate content level - low, moderate, high (string)",
+        "histamine_level": "Histamine content level - low, moderate, high (string)",
+        "goitrogen_present": "Contains goitrogens affects thyroid function (boolean)"
+      },
+      "retrieval_scoring": {
+        "nutritional_density_score": "Overall nutrient density score 0-100 (integer)",
+        "health_benefit_score": "Health benefit potential score 0-100 (integer)",
+        "versatility_score": "Recipe versatility and usage range score 0-100 (integer)",
+        "palatability_score": "Taste and acceptability score 0-100 (integer)",
+        "cost_accessibility_score": "Cost and availability score 0-100 (integer)"
+      },
+      "recipe_compatibility": {
+        "primary_recipe_types": "Recipe types where this food is commonly used (array of strings)",
+        "pairing_foods": "Foods that pair well with this food (array of strings)",
+        "spice_compatibility": "Compatibility with spices - low, medium, high, very_high (string)",
+        "texture_profile": "Texture characteristics (string)"
+      }
+    }
+  ]
+}

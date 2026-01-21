@@ -1,0 +1,224 @@
+[
+  {
+    "exchange_category_id": "cereal",
+    "display_name": "Cereal/Grain",
+    "description": "Primary energy source - rice, roti, jowar, bajra, oats",
+    "amount_per_exchange_g": 30.0,
+    "nutrition_per_exchange": {
+      "calories": 80.0,
+      "protein_g": 2.0,
+      "carbs_g": 15.0,
+      "fat_g": 1.0
+    },
+    "examples": ["Rice (cooked)", "Roti (1 medium)", "Jowar roti", "Bajra roti", "Oats (cooked)"],
+    "source": "Indian Exchange Lists for Diabetes (IET)",
+    "source_reference": "IET Exchange Lists - Cereal Group",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "exchange_category_id": "pulse",
+    "display_name": "Pulse/Legume",
+    "description": "Plant protein source - moong dal, chana, rajma, masoor",
+    "amount_per_exchange_g": 30.0,
+    "nutrition_per_exchange": {
+      "calories": 100.0,
+      "protein_g": 7.0,
+      "carbs_g": 15.0,
+      "fat_g": 2.0
+    },
+    "examples": ["Moong dal (cooked)", "Chana dal", "Rajma (cooked)", "Masoor dal", "Toor dal"],
+    "source": "Indian Exchange Lists for Diabetes (IET)",
+    "source_reference": "IET Exchange Lists - Pulse Group",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "exchange_category_id": "milk",
+    "display_name": "Milk & Dairy",
+    "description": "Protein + fat source - milk, curd, buttermilk",
+    "amount_per_exchange_g": 150.0,
+    "nutrition_per_exchange": {
+      "calories": 100.0,
+      "protein_g": 6.0,
+      "carbs_g": 10.0,
+      "fat_g": 4.0
+    },
+    "examples": ["Milk (1 cup)", "Curd (1 cup)", "Buttermilk (1 cup)"],
+    "source": "Indian Exchange Lists for Diabetes (IET)",
+    "source_reference": "IET Exchange Lists - Milk Group",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "exchange_category_id": "vegetable_non_starchy",
+    "display_name": "Non-Starchy Vegetable",
+    "description": "Fiber, micronutrients - lauki, tori, bhindi, spinach",
+    "amount_per_exchange_g": 100.0,
+    "nutrition_per_exchange": {
+      "calories": 25.0,
+      "protein_g": 2.0,
+      "carbs_g": 5.0,
+      "fat_g": 0.0
+    },
+    "examples": ["Lauki", "Tori", "Bhindi", "Spinach", "Cabbage", "Cauliflower"],
+    "source": "Indian Exchange Lists for Diabetes (IET)",
+    "source_reference": "IET Exchange Lists - Non-Starchy Vegetable Group",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "exchange_category_id": "vegetable_a",
+    "display_name": "Vegetable A",
+    "description": "Non-starchy vegetables - capsicum, onion, tomatoes, cabbage, cauliflower",
+    "amount_per_exchange_g": 100.0,
+    "nutrition_per_exchange": {
+      "calories": 25.0,
+      "protein_g": 1.0,
+      "carbs_g": 6.0,
+      "fat_g": 0.0
+    },
+    "examples": ["Capsicum", "Onion", "Tomatoes", "Cabbage", "Cauliflower"],
+    "source": "MSc Practicals Case Study",
+    "source_reference": "Food Exchange List - Veg A",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "exchange_category_id": "vegetable_starchy",
+    "display_name": "Starchy Vegetable",
+    "description": "Carb-rich vegetables - potato, sweet potato, yam",
+    "amount_per_exchange_g": 100.0,
+    "nutrition_per_exchange": {
+      "calories": 80.0,
+      "protein_g": 2.0,
+      "carbs_g": 18.0,
+      "fat_g": 0.0
+    },
+    "examples": ["Potato", "Sweet potato", "Yam", "Arbi"],
+    "source": "Indian Exchange Lists for Diabetes (IET)",
+    "source_reference": "IET Exchange Lists - Starchy Vegetable Group",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "exchange_category_id": "vegetable_b",
+    "display_name": "Vegetable B",
+    "description": "Starchy vegetables - beetroot, carrot, beans",
+    "amount_per_exchange_g": 100.0,
+    "nutrition_per_exchange": {
+      "calories": 50.0,
+      "protein_g": 3.0,
+      "carbs_g": 10.0,
+      "fat_g": 0.0
+    },
+    "examples": ["Beetroot", "Carrot", "Beans"],
+    "source": "MSc Practicals Case Study",
+    "source_reference": "Food Exchange List - Veg B",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "exchange_category_id": "fruit",
+    "display_name": "Fruit",
+    "description": "Natural sugars, micronutrients - apple, papaya, banana",
+    "amount_per_exchange_g": 100.0,
+    "nutrition_per_exchange": {
+      "calories": 60.0,
+      "protein_g": 1.0,
+      "carbs_g": 15.0,
+      "fat_g": 0.0
+    },
+    "examples": ["Apple (1 medium)", "Papaya (1 cup)", "Banana (1 small)", "Orange (1 medium)"],
+    "source": "Indian Exchange Lists for Diabetes (IET)",
+    "source_reference": "IET Exchange Lists - Fruit Group",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "exchange_category_id": "fat",
+    "display_name": "Fat",
+    "description": "Concentrated energy - oil, ghee, butter",
+    "amount_per_exchange_g": 10.0,
+    "nutrition_per_exchange": {
+      "calories": 45.0,
+      "protein_g": 0.0,
+      "carbs_g": 0.0,
+      "fat_g": 5.0
+    },
+    "examples": ["Oil (1 tsp)", "Ghee (1 tsp)", "Butter (1 tsp)"],
+    "source": "Indian Exchange Lists for Diabetes (IET)",
+    "source_reference": "IET Exchange Lists - Fat Group",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "exchange_category_id": "nuts_seeds",
+    "display_name": "Nuts & Seeds",
+    "description": "Fat + protein - almonds, peanuts, seeds",
+    "amount_per_exchange_g": 15.0,
+    "nutrition_per_exchange": {
+      "calories": 70.0,
+      "protein_g": 3.0,
+      "carbs_g": 5.0,
+      "fat_g": 6.0
+    },
+    "examples": ["Almonds (10 pieces)", "Peanuts (1 tbsp)", "Seeds (1 tbsp)"],
+    "source": "Indian Exchange Lists for Diabetes (IET)",
+    "source_reference": "IET Exchange Lists - Nuts & Seeds Group",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "exchange_category_id": "egg_whites",
+    "display_name": "Egg Whites",
+    "description": "High protein, low calorie - egg whites",
+    "amount_per_exchange_g": 30.0,
+    "nutrition_per_exchange": {
+      "calories": 15.0,
+      "protein_g": 3.5,
+      "carbs_g": 0.0,
+      "fat_g": 0.0
+    },
+    "examples": ["Egg whites (30g)", "Egg whites (1 large egg white)"],
+    "source": "MSc Practicals Case Study",
+    "source_reference": "Food Exchange List - Egg whites",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "exchange_category_id": "paneer",
+    "display_name": "Paneer",
+    "description": "Indian cottage cheese - high protein, moderate fat",
+    "amount_per_exchange_g": 40.0,
+    "nutrition_per_exchange": {
+      "calories": 100.0,
+      "protein_g": 7.5,
+      "carbs_g": 5.0,
+      "fat_g": 6.0
+    },
+    "examples": ["Paneer (40g)", "Paneer cubes"],
+    "source": "MSc Practicals Case Study",
+    "source_reference": "Food Exchange List - Paneer",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "exchange_category_id": "jaggery",
+    "display_name": "Jaggery",
+    "description": "Natural sweetener - unrefined sugar",
+    "amount_per_exchange_g": 24.0,
+    "nutrition_per_exchange": {
+      "calories": 100.0,
+      "protein_g": 0.0,
+      "carbs_g": 24.0,
+      "fat_g": 0.0
+    },
+    "examples": ["Jaggery (24g)", "Gur"],
+    "source": "MSc Practicals Case Study",
+    "source_reference": "Food Exchange List - Jaggery",
+    "version": "1.0",
+    "status": "active"
+  }
+]
+

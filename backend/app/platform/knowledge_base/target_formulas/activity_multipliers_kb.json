@@ -1,0 +1,64 @@
+[
+  {
+    "multiplier_id": "sedentary",
+    "display_name": "Sedentary",
+    "description": "Little or no exercise, desk job",
+    "multiplier_value": 1.2,
+    "activity_description": "Little or no exercise, desk job, minimal daily movement",
+    "examples": ["Office worker with no exercise", "Elderly with limited mobility"],
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Evidence Analysis Library: Energy Requirements",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "multiplier_id": "lightly_active",
+    "display_name": "Lightly Active",
+    "description": "Light exercise 1-3 days per week",
+    "multiplier_value": 1.375,
+    "activity_description": "Light exercise or sports 1-3 days per week",
+    "examples": ["Walking 2-3 times per week", "Light yoga or stretching"],
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Evidence Analysis Library: Energy Requirements",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "multiplier_id": "moderately_active",
+    "display_name": "Moderately Active",
+    "description": "Moderate exercise 3-5 days per week",
+    "multiplier_value": 1.55,
+    "activity_description": "Moderate exercise or sports 3-5 days per week",
+    "examples": ["Regular gym workouts", "Running 3-4 times per week", "Active job with some walking"],
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Evidence Analysis Library: Energy Requirements",
+    "version": "1.0",
+    "status": "active",
+    "is_default": true
+  },
+  {
+    "multiplier_id": "very_active",
+    "display_name": "Very Active",
+    "description": "Hard exercise 6-7 days per week",
+    "multiplier_value": 1.725,
+    "activity_description": "Hard exercise or sports 6-7 days per week",
+    "examples": ["Daily intense workouts", "Athletes in training", "Physical labor job"],
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Evidence Analysis Library: Energy Requirements",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "multiplier_id": "extremely_active",
+    "display_name": "Extremely Active",
+    "description": "Very hard exercise, physical job, or training twice a day",
+    "multiplier_value": 1.9,
+    "activity_description": "Very hard exercise, physical job, or training twice a day",
+    "examples": ["Elite athletes", "Construction workers", "Double training sessions"],
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Evidence Analysis Library: Energy Requirements",
+    "version": "1.0",
+    "status": "active"
+  }
+]
+

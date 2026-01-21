@@ -1,0 +1,136 @@
+[
+  {
+    "rule_id": "exchange_limits_per_meal",
+    "display_name": "Exchange Limits Per Meal",
+    "description": "Maximum and minimum exchange limits per meal type",
+    "meal_type_limits": {
+      "breakfast": {
+        "cereal": {"min": 1, "max": 4},
+        "pulse": {"min": 0, "max": 2},
+        "milk": {"min": 0, "max": 2},
+        "paneer": {"min": 0, "max": 0},
+        "egg_whites": {"min": 0, "max": 0},
+        "vegetable_non_starchy": {"min": 0, "max": 2},
+        "vegetable_starchy": {"min": 0, "max": 1},
+        "vegetable_a": {"min": 0, "max": 2},
+        "vegetable_b": {"min": 0, "max": 0},
+        "fruit": {"min": 0, "max": 2},
+        "fat": {"min": 0, "max": 2},
+        "nuts_seeds": {"min": 0, "max": 1},
+        "jaggery": {"min": 0, "max": 0}
+      },
+      "lunch": {
+        "cereal": {"min": 2, "max": 6},
+        "pulse": {"min": 1, "max": 4},
+        "milk": {"min": 0, "max": 2},
+        "paneer": {"min": 0, "max": 1},
+        "egg_whites": {"min": 0, "max": 0},
+        "vegetable_non_starchy": {"min": 2, "max": 4},
+        "vegetable_starchy": {"min": 0, "max": 2},
+        "vegetable_a": {"min": 1, "max": 3},
+        "vegetable_b": {"min": 0, "max": 1},
+        "fruit": {"min": 0, "max": 1},
+        "fat": {"min": 1, "max": 3},
+        "nuts_seeds": {"min": 0, "max": 1},
+        "jaggery": {"min": 0, "max": 0}
+      },
+      "dinner": {
+        "cereal": {"min": 2, "max": 5},
+        "pulse": {"min": 1, "max": 3},
+        "milk": {"min": 0, "max": 2},
+        "paneer": {"min": 0, "max": 0},
+        "egg_whites": {"min": 0, "max": 2},
+        "vegetable_non_starchy": {"min": 2, "max": 4},
+        "vegetable_starchy": {"min": 0, "max": 1},
+        "vegetable_a": {"min": 1, "max": 2},
+        "vegetable_b": {"min": 0, "max": 1},
+        "fruit": {"min": 0, "max": 1},
+        "fat": {"min": 1, "max": 3},
+        "nuts_seeds": {"min": 0, "max": 1},
+        "jaggery": {"min": 0, "max": 0}
+      },
+      "snack": {
+        "cereal": {"min": 0, "max": 2},
+        "pulse": {"min": 0, "max": 1},
+        "milk": {"min": 0, "max": 1},
+        "paneer": {"min": 0, "max": 0},
+        "egg_whites": {"min": 0, "max": 0},
+        "vegetable_non_starchy": {"min": 0, "max": 2},
+        "vegetable_starchy": {"min": 0, "max": 1},
+        "vegetable_a": {"min": 0, "max": 1},
+        "vegetable_b": {"min": 0, "max": 1},
+        "fruit": {"min": 0, "max": 2},
+        "fat": {"min": 0, "max": 2},
+        "nuts_seeds": {"min": 0, "max": 1},
+        "jaggery": {"min": 0, "max": 0}
+      },
+      "early_morning": {
+        "nuts_seeds": {"min": 0, "max": 0.5},
+        "cereal": {"min": 0, "max": 0},
+        "pulse": {"min": 0, "max": 0},
+        "milk": {"min": 0, "max": 0},
+        "paneer": {"min": 0, "max": 0},
+        "egg_whites": {"min": 0, "max": 0},
+        "vegetable_a": {"min": 0, "max": 0},
+        "vegetable_b": {"min": 0, "max": 0},
+        "fruit": {"min": 0, "max": 0},
+        "fat": {"min": 0, "max": 0},
+        "jaggery": {"min": 0, "max": 0}
+      },
+      "mid_morning": {
+        "nuts_seeds": {"min": 0, "max": 0.5},
+        "fruit": {"min": 0, "max": 1},
+        "cereal": {"min": 0, "max": 0},
+        "pulse": {"min": 0, "max": 0},
+        "milk": {"min": 0, "max": 0},
+        "paneer": {"min": 0, "max": 0},
+        "egg_whites": {"min": 0, "max": 0},
+        "vegetable_a": {"min": 0, "max": 0},
+        "vegetable_b": {"min": 0, "max": 0},
+        "fat": {"min": 0, "max": 0},
+        "jaggery": {"min": 0, "max": 0}
+      },
+      "bedtime": {
+        "milk": {"min": 0, "max": 0.5},
+        "jaggery": {"min": 0, "max": 0.25},
+        "cereal": {"min": 0, "max": 0},
+        "pulse": {"min": 0, "max": 0},
+        "paneer": {"min": 0, "max": 0},
+        "egg_whites": {"min": 0, "max": 0},
+        "vegetable_a": {"min": 0, "max": 0},
+        "vegetable_b": {"min": 0, "max": 0},
+        "fruit": {"min": 0, "max": 0},
+        "fat": {"min": 0, "max": 0},
+        "nuts_seeds": {"min": 0, "max": 0}
+      }
+    },
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Meal Planning Guidelines (2018)",
+    "version": "1.0",
+    "status": "active",
+    "is_default": true
+  },
+  {
+    "rule_id": "allocation_thresholds",
+    "display_name": "Allocation Thresholds",
+    "description": "Thresholds for exchange allocation decisions",
+    "thresholds": {
+      "protein_allocation": {
+        "min_protein_for_milk_g": 5.0,
+        "note": "Allocate milk only if remaining protein > 5g"
+      },
+      "calorie_allocation": {
+        "min_calories_for_fat": 20.0,
+        "note": "Add fat exchanges only if remaining calories > 20 kcal"
+      },
+      "milk_max_exchanges": 2,
+      "fat_max_exchanges": 3
+    },
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Meal Planning Accuracy (2018)",
+    "version": "1.0",
+    "status": "active",
+    "is_default": true
+  }
+]
+

@@ -1,0 +1,29 @@
+[
+  {
+    "rule_id": "primary_dosha_threshold",
+    "rule_name": "Primary Dosha Determination",
+    "thresholds": {
+      "primary_dosha": {
+        "min_percentage": 40,
+        "description": "Dosha with ≥40% of total score is primary"
+      },
+      "secondary_dosha": {
+        "min_percentage": 25,
+        "max_percentage": 39,
+        "description": "Dosha with 25-39% of total score is secondary"
+      }
+    },
+    "calculation_method": "percentage_of_total",
+    "source": "Charaka Samhita",
+    "source_reference": "Dosha Determination Rules",
+    "version": "1.0",
+    "status": "active",
+    "is_default": true
+  }
+]
+
+
+
+
+
+

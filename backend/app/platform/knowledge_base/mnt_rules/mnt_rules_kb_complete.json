@@ -1,0 +1,842 @@
+[
+  {
+    "rule_id": "mnt_carb_restriction_diabetes",
+    "display_name": "Carbohydrate Restriction for Diabetes",
+    "description": "Restrict carbohydrate intake to improve glycemic control in diabetes",
+    "applies_to_diagnoses": ["type_2_diabetes", "prediabetes", "gestational_diabetes", "excess_carbohydrate_intake"],
+    "priority_level": 3,
+    "priority_label": "high",
+    "macro_constraints": {
+      "carbohydrates_percent": {
+        "max": 45,
+        "unit": "%",
+        "note": "Maximum 45% of total calories from carbohydrates"
+      },
+      "fiber_g": {
+        "min": 25,
+        "unit": "g",
+        "note": "Minimum 25g dietary fiber per day"
+      }
+    },
+    "micro_constraints": {},
+    "food_exclusions": [
+      "refined_sugar",
+      "white_flour",
+      "high_gi_foods",
+      "sweetened_beverages",
+      "processed_snacks"
+    ],
+    "food_inclusions": [
+      "whole_grains",
+      "fiber_rich_foods",
+      "low_gi_foods"
+    ],
+    "meal_distribution": {
+      "carb_spread": "even",
+      "note": "Distribute carbohydrates evenly across meals"
+    },
+    "override_allowed": false,
+    "conflict_resolution": "Take most restrictive constraint when multiple rules apply",
+    "evidence_level": "A",
+    "source": "American Diabetes Association",
+    "source_reference": "ADA Standards of Medical Care in Diabetes 2024, Section 5: Facilitating Behavior Change and Well-being to Improve Health Outcomes",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "rule_id": "mnt_sodium_restriction_hypertension",
+    "display_name": "Sodium Restriction for Hypertension",
+    "description": "Limit sodium intake to reduce blood pressure in hypertension",
+    "applies_to_diagnoses": ["hypertension", "metabolic_syndrome"],
+    "priority_level": 3,
+    "priority_label": "high",
+    "macro_constraints": {},
+    "micro_constraints": {
+      "sodium_mg": {
+        "max": 2300,
+        "unit": "mg",
+        "note": "General population: ≤2300mg/day. For hypertension: ≤1500mg/day recommended"
+      }
+    },
+    "food_exclusions": [
+      "processed_foods",
+      "high_sodium_foods",
+      "canned_foods",
+      "pickled_foods",
+      "salted_snacks"
+    ],
+    "food_inclusions": [
+      "fresh_foods",
+      "low_sodium_alternatives"
+    ],
+    "meal_distribution": {},
+    "override_allowed": false,
+    "conflict_resolution": "Take most restrictive sodium limit",
+    "evidence_level": "A",
+    "source": "American Heart Association",
+    "source_reference": "AHA Scientific Statement: Dietary Sodium and Cardiovascular Disease Risk (2021)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "rule_id": "mnt_fat_modification_dyslipidemia",
+    "display_name": "Fat Modification for Dyslipidemia",
+    "description": "Modify fat intake to improve lipid profile in dyslipidemia",
+    "applies_to_diagnoses": ["dyslipidemia", "metabolic_syndrome"],
+    "priority_level": 3,
+    "priority_label": "high",
+    "macro_constraints": {
+      "saturated_fat_percent": {
+        "max": 7,
+        "unit": "%",
+        "note": "Maximum 7% of total calories from saturated fat"
+      },
+      "trans_fat_g": {
+        "max": 0,
+        "unit": "g",
+        "note": "Zero trans fat intake"
+      },
+      "monounsaturated_fat_percent": {
+        "min": 10,
+        "unit": "%",
+        "note": "Minimum 10% from monounsaturated fats (olive oil, nuts)"
+      }
+    },
+    "micro_constraints": {},
+    "food_exclusions": [
+      "trans_fats",
+      "high_saturated_fat_foods",
+      "fried_foods",
+      "processed_meats",
+      "full_fat_dairy"
+    ],
+    "food_inclusions": [
+      "omega_3_rich_foods",
+      "monounsaturated_fats",
+      "plant_based_fats"
+    ],
+    "meal_distribution": {},
+    "override_allowed": false,
+    "conflict_resolution": "Take most restrictive fat constraints",
+    "evidence_level": "A",
+    "source": "American Heart Association",
+    "source_reference": "AHA Scientific Statement: Dietary Fats and Cardiovascular Disease (2017)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "rule_id": "mnt_calorie_restriction_obesity",
+    "display_name": "Calorie Restriction for Obesity",
+    "description": "Create calorie deficit for weight loss in obesity",
+    "applies_to_diagnoses": ["obesity", "overweight"],
+    "priority_level": 2,
+    "priority_label": "medium",
+    "macro_constraints": {
+      "calories": {
+        "deficit_percent": 20,
+        "unit": "%",
+        "note": "20% calorie deficit from TDEE for weight loss"
+      }
+    },
+    "micro_constraints": {},
+    "food_exclusions": [],
+    "food_inclusions": [
+      "nutrient_dense_foods",
+      "low_calorie_high_volume_foods"
+    ],
+    "meal_distribution": {
+      "meal_frequency": "3-4",
+      "note": "Regular meal pattern to prevent overeating"
+    },
+    "override_allowed": false,
+    "conflict_resolution": "Take higher deficit percentage if multiple rules apply",
+    "evidence_level": "A",
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Adult Weight Management Evidence-Based Nutrition Practice Guideline (2014)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "rule_id": "mnt_fiber_increase",
+    "display_name": "Fiber Increase",
+    "description": "Increase dietary fiber intake for optimal health",
+    "applies_to_diagnoses": ["inadequate_fiber_intake"],
+    "priority_level": 2,
+    "priority_label": "medium",
+    "macro_constraints": {
+      "fiber_g": {
+        "min": 25,
+        "unit": "g",
+        "note": "Minimum 25g dietary fiber per day for adults"
+      }
+    },
+    "micro_constraints": {},
+    "food_exclusions": [],
+    "food_inclusions": [
+      "whole_grains",
+      "legumes",
+      "fruits",
+      "vegetables",
+      "nuts_seeds"
+    ],
+    "meal_distribution": {},
+    "override_allowed": false,
+    "conflict_resolution": "Take higher minimum if multiple rules apply",
+    "evidence_level": "A",
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Health Implications of Dietary Fiber (2015)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "rule_id": "mnt_protein_adequate",
+    "display_name": "Adequate Protein Intake",
+    "description": "Ensure adequate protein intake for muscle maintenance and metabolic function",
+    "applies_to_diagnoses": ["inadequate_protein_intake"],
+    "priority_level": 2,
+    "priority_label": "medium",
+    "macro_constraints": {
+      "protein_percent": {
+        "min": 20,
+        "unit": "%",
+        "note": "Minimum 20% of total calories from protein"
+      },
+      "protein_g_per_kg": {
+        "min": 0.8,
+        "unit": "g/kg",
+        "note": "Minimum 0.8g protein per kg body weight"
+      }
+    },
+    "micro_constraints": {},
+    "food_exclusions": [],
+    "food_inclusions": [
+      "lean_proteins",
+      "plant_proteins",
+      "dairy_proteins"
+    ],
+    "meal_distribution": {
+      "protein_distribution": "even",
+      "note": "Distribute protein evenly across meals"
+    },
+    "override_allowed": false,
+    "conflict_resolution": "Take higher minimum if multiple rules apply",
+    "evidence_level": "B",
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Protein and Exercise (2016)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "rule_id": "mnt_prediabetes_prevention",
+    "display_name": "Prediabetes Prevention",
+    "description": "Nutrition therapy to prevent progression from prediabetes to diabetes",
+    "applies_to_diagnoses": ["prediabetes"],
+    "priority_level": 3,
+    "priority_label": "high",
+    "macro_constraints": {
+      "carbohydrates_percent": {
+        "max": 50,
+        "unit": "%",
+        "note": "Moderate carbohydrate restriction"
+      },
+      "fiber_g": {
+        "min": 25,
+        "unit": "g"
+      }
+    },
+    "micro_constraints": {},
+    "food_exclusions": [
+      "refined_sugar",
+      "high_gi_foods"
+    ],
+    "food_inclusions": [
+      "whole_grains",
+      "fiber_rich_foods"
+    ],
+    "meal_distribution": {
+      "carb_spread": "even"
+    },
+    "override_allowed": false,
+    "conflict_resolution": "Take most restrictive constraint",
+    "evidence_level": "A",
+    "source": "American Diabetes Association",
+    "source_reference": "ADA Standards of Medical Care in Diabetes 2024, Section 3: Prevention or Delay of Type 2 Diabetes",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "rule_id": "mnt_underweight_nutrition",
+    "display_name": "Nutrition Support for Underweight",
+    "description": "Increase calorie and nutrient intake for healthy weight gain",
+    "applies_to_diagnoses": ["underweight"],
+    "priority_level": 2,
+    "priority_label": "medium",
+    "macro_constraints": {
+      "calories": {
+        "surplus_percent": 10,
+        "unit": "%",
+        "note": "10% calorie surplus from TDEE for healthy weight gain"
+      },
+      "protein_percent": {
+        "min": 20,
+        "unit": "%"
+      }
+    },
+    "micro_constraints": {},
+    "food_exclusions": [],
+    "food_inclusions": [
+      "nutrient_dense_foods",
+      "healthy_fats",
+      "protein_rich_foods"
+    ],
+    "meal_distribution": {
+      "meal_frequency": "5-6",
+      "note": "Frequent small meals for better tolerance"
+    },
+    "override_allowed": false,
+    "conflict_resolution": "Take higher surplus if multiple rules apply",
+    "evidence_level": "B",
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Nutrition Intervention in the Treatment of Eating Disorders (2011)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "rule_id": "mnt_glycemic_control_type1_diabetes",
+    "display_name": "Glycemic Control for Type 1 Diabetes",
+    "description": "Maintain stable blood glucose levels through carbohydrate consistency and insulin-matched nutrition.",
+    "applies_to_diagnoses": ["type_1_diabetes"],
+    "priority_level": 3,
+    "priority_label": "high",
+    "macro_constraints": {
+      "carbohydrates_percent": {
+        "max": 50,
+        "unit": "%",
+        "note": "Moderate carbohydrate intake with consistent distribution per meal to match insulin dosing"
+      },
+      "fiber_g": {
+        "min": 25,
+        "unit": "g",
+        "note": "Minimum 25g dietary fiber per day"
+      }
+    },
+    "micro_constraints": {},
+    "food_exclusions": [
+      "refined_sugars",
+      "sugar_sweetened_beverages"
+    ],
+    "food_inclusions": [
+      "complex_carbohydrates",
+      "high_fiber_foods",
+      "lean_proteins"
+    ],
+    "meal_distribution": {
+      "meal_frequency": "3+2",
+      "note": "Regular meals with planned snacks to prevent hypoglycemia"
+    },
+    "override_allowed": false,
+    "conflict_resolution": "Glycemic control overrides weight-loss focused rules",
+    "evidence_level": "A",
+    "source": "American Diabetes Association",
+    "source_reference": "ADA Standards of Care in Diabetes 2024",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "rule_id": "mnt_pcos_metabolic_management",
+    "display_name": "Metabolic Nutrition for PCOS",
+    "description": "Support insulin sensitivity, hormonal balance, and inflammation control in PCOS.",
+    "applies_to_diagnoses": ["pcos"],
+    "priority_level": 2,
+    "priority_label": "medium",
+    "macro_constraints": {
+      "carbohydrates_percent": {
+        "max": 45,
+        "unit": "%",
+        "note": "Focus on low-GI carbohydrates to reduce insulin spikes"
+      },
+      "protein_percent": {
+        "min": 20,
+        "unit": "%",
+        "note": "Higher protein supports insulin sensitivity and satiety"
+      }
+    },
+    "micro_constraints": {},
+    "food_exclusions": [
+      "refined_carbohydrates",
+      "sugary_snacks"
+    ],
+    "food_inclusions": [
+      "whole_grains",
+      "vegetables",
+      "omega_3_sources"
+    ],
+    "meal_distribution": {
+      "meal_frequency": "3-4",
+      "note": "Balanced meals to support hormonal regulation"
+    },
+    "override_allowed": true,
+    "conflict_resolution": "Follow diabetes rules first if comorbid diabetes exists",
+    "evidence_level": "B",
+    "source": "Endocrine Society",
+    "source_reference": "PCOS Clinical Practice Guideline (2018)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "rule_id": "mnt_hypothyroidism_micronutrient_support",
+    "display_name": "Micronutrient Support for Hypothyroidism",
+    "description": "Ensure iodine and selenium adequacy while managing goitrogen intake.",
+    "applies_to_diagnoses": ["hypothyroidism"],
+    "priority_level": 1,
+    "priority_label": "low",
+    "macro_constraints": {},
+    "micro_constraints": {
+      "iodine_mcg": {
+        "min": 150,
+        "max": 1100,
+        "unit": "mcg",
+        "note": "Ensure sufficient iodine intake 150-1100mcg/day (RDA 150mcg), avoid excess (>1100mcg)"
+      },
+      "selenium_mcg": {
+        "min": 55,
+        "unit": "mcg",
+        "note": "Adequate selenium 55mcg/day supports thyroid function (RDA 55mcg)"
+      }
+    },
+    "food_exclusions": [
+      "excess_raw_cruciferous_vegetables"
+    ],
+    "food_inclusions": [
+      "iodized_salt",
+      "selenium_rich_foods"
+    ],
+    "meal_distribution": {
+      "meal_frequency": "3",
+      "note": "Consistent meal timing supports metabolism"
+    },
+    "override_allowed": true,
+    "conflict_resolution": "CKD-related mineral restrictions take precedence",
+    "evidence_level": "B",
+    "source": "American Thyroid Association",
+    "source_reference": "ATA Hypothyroidism Guidelines",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "rule_id": "mnt_low_fodmap_ibs",
+    "display_name": "Low FODMAP Diet for IBS",
+    "description": "Reduce fermentable carbohydrates to control IBS symptoms.",
+    "applies_to_diagnoses": ["ibs"],
+    "priority_level": 3,
+    "priority_label": "high",
+    "macro_constraints": {},
+    "micro_constraints": {},
+    "food_exclusions": [
+      "high_fodmap_foods"
+    ],
+    "food_inclusions": [
+      "low_fodmap_fruits",
+      "low_fodmap_vegetables"
+    ],
+    "meal_distribution": {
+      "meal_frequency": "3-5",
+      "note": "Smaller meals reduce gut distension"
+    },
+    "override_allowed": true,
+    "conflict_resolution": "IBD rules override IBS rules if both present",
+    "evidence_level": "A",
+    "source": "American College of Gastroenterology",
+    "source_reference": "ACG IBS Guideline (2021)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "rule_id": "mnt_ckd_renal_restrictions",
+    "display_name": "Renal Nutrition Management for CKD",
+    "description": "Modify protein, sodium, potassium, and phosphorus intake based on CKD stage.",
+    "applies_to_diagnoses": ["ckd"],
+    "priority_level": 3,
+    "priority_label": "high",
+    "macro_constraints": {
+      "protein_g_per_kg": {
+        "max": 0.8,
+        "unit": "g/kg",
+        "note": "Protein intake adjusted based on eGFR (stages 3-5: 0.6-0.8g/kg/day)"
+      }
+    },
+    "micro_constraints": {
+      "sodium_mg": {
+        "max": 2000,
+        "unit": "mg",
+        "note": "Sodium restriction ≤2000mg/day for blood pressure and fluid control"
+      },
+      "potassium_mg": {
+        "max": 2000,
+        "unit": "mg",
+        "note": "Potassium restriction ≤2000mg/day if serum levels are elevated (stage 3-5)"
+      },
+      "phosphorus_mg": {
+        "max": 1000,
+        "unit": "mg",
+        "note": "Phosphorus restriction ≤1000mg/day required for stages 3-5 to prevent bone disease"
+      }
+    },
+    "food_exclusions": [
+      "high_potassium_foods",
+      "processed_foods"
+    ],
+    "food_inclusions": [
+      "low_potassium_vegetables",
+      "controlled_protein_sources"
+    ],
+    "meal_distribution": {
+      "meal_frequency": "3",
+      "note": "Avoid large protein loads per meal"
+    },
+    "override_allowed": false,
+    "conflict_resolution": "CKD rules override all other macro rules",
+    "evidence_level": "A",
+    "source": "KDIGO",
+    "source_reference": "KDIGO CKD Nutrition Guidelines (2023)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "rule_id": "mnt_fatty_liver_sugar_reduction",
+    "display_name": "Sugar and Fat Modification for Fatty Liver Disease",
+    "description": "Reduce hepatic fat accumulation by limiting simple sugars and improving fat quality.",
+    "applies_to_diagnoses": ["fatty_liver_disease"],
+    "priority_level": 2,
+    "priority_label": "medium",
+    "macro_constraints": {
+      "added_sugars_percent": {
+        "max": 5,
+        "unit": "%",
+        "note": "Maximum 5% of total calories from added sugars"
+      }
+    },
+    "micro_constraints": {},
+    "food_exclusions": [
+      "fructose_rich_foods",
+      "sugary_beverages"
+    ],
+    "food_inclusions": [
+      "monounsaturated_fats",
+      "omega_3_sources"
+    ],
+    "meal_distribution": {
+      "meal_frequency": "3-4",
+      "note": "Consistent intake supports metabolic stability"
+    },
+    "override_allowed": true,
+    "conflict_resolution": "Diabetes-related sugar limits take precedence",
+    "evidence_level": "A",
+    "source": "AASLD",
+    "source_reference": "NAFLD/NASH Practice Guidance (2023)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "rule_id": "mnt_bone_health_osteoporosis",
+    "display_name": "Bone Health Nutrition for Osteoporosis",
+    "description": "Support bone density through adequate calcium, vitamin D, and protein intake.",
+    "applies_to_diagnoses": ["osteoporosis"],
+    "priority_level": 2,
+    "priority_label": "medium",
+    "macro_constraints": {
+      "protein_percent": {
+        "min": 15,
+        "unit": "%",
+        "note": "Adequate protein (minimum 15% calories) supports bone matrix"
+      }
+    },
+    "micro_constraints": {
+      "calcium_mg": {
+        "min": 1000,
+        "unit": "mg",
+        "note": "Adequate calcium intake ≥1000mg/day for bone health"
+      },
+      "vitamin_D_IU": {
+        "min": 800,
+        "unit": "IU",
+        "note": "Vitamin D ≥800IU/day supports calcium absorption and bone health"
+      }
+    },
+    "food_exclusions": [
+      "excess_sodium",
+      "excess_alcohol"
+    ],
+    "food_inclusions": [
+      "calcium_rich_foods",
+      "vitamin_d_sources"
+    ],
+    "meal_distribution": {
+      "meal_frequency": "3",
+      "note": "Distribute calcium intake across meals"
+    },
+    "override_allowed": true,
+    "conflict_resolution": "CKD-related mineral limits override calcium targets",
+    "evidence_level": "A",
+    "source": "National Osteoporosis Foundation",
+    "source_reference": "Clinician’s Guide to Osteoporosis (2022)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "rule_id": "mnt_ibd_anti_inflammatory_nutrition",
+    "display_name": "Anti-inflammatory Nutrition for IBD",
+    "description": "Support gut healing, reduce inflammation, and prevent malnutrition in inflammatory bowel disease.",
+    "applies_to_diagnoses": ["ibd"],
+    "priority_level": 3,
+    "priority_label": "high",
+    "macro_constraints": {
+      "protein_g_per_kg": {
+        "min": 1.2,
+        "unit": "g/kg",
+        "note": "Higher protein needs (1.2-1.5g/kg/day) due to inflammation and tissue repair"
+      }
+    },
+    "micro_constraints": {
+      "iron_mg": {
+        "min": 18,
+        "unit": "mg",
+        "note": "Monitor and ensure adequate iron intake (RDA 18mg/day for women, 8mg/day for men)"
+      },
+      "vitamin_B12_mcg": {
+        "min": 2.4,
+        "unit": "mcg",
+        "note": "Monitor and ensure adequate B12 (RDA 2.4mcg/day)"
+      }
+    },
+    "food_exclusions": [
+      "high_fiber_foods_during_flare",
+      "spicy_foods",
+      "fried_foods"
+    ],
+    "food_inclusions": [
+      "easily_digestible_proteins",
+      "low_residue_foods_during_flare",
+      "anti_inflammatory_foods"
+    ],
+    "meal_distribution": {
+      "meal_frequency": "4-6",
+      "note": "Small frequent meals to reduce gut burden"
+    },
+    "override_allowed": false,
+    "conflict_resolution": "IBD rules override IBS and GERD rules during active disease",
+    "evidence_level": "A",
+    "source": "European Crohn’s and Colitis Organisation",
+    "source_reference": "ECCO Guidelines on Nutrition in IBD (2023)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "rule_id": "mnt_cardiovascular_heart_health",
+    "display_name": "Heart-Healthy Nutrition for Cardiovascular Disease",
+    "description": "Reduce cardiovascular risk by improving lipid profile, blood pressure, and overall metabolic health.",
+    "applies_to_diagnoses": ["cardiovascular_disease"],
+    "priority_level": 3,
+    "priority_label": "high",
+    "macro_constraints": {
+      "saturated_fat_percent": {
+        "max": 7,
+        "unit": "%",
+        "note": "Limit saturated fat to ≤7% of calories to reduce LDL cholesterol"
+      },
+      "trans_fat_g": {
+        "max": 0,
+        "unit": "g",
+        "note": "Zero trans fat intake"
+      }
+    },
+    "micro_constraints": {
+      "sodium_mg": {
+        "max": 2000,
+        "unit": "mg",
+        "note": "Sodium restriction ≤2000mg/day for blood pressure control"
+      }
+    },
+    "food_exclusions": [
+      "trans_fats",
+      "fried_foods",
+      "processed_foods"
+    ],
+    "food_inclusions": [
+      "omega_3_fatty_acids",
+      "high_fiber_foods",
+      "plant_based_fats"
+    ],
+    "meal_distribution": {
+      "meal_frequency": "3-4",
+      "note": "Balanced meal timing supports lipid control"
+    },
+    "override_allowed": false,
+    "conflict_resolution": "CKD sodium and fat restrictions take precedence if present",
+    "evidence_level": "A",
+    "source": "American Heart Association",
+    "source_reference": "AHA Dietary Guidance for Cardiovascular Health (2021)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "rule_id": "mnt_iron_deficiency_anemia_repletion",
+    "display_name": "Iron Repletion Nutrition for Iron Deficiency Anemia",
+    "description": "Improve hemoglobin and iron stores through dietary iron optimization and absorption enhancement.",
+    "applies_to_diagnoses": ["iron_deficiency_anemia"],
+    "priority_level": 3,
+    "priority_label": "high",
+    "macro_constraints": {},
+    "micro_constraints": {
+      "iron_mg": {
+        "min": 18,
+        "unit": "mg",
+        "note": "Increase iron intake (RDA 18mg/day women, 8mg/day men). Prefer heme iron sources where applicable"
+      },
+      "vitamin_C_mg": {
+        "min": 65,
+        "unit": "mg",
+        "note": "Ensure adequate vitamin C (≥65mg/day) to enhance iron absorption"
+      }
+    },
+    "food_exclusions": [
+      "tea_coffee_with_meals",
+      "calcium_with_iron_rich_meals"
+    ],
+    "food_inclusions": [
+      "iron_rich_foods",
+      "vitamin_c_rich_foods"
+    ],
+    "meal_distribution": {
+      "meal_frequency": "3",
+      "note": "Pair iron foods with vitamin C sources"
+    },
+    "override_allowed": false,
+    "conflict_resolution": "Iron deficiency rules override calorie restriction rules",
+    "evidence_level": "A",
+    "source": "World Health Organization",
+    "source_reference": "WHO Guidelines on Iron Deficiency Anemia (2020)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "rule_id": "mnt_generic_anemia_support",
+    "display_name": "Micronutrient Support for Anemia",
+    "description": "Support red blood cell production through iron, vitamin B12, folate, and protein adequacy.",
+    "applies_to_diagnoses": ["anemia"],
+    "priority_level": 2,
+    "priority_label": "medium",
+    "macro_constraints": {
+      "protein_percent": {
+        "min": 15,
+        "unit": "%",
+        "note": "Adequate protein supports red blood cell production"
+      }
+    },
+    "micro_constraints": {
+      "iron_mg": {
+        "min": 18,
+        "unit": "mg",
+        "note": "Adequate iron required for red blood cell production (RDA 18mg/day women, 8mg/day men)"
+      },
+      "vitamin_B12_mcg": {
+        "min": 2.4,
+        "unit": "mcg",
+        "note": "Adequate B12 required for red blood cell production (RDA 2.4mcg/day)"
+      },
+      "folate_mcg": {
+        "min": 400,
+        "unit": "mcg",
+        "note": "Adequate folate required for red blood cell production (RDA 400mcg/day)"
+      }
+    },
+    "food_exclusions": [],
+    "food_inclusions": [
+      "iron_rich_foods",
+      "b12_rich_foods",
+      "folate_rich_foods"
+    ],
+    "meal_distribution": {
+      "meal_frequency": "3",
+      "note": "Balanced meals to support hematopoiesis"
+    },
+    "override_allowed": true,
+    "conflict_resolution": "Iron deficiency–specific rules override generic anemia rules",
+    "evidence_level": "B",
+    "source": "World Health Organization",
+    "source_reference": "WHO Nutritional Anemias Report",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "rule_id": "mnt_gastritis_gastric_healing",
+    "display_name": "Gastric Healing Nutrition for Gastritis",
+    "description": "Reduce gastric irritation and support healing of the stomach lining.",
+    "applies_to_diagnoses": ["gastritis"],
+    "priority_level": 3,
+    "priority_label": "high",
+    "macro_constraints": {},
+    "micro_constraints": {},
+    "food_exclusions": [
+      "spicy_foods",
+      "alcohol",
+      "caffeine",
+      "fried_foods"
+    ],
+    "food_inclusions": [
+      "bland_foods",
+      "easily_digestible_foods"
+    ],
+    "meal_distribution": {
+      "meal_frequency": "4-6",
+      "note": "Small frequent meals reduce gastric acid load"
+    },
+    "override_allowed": false,
+    "conflict_resolution": "Gastritis rules override GERD and weight loss rules during active symptoms",
+    "evidence_level": "B",
+    "source": "American College of Gastroenterology",
+    "source_reference": "ACG Clinical Guideline on Gastritis",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "rule_id": "mnt_gerd_reflux_control",
+    "display_name": "Reflux Control Nutrition for GERD",
+    "description": "Reduce acid reflux symptoms through trigger avoidance, meal timing, and portion control.",
+    "applies_to_diagnoses": ["gerd"],
+    "priority_level": 3,
+    "priority_label": "high",
+    "macro_constraints": {
+      "fat_percent": {
+        "max": 30,
+        "unit": "%",
+        "note": "Limit fat intake (≤30% calories) as high-fat meals worsen reflux"
+      }
+    },
+    "micro_constraints": {},
+    "food_exclusions": [
+      "spicy_foods",
+      "chocolate",
+      "citrus_fruits",
+      "carbonated_beverages"
+    ],
+    "food_inclusions": [
+      "low_fat_foods",
+      "non_acidic_fruits",
+      "complex_carbohydrates"
+    ],
+    "meal_distribution": {
+      "meal_frequency": "3-4",
+      "note": "Avoid late-night meals; last meal 2–3 hours before sleep"
+    },
+    "override_allowed": false,
+    "conflict_resolution": "GERD rules override obesity calorie rules for meal timing",
+    "evidence_level": "A",
+    "source": "American College of Gastroenterology",
+    "source_reference": "ACG GERD Clinical Guideline (2022)",
+    "version": "1.0",
+    "status": "active"
+  }         
+  
+]
+

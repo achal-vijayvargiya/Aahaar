@@ -27,6 +27,10 @@ class Settings(BaseSettings):
     OPENROUTER_API_KEY: str = "sk-or-v1-placeholder-get-from-openrouter-ai"
     DIET_PLAN_MODEL: str = "anthropic/claude-3.5-sonnet"  # or "meta-llama/llama-3.1-70b-instruct"
     DIET_PLAN_TEMPERATURE: float = 0.7
+    # Food Enrichment Model - Use qwen/qwen-2.5-72b-instruct or qwen/qwen-2.5-7b-instruct
+    # Note: qwen-2.5-32b-instruct does NOT exist. Available: 7B and 72B versions
+    FOOD_ENRICHMENT_MODEL: str = "qwen/qwen-2.5-72b-instruct"  # Verified available on OpenRouter
+    FOOD_ENRICHMENT_TEMPERATURE: float = 0.3  # Lower temperature for consistent enrichment
     
     # Logging
     LOG_LEVEL: str = "INFO"

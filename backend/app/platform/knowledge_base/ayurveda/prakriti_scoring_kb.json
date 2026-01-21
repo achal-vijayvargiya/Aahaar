@@ -1,0 +1,330 @@
+[
+  {
+    "question_id": "1.1_body_structure",
+    "question_text": "Body structure",
+    "section": "physical_constitution",
+    "answer_options": {
+      "A": {
+        "text": "Thin / lean",
+        "dosha_weights": {
+          "Vata": 2,
+          "Pitta": 0,
+          "Kapha": 0
+        }
+      },
+      "B": {
+        "text": "Medium, proportionate",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 2,
+          "Kapha": 0
+        }
+      },
+      "C": {
+        "text": "Broad / heavy",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 0,
+          "Kapha": 2
+        }
+      }
+    },
+    "priority": "high",
+    "source": "Charaka Samhita",
+    "source_reference": "Prakriti Assessment - Body Structure",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "question_id": "1.2_weight_pattern",
+    "question_text": "Weight pattern",
+    "section": "physical_constitution",
+    "answer_options": {
+      "A": {
+        "text": "Fluctuates easily",
+        "dosha_weights": {
+          "Vata": 2,
+          "Pitta": 0,
+          "Kapha": 0
+        }
+      },
+      "B": {
+        "text": "Stable",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 2,
+          "Kapha": 0
+        }
+      },
+      "C": {
+        "text": "Increases easily",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 0,
+          "Kapha": 2
+        }
+      }
+    },
+    "priority": "high",
+    "source": "Charaka Samhita",
+    "source_reference": "Prakriti Assessment - Weight Pattern",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "question_id": "1.3_skin",
+    "question_text": "Skin characteristics",
+    "section": "physical_constitution",
+    "answer_options": {
+      "A": {
+        "text": "Dry, rough, cracked",
+        "dosha_weights": {
+          "Vata": 1,
+          "Pitta": 0,
+          "Kapha": 0
+        }
+      },
+      "B": {
+        "text": "Warm, sensitive, acne-prone",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 1,
+          "Kapha": 0
+        }
+      },
+      "C": {
+        "text": "Thick, oily, smooth",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 0,
+          "Kapha": 1
+        }
+      }
+    },
+    "priority": "medium",
+    "source": "Charaka Samhita",
+    "source_reference": "Prakriti Assessment - Skin",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "question_id": "1.4_hair",
+    "question_text": "Hair characteristics",
+    "section": "physical_constitution",
+    "answer_options": {
+      "A": {
+        "text": "Dry, frizzy, brittle",
+        "dosha_weights": {
+          "Vata": 1,
+          "Pitta": 0,
+          "Kapha": 0
+        }
+      },
+      "B": {
+        "text": "Fine, premature greying",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 1,
+          "Kapha": 0
+        }
+      },
+      "C": {
+        "text": "Thick, oily, strong",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 0,
+          "Kapha": 1
+        }
+      }
+    },
+    "priority": "medium",
+    "source": "Charaka Samhita",
+    "source_reference": "Prakriti Assessment - Hair",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "question_id": "1.5_sweating",
+    "question_text": "Sweating pattern",
+    "section": "physical_constitution",
+    "answer_options": {
+      "A": {
+        "text": "Minimal",
+        "dosha_weights": {
+          "Vata": 1,
+          "Pitta": 0,
+          "Kapha": 0
+        }
+      },
+      "B": {
+        "text": "Moderate to heavy",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 1,
+          "Kapha": 0
+        }
+      },
+      "C": {
+        "text": "Low but sticky",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 0,
+          "Kapha": 1
+        }
+      }
+    },
+    "priority": "medium",
+    "source": "Charaka Samhita",
+    "source_reference": "Prakriti Assessment - Sweating",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "question_id": "4.1_thinking_style",
+    "question_text": "Thinking style",
+    "section": "mental_emotional",
+    "answer_options": {
+      "A": {
+        "text": "Quickly, many ideas",
+        "dosha_weights": {
+          "Vata": 1,
+          "Pitta": 0,
+          "Kapha": 0
+        }
+      },
+      "B": {
+        "text": "Focused and analytical",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 1,
+          "Kapha": 0
+        }
+      },
+      "C": {
+        "text": "Slowly and deeply",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 0,
+          "Kapha": 1
+        }
+      }
+    },
+    "priority": "medium",
+    "source": "Charaka Samhita",
+    "source_reference": "Prakriti Assessment - Thinking Style",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "question_id": "4.3_memory",
+    "question_text": "Memory pattern",
+    "section": "mental_emotional",
+    "answer_options": {
+      "A": {
+        "text": "Quick to learn, quick to forget",
+        "dosha_weights": {
+          "Vata": 1,
+          "Pitta": 0,
+          "Kapha": 0
+        }
+      },
+      "B": {
+        "text": "Sharp and precise",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 1,
+          "Kapha": 0
+        }
+      },
+      "C": {
+        "text": "Slow to learn, strong retention",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 0,
+          "Kapha": 1
+        }
+      }
+    },
+    "priority": "medium",
+    "source": "Charaka Samhita",
+    "source_reference": "Prakriti Assessment - Memory",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "question_id": "5.1_sleep_duration",
+    "question_text": "Sleep duration",
+    "section": "sleep_patterns",
+    "answer_options": {
+      "A": {
+        "text": "Less than 6 hours",
+        "dosha_weights": {
+          "Vata": 1,
+          "Pitta": 0,
+          "Kapha": 0
+        }
+      },
+      "B": {
+        "text": "6-8 hours",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 1,
+          "Kapha": 0
+        }
+      },
+      "C": {
+        "text": "More than 8 hours",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 0,
+          "Kapha": 1
+        }
+      }
+    },
+    "priority": "medium",
+    "source": "Charaka Samhita",
+    "source_reference": "Prakriti Assessment - Sleep Duration",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "question_id": "5.2_sleep_quality",
+    "question_text": "Sleep quality",
+    "section": "sleep_patterns",
+    "answer_options": {
+      "A": {
+        "text": "Light, interrupted",
+        "dosha_weights": {
+          "Vata": 1,
+          "Pitta": 0,
+          "Kapha": 0
+        }
+      },
+      "B": {
+        "text": "Moderate, refreshing",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 1,
+          "Kapha": 0
+        }
+      },
+      "C": {
+        "text": "Deep, heavy",
+        "dosha_weights": {
+          "Vata": 0,
+          "Pitta": 0,
+          "Kapha": 1
+        }
+      }
+    },
+    "priority": "medium",
+    "source": "Charaka Samhita",
+    "source_reference": "Prakriti Assessment - Sleep Quality",
+    "version": "1.0",
+    "status": "active"
+  }
+]
+
+
+
+

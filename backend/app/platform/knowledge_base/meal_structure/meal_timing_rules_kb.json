@@ -1,0 +1,62 @@
+[
+  {
+    "meal_type": "breakfast",
+    "display_name": "Breakfast Timing",
+    "description": "Timing window for breakfast meal",
+    "timing_rule": "relative_to_wake",
+    "start_offset_minutes": 30,
+    "end_offset_minutes": 90,
+    "window_duration_minutes": 60,
+    "note": "Breakfast should be 30-90 minutes after wake time for optimal digestion",
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Meal Timing and Circadian Rhythms (2018)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "meal_type": "lunch",
+    "display_name": "Lunch Timing",
+    "description": "Timing window for lunch meal",
+    "timing_rule": "relative_to_previous_meal",
+    "start_offset_hours": 4,
+    "end_offset_hours": 5,
+    "window_duration_hours": 1,
+    "fallback_rule": "relative_to_wake",
+    "fallback_start_offset_hours": 4,
+    "fallback_end_offset_hours": 5,
+    "note": "Lunch should be 4-5 hours after breakfast or previous meal",
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Meal Timing and Circadian Rhythms (2018)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "meal_type": "snack",
+    "display_name": "Snack Timing",
+    "description": "Timing window for snack meals",
+    "timing_rule": "relative_to_previous_meal",
+    "start_offset_hours": 2,
+    "end_offset_hours": 3,
+    "window_duration_hours": 1,
+    "note": "Snacks should be 2-3 hours after previous meal",
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Meal Frequency and Timing (2015)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "meal_type": "dinner",
+    "display_name": "Dinner Timing",
+    "description": "Timing window for dinner meal",
+    "timing_rule": "relative_to_sleep",
+    "min_hours_before_sleep": 3,
+    "window_duration_hours": 1,
+    "min_hours_after_previous_meal": 1,
+    "note": "Dinner should be at least 3 hours before sleep for optimal digestion and sleep quality",
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Meal Timing and Sleep Quality (2019)",
+    "version": "1.0",
+    "status": "active"
+  }
+]
+

@@ -1,0 +1,38 @@
+[
+  {
+    "rule_id": "vikriti_severity_thresholds",
+    "rule_name": "Vikriti Severity Determination",
+    "calculation_method": "excess_over_prakriti_percentage",
+    "thresholds": {
+      "none": {
+        "max_excess": 14.9,
+        "description": "No significant imbalance"
+      },
+      "mild": {
+        "min_excess": 15,
+        "max_excess": 19.9,
+        "description": "Mild imbalance (15-19.9% excess)"
+      },
+      "moderate": {
+        "min_excess": 20,
+        "max_excess": 29.9,
+        "description": "Moderate imbalance (20-29.9% excess)"
+      },
+      "severe": {
+        "min_excess": 30,
+        "description": "Severe imbalance (≥30% excess)"
+      }
+    },
+    "source": "Charaka Samhita",
+    "source_reference": "Vikriti Severity Assessment",
+    "version": "1.0",
+    "status": "active",
+    "is_default": true
+  }
+]
+
+
+
+
+
+

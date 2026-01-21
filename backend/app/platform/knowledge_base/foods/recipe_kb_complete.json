@@ -1,0 +1,935 @@
+[
+  {
+    "recipe_id": "dal_khichdi_brown_rice",
+    "display_name": "Dal Khichdi with Brown Rice",
+    "aliases": ["khichdi", "dal khichdi", "rice lentil porridge", "dal bhaat"],
+    
+    "basic_info": {
+      "cuisine_type": "indian",
+      "meal_type": ["breakfast", "lunch", "dinner"],
+      "diet_type": ["vegetarian", "vegan"],
+      "cooking_method": "boiled",
+      "cooking_time_minutes": 30,
+      "prep_time_minutes": 10,
+      "serving_count": 2,
+      "region": "pan_india",
+      "difficulty_level": "easy"
+    },
+    
+    "ingredients": [
+      {
+        "food_id": "brown_rice_cooked",
+        "food_name": "Brown Rice",
+        "quantity_g": 100,
+        "quantity_display": "1/2 cup (raw)",
+        "exchange_equivalents": {
+          "cereal": 1.5
+        },
+        "is_primary": true,
+        "substitution_options": [
+          {
+            "food_id": "white_rice_cooked",
+            "notes": "Higher GI, less fiber"
+          }
+        ]
+      },
+      {
+        "food_id": "moong_dal_cooked",
+        "food_name": "Moong Dal",
+        "quantity_g": 50,
+        "quantity_display": "1/4 cup (raw)",
+        "exchange_equivalents": {
+          "pulse": 1.0
+        },
+        "is_primary": true
+      },
+      {
+        "food_id": "mustard_oil",
+        "food_name": "Mustard Oil",
+        "quantity_g": 5,
+        "quantity_display": "1 tsp",
+        "exchange_equivalents": {
+          "fat": 1.0
+        },
+        "is_primary": false,
+        "optional": true
+      }
+    ],
+    
+    "total_nutrition_per_serving": {
+      "calories_kcal": 280.0,
+      "macros": {
+        "protein_g": 12.0,
+        "carbs_g": 45.0,
+        "fat_g": 6.0,
+        "fiber_g": 4.0,
+        "sugar_g": 1.0,
+        "saturated_fat_g": 3.0,
+        "trans_fat_g": 0.0,
+        "added_sugar_g": 0.0
+      },
+      "micros": {
+        "sodium_mg": 150.0,
+        "potassium_mg": 250.0,
+        "calcium_mg": 45.0,
+        "iron_mg": 2.5,
+        "magnesium_mg": 80.0,
+        "phosphorus_mg": 200.0
+      },
+      "glycemic_properties": {
+        "glycemic_index": 58,
+        "glycemic_load_per_serving": 26.1
+      }
+    },
+    
+    "exchange_summary_per_serving": {
+      "cereal": 1.5,
+      "pulse": 1.0,
+      "fat": 1.0,
+      "vegetable_non_starchy": 0.0,
+      "vegetable_starchy": 0.0,
+      "fruit": 0.0,
+      "milk": 0.0,
+      "nuts_seeds": 0.0
+    },
+    
+    "mnt_compatibility": {
+      "macro_compliance": {
+        "carbohydrates_percent": 64.3,
+        "protein_percent": 17.1,
+        "fat_percent": 19.3,
+        "fiber_g": 4.0,
+        "meets_low_carb_45pct": false,
+        "meets_moderate_carb_50pct": false,
+        "meets_high_protein_20pct": false,
+        "meets_low_fat_30pct": true,
+        "meets_low_saturated_fat_7pct": true
+      },
+      "micro_compliance": {
+        "low_sodium": true,
+        "low_potassium": true,
+        "low_phosphorus": true
+      },
+      "medical_tags": {
+        "diabetic_safe": true,
+        "cardiac_safe": true,
+        "renal_safe_stage_1_2": true,
+        "hypertension_safe": true,
+        "gerd_safe": false,
+        "gastritis_safe": true,
+        "ibs_safe": true,
+        "ibd_safe_remission": true
+      },
+      "food_exclusion_tags": [],
+      "food_inclusion_tags": ["whole_grains", "fiber_rich_foods"],
+      "contraindications": ["gerd"],
+      "preferred_conditions": [
+        "diabetes",
+        "hypertension",
+        "gastritis",
+        "ibs"
+      ]
+    },
+    
+    "ayurvedic_properties": {
+      "dosha_effects": {
+        "vata": "pacifying",
+        "pitta": "neutral_to_pacifying",
+        "kapha": "neutral"
+      },
+      "guna": "sattvic",
+      "virya": "neutral_to_cooling",
+      "agni_effect": "improving",
+      "digestive_load": "light",
+      "food_temperature_preference": "warm",
+      "cooking_method": "boiled",
+      "meal_timing_preference": ["lunch", "dinner"],
+      "season_preference": ["monsoon", "winter"]
+    },
+    
+    "meal_structure_fit": {
+      "suitable_for_meals": ["breakfast", "lunch", "dinner"],
+      "calorie_range_per_serving": {
+        "min": 250,
+        "max": 350
+      },
+      "protein_range_per_serving": {
+        "min": 10,
+        "max": 15
+      },
+      "calorie_adjustability": "medium",
+      "portion_scalability": "high"
+    },
+    
+    "cooking_instructions": {
+      "steps": [
+        "Wash brown rice and moong dal separately",
+        "Soak rice and dal together for 30 minutes",
+        "Drain and pressure cook with water (1:3 ratio) for 3 whistles",
+        "Let pressure release naturally",
+        "Heat oil in a pan, add cumin seeds for tempering",
+        "Add cooked khichdi, salt, and turmeric powder",
+        "Mix well and serve hot with ghee (optional)"
+      ],
+      "tips": [
+        "Soaking improves digestibility and reduces cooking time",
+        "Adjust water ratio for desired consistency (thick/thin)",
+        "Can add vegetables like carrots or beans for extra nutrition",
+        "Serve with pickle or yogurt for enhanced flavor"
+      ]
+    },
+    
+    "variations": [
+      {
+        "variation_id": "dal_khichdi_with_vegetables",
+        "name": "Dal Khichdi with Vegetables",
+        "additional_ingredients": [
+          {
+            "food_id": "spinach_cooked",
+            "food_name": "Spinach",
+            "quantity_g": 50,
+            "exchange_equivalents": {
+              "vegetable_non_starchy": 0.5
+            }
+          }
+        ],
+        "nutrition_delta": {
+          "calories_kcal": 15,
+          "fiber_g": 2.0,
+          "iron_mg": 1.8
+        }
+      }
+    ],
+    
+    "version": "1.0",
+    "status": "active",
+    "source": "Traditional Indian Recipe",
+    "source_reference": "Regional Indian Cuisine",
+    "last_reviewed": "2025-01-15"
+  },
+  {
+    "recipe_id": "roti_with_dal",
+    "display_name": "Roti with Dal",
+    "aliases": ["chapati dal", "roti dal", "flatbread with lentils"],
+    
+    "basic_info": {
+      "cuisine_type": "indian",
+      "meal_type": ["breakfast", "lunch", "dinner"],
+      "diet_type": ["vegetarian", "vegan"],
+      "cooking_method": "roasted_boiled",
+      "cooking_time_minutes": 40,
+      "prep_time_minutes": 15,
+      "serving_count": 2,
+      "region": "pan_india",
+      "difficulty_level": "medium"
+    },
+    
+    "ingredients": [
+      {
+        "food_id": "whole_wheat_roti",
+        "food_name": "Whole Wheat Roti",
+        "quantity_g": 80,
+        "quantity_display": "2 rotis",
+        "exchange_equivalents": {
+          "cereal": 2.66
+        },
+        "is_primary": true
+      },
+      {
+        "food_id": "moong_dal_cooked",
+        "food_name": "Moong Dal",
+        "quantity_g": 150,
+        "quantity_display": "3/4 cup (cooked)",
+        "exchange_equivalents": {
+          "pulse": 1.5
+        },
+        "is_primary": true
+      },
+      {
+        "food_id": "mustard_oil",
+        "food_name": "Mustard Oil",
+        "quantity_g": 5,
+        "quantity_display": "1 tsp",
+        "exchange_equivalents": {
+          "fat": 1.0
+        },
+        "is_primary": false
+      }
+    ],
+    
+    "total_nutrition_per_serving": {
+      "calories_kcal": 450.0,
+      "macros": {
+        "protein_g": 18.0,
+        "carbs_g": 68.0,
+        "fat_g": 10.0,
+        "fiber_g": 12.0,
+        "sugar_g": 3.0,
+        "saturated_fat_g": 4.0,
+        "trans_fat_g": 0.0,
+        "added_sugar_g": 0.0
+      },
+      "micros": {
+        "sodium_mg": 200.0,
+        "potassium_mg": 450.0,
+        "calcium_mg": 80.0,
+        "iron_mg": 4.5,
+        "magnesium_mg": 120.0,
+        "phosphorus_mg": 350.0
+      },
+      "glycemic_properties": {
+        "glycemic_index": 60,
+        "glycemic_load_per_serving": 40.8
+      }
+    },
+    
+    "exchange_summary_per_serving": {
+      "cereal": 2.66,
+      "pulse": 1.5,
+      "fat": 1.0,
+      "vegetable_non_starchy": 0.0,
+      "vegetable_starchy": 0.0,
+      "fruit": 0.0,
+      "milk": 0.0,
+      "nuts_seeds": 0.0
+    },
+    
+    "mnt_compatibility": {
+      "macro_compliance": {
+        "carbohydrates_percent": 60.4,
+        "protein_percent": 16.0,
+        "fat_percent": 20.0,
+        "fiber_g": 12.0,
+        "meets_low_carb_45pct": false,
+        "meets_moderate_carb_50pct": false,
+        "meets_high_protein_20pct": false,
+        "meets_low_fat_30pct": true,
+        "meets_low_saturated_fat_7pct": true
+      },
+      "micro_compliance": {
+        "low_sodium": true,
+        "low_potassium": false,
+        "low_phosphorus": false
+      },
+      "medical_tags": {
+        "diabetic_safe": true,
+        "cardiac_safe": true,
+        "renal_safe_stage_1_2": false,
+        "hypertension_safe": true,
+        "gerd_safe": false,
+        "gastritis_safe": true,
+        "ibs_safe": true,
+        "ibd_safe_remission": true
+      },
+      "food_exclusion_tags": [],
+      "food_inclusion_tags": ["whole_grains", "fiber_rich_foods"],
+      "contraindications": ["gerd", "ckd_stage_4_5"],
+      "preferred_conditions": [
+        "diabetes",
+        "hypertension",
+        "anemia",
+        "inadequate_fiber_intake"
+      ]
+    },
+    
+    "ayurvedic_properties": {
+      "dosha_effects": {
+        "vata": "pacifying",
+        "pitta": "neutral",
+        "kapha": "neutral"
+      },
+      "guna": "sattvic",
+      "virya": "neutral",
+      "agni_effect": "improving",
+      "digestive_load": "moderate",
+      "food_temperature_preference": "hot_fresh",
+      "cooking_method": "roasted_boiled",
+      "meal_timing_preference": ["lunch", "dinner"],
+      "season_preference": ["all_seasons"]
+    },
+    
+    "meal_structure_fit": {
+      "suitable_for_meals": ["lunch", "dinner"],
+      "calorie_range_per_serving": {
+        "min": 400,
+        "max": 500
+      },
+      "protein_range_per_serving": {
+        "min": 15,
+        "max": 20
+      },
+      "calorie_adjustability": "high",
+      "portion_scalability": "high"
+    },
+    
+    "cooking_instructions": {
+      "steps": [
+        "Prepare moong dal: Soak dal for 30 minutes, pressure cook until soft",
+        "Heat oil, add cumin seeds, ginger, garlic, and spices",
+        "Add cooked dal, water, salt, and turmeric",
+        "Simmer until desired consistency",
+        "For roti: Mix whole wheat flour with water to make soft dough",
+        "Roll out thin circles and roast on tawa until golden brown spots appear",
+        "Serve hot roti with dal"
+      ],
+      "tips": [
+        "Fresh hot rotis taste best with dal",
+        "Can adjust dal consistency (thick/thin) based on preference",
+        "Add lemon juice and coriander for freshness"
+      ]
+    },
+    
+    "variations": [
+      {
+        "variation_id": "roti_dal_with_vegetables",
+        "name": "Roti, Dal with Vegetable Sabzi",
+        "additional_ingredients": [
+          {
+            "food_id": "spinach_cooked",
+            "food_name": "Spinach",
+            "quantity_g": 100,
+            "exchange_equivalents": {
+              "vegetable_non_starchy": 1.0
+            }
+          }
+        ],
+        "nutrition_delta": {
+          "calories_kcal": 23,
+          "fiber_g": 2.2,
+          "iron_mg": 3.6
+        }
+      }
+    ],
+    
+    "version": "1.0",
+    "status": "active",
+    "source": "Traditional Indian Recipe",
+    "source_reference": "Regional Indian Cuisine",
+    "last_reviewed": "2025-01-15"
+  },
+  {
+    "recipe_id": "palak_dal",
+    "display_name": "Palak Dal (Spinach Lentil Curry)",
+    "aliases": ["spinach dal", "dal palak", "spinach with lentils"],
+    
+    "basic_info": {
+      "cuisine_type": "indian",
+      "meal_type": ["lunch", "dinner"],
+      "diet_type": ["vegetarian", "vegan"],
+      "cooking_method": "boiled_sautéed",
+      "cooking_time_minutes": 25,
+      "prep_time_minutes": 10,
+      "serving_count": 2,
+      "region": "pan_india",
+      "difficulty_level": "easy"
+    },
+    
+    "ingredients": [
+      {
+        "food_id": "moong_dal_cooked",
+        "food_name": "Moong Dal",
+        "quantity_g": 100,
+        "quantity_display": "1/2 cup (raw)",
+        "exchange_equivalents": {
+          "pulse": 2.0
+        },
+        "is_primary": true
+      },
+      {
+        "food_id": "spinach_cooked",
+        "food_name": "Spinach",
+        "quantity_g": 180,
+        "quantity_display": "2 cups (cooked)",
+        "exchange_equivalents": {
+          "vegetable_non_starchy": 2.0
+        },
+        "is_primary": true
+      },
+      {
+        "food_id": "mustard_oil",
+        "food_name": "Mustard Oil",
+        "quantity_g": 5,
+        "quantity_display": "1 tsp",
+        "exchange_equivalents": {
+          "fat": 1.0
+        },
+        "is_primary": false,
+        "optional": true
+      }
+    ],
+    
+    "total_nutrition_per_serving": {
+      "calories_kcal": 200.0,
+      "macros": {
+        "protein_g": 14.0,
+        "carbs_g": 23.0,
+        "fat_g": 4.0,
+        "fiber_g": 11.0,
+        "sugar_g": 3.0,
+        "saturated_fat_g": 1.0,
+        "trans_fat_g": 0.0,
+        "added_sugar_g": 0.0
+      },
+      "micros": {
+        "sodium_mg": 200.0,
+        "potassium_mg": 550.0,
+        "calcium_mg": 150.0,
+        "iron_mg": 5.5,
+        "magnesium_mg": 100.0,
+        "phosphorus_mg": 250.0
+      },
+      "glycemic_properties": {
+        "glycemic_index": 35,
+        "glycemic_load_per_serving": 8.1
+      }
+    },
+    
+    "exchange_summary_per_serving": {
+      "cereal": 0.0,
+      "pulse": 2.0,
+      "fat": 1.0,
+      "vegetable_non_starchy": 2.0,
+      "vegetable_starchy": 0.0,
+      "fruit": 0.0,
+      "milk": 0.0,
+      "nuts_seeds": 0.0
+    },
+    
+    "mnt_compatibility": {
+      "macro_compliance": {
+        "carbohydrates_percent": 46.0,
+        "protein_percent": 28.0,
+        "fat_percent": 18.0,
+        "fiber_g": 11.0,
+        "meets_low_carb_45pct": false,
+        "meets_moderate_carb_50pct": true,
+        "meets_high_protein_20pct": true,
+        "meets_low_fat_30pct": true,
+        "meets_low_saturated_fat_7pct": true
+      },
+      "micro_compliance": {
+        "low_sodium": true,
+        "low_potassium": false,
+        "low_phosphorus": false,
+        "high_iron": true,
+        "high_folate": true
+      },
+      "medical_tags": {
+        "diabetic_safe": true,
+        "cardiac_safe": true,
+        "renal_safe_stage_1_2": false,
+        "hypertension_safe": true,
+        "gerd_safe": false,
+        "gastritis_safe": true,
+        "ibs_safe": true,
+        "ibd_safe_remission": true,
+        "anemia_safe": true
+      },
+      "food_exclusion_tags": [],
+      "food_inclusion_tags": ["fiber_rich_foods", "iron_rich_foods", "plant_proteins", "vegetables"],
+      "contraindications": ["gerd", "ckd_stage_4_5"],
+      "preferred_conditions": [
+        "diabetes",
+        "anemia",
+        "iron_deficiency_anemia",
+        "inadequate_fiber_intake",
+        "inadequate_protein_intake"
+      ]
+    },
+    
+    "ayurvedic_properties": {
+      "dosha_effects": {
+        "vata": "pacifying",
+        "pitta": "pacifying",
+        "kapha": "pacifying"
+      },
+      "guna": "sattvic",
+      "virya": "cooling",
+      "agni_effect": "improving",
+      "digestive_load": "light",
+      "food_temperature_preference": "warm",
+      "cooking_method": "boiled_sautéed",
+      "meal_timing_preference": ["lunch", "dinner"],
+      "season_preference": ["winter", "spring"]
+    },
+    
+    "meal_structure_fit": {
+      "suitable_for_meals": ["lunch", "dinner"],
+      "calorie_range_per_serving": {
+        "min": 180,
+        "max": 250
+      },
+      "protein_range_per_serving": {
+        "min": 12,
+        "max": 16
+      },
+      "calorie_adjustability": "medium",
+      "portion_scalability": "high"
+    },
+    
+    "cooking_instructions": {
+      "steps": [
+        "Wash and soak moong dal for 30 minutes",
+        "Pressure cook dal until soft (3-4 whistles)",
+        "Wash spinach leaves thoroughly and chop",
+        "Heat oil in a pan, add cumin seeds, garlic, and green chilies",
+        "Add chopped spinach and cook until wilted",
+        "Add cooked dal, salt, turmeric, and red chili powder",
+        "Simmer for 5-7 minutes until well combined",
+        "Serve hot with roti or rice"
+      ],
+      "tips": [
+        "Fresh spinach works best for flavor",
+        "Can add tomatoes for tanginess",
+        "Adjust spices based on taste preference"
+      ]
+    },
+    
+    "variations": [],
+    
+    "version": "1.0",
+    "status": "active",
+    "source": "Traditional Indian Recipe",
+    "source_reference": "Regional Indian Cuisine",
+    "last_reviewed": "2025-01-15"
+  },
+  {
+    "recipe_id": "breakfast_apple_almonds",
+    "display_name": "Apple with Almonds (Breakfast)",
+    "aliases": ["apple badam", "fruit nuts snack"],
+    
+    "basic_info": {
+      "cuisine_type": "indian",
+      "meal_type": ["breakfast", "snack"],
+      "diet_type": ["vegetarian", "vegan"],
+      "cooking_method": "raw",
+      "cooking_time_minutes": 0,
+      "prep_time_minutes": 5,
+      "serving_count": 1,
+      "region": "pan_india",
+      "difficulty_level": "easy"
+    },
+    
+    "ingredients": [
+      {
+        "food_id": "apple",
+        "food_name": "Apple",
+        "quantity_g": 182,
+        "quantity_display": "1 medium apple",
+        "exchange_equivalents": {
+          "fruit": 1.5
+        },
+        "is_primary": true
+      },
+      {
+        "food_id": "almonds",
+        "food_name": "Almonds",
+        "quantity_g": 10,
+        "quantity_display": "10 almonds",
+        "exchange_equivalents": {
+          "nuts_seeds": 1.0
+        },
+        "is_primary": true
+      }
+    ],
+    
+    "total_nutrition_per_serving": {
+      "calories_kcal": 130.0,
+      "macros": {
+        "protein_g": 3.5,
+        "carbs_g": 28.0,
+        "fat_g": 5.0,
+        "fiber_g": 4.9,
+        "sugar_g": 19.0,
+        "saturated_fat_g": 0.4,
+        "trans_fat_g": 0.0,
+        "added_sugar_g": 0.0
+      },
+      "micros": {
+        "sodium_mg": 2.8,
+        "potassium_mg": 275.0,
+        "calcium_mg": 55.0,
+        "iron_mg": 0.9,
+        "magnesium_mg": 54.0,
+        "phosphorus_mg": 99.0
+      },
+      "glycemic_properties": {
+        "glycemic_index": 36,
+        "glycemic_load_per_serving": 10.1
+      }
+    },
+    
+    "exchange_summary_per_serving": {
+      "cereal": 0.0,
+      "pulse": 0.0,
+      "fat": 0.0,
+      "vegetable_non_starchy": 0.0,
+      "vegetable_starchy": 0.0,
+      "fruit": 1.5,
+      "milk": 0.0,
+      "nuts_seeds": 1.0
+    },
+    
+    "mnt_compatibility": {
+      "macro_compliance": {
+        "carbohydrates_percent": 86.2,
+        "protein_percent": 10.8,
+        "fat_percent": 34.6,
+        "fiber_g": 4.9,
+        "meets_low_carb_45pct": false,
+        "meets_moderate_carb_50pct": false,
+        "meets_high_protein_20pct": false,
+        "meets_low_fat_30pct": false,
+        "meets_low_saturated_fat_7pct": true
+      },
+      "micro_compliance": {
+        "low_sodium": true,
+        "low_potassium": true,
+        "low_phosphorus": true
+      },
+      "medical_tags": {
+        "diabetic_safe": true,
+        "cardiac_safe": true,
+        "renal_safe_stage_1_2": true,
+        "hypertension_safe": true,
+        "gerd_safe": true,
+        "gastritis_safe": true,
+        "ibs_safe": true,
+        "ibd_safe_remission": true
+      },
+      "food_exclusion_tags": [],
+      "food_inclusion_tags": ["fruits", "nuts_seeds", "low_gi_foods"],
+      "contraindications": ["nut_allergy"],
+      "preferred_conditions": [
+        "diabetes",
+        "hypertension",
+        "obesity"
+      ]
+    },
+    
+    "ayurvedic_properties": {
+      "dosha_effects": {
+        "vata": "pacifying",
+        "pitta": "pacifying",
+        "kapha": "neutral"
+      },
+      "guna": "sattvic",
+      "virya": "cooling",
+      "agni_effect": "neutral",
+      "digestive_load": "light",
+      "food_temperature_preference": "room_temperature",
+      "cooking_method": "raw",
+      "meal_timing_preference": ["breakfast", "mid_morning"],
+      "season_preference": ["winter", "spring"]
+    },
+    
+    "meal_structure_fit": {
+      "suitable_for_meals": ["breakfast", "snack"],
+      "calorie_range_per_serving": {
+        "min": 100,
+        "max": 150
+      },
+      "protein_range_per_serving": {
+        "min": 2,
+        "max": 5
+      },
+      "calorie_adjustability": "low",
+      "portion_scalability": "medium"
+    },
+    
+    "cooking_instructions": {
+      "steps": [
+        "Wash apple thoroughly",
+        "Cut apple into slices or cubes",
+        "Soak almonds overnight or for at least 4 hours (optional but recommended)",
+        "Peel almond skin if soaked",
+        "Serve apple with almonds"
+      ],
+      "tips": [
+        "Soaked almonds are easier to digest",
+        "Eat apple with skin for maximum fiber",
+        "Can add a pinch of cinnamon for flavor"
+      ]
+    },
+    
+    "variations": [],
+    
+    "version": "1.0",
+    "status": "active",
+    "source": "Traditional Indian Recipe",
+    "source_reference": "Regional Indian Cuisine",
+    "last_reviewed": "2025-01-15"
+  },
+  {
+    "recipe_id": "milk_almond_smoothie",
+    "display_name": "Almond Milk Smoothie",
+    "aliases": ["badam milk", "almond shake"],
+    
+    "basic_info": {
+      "cuisine_type": "indian",
+      "meal_type": ["breakfast", "snack"],
+      "diet_type": ["vegetarian"],
+      "cooking_method": "blended",
+      "cooking_time_minutes": 5,
+      "prep_time_minutes": 5,
+      "serving_count": 1,
+      "region": "pan_india",
+      "difficulty_level": "easy"
+    },
+    
+    "ingredients": [
+      {
+        "food_id": "low_fat_milk",
+        "food_name": "Low Fat Milk",
+        "quantity_g": 250,
+        "quantity_display": "1 cup",
+        "exchange_equivalents": {
+          "milk": 1.0
+        },
+        "is_primary": true
+      },
+      {
+        "food_id": "almonds",
+        "food_name": "Almonds",
+        "quantity_g": 10,
+        "quantity_display": "10 almonds",
+        "exchange_equivalents": {
+          "nuts_seeds": 1.0
+        },
+        "is_primary": true
+      }
+    ],
+    
+    "total_nutrition_per_serving": {
+      "calories_kcal": 170.0,
+      "macros": {
+        "protein_g": 6.5,
+        "carbs_g": 8.0,
+        "fat_g": 6.0,
+        "fiber_g": 1.3,
+        "sugar_g": 8.0,
+        "saturated_fat_g": 1.0,
+        "trans_fat_g": 0.0,
+        "added_sugar_g": 0.0
+      },
+      "micros": {
+        "sodium_mg": 45.0,
+        "potassium_mg": 318.0,
+        "calcium_mg": 394.0,
+        "iron_mg": 0.4,
+        "magnesium_mg": 38.0,
+        "phosphorus_mg": 198.0
+      },
+      "glycemic_properties": {
+        "glycemic_index": 25,
+        "glycemic_load_per_serving": 2.0
+      }
+    },
+    
+    "exchange_summary_per_serving": {
+      "cereal": 0.0,
+      "pulse": 0.0,
+      "fat": 0.0,
+      "vegetable_non_starchy": 0.0,
+      "vegetable_starchy": 0.0,
+      "fruit": 0.0,
+      "milk": 1.0,
+      "nuts_seeds": 1.0
+    },
+    
+    "mnt_compatibility": {
+      "macro_compliance": {
+        "carbohydrates_percent": 18.8,
+        "protein_percent": 15.3,
+        "fat_percent": 31.8,
+        "fiber_g": 1.3,
+        "meets_low_carb_45pct": true,
+        "meets_moderate_carb_50pct": true,
+        "meets_high_protein_20pct": false,
+        "meets_low_fat_30pct": false,
+        "meets_low_saturated_fat_7pct": true
+      },
+      "micro_compliance": {
+        "low_sodium": true,
+        "low_potassium": true,
+        "low_phosphorus": false,
+        "high_calcium": true
+      },
+      "medical_tags": {
+        "diabetic_safe": true,
+        "cardiac_safe": true,
+        "renal_safe_stage_1_2": false,
+        "hypertension_safe": true,
+        "gerd_safe": true,
+        "gastritis_safe": true,
+        "ibs_safe": false,
+        "ibd_safe_remission": true,
+        "osteoporosis_safe": true
+      },
+      "food_exclusion_tags": [],
+      "food_inclusion_tags": ["dairy_proteins", "calcium_rich_foods"],
+      "contraindications": ["ckd_stage_4_5", "lactose_intolerance", "nut_allergy", "ibs"],
+      "preferred_conditions": [
+        "osteoporosis",
+        "inadequate_protein_intake",
+        "inadequate_calcium_intake"
+      ]
+    },
+    
+    "ayurvedic_properties": {
+      "dosha_effects": {
+        "vata": "pacifying",
+        "pitta": "neutral",
+        "kapha": "aggravating"
+      },
+      "guna": "sattvic",
+      "virya": "cooling",
+      "agni_effect": "improving",
+      "digestive_load": "moderate",
+      "food_temperature_preference": "warm",
+      "cooking_method": "blended",
+      "meal_timing_preference": ["breakfast", "evening"],
+      "season_preference": ["winter"]
+    },
+    
+    "meal_structure_fit": {
+      "suitable_for_meals": ["breakfast", "snack"],
+      "calorie_range_per_serving": {
+        "min": 150,
+        "max": 200
+      },
+      "protein_range_per_serving": {
+        "min": 5,
+        "max": 8
+      },
+      "calorie_adjustability": "low",
+      "portion_scalability": "high"
+    },
+    
+    "cooking_instructions": {
+      "steps": [
+        "Soak almonds overnight or for at least 4 hours",
+        "Peel almond skin",
+        "Warm milk slightly (optional but recommended)",
+        "Blend soaked almonds with milk until smooth",
+        "Strain through a sieve if desired for smoother texture",
+        "Add cardamom powder or saffron for flavor (optional)",
+        "Serve warm or chilled"
+      ],
+      "tips": [
+        "Soaked almonds blend better and are more digestible",
+        "Warm milk improves digestibility according to Ayurveda",
+        "Can add dates or jaggery for sweetness (adjust exchanges)"
+      ]
+    },
+    
+    "variations": [],
+    
+    "version": "1.0",
+    "status": "active",
+    "source": "Traditional Indian Recipe",
+    "source_reference": "Regional Indian Cuisine",
+    "last_reviewed": "2025-01-15"
+  }
+]
+

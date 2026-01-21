@@ -49,3 +49,9 @@ logs/
 .coverage
 htmlcov/
 
+# Backend resources (large docs / binaries)
+Resource/
+
+# Markdown docs (ignore all .md files)
+*.md
+

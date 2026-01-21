@@ -1,0 +1,88 @@
+[
+  {
+    "rule_id": "meal_count_by_calories",
+    "display_name": "Meal Count by Calorie Range",
+    "description": "Determines number of meals based on total daily calorie target",
+    "rule_type": "calorie_based",
+    "calorie_ranges": [
+      {
+        "max": 1600,
+        "meal_count": 3,
+        "note": "Lower calorie needs - 3 main meals"
+      },
+      {
+        "min": 1600,
+        "max": 2200,
+        "meal_count": 4,
+        "note": "Moderate calorie needs - 3 meals + 1 snack"
+      },
+      {
+        "min": 2200,
+        "meal_count": 5,
+        "note": "Higher calorie needs - 3 meals + 2 snacks"
+      }
+    ],
+    "min_meals": 1,
+    "max_meals": 7,
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Meal Frequency and Timing (2015)",
+    "version": "1.0",
+    "status": "active",
+    "is_default": true
+  },
+  {
+    "rule_id": "meal_count_by_fasting_window",
+    "display_name": "Meal Count by Fasting Window",
+    "description": "Determines number of meals based on intermittent fasting eating window",
+    "rule_type": "fasting_based",
+    "fasting_window_rules": [
+      {
+        "eating_hours_min": 8,
+        "meal_count": 4,
+        "note": "8+ hour eating window allows 3 meals + 1 snack"
+      },
+      {
+        "eating_hours_min": 6,
+        "eating_hours_max": 8,
+        "meal_count": 3,
+        "note": "6-8 hour eating window allows 3 meals"
+      },
+      {
+        "eating_hours_min": 4,
+        "eating_hours_max": 6,
+        "meal_count": 2,
+        "note": "4-6 hour eating window allows 2 meals"
+      },
+      {
+        "eating_hours_max": 4,
+        "meal_count": 1,
+        "note": "Less than 4 hour eating window allows 1 meal"
+      }
+    ],
+    "hours_between_meals": {
+      "min": 2,
+      "max": 3,
+      "note": "Assume 2-3 hours between meals for calculation"
+    },
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Intermittent Fasting (2020)",
+    "version": "1.0",
+    "status": "active",
+    "is_default": false
+  },
+  {
+    "rule_id": "meal_count_high_protein",
+    "display_name": "Meal Count for High Protein Priority",
+    "description": "Adds additional meal opportunity for high protein distribution",
+    "rule_type": "protein_based",
+    "protein_threshold_percent": 30,
+    "additional_meals": 1,
+    "note": "If protein is >30% of calories, add 1 meal for better distribution",
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Protein Distribution (2016)",
+    "version": "1.0",
+    "status": "active",
+    "is_default": false
+  }
+]
+

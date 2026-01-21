@@ -1,0 +1,65 @@
+[
+  {
+    "rule_id": "mandatory_presence_constraints",
+    "display_name": "Mandatory Presence Constraints",
+    "description": "Constraints ensuring food groups are present in daily meal plan",
+    "daily_constraints": {
+      "fruit": {
+        "min_exchanges": 1,
+        "note": "At least 1 fruit exchange per day for micronutrients and fiber"
+      },
+      "vegetable_a": {
+        "min_exchanges": 2,
+        "note": "At least 2 vegetable A exchanges per day for fiber and micronutrients"
+      }
+    },
+    "meal_presence_constraints": [
+      {
+        "constraint_id": "vegetable_in_meals",
+        "display_name": "Vegetable in Multiple Meals",
+        "description": "Ensure vegetables appear in at least N meals",
+        "categories": ["vegetable_a", "vegetable_non_starchy"],
+        "min_meals": 2,
+        "note": "Vegetables should appear in at least 2 meals per day"
+      },
+      {
+        "constraint_id": "fat_in_meals",
+        "display_name": "Fat in Multiple Meals",
+        "description": "Ensure fat appears in at least N meals",
+        "categories": ["fat"],
+        "min_meals": 2,
+        "note": "Fat should appear in at least 2 meals per day for satiety"
+      },
+      {
+        "constraint_id": "protein_in_main_meals",
+        "display_name": "Protein in Main Meals",
+        "description": "Ensure protein sources appear in at least N main meals",
+        "categories": ["pulse", "milk", "paneer", "egg_whites"],
+        "min_meals": 1,
+        "meal_types": ["breakfast", "lunch", "dinner"],
+        "note": "Protein source should appear in at least 1 main meal (breakfast/lunch/dinner)",
+        "exclusion_rules": {
+          "milk": {
+            "exclude_when": {
+              "user_preference": ["lactose_intolerance", "dairy_allergy", "vegan_preference", "personal_preference"],
+              "diet_type": ["vegan", "dairy_free", "paleo"],
+              "medical_condition": ["lactose_intolerance", "milk_allergy", "galactosemia", "casein_intolerance"]
+            },
+            "compensation_categories": ["pulse", "paneer", "egg_whites", "nuts_seeds"],
+            "compensation_note": "When milk is excluded, ensure protein is compensated with alternative sources",
+            "override_allowed": true,
+            "override_note": "Exclusion can be overridden if user preference changes or medical clearance obtained",
+            "log_exclusion": true,
+            "log_reason": true,
+            "transparency_note": "All milk exclusions must be logged with reason to prevent silent omission"
+          }
+        }
+      }
+    ],
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Meal Planning Guidelines (2018)",
+    "version": "1.0",
+    "status": "active",
+    "is_default": true
+  }
+]

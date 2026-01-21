@@ -1,0 +1,296 @@
+[
+  {
+    "rule_id": "default_calorie_allocation",
+    "display_name": "Default Calorie Allocation",
+    "description": "Standard calorie percentage distribution per meal type",
+    "meal_type_percentages": {
+      "breakfast": {
+        "min": 20,
+        "max": 25,
+        "default": 22.5,
+        "unit": "%",
+        "note": "Breakfast: 20-25% of total calories (default 22.5%)"
+      },
+      "lunch": {
+        "min": 30,
+        "max": 35,
+        "default": 32.5,
+        "unit": "%",
+        "note": "Lunch: 30-35% of total calories (default 32.5%) - largest meal"
+      },
+      "snack": {
+        "min": 10,
+        "max": 15,
+        "default": 12.5,
+        "unit": "%",
+        "note": "Snack: 10-15% of total calories (default 12.5%)"
+      },
+      "dinner": {
+        "min": 20,
+        "max": 30,
+        "default": 25,
+        "unit": "%",
+        "note": "Dinner: 20-30% of total calories (default 25%)"
+      }
+    },
+    "redistribution_rules": {
+      "no_snacks": {
+        "description": "When no snacks are present, redistribute remaining calories",
+        "lunch": 0.5,
+        "dinner": 0.3,
+        "breakfast": 0.2,
+        "note": "50% to lunch, 30% to dinner, 20% to breakfast"
+      }
+    },
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Meal Distribution Patterns (2017)",
+    "version": "1.0",
+    "status": "active",
+    "is_default": true
+  },
+  {
+    "rule_id": "athlete_calorie_allocation",
+    "display_name": "Athlete Calorie Allocation",
+    "description": "Calorie distribution optimized for athletes and high activity",
+    "meal_type_percentages": {
+      "breakfast": {
+        "min": 25,
+        "max": 30,
+        "default": 27.5,
+        "unit": "%"
+      },
+      "lunch": {
+        "min": 30,
+        "max": 35,
+        "default": 32.5,
+        "unit": "%"
+      },
+      "snack": {
+        "min": 10,
+        "max": 15,
+        "default": 12.5,
+        "unit": "%"
+      },
+      "dinner": {
+        "min": 20,
+        "max": 25,
+        "default": 22.5,
+        "unit": "%"
+      }
+    },
+    "redistribution_rules": {
+      "no_snacks": {
+        "description": "When no snacks are present, redistribute remaining calories for athletes",
+        "breakfast": 0.35,
+        "lunch": 0.40,
+        "dinner": 0.25,
+        "note": "Favor breakfast and lunch for training energy"
+      }
+    },
+    "applies_to": ["athletes", "very_active"],
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Nutrition and Athletic Performance (2016)",
+    "version": "1.0",
+    "status": "active",
+    "is_default": false
+  },
+  {
+    "rule_id": "weight_loss_calorie_allocation",
+    "display_name": "Weight Loss Calorie Allocation",
+    "description": "Calorie distribution optimized for weight loss",
+    "meal_type_percentages": {
+      "breakfast": {
+        "min": 25,
+        "max": 30,
+        "default": 27.5,
+        "unit": "%",
+        "note": "Higher breakfast for satiety"
+      },
+      "lunch": {
+        "min": 30,
+        "max": 35,
+        "default": 32.5,
+        "unit": "%"
+      },
+      "snack": {
+        "min": 10,
+        "max": 15,
+        "default": 12.5,
+        "unit": "%"
+      },
+      "dinner": {
+        "min": 20,
+        "max": 25,
+        "default": 22.5,
+        "unit": "%",
+        "note": "Lower dinner for weight loss"
+      }
+    },
+    "redistribution_rules": {
+      "no_snacks": {
+        "description": "When no snacks are present, redistribute remaining calories for weight loss",
+        "breakfast": 0.35,
+        "lunch": 0.40,
+        "dinner": 0.25,
+        "note": "Higher breakfast and lunch for satiety, lower dinner"
+      }
+    },
+    "applies_to": ["weight_loss", "obesity"],
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Adult Weight Management Evidence-Based Nutrition Practice Guideline (2014)",
+    "version": "1.0",
+    "status": "active",
+    "is_default": false
+  },
+  {
+    "rule_id": "small_frequent_meals_calorie_allocation",
+    "display_name": "Small Frequent Meals Calorie Allocation",
+    "description": "Calorie distribution for 4-5 smaller meals to reduce gastric pressure and improve digestion",
+    "applies_to": ["gerd", "gastritis", "ibs", "digestive_issues"],
+    "meal_type_percentages": {
+      "breakfast": {
+        "min": 20,
+        "max": 25,
+        "default": 22.5,
+        "unit": "%",
+        "note": "Smaller breakfast to avoid overeating"
+      },
+      "lunch": {
+        "min": 25,
+        "max": 30,
+        "default": 27.5,
+        "unit": "%",
+        "note": "Reduced from default to accommodate more meals"
+      },
+      "snack": {
+        "min": 12,
+        "max": 18,
+        "default": 15,
+        "unit": "%",
+        "note": "Two snacks, each ~15% for smaller frequent meals"
+      },
+      "dinner": {
+        "min": 18,
+        "max": 22,
+        "default": 20,
+        "unit": "%",
+        "note": "Lighter dinner for better digestion"
+      }
+    },
+    "redistribution_rules": {
+      "no_snacks": {
+        "description": "If no snacks, redistribute to main meals evenly",
+        "breakfast": 0.35,
+        "lunch": 0.40,
+        "dinner": 0.25,
+        "note": "Distribute to avoid large meals"
+      }
+    },
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Evidence Analysis Library: GERD and Digestive Disorders Nutrition Therapy",
+    "version": "1.0",
+    "status": "active",
+    "is_default": false
+  },
+  {
+    "rule_id": "diabetes_even_distribution_calorie_allocation",
+    "display_name": "Diabetes Even Distribution Calorie Allocation",
+    "description": "Even calorie distribution across meals for consistent carbohydrate intake and glycemic control",
+    "applies_to": ["diabetes", "type_2_diabetes", "prediabetes", "gestational_diabetes"],
+    "meal_type_percentages": {
+      "breakfast": {
+        "min": 25,
+        "max": 30,
+        "default": 27.5,
+        "unit": "%",
+        "note": "Even distribution for consistent carb intake"
+      },
+      "lunch": {
+        "min": 25,
+        "max": 30,
+        "default": 27.5,
+        "unit": "%",
+        "note": "Reduced from default to achieve even distribution"
+      },
+      "snack": {
+        "min": 10,
+        "max": 15,
+        "default": 12.5,
+        "unit": "%",
+        "note": "Snack helps prevent hypoglycemia"
+      },
+      "dinner": {
+        "min": 25,
+        "max": 30,
+        "default": 27.5,
+        "unit": "%",
+        "note": "Even distribution maintains glycemic control"
+      }
+    },
+    "redistribution_rules": {
+      "no_snacks": {
+        "description": "Redistribute evenly across 3 meals for consistent carbohydrate intake",
+        "breakfast": 0.333,
+        "lunch": 0.333,
+        "dinner": 0.334,
+        "note": "Equal distribution: 33.3% each meal"
+      }
+    },
+    "source": "American Diabetes Association",
+    "source_reference": "ADA Standards of Medical Care in Diabetes 2024, Section 5: Facilitating Behavior Change",
+    "version": "1.0",
+    "status": "active",
+    "is_default": false
+  },
+  {
+    "rule_id": "muscle_gain_calorie_allocation",
+    "display_name": "Muscle Gain Calorie Allocation",
+    "description": "Calorie distribution optimized for muscle building with higher breakfast and strategic meal timing",
+    "applies_to": ["muscle_gain", "bodybuilding", "weight_gain"],
+    "meal_type_percentages": {
+      "breakfast": {
+        "min": 28,
+        "max": 32,
+        "default": 30,
+        "unit": "%",
+        "note": "Higher breakfast for muscle building"
+      },
+      "lunch": {
+        "min": 28,
+        "max": 32,
+        "default": 30,
+        "unit": "%",
+        "note": "Substantial lunch for sustained energy"
+      },
+      "snack": {
+        "min": 12,
+        "max": 18,
+        "default": 15,
+        "unit": "%",
+        "note": "Pre/post-workout snacks important for muscle building"
+      },
+      "dinner": {
+        "min": 20,
+        "max": 25,
+        "default": 22.5,
+        "unit": "%",
+        "note": "Adequate dinner for recovery"
+      }
+    },
+    "redistribution_rules": {
+      "no_snacks": {
+        "description": "Redistribute snack calories to main meals for muscle building",
+        "breakfast": 0.35,
+        "lunch": 0.40,
+        "dinner": 0.25,
+        "note": "Favor breakfast and lunch for training energy"
+      }
+    },
+    "source": "International Society of Sports Nutrition",
+    "source_reference": "ISSN Position Stand: Nutrient Timing (2017)",
+    "version": "1.0",
+    "status": "active",
+    "is_default": false
+  }
+]
+

@@ -6,10 +6,33 @@ from sqlalchemy import pool
 
 from alembic import context
 
-# Import the Base from database.py and all models
+# Import the Base from database.py and all platform models
 from app.database import Base
-from app.models import User, Client, Appointment, NutritionKnowledge, FoodItem
 from app.config import settings
+
+# Import all platform models (using __init__.py exports)
+from app.platform.data.models import (
+    PlatformClient,
+    PlatformIntake,
+    PlatformAssessment,
+    PlatformDiagnosis,
+    PlatformMNTConstraint,
+    PlatformNutritionTarget,
+    PlatformMealStructure,
+    PlatformAyurvedaProfile,
+    PlatformDietPlan,
+    PlatformFoodAllocationApproval,
+    PlatformMonitoringRecord,
+    PlatformDecisionLog,
+    KBMedicalCondition,
+    KBNutritionDiagnosis,
+    KBMNTRule,
+    KBAyurvedaProfile,
+    KBFood,
+    KBLabThreshold,
+    KBMedicalModifierRule,
+    KBFoodConditionCompatibility
+)
 
 # this is the Alembic Config object
 config = context.config

@@ -1,0 +1,32 @@
+[
+  {
+    "rule_id": "exchange_rounding_rules",
+    "display_name": "Exchange Rounding Rules",
+    "description": "Rules for rounding exchange values to practical units after allocation",
+    "rounding_config": {
+      "rounding_precision": 0.5,
+      "rounding_precision_display": "0.5 units",
+      "note": "Round exchange values to nearest 0.5 unit (e.g., 1.2 → 1.0, 1.3 → 1.5, 1.7 → 1.5, 1.8 → 2.0)"
+    },
+    "rounding_behavior": {
+      "preserve_daily_totals": true,
+      "preserve_daily_totals_note": "After rounding, daily exchange totals must match pre-rounding totals exactly",
+      "prefer_higher_energy_meals": true,
+      "prefer_higher_energy_meals_note": "When balancing remainders, adjust higher-energy meals first (meals with higher energy_weight)",
+      "never_remove_food_groups": true,
+      "never_remove_food_groups_note": "Do not remove any food group during rounding. Zero values remain zero, non-zero values remain non-zero."
+    },
+    "remainder_balancing": {
+      "strategy": "energy_weighted",
+      "description": "Distribute rounding remainders to meals based on energy_weight (higher energy meals get priority)",
+      "min_adjustment": 0.5,
+      "max_adjustment_per_meal": 1.0,
+      "note": "Remainders are distributed in 0.5 unit increments, with maximum 1.0 unit adjustment per meal per category"
+    },
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Exchange System Precision and Practicality (2019)",
+    "version": "1.0",
+    "status": "active",
+    "is_default": true
+  }
+]

@@ -1,0 +1,376 @@
+[
+  {
+    "nutrient_id": "fiber_g",
+    "display_name": "Dietary Fiber",
+    "nutrient_type": "macronutrient_derived",
+    "unit": "g",
+    "default_targets": {
+      "adult_male": {
+        "min": 30,
+        "max": 38,
+        "note": "30-38g per day for men"
+      },
+      "adult_female": {
+        "min": 21,
+        "max": 25,
+        "note": "21-25g per day for women"
+      },
+      "general": {
+        "min": 25,
+        "max": 30,
+        "note": "General recommendation: 25-30g per day"
+      }
+    },
+    "age_adjustments": {},
+    "condition_adjustments": {
+      "diabetes": {
+        "min": 25,
+        "note": "Minimum 25g for glycemic control"
+      }
+    },
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Health Implications of Dietary Fiber (2015)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "nutrient_id": "sodium_mg",
+    "display_name": "Sodium",
+    "nutrient_type": "mineral",
+    "unit": "mg",
+    "default_targets": {
+      "adult": {
+        "max": 2300,
+        "note": "Maximum 2300mg per day (general population)"
+      }
+    },
+    "age_adjustments": {
+      "over_50": {
+        "max": 1500,
+        "note": "1500mg for adults over 50"
+      }
+    },
+    "condition_adjustments": {
+      "hypertension": {
+        "max": 1500,
+        "note": "1500mg for hypertension management"
+      },
+      "diabetes": {
+        "max": 2300,
+        "note": "2300mg unless hypertension present"
+      }
+    },
+    "source": "American Heart Association",
+    "source_reference": "AHA Scientific Statement: Dietary Sodium and Cardiovascular Disease Risk (2021)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "nutrient_id": "calcium_mg",
+    "display_name": "Calcium",
+    "nutrient_type": "mineral",
+    "unit": "mg",
+    "default_targets": {
+      "adult_male_19_50": {
+        "min": 1000,
+        "max": 2500,
+        "note": "1000mg for men 19-50 years"
+      },
+      "adult_female_19_50": {
+        "min": 1000,
+        "max": 2500,
+        "note": "1000mg for women 19-50 years"
+      },
+      "adult_male_51_plus": {
+        "min": 1000,
+        "max": 2000,
+        "note": "1000mg for men 51+ years"
+      },
+      "adult_female_51_plus": {
+        "min": 1200,
+        "max": 2000,
+        "note": "1200mg for women 51+ years (bone health)"
+      }
+    },
+    "age_adjustments": {
+      "over_50": {
+        "min": 1200,
+        "note": "Increase to 1200mg for adults over 50"
+      }
+    },
+    "condition_adjustments": {},
+    "source": "Institute of Medicine",
+    "source_reference": "Dietary Reference Intakes for Calcium and Vitamin D (2011)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "nutrient_id": "iron_mg",
+    "display_name": "Iron",
+    "nutrient_type": "mineral",
+    "unit": "mg",
+    "default_targets": {
+      "adult_male": {
+        "min": 8,
+        "max": 45,
+        "note": "8mg per day for men 19-50 years"
+      },
+      "adult_female_19_50": {
+        "min": 18,
+        "max": 45,
+        "note": "18mg per day for women 19-50 years (menstruating)"
+      },
+      "adult_female_51_plus": {
+        "min": 8,
+        "max": 45,
+        "note": "8mg per day for women 51+ years (post-menopausal)"
+      }
+    },
+    "age_adjustments": {
+      "female_over_50": {
+        "min": 8,
+        "note": "Reduced to 8mg after menopause"
+      }
+    },
+    "condition_adjustments": {
+      "anemia": {
+        "min": 18,
+        "note": "Higher intake may be needed, consult healthcare provider"
+      },
+      "pregnancy": {
+        "min": 27,
+        "note": "27mg per day during pregnancy"
+      }
+    },
+    "source": "Institute of Medicine",
+    "source_reference": "Dietary Reference Intakes for Iron (2001)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "nutrient_id": "vitamin_d_iu",
+    "display_name": "Vitamin D",
+    "nutrient_type": "vitamin",
+    "unit": "IU",
+    "default_targets": {
+      "adult_19_50": {
+        "min": 600,
+        "max": 4000,
+        "note": "600 IU per day for adults 19-50 years"
+      },
+      "adult_51_70": {
+        "min": 600,
+        "max": 4000,
+        "note": "600 IU per day for adults 51-70 years"
+      },
+      "adult_71_plus": {
+        "min": 800,
+        "max": 4000,
+        "note": "800 IU per day for adults 71+ years"
+      }
+    },
+    "age_adjustments": {
+      "over_70": {
+        "min": 800,
+        "note": "Increase to 800 IU for adults over 70"
+      },
+      "over_50": {
+        "min": 800,
+        "note": "Consider 800 IU for adults over 50"
+      }
+    },
+    "condition_adjustments": {
+      "osteoporosis": {
+        "min": 800,
+        "note": "800-1000 IU for bone health"
+      }
+    },
+    "source": "Institute of Medicine",
+    "source_reference": "Dietary Reference Intakes for Calcium and Vitamin D (2011)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "nutrient_id": "potassium_mg",
+    "display_name": "Potassium",
+    "nutrient_type": "mineral",
+    "unit": "mg",
+    "default_targets": {
+      "adult_male": {
+        "min": 3400,
+        "max": null,
+        "note": "3400mg per day for men"
+      },
+      "adult_female": {
+        "min": 2600,
+        "max": null,
+        "note": "2600mg per day for women"
+      }
+    },
+    "age_adjustments": {},
+    "condition_adjustments": {
+      "hypertension": {
+        "min": 3500,
+        "note": "Higher potassium intake recommended for blood pressure management"
+      }
+    },
+    "source": "Institute of Medicine",
+    "source_reference": "Dietary Reference Intakes for Potassium (2019)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "nutrient_id": "vitamin_b12_mcg",
+    "display_name": "Vitamin B12",
+    "nutrient_type": "vitamin",
+    "unit": "mcg",
+    "default_targets": {
+      "adult": {
+        "min": 2.4,
+        "max": null,
+        "note": "2.4 mcg per day for adults"
+      }
+    },
+    "age_adjustments": {
+      "over_50": {
+        "min": 2.4,
+        "note": "May need fortified foods or supplements due to reduced absorption"
+      }
+    },
+    "condition_adjustments": {
+      "vegan": {
+        "min": 2.4,
+        "note": "Supplementation recommended for vegans"
+      }
+    },
+    "source": "Institute of Medicine",
+    "source_reference": "Dietary Reference Intakes for Thiamin, Riboflavin, Niacin, Vitamin B6, Folate, Vitamin B12, Pantothenic Acid, Biotin, and Choline (1998)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "nutrient_id": "magnesium_mg",
+    "display_name": "Magnesium",
+    "nutrient_type": "mineral",
+    "unit": "mg",
+    "default_targets": {
+      "adult_male": {
+        "min": 400,
+        "max": null,
+        "note": "400-420mg per day for men (420mg for 31+ years)"
+      },
+      "adult_female_19_50": {
+        "min": 310,
+        "max": null,
+        "note": "310-320mg per day for women 19-50 years"
+      },
+      "adult_female_51_plus": {
+        "min": 320,
+        "max": null,
+        "note": "320mg per day for women 51+ years"
+      },
+      "adult_female": {
+        "min": 310,
+        "max": null,
+        "note": "310-320mg per day for women"
+      }
+    },
+    "age_adjustments": {},
+    "condition_adjustments": {
+      "diabetes": {
+        "min": 400,
+        "note": "Higher magnesium may help with insulin sensitivity"
+      }
+    },
+    "source": "Institute of Medicine",
+    "source_reference": "Dietary Reference Intakes for Calcium, Phosphorus, Magnesium, Vitamin D, and Fluoride (1997)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "nutrient_id": "zinc_mg",
+    "display_name": "Zinc",
+    "nutrient_type": "mineral",
+    "unit": "mg",
+    "default_targets": {
+      "adult_male": {
+        "min": 11,
+        "max": 40,
+        "note": "11mg per day for men"
+      },
+      "adult_female": {
+        "min": 8,
+        "max": 40,
+        "note": "8mg per day for women"
+      }
+    },
+    "age_adjustments": {},
+    "condition_adjustments": {},
+    "source": "Institute of Medicine",
+    "source_reference": "Dietary Reference Intakes for Vitamin A, Vitamin K, Arsenic, Boron, Chromium, Copper, Iodine, Iron, Manganese, Molybdenum, Nickel, Silicon, Vanadium, and Zinc (2001)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "nutrient_id": "vitamin_c_mg",
+    "display_name": "Vitamin C",
+    "nutrient_type": "vitamin",
+    "unit": "mg",
+    "default_targets": {
+      "adult_male": {
+        "min": 90,
+        "max": 2000,
+        "note": "90mg per day for men"
+      },
+      "adult_female": {
+        "min": 75,
+        "max": 2000,
+        "note": "75mg per day for women"
+      }
+    },
+    "age_adjustments": {},
+    "condition_adjustments": {
+      "iron_deficiency_anemia": {
+        "min": 100,
+        "note": "Higher vitamin C enhances iron absorption"
+      },
+      "smoking": {
+        "min": 125,
+        "note": "125mg per day for smokers (additional 35mg)"
+      }
+    },
+    "source": "Institute of Medicine",
+    "source_reference": "Dietary Reference Intakes for Vitamin C, Vitamin E, Selenium, and Carotenoids (2000)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "nutrient_id": "folate_mcg",
+    "display_name": "Folate (Folic Acid)",
+    "nutrient_type": "vitamin",
+    "unit": "mcg",
+    "default_targets": {
+      "adult": {
+        "min": 400,
+        "max": 1000,
+        "note": "400 mcg DFE per day for adults"
+      }
+    },
+    "age_adjustments": {},
+    "condition_adjustments": {
+      "anemia": {
+        "min": 400,
+        "note": "Adequate folate required for red blood cell production"
+      },
+      "pregnancy": {
+        "min": 600,
+        "note": "600 mcg DFE per day during pregnancy"
+      }
+    },
+    "source": "Institute of Medicine",
+    "source_reference": "Dietary Reference Intakes for Thiamin, Riboflavin, Niacin, Vitamin B6, Folate, Vitamin B12, Pantothenic Acid, Biotin, and Choline (1998)",
+    "version": "1.0",
+    "status": "active"
+  }
+]
+

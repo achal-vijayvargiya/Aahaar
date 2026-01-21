@@ -1,0 +1,20 @@
+code,Food Name,,PROTCNT,FATCE,FIBTG,CHOAVLDF,ENERC,Exchange
+F001,Beet root (Beta vulgaris),6,1.95±0.14,0.14±0.01,3.31±0.32,6.18±0.61,149±9,ROOTS AND TUBERS
+F002,"Carrot, orange (Daucus carota)",6,0.95±0.15,0.47±0.02,4.18±0.30,5.55±0.48,139±9,ROOTS AND TUBERS
+F003,"Carrot, red (Daucus carota)",4,1.04±0.09,0.47±0.04,4.49±0.19,6.71±1.11,160±19,ROOTS AND TUBERS
+F004,Colocasia (Colocasia esculenta),6,3.31±0.59,0.17±0.03,3.22±0.34,17.85±0.94,372±9,ROOTS AND TUBERS
+F005,Lotus root (Nelumbium nelumbo),3,1.94±0.32,0.93±0.06,4.70±0.04,14.67±0.45,332±14,ROOTS AND TUBERS
+F006,"Potato, brown skin, big (Solanum tuberosum)",6,1.54±0.17,0.23±0.02,1.71±0.03,14.89±0.40,292±7,ROOTS AND TUBERS
+F007,"Potato, brown skin, small (Solanum tuberosum)",1,1.35,0.22,1.69,12.9,255,ROOTS AND TUBERS
+F008,"Potato, red skin (Solanum tuberosum)",1,1.83,0.22,1.68,15.43,306,ROOTS AND TUBERS
+F009,"Radish, elongate, red skin (Raphanus sativus)",3,0.67±0.03,0.13±0.02,2.46±0.16,6.71±0.12,134±3,ROOTS AND TUBERS
+F010,"Radish, elongate, white skin (Raphanus sativus)",6,0.77±0.08,0.15±0.02,2.65±0.15,6.56±0.70,135±11,ROOTS AND TUBERS
+F011,"Radish, round, red skin (Raphanus sativus)",1,0.89,0.16,2.29,6.07,130,ROOTS AND TUBERS
+F012,"Radish, round, white skin (Raphanus sativus)",2,0.8,0.14,2.37,6.13,129,ROOTS AND TUBERS
+F013,"Sweet potato, brown skin (Ipomoea batatas)",4,1.33±0.12,0.26±0.06,3.99±0.05,24.25±0.77,456±15,ROOTS AND TUBERS
+F014,"Sweet potato, pink skin (Ipomoea batatas)",3,1.27±0.09,0.33±0.06,3.94±0.10,23.93±0.15,452±4,ROOTS AND TUBERS
+F015,Tapioca (Manihot esculenta),3,1.03±0.10,0.20±0.01,4.61±0.12,17.81±0.57,334±10,ROOTS AND TUBERS
+F016,Water Chestnut (Eleocharis dulcis),1,0.86,0.37,3.02,21.46,400,ROOTS AND TUBERS
+F017,"Yam, elephant (Amorphophallus campanulatus)",6,2.56±0.28,0.14±0.02,4.17±0.05,17.46±0.55,353±5,ROOTS AND TUBERS
+F018,"Yam, ordinary (Amorphophallus sp.)",4,2.18±0.26,0.17±0.02,4.08±0.07,17.65±0.57,349±12,ROOTS AND TUBERS
+F019,"Yam, wild (Dioscorea villosa)",2,3.07,0.3,4.57,20.95,430,ROOTS AND TUBERS

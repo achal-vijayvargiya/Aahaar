@@ -1,0 +1,69 @@
+code,Food Name,,PROTCNT,FATCE,FIBTG,CHOAVLDF,ENERC,Exchange
+E001,"Apple, big (Malus domestica)",6,0.29±0.08,0.64±0.04,2.59±0.15,13.11±0.76,261±15,FRUITS
+E002,"Apple, green (Malus domestica)",6,0.46±0.07,0.50±0.05,2.54±0.26,10.65±1.00,214±17,FRUITS
+E003,"Apple, small (Malus domestica)",6,0.31±0.05,No.0 o.5f3 R±e0g.0io5ns,2.06±0.12,13.95±0.48,267±8,FRUITS
+E004,"Apple, small, Kashmir (Malus domestica)",1,0.27,0.6,2.07,13.99,269,FRUITS
+E005,"Apricot, dried (Prunus armeniaca)",6,3.17±0.29,0.74±0.03,3.32±0.13,72.63±0.27,1321±9,FRUITS
+E006,"Apricot, processed (Prunus armeniaca)",3,1.47±0.15,0.64±0.04,0.59±0.01,10.93±0.88,236±12,FRUITS
+E007,Avocado fruit (Persea sp.),1,2.95,13.86,6.69,1.75,604,FRUITS
+E008,Bael fruit (Aegle marmelos),1,2.63,0.57,6.31,28.21,569,FRUITS
+E009,"Banana, ripe, montham (Musa x paradisiaca)",1,1.25,0.32,2.21,24.95,463,FRUITS
+E010,"Banana, ripe, poovam (Musa x paradisiaca)",2,1.49,0.35,2.33,23.41,445,FRUITS
+E011,"Banana, ripe, red (Musa x paradisiaca)",1,1.29,0.29,1.98,25.21,467,FRUITS
+E012,"Banana, ripe, robusta (Musa x paradisiaca)",6,1.23±0.08,0.33±0.01,1.94±0.07,23.63±0.74,440±14,FRUITS
+E013,Black berry (Rubus sp.),5,0.92±0.10,0.63±0.02,4.35±0.25,10.64±0.35,227±6,FRUITS
+E014,"Cherries, red (Prunus cerasus)",4,1.49±0.22,0.46±0.05,2.12±0.12,11.87±0.31,250±4,FRUITS
+E015,"Currants, black (Ribes nigrum)",1,1.51,0.53,4.07,9.93,227,FRUITS
+E016,Custard apple (Annona squamosa),1,1.62,0.67,5.1,20.38,414,FRUITS
+E017,"Dates, dry, pale brown (Phoenix dactylifera)",6,2.45±0.24,0.35±0.03,8.95±0.23,74.91±0.52,1340±12,FRUITS
+E018,"Dates, dry, dark brown (Phoenix dactylifera)",2,2.38,0.35,9.1,72.67,1301,FRUITS
+E019,"Dates, processed (Phoenix dactylifera)",2,1.18,0.41,6.52,67.95,1197,FRUITS
+E020,Fig (Ficus carica),6,2.03±0.22,0.37±0.06,4.64±0.41,16.28±1.13,341±18,FRUITS
+E021,Gooseberry (Emblica officinalis),5,0.34±0.03,0.16±0.04,7.75±0.64,4.39±1.09,99±19,FRUITS
+E022,"Grapes, seeded, round, black (Vitis vinifera)",4,0.76±0.13,0.32±0.02,1.35±0.14,13.23±0.60,254±11,FRUITS
+E023,"Grapes, seeded, round, green (Vitis vinifera)",5,0.77±0.12,0.29±0.03,1.25±0.04,12.19±0.20,235±4,FRUITS
+E024,"Grapes, seeded, round, red (Vitis vinifera)",5,0.95±0.11,No.0 o.2f9 R±e0g.0io4ns,1.28±0.10,12.55±1.38,244±26,FRUITS
+E025,"Grapes, seedless, oval, black (Vitis vinifera)",5,1.41±0.26,0.46±0.11,1.64±0.15,20.48±0.97,395±23,FRUITS
+E026,"Grapes, seedless, round, green (Vitis vinifera)",5,0.62±0.13,0.26±0.02,1.28±0.05,11.81±1.52,224±28,FRUITS
+E027,"Grapes, seedless, round, black (Vitis vinifera)",5,1.24±0.25,0.35±0.03,1.15±0.19,19.86±1.58,374±25,FRUITS
+E028,"Guava, white flesh (Psidium guajava)",5,1.44±0.09,0.32±0.03,8.59±0.05,5.13±0.33,135±5,FRUITS
+E029,"Guava, pink flesh (Psidium guajava)",5,1.19±0.19,0.25±0.03,7.39±0.38,9.14±0.27,195±6,FRUITS
+E030,"Jack fruit, ripe (Artocarpus heterophyllus)",5,2.74±0.47,0.15±0.02,3.62±0.17,14.01±0.56,302±3,FRUITS
+E031,"Jambu fruit, ripe (Syzygium samarangense)",2,0.82,0.17,3.07,12.3,235,FRUITS
+E032,Karonda fruit (Carissa carandas),1,1.15,1.67,7.25,2.87,141,FRUITS
+E033,"Lemon, juice (Citrus limon)",6,0.41±0.05,0.75±0.02,,6.97±0.56,153±9,FRUITS
+E034,"Lime, sweet,pulp (Citrus limetta)",6,0.76±0.09,0.20±0.06,2.07±0.11,5.18±0.37,114±5,FRUITS
+E035,Litchi (Litchi chinensis),4,0.99±0.09,0.26±0.02,1.34±0.05,11.41±0.20,225±5,FRUITS
+E036,"Mango, ripe, banganapalli (Mangifera indica)",6,0.54±0.10,0.55±0.03,1.88±0.15,8.18±0.49,175±9,FRUITS
+E037,"Mango, ripe, gulabkhas (Mangifera indica)",2,0.52,0.53,1.67,10.32,209,FRUITS
+E038,"Mango, ripe, himsagar (Mangifera indica)",3,0.46±0.04,0.54±0.02,1.55±0.13,9.03±0.26,187±5,FRUITS
+E039,"Mango, ripe, kesar (Mangifera indica)",4,0.54±0.05,0.57±0.03,2.02±0.20,11.36±0.49,231±8,FRUITS
+E040,"Mango, ripe, neelam (Mangifera indica)",2,0.68,0.55,1.77,8.21,178,FRUITS
+E041,"Mango, ripe, paheri (Mangifera indica)",2,0.68,0.58,1.97,8.67,188,FRUITS
+E042,"Mango, ripe, totapari (Mangifera indica)",1,0.41,0.49,1.73,12.75,248,FRUITS
+E043,Mangosteen (Garcinia mangostana),1,0.63,0.24,1.87,11.41,219,FRUITS
+E044,Manila tamarind (Pithecellobium dulce),1,3.56,1.14,4.4,13.54,342,FRUITS
+E045,"Musk melon, orange flesh (Cucumis melon)",5,0.42±0.06,No.0 o.3f5 R±e0g.0io2ns,1.51±0.28,4.24±0.40,97±8,FRUITS
+E046,"Musk melon, yellow flesh (Cucumis melon)",6,0.53±0.05,0.26±0.02,1.49±0.10,5.40±1.04,116±18,FRUITS
+E047,"Orange, pulp (Citrus aurantium)",6,0.70±0.12,0.13±0.02,1.29±0.05,7.92±0.27,156±4,FRUITS
+E048,"Palm fruit, tender (Borassus flabellifer)",1,0.5,0.12,2.4,4.92,101,FRUITS
+E049,"Papaya, ripe (Carica papaya)",6,0.42±0.05,0.16±0.01,2.83±0.26,4.61±0.48,100±9,FRUITS
+E050,Peach (Prunus communis),1,0.86,0.37,2.13,7.82,168,FRUITS
+E051,Pear (Pyrus sp.),6,0.36±0.04,0.27±0.04,4.48±0.08,8.09±0.23,157±3,FRUITS
+E052,Phalsa (Grewia asiatica),2,1.66,0.14,4.54,15.09,299,FRUITS
+E053,Pineapple  (Ananas comosus),6,0.52±0.09,0.16±0.02,3.46±0.12,9.42±1.15,180±19,FRUITS
+E054,Plum (Prunus domestica),3,0.64±0.13,0.40±0.16,2.07±0.36,12.10±1.47,238±19,FRUITS
+E055,"Pomegranate, maroon seeds (Punica granatum)",6,1.33±0.07,0.15±0.02,2.83±0.06,11.58±0.43,229±6,FRUITS
+E056,Pummelo (Citrus maxima),3,0.68±0.06,0.42±0.01,0.80±0.04,10.64±1.54,210±26,FRUITS
+E057,"Raisins, dried, black (Vitis vinifera)",6,2.57±0.20,0.34±0.02,3.92±0.23,71.29±0.48,1279±12,FRUITS
+E058,"Raisins, dried, golden (Vitis vinifera)",6,2.76±0.26,0.35±0.03,4.56±0.50,68.79±1.00,1241±16,FRUITS
+E059,Rambutan (Nephelium lappaceum),1,0.68,0.16,1.02,16.84,306,FRUITS
+E060,Sapota (Achras sapota),6,0.92±0.07,1.26±0.02,9.60±0.57,13.90±1.13,307±18,FRUITS
+E061,Soursop (Annona muricata),1,0.74,0.94,4.95,11.94,260,FRUITS
+E062,Star fruit (Averrhoa carambola),1,0.79,0.39,2.81,4.51,110,FRUITS
+E063,Strawberry (Fragaria x ananassa),6,0.97±0.10,0.56±0.02,2.50±0.03,3.40±0.64,103±11,FRUITS
+E064,"Tamarind, pulp (Tamarindus indica)",6,2.92±0.22,0.15±0.02,5.31±0.27,67.35±0.45,1207±7,FRUITS
+E065,"Water melon, dark green (sugar baby) (Citrullus vulgaris)",6,0.60±0.06,0.16±0.01,0.70±0.14,3.86±0.59,85±10,FRUITS
+E066,"Water melon, pale green (Citrullus vulgaris)",6,0.59±0.03,0.16±0.01,0.78±0.11,3.02±0.21,70±4,FRUITS
+E067,Wood Apple (Limonia acidissima),3,3.14±0.30,3.62±0.03,5.21±0.38,7.52±0.58,327±3,FRUITS
+E068,Zizyphus (Zizyphus jujube),1,1.34,0.35,3.73,9.4,204,FRUITS

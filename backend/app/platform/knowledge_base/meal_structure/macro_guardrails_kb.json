@@ -1,0 +1,116 @@
+[
+  {
+    "meal_type": "breakfast",
+    "display_name": "Breakfast Macro Guardrails",
+    "description": "Acceptable macro percentage ranges for breakfast meals",
+    "macro_guardrails": {
+      "carb_pct": {
+        "min": 40,
+        "max": 55,
+        "unit": "%",
+        "note": "Higher carbs for morning energy"
+      },
+      "fat_pct": {
+        "min": 20,
+        "max": 30,
+        "unit": "%",
+        "note": "Moderate fat for satiety"
+      }
+    },
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Meal Distribution Patterns (2017)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "meal_type": "lunch",
+    "display_name": "Lunch Macro Guardrails",
+    "description": "Acceptable macro percentage ranges for lunch meals",
+    "macro_guardrails": {
+      "carb_pct": {
+        "min": 35,
+        "max": 50,
+        "unit": "%",
+        "note": "Balanced carbs for sustained energy"
+      },
+      "fat_pct": {
+        "min": 25,
+        "max": 35,
+        "unit": "%",
+        "note": "Balanced fat"
+      }
+    },
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Meal Distribution Patterns (2017)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "meal_type": "snack",
+    "display_name": "Snack Macro Guardrails",
+    "description": "Acceptable macro percentage ranges for snack meals",
+    "macro_guardrails": {
+      "carb_pct": {
+        "min": 30,
+        "max": 50,
+        "unit": "%",
+        "note": "Flexible carbs for quick energy"
+      },
+      "fat_pct": {
+        "min": 20,
+        "max": 35,
+        "unit": "%",
+        "note": "Flexible fat"
+      }
+    },
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Meal Frequency and Timing (2015)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "meal_type": "dinner",
+    "display_name": "Dinner Macro Guardrails",
+    "description": "Acceptable macro percentage ranges for dinner meals",
+    "macro_guardrails": {
+      "carb_pct": {
+        "min": 25,
+        "max": 40,
+        "unit": "%",
+        "note": "Lower carbs for better sleep quality"
+      },
+      "fat_pct": {
+        "min": 25,
+        "max": 35,
+        "unit": "%",
+        "note": "Higher fat for satiety and sleep"
+      }
+    },
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Meal Timing and Sleep Quality (2019)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "meal_type": "default",
+    "display_name": "Default Macro Guardrails",
+    "description": "Default macro guardrails for unknown meal types",
+    "macro_guardrails": {
+      "carb_pct": {
+        "min": 35,
+        "max": 50,
+        "unit": "%"
+      },
+      "fat_pct": {
+        "min": 25,
+        "max": 35,
+        "unit": "%"
+      }
+    },
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Meal Distribution Patterns (2017)",
+    "version": "1.0",
+    "status": "active"
+  }
+]
+

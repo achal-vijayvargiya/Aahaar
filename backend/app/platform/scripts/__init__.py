@@ -1,0 +1,4 @@
+"""
+Platform scripts package.
+"""
+

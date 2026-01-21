@@ -1,0 +1,66 @@
+[
+  {
+    "agni_type": "Sama",
+    "meal_timing": "regular",
+    "description": "Balanced digestion - regular meal times",
+    "recommendations": {
+      "breakfast": "7-8 AM",
+      "lunch": "12-1 PM",
+      "dinner": "6-7 PM",
+      "snacks": "As needed, moderate"
+    },
+    "source": "Charaka Samhita",
+    "source_reference": "Agni-Based Meal Timing - Sama",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "agni_type": "Vishama",
+    "meal_timing": "fixed",
+    "description": "Fixed meal times for irregular Agni",
+    "recommendations": {
+      "breakfast": "7-8 AM (fixed)",
+      "lunch": "12-1 PM (fixed)",
+      "dinner": "6-7 PM (fixed)",
+      "snacks": "Avoid irregular snacking"
+    },
+    "source": "Charaka Samhita",
+    "source_reference": "Agni-Based Meal Timing - Vishama",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "agni_type": "Tikshna",
+    "meal_timing": "regular",
+    "description": "Regular meals, avoid fasting",
+    "recommendations": {
+      "breakfast": "7-8 AM",
+      "lunch": "12-1 PM",
+      "dinner": "6-7 PM",
+      "snacks": "Regular snacks to avoid excessive hunger"
+    },
+    "source": "Charaka Samhita",
+    "source_reference": "Agni-Based Meal Timing - Tikshna",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "agni_type": "Manda",
+    "meal_timing": "small_frequent",
+    "description": "Smaller, frequent meals for slow Agni",
+    "recommendations": {
+      "breakfast": "7-8 AM (light)",
+      "lunch": "12-1 PM (moderate)",
+      "dinner": "6-7 PM (light)",
+      "snacks": "2-3 small snacks between meals"
+    },
+    "source": "Charaka Samhita",
+    "source_reference": "Agni-Based Meal Timing - Manda",
+    "version": "1.0",
+    "status": "active"
+  }
+]
+
+
+
+

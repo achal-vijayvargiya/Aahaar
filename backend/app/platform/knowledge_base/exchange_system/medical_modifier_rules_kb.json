@@ -1,0 +1,278 @@
+[
+  {
+    "modifier_id": "diabetes_exchange_modifier",
+    "display_name": "Diabetes Exchange Modifier",
+    "description": "Exchange adjustments for diabetes management",
+    "applies_to_conditions": ["diabetes", "type_2_diabetes", "prediabetes"],
+    "modifications": [
+      {
+        "exchange_category": "cereal",
+        "action": "reduce",
+        "amount": 1,
+        "note": "Reduce cereal by 1 exchange to control blood sugar"
+      },
+      {
+        "exchange_category": "vegetable_non_starchy",
+        "action": "increase",
+        "amount": 1,
+        "note": "Add 1 vegetable exchange for fiber and glycemic control"
+      }
+    ],
+    "priority": "high",
+    "overrides_ayurveda": true,
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Evidence-Based Nutrition Practice Guideline for Type 2 Diabetes (2015)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "modifier_id": "ckd_exchange_modifier",
+    "display_name": "CKD Exchange Modifier",
+    "description": "Exchange adjustments for chronic kidney disease",
+    "applies_to_conditions": ["ckd", "kidney_disease", "renal_disease"],
+    "modifications": [
+      {
+        "exchange_category": "pulse",
+        "action": "reduce",
+        "amount": 1,
+        "max_reduction": 1,
+        "note": "Reduce pulse by 1 exchange to limit protein/phosphorus"
+      },
+      {
+        "exchange_category": "cereal",
+        "action": "compensate",
+        "compensation_logic": "calorie_equivalent",
+        "note": "Compensate reduced pulse calories with cereal"
+      }
+    ],
+    "priority": "high",
+    "overrides_ayurveda": true,
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Evidence-Based Nutrition Practice Guideline for CKD (2019)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "modifier_id": "obesity_exchange_modifier",
+    "display_name": "Obesity Exchange Modifier",
+    "description": "Exchange adjustments for weight management",
+    "applies_to_conditions": ["obesity", "overweight"],
+    "modifications": [
+      {
+        "exchange_category": "fat",
+        "action": "reduce",
+        "amount": 1,
+        "note": "Reduce fat by 1 exchange for calorie reduction"
+      },
+      {
+        "exchange_category": "vegetable_non_starchy",
+        "action": "increase",
+        "amount": 1,
+        "note": "Add 1 vegetable exchange for satiety and volume"
+      }
+    ],
+    "priority": "high",
+    "overrides_ayurveda": true,
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Adult Weight Management Evidence-Based Nutrition Practice Guideline (2014)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "modifier_id": "gerd_exchange_modifier",
+    "display_name": "GERD Exchange Modifier",
+    "description": "Exchange adjustments for GERD/reflux management",
+    "applies_to_conditions": ["gerd", "reflux", "acid_reflux"],
+    "modifications": [
+      {
+        "exchange_category": "fat",
+        "action": "reduce",
+        "amount": 1,
+        "note": "Reduce fat by 1 exchange to reduce reflux"
+      },
+      {
+        "exchange_category": "cereal",
+        "action": "compensate",
+        "compensation_logic": "calorie_equivalent",
+        "note": "Compensate reduced fat calories with cereal"
+      }
+    ],
+    "priority": "high",
+    "overrides_ayurveda": true,
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Evidence-Based Nutrition Practice Guideline for GERD (2018)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "modifier_id": "hypertension_exchange_modifier",
+    "display_name": "Hypertension Exchange Modifier",
+    "description": "Exchange adjustments for hypertension/blood pressure management",
+    "applies_to_conditions": ["hypertension", "high_blood_pressure"],
+    "modifications": [
+      {
+        "exchange_category": "fat",
+        "action": "reduce",
+        "amount": 1,
+        "note": "Reduce fat by 1 exchange to support weight and blood pressure management"
+      },
+      {
+        "exchange_category": "vegetable_non_starchy",
+        "action": "ensure_minimum",
+        "min_exchanges": 2,
+        "note": "Ensure adequate vegetables for potassium and fiber (support BP management)"
+      }
+    ],
+    "priority": "high",
+    "overrides_ayurveda": true,
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Evidence-Based Nutrition Practice Guideline for Hypertension (2017)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "modifier_id": "ibs_exchange_modifier",
+    "display_name": "IBS Exchange Modifier",
+    "description": "Exchange adjustments for irritable bowel syndrome management",
+    "applies_to_conditions": ["ibs", "irritable_bowel_syndrome"],
+    "modifications": [
+      {
+        "exchange_category": "pulse",
+        "action": "reduce",
+        "amount": 1,
+        "max_reduction": 1,
+        "note": "Reduce pulse by 1 exchange to minimize gas-producing foods (maintain minimum for protein)"
+      },
+      {
+        "exchange_category": "cereal",
+        "action": "compensate",
+        "compensation_logic": "calorie_equivalent",
+        "note": "Compensate reduced pulse calories with easily digestible cereal"
+      }
+    ],
+    "priority": "high",
+    "overrides_ayurveda": true,
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Evidence-Based Nutrition Practice Guideline for IBS (2016)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "modifier_id": "ibd_exchange_modifier",
+    "display_name": "IBD Exchange Modifier",
+    "description": "Exchange adjustments for inflammatory bowel disease management",
+    "applies_to_conditions": ["ibd", "inflammatory_bowel_disease", "crohns", "colitis"],
+    "modifications": [
+      {
+        "exchange_category": "pulse",
+        "action": "reduce",
+        "amount": 1,
+        "max_reduction": 1,
+        "note": "Reduce pulse by 1 exchange during flares to minimize gut burden (maintain minimum for protein)"
+      },
+      {
+        "exchange_category": "vegetable_non_starchy",
+        "action": "reduce",
+        "amount": 1,
+        "note": "Reduce high-fiber vegetables by 1 exchange during flares (use easily digestible vegetables)"
+      },
+      {
+        "exchange_category": "cereal",
+        "action": "compensate",
+        "compensation_logic": "calorie_equivalent",
+        "note": "Compensate with easily digestible cereal sources"
+      }
+    ],
+    "priority": "high",
+    "overrides_ayurveda": true,
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Evidence-Based Nutrition Practice Guideline for IBD (2019)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "modifier_id": "gastritis_exchange_modifier",
+    "display_name": "Gastritis Exchange Modifier",
+    "description": "Exchange adjustments for gastritis management",
+    "applies_to_conditions": ["gastritis"],
+    "modifications": [
+      {
+        "exchange_category": "fat",
+        "action": "reduce",
+        "amount": 1,
+        "note": "Reduce fat by 1 exchange to reduce gastric irritation"
+      },
+      {
+        "exchange_category": "cereal",
+        "action": "compensate",
+        "compensation_logic": "calorie_equivalent",
+        "note": "Compensate reduced fat calories with cereal"
+      }
+    ],
+    "priority": "high",
+    "overrides_ayurveda": true,
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Evidence-Based Nutrition Practice Guideline for Gastritis (2017)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "modifier_id": "fatty_liver_exchange_modifier",
+    "display_name": "Fatty Liver Exchange Modifier",
+    "description": "Exchange adjustments for fatty liver disease management",
+    "applies_to_conditions": ["fatty_liver_disease", "nafld", "nash"],
+    "modifications": [
+      {
+        "exchange_category": "fat",
+        "action": "reduce",
+        "amount": 1,
+        "note": "Reduce fat by 1 exchange to support liver health and weight management"
+      },
+      {
+        "exchange_category": "cereal",
+        "action": "reduce",
+        "amount": 1,
+        "note": "Reduce refined cereal by 1 exchange to minimize refined carbohydrate intake"
+      },
+      {
+        "exchange_category": "vegetable_non_starchy",
+        "action": "increase",
+        "amount": 1,
+        "note": "Add 1 vegetable exchange for fiber and micronutrients"
+      }
+    ],
+    "priority": "high",
+    "overrides_ayurveda": true,
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Evidence-Based Nutrition Practice Guideline for NAFLD (2020)",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "modifier_id": "pcos_exchange_modifier",
+    "display_name": "PCOS Exchange Modifier",
+    "description": "Exchange adjustments for polycystic ovary syndrome management",
+    "applies_to_conditions": ["pcos", "polycystic_ovary_syndrome"],
+    "modifications": [
+      {
+        "exchange_category": "cereal",
+        "action": "reduce",
+        "amount": 1,
+        "note": "Reduce cereal by 1 exchange to improve insulin sensitivity"
+      },
+      {
+        "exchange_category": "vegetable_non_starchy",
+        "action": "increase",
+        "amount": 1,
+        "note": "Add 1 vegetable exchange for fiber and improved insulin response"
+      }
+    ],
+    "priority": "high",
+    "overrides_ayurveda": true,
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Evidence-Based Nutrition Practice Guideline for PCOS (2018)",
+    "version": "1.0",
+    "status": "active"
+  }
+]
+

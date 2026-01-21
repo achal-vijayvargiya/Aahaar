@@ -1,0 +1,157 @@
+[
+  {
+    "config_id": "core_food_groups",
+    "display_name": "Core Food Groups Configuration",
+    "description": "Core food groups with their display names, descriptions, display order, and nutrition values",
+    "core_food_groups": [
+      {
+        "exchange_category_id": "cereal",
+        "display_name": "Cereal/Grain",
+        "description": "Rice, wheat, millets, oats",
+        "display_order": 1,
+        "amount_per_exchange_g": 30.0,
+        "nutrition_per_exchange": {
+          "calories": 80.0,
+          "protein_g": 2.0,
+          "carbs_g": 15.0,
+          "fat_g": 1.0
+        }
+      },
+      {
+        "exchange_category_id": "pulse",
+        "display_name": "Pulse/Legume",
+        "description": "Dal, chana, rajma, lentils",
+        "display_order": 2,
+        "amount_per_exchange_g": 30.0,
+        "nutrition_per_exchange": {
+          "calories": 100.0,
+          "protein_g": 7.0,
+          "carbs_g": 15.0,
+          "fat_g": 1.0
+        }
+      },
+      {
+        "exchange_category_id": "vegetable_non_starchy",
+        "display_name": "Non-Starchy Vegetable",
+        "description": "Leafy, gourds, cauliflower",
+        "display_order": 3,
+        "amount_per_exchange_g": 100.0,
+        "nutrition_per_exchange": {
+          "calories": 25.0,
+          "protein_g": 2.0,
+          "carbs_g": 5.0,
+          "fat_g": 0.0
+        }
+      },
+      {
+        "exchange_category_id": "vegetable_starchy",
+        "display_name": "Starchy Vegetable",
+        "description": "Potato, sweet potato, corn",
+        "display_order": 4,
+        "amount_per_exchange_g": 100.0,
+        "nutrition_per_exchange": {
+          "calories": 80.0,
+          "protein_g": 2.0,
+          "carbs_g": 18.0,
+          "fat_g": 0.0
+        }
+      },
+      {
+        "exchange_category_id": "fruit",
+        "display_name": "Fruit",
+        "description": "All fruits",
+        "display_order": 5,
+        "amount_per_exchange_g": 100.0,
+        "nutrition_per_exchange": {
+          "calories": 60.0,
+          "protein_g": 1.0,
+          "carbs_g": 15.0,
+          "fat_g": 0.0
+        }
+      },
+      {
+        "exchange_category_id": "milk",
+        "display_name": "Milk & Dairy",
+        "description": "Milk, curd, yogurt",
+        "display_order": 6,
+        "amount_per_exchange_g": 150.0,
+        "nutrition_per_exchange": {
+          "calories": 100.0,
+          "protein_g": 6.0,
+          "carbs_g": 10.0,
+          "fat_g": 4.0
+        }
+      },
+      {
+        "exchange_category_id": "egg_whites",
+        "display_name": "Egg",
+        "description": "egg_whites",
+        "display_order": 7,
+        "amount_per_exchange_g": 30.0,
+        "nutrition_per_exchange": {
+          "calories": 15.0,
+          "protein_g": 3.5,
+          "carbs_g": 0.0,
+          "fat_g": 0.0
+        }
+      },
+      {
+        "exchange_category_id": "paneer",
+        "display_name": "Paneer/Cheese",
+        "description": "Paneer, cheese",
+        "display_order": 8,
+        "amount_per_exchange_g": 40.0,
+        "nutrition_per_exchange": {
+          "calories": 100.0,
+          "protein_g": 7.5,
+          "carbs_g": 5.0,
+          "fat_g": 6.0
+        }
+      },
+      {
+        "exchange_category_id": "nuts_seeds",
+        "display_name": "Nuts & Seeds",
+        "description": "Almond, peanut, seeds",
+        "display_order": 9,
+        "amount_per_exchange_g": 15.0,
+        "nutrition_per_exchange": {
+          "calories": 70.0,
+          "protein_g": 3.0,
+          "carbs_g": 5.0,
+          "fat_g": 6.0
+        }
+      },
+      {
+        "exchange_category_id": "fat",
+        "display_name": "Fat/Oil",
+        "description": "Oil, ghee, butter",
+        "display_order": 10,
+        "amount_per_exchange_g": 10.0,
+        "nutrition_per_exchange": {
+          "calories": 45.0,
+          "protein_g": 0.0,
+          "carbs_g": 0.0,
+          "fat_g": 5.0
+        }
+      },
+      {
+        "exchange_category_id": "jaggery",
+        "display_name": "Sugar/Jaggery",
+        "description": "Sugar, jaggery, honey",
+        "display_order": 11,
+        "amount_per_exchange_g": 24.0,
+        "nutrition_per_exchange": {
+          "calories": 100.0,
+          "protein_g": 0.0,
+          "carbs_g": 24.0,
+          "fat_g": 0.0
+        }
+      }
+    ],
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Food Groups Classification (2018)",
+    "version": "1.0",
+    "status": "active",
+    "is_default": true
+  }
+]

@@ -1,0 +1,170 @@
+[
+  {
+    "rule_id": "default_macro_distribution",
+    "display_name": "Default Macro Distribution",
+    "description": "Standard Acceptable Macronutrient Distribution Ranges (AMDR) for healthy adults",
+    "applies_to": ["general_population"],
+    "carbohydrates_percent": {
+      "min": 45,
+      "max": 65,
+      "unit": "%",
+      "note": "45-65% of total calories from carbohydrates"
+    },
+    "protein_percent": {
+      "min": 10,
+      "max": 35,
+      "unit": "%",
+      "note": "10-35% of total calories from protein"
+    },
+    "fat_percent": {
+      "min": 20,
+      "max": 35,
+      "unit": "%",
+      "note": "20-35% of total calories from fat"
+    },
+    "calories_per_gram": {
+      "carbohydrates": 4,
+      "protein": 4,
+      "fat": 9
+    },
+    "source": "Institute of Medicine (IOM)",
+    "source_reference": "Dietary Reference Intakes for Energy, Carbohydrate, Fiber, Fat, Fatty Acids, Cholesterol, Protein, and Amino Acids (2005)",
+    "version": "1.0",
+    "status": "active",
+    "is_default": true
+  },
+  {
+    "rule_id": "athlete_macro_distribution",
+    "display_name": "Athlete Macro Distribution",
+    "description": "Macro distribution for active individuals and athletes",
+    "applies_to": ["athletes", "very_active"],
+    "carbohydrates_percent": {
+      "min": 50,
+      "max": 65,
+      "unit": "%",
+      "note": "Higher carbs for energy needs"
+    },
+    "protein_percent": {
+      "min": 15,
+      "max": 30,
+      "unit": "%",
+      "note": "Higher protein for muscle maintenance"
+    },
+    "fat_percent": {
+      "min": 20,
+      "max": 30,
+      "unit": "%"
+    },
+    "calories_per_gram": {
+      "carbohydrates": 4,
+      "protein": 4,
+      "fat": 9
+    },
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Nutrition and Athletic Performance (2016)",
+    "version": "1.0",
+    "status": "active",
+    "is_default": false
+  },
+  {
+    "rule_id": "weight_loss_macro_distribution",
+    "display_name": "Weight Loss Macro Distribution",
+    "description": "Macro distribution optimized for weight loss",
+    "applies_to": ["weight_loss", "obesity"],
+    "carbohydrates_percent": {
+      "min": 40,
+      "max": 50,
+      "unit": "%"
+    },
+    "protein_percent": {
+      "min": 25,
+      "max": 35,
+      "unit": "%",
+      "note": "Higher protein for satiety and muscle preservation"
+    },
+    "fat_percent": {
+      "min": 25,
+      "max": 35,
+      "unit": "%"
+    },
+    "calories_per_gram": {
+      "carbohydrates": 4,
+      "protein": 4,
+      "fat": 9
+    },
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Adult Weight Management Evidence-Based Nutrition Practice Guideline (2014)",
+    "version": "1.0",
+    "status": "active",
+    "is_default": false
+  },
+  {
+    "rule_id": "muscle_gain_macro_distribution",
+    "display_name": "Muscle Gain Macro Distribution",
+    "description": "Macro distribution optimized for muscle building and lean mass gain",
+    "applies_to": ["muscle_gain", "weight_gain", "bodybuilding"],
+    "carbohydrates_percent": {
+      "min": 45,
+      "max": 55,
+      "unit": "%",
+      "note": "Adequate carbs for training energy and recovery"
+    },
+    "protein_percent": {
+      "min": 25,
+      "max": 35,
+      "unit": "%",
+      "note": "Higher protein for muscle synthesis (1.6-2.2 g/kg recommended)"
+    },
+    "fat_percent": {
+      "min": 20,
+      "max": 30,
+      "unit": "%",
+      "note": "Essential for hormone production and satiety"
+    },
+    "calories_per_gram": {
+      "carbohydrates": 4,
+      "protein": 4,
+      "fat": 9
+    },
+    "source": "International Society of Sports Nutrition",
+    "source_reference": "ISSN Position Stand: Protein and Exercise (2017)",
+    "version": "1.0",
+    "status": "active",
+    "is_default": false
+  },
+  {
+    "rule_id": "high_protein_macro_distribution",
+    "display_name": "High-Protein Macro Distribution",
+    "description": "Higher protein distribution for elderly, sarcopenia prevention, or increased protein needs",
+    "applies_to": ["elderly", "sarcopenia_prevention", "high_protein_needs"],
+    "carbohydrates_percent": {
+      "min": 40,
+      "max": 55,
+      "unit": "%",
+      "note": "Reduced from default to accommodate higher protein"
+    },
+    "protein_percent": {
+      "min": 20,
+      "max": 35,
+      "unit": "%",
+      "note": "Higher protein (1.2-1.5 g/kg) for muscle preservation and synthesis"
+    },
+    "fat_percent": {
+      "min": 20,
+      "max": 35,
+      "unit": "%",
+      "note": "Maintained for essential fatty acids"
+    },
+    "calories_per_gram": {
+      "carbohydrates": 4,
+      "protein": 4,
+      "fat": 9
+    },
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Evidence Analysis Library: Protein Requirements for Older Adults",
+    "version": "1.0",
+    "status": "active",
+    "is_default": false
+  }
+]
+

@@ -1,0 +1,40 @@
+[
+  {
+    "rule_id": "nutrition_validation_tolerances",
+    "display_name": "Nutrition Validation Tolerances",
+    "description": "Tolerance percentages for validating exchange allocation against nutrition targets",
+    "tolerances": {
+      "calories": {
+        "tolerance_pct": 7.0,
+        "note": "±7% tolerance for calories (allows for rounding and exchange approximations)"
+      },
+      "protein": {
+        "tolerance_pct": 3.0,
+        "note": "Tight tolerance ±3% for protein (critical nutrient)"
+      },
+      "carbs": {
+        "tolerance_pct": 10.0,
+        "note": "Moderate tolerance ±10% for carbohydrates"
+      },
+      "fat": {
+        "tolerance_pct": 10.0,
+        "note": "Moderate tolerance ±10% for fat"
+      }
+    },
+    "adjustment_rules": {
+      "never_drop_food_groups": true,
+      "adjustment_priority": [
+        "cereal",
+        "fat",
+        "nuts_seeds",
+        "jaggery"
+      ],
+      "note": "When adjusting, prioritize these categories. Never drop food groups entirely."
+    },
+    "source": "Academy of Nutrition and Dietetics",
+    "source_reference": "AND Position Paper: Meal Planning Accuracy (2018)",
+    "version": "1.0",
+    "status": "active",
+    "is_default": true
+  }
+]

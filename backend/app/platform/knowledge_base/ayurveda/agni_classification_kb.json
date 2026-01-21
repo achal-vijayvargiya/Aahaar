@@ -1,0 +1,81 @@
+[
+  {
+    "question_id": "2.1_hunger_pattern",
+    "question_text": "Hunger pattern",
+    "agni_mapping": {
+      "A": {
+        "text": "Irregular, unpredictable",
+        "agni_type": "Vishama",
+        "weight": 2
+      },
+      "B": {
+        "text": "Strong and sharp",
+        "agni_type": "Tikshna",
+        "weight": 2
+      },
+      "C": {
+        "text": "Mild, delayed",
+        "agni_type": "Manda",
+        "weight": 2
+      }
+    },
+    "fallback_agni": "Sama",
+    "source": "Charaka Samhita",
+    "source_reference": "Agni Assessment - Hunger Patterns",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "question_id": "2.2_appetite_strength",
+    "question_text": "Appetite strength",
+    "agni_mapping": {
+      "A": {
+        "text": "Nervous or shaky",
+        "agni_type": "Vishama",
+        "weight": 2
+      },
+      "B": {
+        "text": "Irritable or angry",
+        "agni_type": "Tikshna",
+        "weight": 2
+      },
+      "C": {
+        "text": "Comfortable but slow",
+        "agni_type": "Manda",
+        "weight": 2
+      }
+    },
+    "fallback_agni": "Sama",
+    "source": "Charaka Samhita",
+    "source_reference": "Agni Assessment - Appetite Strength",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "question_id": "2.3_digestive_comfort",
+    "question_text": "Digestive comfort (for Agni classification)",
+    "agni_mapping": {
+      "A": {
+        "text": "Gas, bloating, discomfort",
+        "agni_type": "Vishama",
+        "weight": 1
+      },
+      "B": {
+        "text": "Burning, acidity",
+        "agni_type": "Tikshna",
+        "weight": 1
+      },
+      "C": {
+        "text": "Heaviness, lethargy",
+        "agni_type": "Manda",
+        "weight": 1
+      }
+    },
+    "fallback_agni": "Sama",
+    "source": "Charaka Samhita",
+    "source_reference": "Agni Assessment - Digestive Comfort",
+    "version": "1.0",
+    "status": "active"
+  }
+]
+

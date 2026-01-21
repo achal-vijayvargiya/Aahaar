@@ -1,0 +1,269 @@
+[
+  {
+    "modifier_id": "vata_imbalance_modifier",
+    "display_name": "Vata Imbalance Modifier",
+    "description": "Exchange adjustments for Vata dosha imbalance",
+    "applies_to": ["Vata"],
+    "modifier_type": "dosha_imbalance",
+    "modifications": [
+      {
+        "exchange_category": "fat",
+        "action": "ensure_minimum",
+        "min_exchanges": 2,
+        "applies_to_meals": ["lunch", "dinner"],
+        "note": "Ensure minimum 2 fat exchanges for Vata balance (lunch/dinner only)"
+      }
+    ],
+    "priority": "low",
+    "overrides_ayurveda": false,
+    "source": "Ayurvedic Nutrition Principles",
+    "source_reference": "Charaka Samhita - Vata Balancing Diet",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "modifier_id": "pitta_imbalance_modifier",
+    "display_name": "Pitta Imbalance Modifier",
+    "description": "Exchange adjustments for Pitta dosha imbalance",
+    "applies_to": ["Pitta"],
+    "modifier_type": "dosha_imbalance",
+    "modifications": [
+      {
+        "exchange_category": "fat",
+        "action": "reduce",
+        "amount": 1,
+        "min_exchanges": 1,
+        "note": "Reduce fat by 1 exchange (maintain minimum 1)"
+      },
+      {
+        "exchange_category": "vegetable_starchy",
+        "action": "reduce",
+        "amount": 1,
+        "note": "Reduce starchy vegetables to avoid excess heat"
+      }
+    ],
+    "priority": "low",
+    "overrides_ayurveda": false,
+    "source": "Ayurvedic Nutrition Principles",
+    "source_reference": "Charaka Samhita - Pitta Balancing Diet",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "modifier_id": "kapha_imbalance_modifier",
+    "display_name": "Kapha Imbalance Modifier",
+    "description": "Exchange adjustments for Kapha dosha imbalance",
+    "applies_to": ["Kapha"],
+    "modifier_type": "dosha_imbalance",
+    "modifications": [
+      {
+        "exchange_category": "cereal",
+        "action": "reduce",
+        "amount": 1,
+        "min_exchanges": 1,
+        "note": "Reduce cereal by 1 exchange (maintain minimum 1)"
+      },
+      {
+        "exchange_category": "fat",
+        "action": "reduce",
+        "amount": 1,
+        "note": "Reduce fat by 1 exchange"
+      },
+      {
+        "exchange_category": "vegetable_non_starchy",
+        "action": "increase",
+        "amount": 1,
+        "note": "Add 1 vegetable exchange for lightness"
+      }
+    ],
+    "priority": "low",
+    "overrides_ayurveda": false,
+    "source": "Ayurvedic Nutrition Principles",
+    "source_reference": "Charaka Samhita - Kapha Balancing Diet",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "modifier_id": "manda_agni_modifier",
+    "display_name": "Manda Agni Modifier",
+    "description": "Exchange adjustments for weak digestive fire",
+    "applies_to": ["Manda"],
+    "modifier_type": "agni",
+    "modifications": [
+      {
+        "exchange_category": "cereal",
+        "action": "reduce",
+        "amount": 1,
+        "min_exchanges": 1,
+        "note": "Reduce cereal by 1 for lighter digestion (maintain minimum 1)"
+      },
+      {
+        "exchange_category": "vegetable_non_starchy",
+        "action": "increase",
+        "amount": 1,
+        "note": "Add 1 vegetable exchange for easier digestion"
+      }
+    ],
+    "priority": "low",
+    "overrides_ayurveda": false,
+    "source": "Ayurvedic Nutrition Principles",
+    "source_reference": "Charaka Samhita - Agni Enhancement",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "modifier_id": "vishama_agni_modifier",
+    "display_name": "Vishama Agni Modifier",
+    "description": "Exchange adjustments for irregular digestive fire (Vata-related)",
+    "applies_to": ["Vishama"],
+    "modifier_type": "agni",
+    "modifications": [
+      {
+        "exchange_category": "fat",
+        "action": "ensure_minimum",
+        "min_exchanges": 2,
+        "applies_to_meals": ["breakfast", "lunch", "dinner"],
+        "note": "Ensure minimum 2 fat exchanges for grounding and stability (helps regulate irregular appetite)"
+      },
+      {
+        "exchange_category": "vegetable_starchy",
+        "action": "reduce",
+        "amount": 1,
+        "note": "Reduce starchy vegetables to avoid bloating and gas"
+      }
+    ],
+    "priority": "low",
+    "overrides_ayurveda": false,
+    "source": "Ayurvedic Nutrition Principles",
+    "source_reference": "Charaka Samhita - Vishama Agni Balancing",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "modifier_id": "tikshna_agni_modifier",
+    "display_name": "Tikshna Agni Modifier",
+    "description": "Exchange adjustments for sharp/overactive digestive fire (Pitta-related)",
+    "applies_to": ["Tikshna"],
+    "modifier_type": "agni",
+    "modifications": [
+      {
+        "exchange_category": "fat",
+        "action": "reduce",
+        "amount": 1,
+        "min_exchanges": 1,
+        "note": "Reduce fat by 1 exchange to prevent excess heat (maintain minimum 1)"
+      },
+      {
+        "exchange_category": "vegetable_starchy",
+        "action": "reduce",
+        "amount": 1,
+        "note": "Reduce starchy vegetables to avoid excess heat generation"
+      },
+      {
+        "exchange_category": "vegetable_non_starchy",
+        "action": "increase",
+        "amount": 1,
+        "note": "Add 1 vegetable exchange for cooling effect"
+      }
+    ],
+    "priority": "low",
+    "overrides_ayurveda": false,
+    "source": "Ayurvedic Nutrition Principles",
+    "source_reference": "Charaka Samhita - Tikshna Agni Balancing",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "modifier_id": "high_ama_modifier",
+    "display_name": "High Ama Modifier",
+    "description": "Exchange adjustments for high ama (toxins)",
+    "applies_to": ["high"],
+    "modifier_type": "ama",
+    "modifications": [
+      {
+        "exchange_category": "nuts_seeds",
+        "action": "remove",
+        "note": "Remove nuts/seeds to reduce ama"
+      },
+      {
+        "exchange_category": "fruit",
+        "action": "limit",
+        "max_exchanges": 1,
+        "note": "Limit fruit to 1 exchange maximum"
+      }
+    ],
+    "priority": "low",
+    "overrides_ayurveda": false,
+    "source": "Ayurvedic Nutrition Principles",
+    "source_reference": "Charaka Samhita - Ama Reduction",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "modifier_id": "moderate_ama_modifier",
+    "display_name": "Moderate Ama Modifier",
+    "description": "Exchange adjustments for moderate ama (toxin) accumulation",
+    "applies_to": ["moderate"],
+    "modifier_type": "ama",
+    "modifications": [
+      {
+        "exchange_category": "nuts_seeds",
+        "action": "reduce",
+        "amount": 1,
+        "note": "Reduce nuts/seeds by 1 exchange to lighten digestive load (less strict than high ama)"
+      },
+      {
+        "exchange_category": "fruit",
+        "action": "limit",
+        "max_exchanges": 2,
+        "note": "Limit fruit to 2 exchanges maximum (less strict than high ama which limits to 1)"
+      },
+      {
+        "exchange_category": "vegetable_non_starchy",
+        "action": "increase",
+        "amount": 1,
+        "note": "Add 1 vegetable exchange for cleansing and easier digestion"
+      }
+    ],
+    "priority": "low",
+    "overrides_ayurveda": false,
+    "source": "Ayurvedic Nutrition Principles",
+    "source_reference": "Charaka Samhita - Moderate Ama Reduction",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "modifier_id": "mild_ama_modifier",
+    "display_name": "Mild Ama Modifier",
+    "description": "Exchange adjustments for mild ama (toxin) accumulation (early stage)",
+    "applies_to": ["mild"],
+    "modifier_type": "ama",
+    "modifications": [
+      {
+        "exchange_category": "nuts_seeds",
+        "action": "limit",
+        "max_exchanges": 1,
+        "note": "Limit nuts/seeds to 1 exchange maximum for easier digestion (gentle adjustment)"
+      },
+      {
+        "exchange_category": "fruit",
+        "action": "limit",
+        "max_exchanges": 3,
+        "note": "Limit fruit to 3 exchanges maximum (gentle adjustment, less strict than moderate/high)"
+      },
+      {
+        "exchange_category": "vegetable_non_starchy",
+        "action": "ensure_minimum",
+        "min_exchanges": 2,
+        "note": "Ensure minimum 2 vegetable exchanges for cleansing support"
+      }
+    ],
+    "priority": "low",
+    "overrides_ayurveda": false,
+    "source": "Ayurvedic Nutrition Principles",
+    "source_reference": "Charaka Samhita - Mild Ama Reduction",
+    "version": "1.0",
+    "status": "active"
+  }
+]
+
