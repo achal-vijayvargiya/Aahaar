@@ -1,10 +1,56 @@
+# FastAPI and dependencies
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+python-multipart==0.0.6
+
+# Database
+sqlalchemy==2.0.25
+psycopg2-binary==2.9.9
+alembic==1.13.1
+
+# Pydantic
+pydantic==2.5.3
+pydantic-settings==2.1.0
+
+# Authentication
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.1.2
+
+# Environment
+python-dotenv==1.0.0
+
+# CORS
+fastapi-cors==0.0.6
+
+# Logging
+python-json-logger==2.0.7
+
+# Utilities
+email-validator==2.1.0
+
+# Knowledge Base & Embeddings
+faiss-cpu>=1.8.0
+sentence-transformers>=2.3.1
+torch>=2.2.0
+
+# Data Processing
+pandas==2.1.4
+openpyxl==3.1.2
+numpy>=1.24.0
+
+# LangChain & AI Agent
+langchain>=0.1.0
+langchain-community>=0.0.10
+langchain-openai>=0.0.5
+openai>=1.12.0
+tiktoken>=0.5.2
+
+# Additional dependencies for document processing (if needed)
 streamlit==1.32.0
 pytesseract==0.3.10
 Pillow==10.2.0
 PyMuPDF==1.23.26
-python-dotenv==1.0.0
-openai==1.12.0
-numpy>=1.19.3,<2.0.0
 python-dateutil==2.8.2
 protobuf>=3.20,<5.0.0
 requests==2.32.5
