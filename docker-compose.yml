@@ -1,0 +1,133 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  db:
+    image: postgres:15-alpine
+    container_name: drassistent-db
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: ${POSTGRES_DB:-drassistent}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - drassistent-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # FastAPI Backend
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: drassistent-backend
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@db:5432/${POSTGRES_DB:-drassistent}
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: ${POSTGRES_DB:-drassistent}
+      SECRET_KEY: ${SECRET_KEY:-your-secret-key-here-change-in-production}
+      DEBUG: ${DEBUG:-True}
+      ENVIRONMENT: ${ENVIRONMENT:-development}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY:-sk-or-v1-placeholder-get-from-openrouter-ai}
+      DIET_PLAN_MODEL: ${DIET_PLAN_MODEL:-anthropic/claude-3.5-sonnet}
+      DIET_PLAN_TEMPERATURE: ${DIET_PLAN_TEMPERATURE:-0.7}
+      FOOD_ENRICHMENT_MODEL: ${FOOD_ENRICHMENT_MODEL:-qwen/qwen-2.5-72b-instruct}
+      FOOD_ENRICHMENT_TEMPERATURE: ${FOOD_ENRICHMENT_TEMPERATURE:-0.3}
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/app:/app/app
+      - ./backend/logs:/app/logs
+      - ./backend/alembic:/app/alembic
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - drassistent-network
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    restart: unless-stopped
+
+  # Web Application (Vite + React) - Development Mode
+  web:
+    build:
+      context: ./aahaar-wellness-hub
+      dockerfile: Dockerfile.dev
+    container_name: drassistent-web
+    environment:
+      VITE_API_BASE_URL: ${VITE_API_BASE_URL:-http://localhost:8000/api/v1}
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./aahaar-wellness-hub/src:/app/src
+      - ./aahaar-wellness-hub/public:/app/public
+      - ./aahaar-wellness-hub/package.json:/app/package.json
+      - ./aahaar-wellness-hub/vite.config.ts:/app/vite.config.ts
+      - ./aahaar-wellness-hub/tsconfig.json:/app/tsconfig.json
+      - /app/node_modules
+    depends_on:
+      - backend
+    networks:
+      - drassistent-network
+    restart: unless-stopped
+
+  # Mobile App Development Server (Expo)
+  mobile:
+    build:
+      context: ./aahaar-mobile
+      dockerfile: Dockerfile
+    container_name: drassistent-mobile
+    environment:
+      EXPO_PUBLIC_API_URL: ${EXPO_PUBLIC_API_URL:-http://localhost:8000/api/v1}
+    ports:
+      - "19000:19000"
+      - "19001:19001"
+      - "19002:19002"
+    volumes:
+      - ./aahaar-mobile:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    networks:
+      - drassistent-network
+    restart: unless-stopped
+    profiles:
+      - mobile
+
+  # pgAdmin (Optional - for database management)
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: drassistent-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL:-admin@drassistent.com}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD:-admin}
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      - db
+    networks:
+      - drassistent-network
+    profiles:
+      - tools
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+    driver: local
+  pgadmin_data:
+    driver: local
+
+networks:
+  drassistent-network:
+    driver: bridge
