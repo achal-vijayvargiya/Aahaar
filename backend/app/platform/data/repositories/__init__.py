@@ -14,6 +14,7 @@ from .platform_meal_structure_repository import PlatformMealStructureRepository
 from .platform_exchange_allocation_repository import PlatformExchangeAllocationRepository
 from .platform_ayurveda_profile_repository import PlatformAyurvedaProfileRepository
 from .platform_diet_plan_repository import PlatformDietPlanRepository
+from .platform_program_repository import PlatformProgramRepository
 from .platform_monitoring_record_repository import PlatformMonitoringRecordRepository
 from .platform_decision_log_repository import PlatformDecisionLogRepository
 from .kb_medical_condition_repository import KBMedicalConditionRepository
@@ -37,6 +38,7 @@ __all__ = [
     "PlatformExchangeAllocationRepository",
     "PlatformAyurvedaProfileRepository",
     "PlatformDietPlanRepository",
+    "PlatformProgramRepository",
     "PlatformMonitoringRecordRepository",
     "PlatformDecisionLogRepository",
     "KBMedicalConditionRepository",

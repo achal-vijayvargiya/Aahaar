@@ -1,27 +1,30 @@
-"""Pytest configuration and fixtures for legacy tests."""
+"""Pytest configuration for tests that target the full ASGI app (app.main).
+
+Platform/NCP tests use ``tests/platform/conftest.py`` and do not import this module
+for fixtures. Auth tests live under ``tests/platform/api/test_auth.py``.
+"""
 import pytest
 from fastapi.testclient import TestClient
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.pool import StaticPool
 
-# Lazy import to avoid breaking platform tests
-# Platform tests use their own isolated conftest
+# Lazy import so a broken or partially-upgraded local env does not break collection
+# of the entire test tree (platform tests stay usable).
 try:
     from app.main import app
     from app.database import Base, get_db
     LEGACY_APP_AVAILABLE = True
-except (ImportError, ModuleNotFoundError) as e:
-    # Legacy app not available (e.g., when running platform-only tests)
-    # This is OK - platform tests have their own conftest
+except Exception:
     LEGACY_APP_AVAILABLE = False
     app = None
     Base = None
     get_db = None
 
-# Only set up legacy fixtures if legacy app is available
 if LEGACY_APP_AVAILABLE:
-    # Create in-memory SQLite database for testing
+    # SQLite for tests that need a test DB session (platform models use
+    # postgresql.UUID and cannot be created on SQLite — use PostgreSQL or
+    # platform conftest for those).
     SQLALCHEMY_DATABASE_URL = "sqlite:///:memory:"
 
     engine = create_engine(
@@ -32,12 +35,17 @@ if LEGACY_APP_AVAILABLE:
 
     TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
+    @pytest.fixture
+    def app_client():
+        """TestClient for ``app.main`` without replacing ``get_db`` (smoke tests)."""
+        with TestClient(app) as test_client:
+            yield test_client
 
     @pytest.fixture
     def db():
-        """Create database tables and provide a database session (legacy tests only)."""
+        """SQLite session + schema for tests that override ``get_db``."""
         if not LEGACY_APP_AVAILABLE:
-            pytest.skip("Legacy app not available - use platform tests instead")
+            pytest.skip("app.main not importable; use platform tests under tests/platform/")
         Base.metadata.create_all(bind=engine)
         db = TestingSessionLocal()
         try:
@@ -49,9 +57,9 @@ if LEGACY_APP_AVAILABLE:
 
     @pytest.fixture
     def client(db):
-        """Create a test client with database override (legacy tests only)."""
+        """TestClient for ``app.main`` with DB override."""
         if not LEGACY_APP_AVAILABLE:
-            pytest.skip("Legacy app not available - use platform tests instead")
+            pytest.skip("app.main not importable; use platform tests under tests/platform/")
         def override_get_db():
             try:
                 yield db

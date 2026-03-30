@@ -14,6 +14,7 @@ from .platform_meal_structure import PlatformMealStructure
 from .platform_exchange_allocation import PlatformExchangeAllocation
 from .platform_ayurveda_profile import PlatformAyurvedaProfile
 from .platform_diet_plan import PlatformDietPlan
+from .platform_program import PlatformProgram
 from .platform_food_allocation_approval import PlatformFoodAllocationApproval
 from .platform_monitoring_record import PlatformMonitoringRecord
 from .platform_decision_log import PlatformDecisionLog
@@ -44,6 +45,7 @@ __all__ = [
     "PlatformExchangeAllocation",
     "PlatformAyurvedaProfile",
     "PlatformDietPlan",
+    "PlatformProgram",
     "PlatformFoodAllocationApproval",
     "PlatformMonitoringRecord",
     "PlatformDecisionLog",

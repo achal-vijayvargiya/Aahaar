@@ -82,6 +82,21 @@ class PlatformDietPlanRepository:
         return self.db.query(PlatformDietPlan).filter(
             PlatformDietPlan.assessment_id == assessment_id
         ).all()
+
+    def get_by_program_id(self, program_id: UUID) -> List[PlatformDietPlan]:
+        """Get all diet plans for a program (all weeks)."""
+        return self.db.query(PlatformDietPlan).filter(
+            PlatformDietPlan.program_id == program_id
+        ).all()
+
+    def get_by_program_and_week(
+        self, program_id: UUID, week_index: int
+    ) -> Optional[PlatformDietPlan]:
+        """Get diet plan for a specific program week."""
+        return self.db.query(PlatformDietPlan).filter(
+            PlatformDietPlan.program_id == program_id,
+            PlatformDietPlan.week_index == week_index
+        ).first()
     
     def get_by_status(self, status: str) -> List[PlatformDietPlan]:
         """

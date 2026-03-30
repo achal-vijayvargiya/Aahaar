@@ -27,6 +27,7 @@ from app.config import settings
 # Import all platform models to ensure they're registered with Base.metadata
 from app.platform.data.models import (
     PlatformClient,
+    PlatformUser,
     PlatformIntake,
     PlatformAssessment,
     PlatformDiagnosis,
@@ -34,6 +35,7 @@ from app.platform.data.models import (
     PlatformNutritionTarget,
     PlatformAyurvedaProfile,
     PlatformDietPlan,
+    PlatformProgram,
     PlatformMonitoringRecord,
     PlatformDecisionLog,
     KBMedicalCondition,
@@ -44,6 +46,7 @@ from app.platform.data.models import (
 )
 
 # Import ONLY platform routers (NO legacy routers)
+from app.platform.api.auth import router as platform_auth_router
 from app.platform.api.clients import router as platform_clients_router
 from app.platform.api.assessments import router as platform_assessments_router
 from app.platform.api.plans import router as platform_plans_router
@@ -58,7 +61,12 @@ platform_test_app = FastAPI(
     description="Isolated test API for platform module (no legacy dependencies)",
 )
 
-# Register ONLY platform routers
+# Register ONLY platform routers (mirror app.main)
+platform_test_app.include_router(
+    platform_auth_router,
+    prefix=f"{settings.API_V1_PREFIX}/platform",
+    tags=["Platform - Auth"],
+)
 platform_test_app.include_router(
     platform_clients_router,
     prefix=f"{settings.API_V1_PREFIX}/platform",
@@ -181,6 +189,7 @@ def clean_platform_db(platform_db: Session) -> Generator[Session, None, None]:
     # Using SQLAlchemy 2.0 style
     platform_db.execute(delete(PlatformMonitoringRecord))
     platform_db.execute(delete(PlatformDietPlan))
+    platform_db.execute(delete(PlatformProgram))
     platform_db.execute(delete(PlatformNutritionTarget))
     platform_db.execute(delete(PlatformMNTConstraint))
     platform_db.execute(delete(PlatformDiagnosis))
@@ -188,6 +197,7 @@ def clean_platform_db(platform_db: Session) -> Generator[Session, None, None]:
     platform_db.execute(delete(PlatformAssessment))
     platform_db.execute(delete(PlatformIntake))
     platform_db.execute(delete(PlatformClient))
+    platform_db.execute(delete(PlatformUser))
     platform_db.execute(delete(PlatformDecisionLog))
     
     # Knowledge base tables (usually read-only, but clean for tests)

@@ -4,6 +4,7 @@ Controls Nutrition Care Process pipeline execution.
 """
 from typing import Optional, Dict, Any
 from uuid import UUID
+import copy
 import logging
 
 from fastapi import HTTPException
@@ -281,7 +282,12 @@ class NCPOrchestrator:
 
         return mnt_context
 
-    def execute_target_stage(self, mnt_context: MNTContext, diagnosis_context: Optional[DiagnosisContext] = None) -> TargetContext:
+    def execute_target_stage(
+        self,
+        mnt_context: MNTContext,
+        diagnosis_context: Optional[DiagnosisContext] = None,
+        client_preferences: Optional[Dict[str, Any]] = None,
+    ) -> TargetContext:
         # Build client_profile from assessment snapshot
         client_context = self._assessment_snapshot.get("client_context", {}) if self._assessment_snapshot else {}
         anthropometry = self._assessment_snapshot.get("clinical_data", {}).get("anthropometry", {}) if self._assessment_snapshot else {}
@@ -295,6 +301,10 @@ class NCPOrchestrator:
             "activity_level": client_context.get("activity_level"),
             "goals": goals,  # Include goals for weight loss/gain calculations
         }
+
+        target_overrides = None
+        if client_preferences and isinstance(client_preferences.get("target_overrides"), dict):
+            target_overrides = client_preferences["target_overrides"]
 
         # Validate input contract
         try:
@@ -312,7 +322,8 @@ class NCPOrchestrator:
             client_profile, 
             mnt_context, 
             activity_level=client_profile.get("activity_level"),
-            diagnosis_context=diagnosis_context  # Pass for adaptive calculations
+            diagnosis_context=diagnosis_context,
+            overrides=target_overrides,
         )
 
         # Validate output contract
@@ -355,11 +366,15 @@ class NCPOrchestrator:
         
         Generates structural skeleton of daily meal plan (no food items).
         """
+        meal_structure_overrides = None
+        if client_preferences and isinstance(client_preferences.get("meal_structure_overrides"), dict):
+            meal_structure_overrides = client_preferences["meal_structure_overrides"]
         # Generate meal structure using MealStructureEngine
         meal_structure_context = self.meal_structure_engine.generate_structure(
             target_context=target_context,
             assessment_snapshot=self._assessment_snapshot,
-            client_preferences=client_preferences
+            client_preferences=client_preferences,
+            overrides=meal_structure_overrides,
         )
         
         # Store meal structure in database
@@ -547,7 +562,9 @@ class NCPOrchestrator:
         exchange_context: ExchangeContext,
         ayurveda_context: AyurvedaContext,
         diagnosis_context: Optional[DiagnosisContext] = None,
-        client_preferences: Optional[Dict[str, Any]] = None
+        client_preferences: Optional[Dict[str, Any]] = None,
+        program_id: Optional[UUID] = None,
+        week_index: Optional[int] = None,
     ) -> InterventionContext:
         intervention = self.food_engine.generate_meal_plan(
             mnt_context=mnt_context,
@@ -565,7 +582,7 @@ class NCPOrchestrator:
         if existing:
             version = max([p.plan_version or 1 for p in existing]) + 1
 
-        plan_record = self.plan_repo.create({
+        plan_payload = {
             "client_id": self.client_id,
             "assessment_id": mnt_context.assessment_id,
             "plan_version": version,
@@ -573,7 +590,12 @@ class NCPOrchestrator:
             "meal_plan": intervention.meal_plan,
             "explanations": intervention.explanations,
             "constraints_snapshot": intervention.constraints_snapshot,
-        })
+        }
+        if program_id is not None:
+            plan_payload["program_id"] = program_id
+        if week_index is not None:
+            plan_payload["week_index"] = week_index
+        plan_record = self.plan_repo.create(plan_payload)
 
         # Update context with plan info
         if intervention.explanations is None:
@@ -592,7 +614,8 @@ class NCPOrchestrator:
         meal_structure_context: MealStructureContext,
         mnt_context: MNTContext,
         ayurveda_context: AyurvedaContext,
-        client_preferences: Optional[Dict[str, Any]] = None
+        client_preferences: Optional[Dict[str, Any]] = None,
+        skip_recipe_llm: bool = False,
     ) -> RecipeContext:
         """
         Execute recipe generation stage (Step 10).
@@ -618,16 +641,28 @@ class NCPOrchestrator:
             num_days=7,
             start_date=None  # Will default to today
         )
-        
-        # Phase 2: Generate recipes from allocated meals (LLM-based)
-        # This adds recipe names, cooking steps, and serving instructions
-        logger.info("Phase 2: Generating recipes with LLM...")
-        final_result = self.recipe_generation_engine.generate_recipes_for_meal_plan(
-            meal_plan=meal_allocation_result,
-            mnt_context=mnt_context,
-            ayurveda_context=ayurveda_context,
-            num_days=7
-        )
+
+        if skip_recipe_llm:
+            logger.info("Phase 2: Skipping recipe LLM (skip_recipe_llm=True); using allocation-only meal plan.")
+            final_result = copy.deepcopy(meal_allocation_result)
+            if "summary" not in final_result:
+                days = final_result.get("days") or {}
+                total_meals = sum(len(d.get("meals") or {}) for d in days.values())
+                final_result["summary"] = {
+                    "total_meals": total_meals,
+                    "successful_recipes": 0,
+                    "failed_recipes": 0,
+                    "validation_failures": 0,
+                }
+        else:
+            # Phase 2: Generate recipes from allocated meals (LLM-based)
+            logger.info("Phase 2: Generating recipes with LLM...")
+            final_result = self.recipe_generation_engine.generate_recipes_for_meal_plan(
+                meal_plan=meal_allocation_result,
+                mnt_context=mnt_context,
+                ayurveda_context=ayurveda_context,
+                num_days=7,
+            )
         
         # Merge variety_metrics from Phase 1 into final result if not present
         if "variety_metrics" not in final_result and "variety_metrics" in meal_allocation_result:
@@ -669,15 +704,28 @@ class NCPOrchestrator:
                     explanations = {}
                 
                 summary = final_result.get("summary", {})
-                explanations["recipe_generation"] = {
-                    "recipes_generated": True,
-                    "plan_duration_days": 7,
-                    "start_date": final_result.get("start_date"),
-                    "total_meals": summary.get("total_meals", 0),
-                    "successful_recipes": summary.get("successful_recipes", 0),
-                    "failed_recipes": summary.get("failed_recipes", 0),
-                    "validation_failures": summary.get("validation_failures", 0),
-                }
+                if skip_recipe_llm:
+                    explanations["recipe_generation"] = {
+                        "recipes_generated": False,
+                        "recipe_llm_skipped": True,
+                        "plan_duration_days": final_result.get("plan_duration_days", 7),
+                        "start_date": final_result.get("start_date"),
+                        "total_meals": summary.get("total_meals", 0),
+                        "successful_recipes": 0,
+                        "failed_recipes": 0,
+                        "validation_failures": 0,
+                    }
+                else:
+                    explanations["recipe_generation"] = {
+                        "recipes_generated": True,
+                        "recipe_llm_skipped": False,
+                        "plan_duration_days": 7,
+                        "start_date": final_result.get("start_date"),
+                        "total_meals": summary.get("total_meals", 0),
+                        "successful_recipes": summary.get("successful_recipes", 0),
+                        "failed_recipes": summary.get("failed_recipes", 0),
+                        "validation_failures": summary.get("validation_failures", 0),
+                    }
                 
                 update_data["explanations"] = explanations
                 self.plan_repo.update(plan_record.id, update_data)
@@ -689,7 +737,10 @@ class NCPOrchestrator:
         self,
         assessment_id: UUID,
         client_preferences: Optional[Dict[str, Any]] = None,
-        enable_ayurveda: Optional[bool] = None
+        enable_ayurveda: Optional[bool] = None,
+        program_id: Optional[UUID] = None,
+        week_index: Optional[int] = None,
+        skip_recipe_llm: bool = False,
     ) -> Dict[str, Any]:
         """
         Execute full pipeline from assessment through plan generation.
@@ -700,7 +751,7 @@ class NCPOrchestrator:
         assessment_context = self.execute_assessment_stage(assessment_id)
         diagnosis_context = self.execute_diagnosis_stage(assessment_context)
         mnt_context = self.execute_mnt_stage(diagnosis_context)
-        target_context = self.execute_target_stage(mnt_context, diagnosis_context)
+        target_context = self.execute_target_stage(mnt_context, diagnosis_context, client_preferences)
         meal_structure_context = self.execute_meal_structure_stage(target_context, client_preferences)
         ayu_context = self.execute_ayurveda_stage(target_context, mnt_context)
         exchange_context = self.execute_exchange_stage(
@@ -711,10 +762,17 @@ class NCPOrchestrator:
             client_preferences  # Pass client_preferences for user-mandated exchanges
         )
         intervention_context = self.execute_intervention_stage(
-            mnt_context, target_context, exchange_context, ayu_context, diagnosis_context, client_preferences
+            mnt_context, target_context, exchange_context, ayu_context, diagnosis_context, client_preferences,
+            program_id=program_id, week_index=week_index,
         )
         recipe_context = self.execute_recipe_stage(
-            intervention_context, exchange_context, meal_structure_context, mnt_context, ayu_context, client_preferences
+            intervention_context,
+            exchange_context,
+            meal_structure_context,
+            mnt_context,
+            ayu_context,
+            client_preferences,
+            skip_recipe_llm=skip_recipe_llm,
         )
 
         self.state_machine.transition_to(ClientState.PLAN_GENERATED)
@@ -727,6 +785,233 @@ class NCPOrchestrator:
             "meal_structure": meal_structure_context,
             "exchange": exchange_context,
             "ayurveda": ayu_context,
+            "intervention": intervention_context,
+            "recipe": recipe_context,
+        }
+
+    # --- Partial pipeline (for supervisor / weekly replan) ----------------------
+    def _load_diagnosis_context(self, assessment_id: UUID) -> DiagnosisContext:
+        """Build DiagnosisContext from persisted diagnoses."""
+        records = self.diagnosis_repo.get_by_assessment_id(assessment_id)
+        medical_conditions = []
+        nutrition_diagnoses = []
+        for r in records:
+            d = {"diagnosis_id": r.diagnosis_id or "", "severity_score": float(r.severity_score) if r.severity_score is not None else None, "evidence": r.evidence}
+            if r.diagnosis_type == "medical":
+                medical_conditions.append(d)
+            else:
+                nutrition_diagnoses.append(d)
+        return DiagnosisContext(assessment_id=assessment_id, medical_conditions=medical_conditions, nutrition_diagnoses=nutrition_diagnoses)
+
+    def _load_mnt_context(self, assessment_id: UUID) -> MNTContext:
+        """Build MNTContext from persisted MNT constraint."""
+        constraints = self.mnt_repo.get_by_assessment_id(assessment_id)
+        if not constraints:
+            return MNTContext(assessment_id=assessment_id, macro_constraints={}, micro_constraints={}, food_exclusions=[], rule_ids_used=[])
+        c = constraints[0]
+        rule_ids = [r.strip() for r in (c.rule_id or "").split(",") if r.strip()]
+        return MNTContext(
+            assessment_id=assessment_id,
+            macro_constraints=c.macro_constraints or {},
+            micro_constraints=c.micro_constraints or {},
+            food_exclusions=c.food_exclusions or [],
+            rule_ids_used=rule_ids,
+        )
+
+    def _load_target_context(self, assessment_id: UUID) -> TargetContext:
+        """Build TargetContext from persisted nutrition target."""
+        t = self.target_repo.get_by_assessment_id(assessment_id)
+        if not t:
+            raise HTTPException(status_code=404, detail=f"No nutrition target for assessment {assessment_id}")
+        return TargetContext(
+            assessment_id=assessment_id,
+            calories_target=float(t.calories_target) if t.calories_target is not None else None,
+            macros=t.macros,
+            key_micros=t.key_micros,
+            calculation_source=t.calculation_source,
+        )
+
+    def _load_meal_structure_context(self, assessment_id: UUID) -> MealStructureContext:
+        """Build MealStructureContext from persisted meal structure."""
+        ms = self.meal_structure_repo.get_by_assessment_id(assessment_id)
+        if not ms:
+            raise HTTPException(status_code=404, detail=f"No meal structure for assessment {assessment_id}")
+        return MealStructureContext(
+            assessment_id=assessment_id,
+            meal_count=ms.meal_count,
+            meals=ms.meals or [],
+            timing_windows=ms.timing_windows or {},
+            energy_weight=ms.energy_weight or {},
+            flags=ms.flags or [],
+        )
+
+    def _load_exchange_context(self, assessment_id: UUID, meal_structure: MealStructureContext, target_context: TargetContext) -> ExchangeContext:
+        """Build ExchangeContext from persisted exchange allocation and recompute per_meal_targets."""
+        ex = self.exchange_repo.get_by_assessment_id(assessment_id)
+        if not ex:
+            raise HTTPException(status_code=404, detail=f"No exchange allocation for assessment {assessment_id}")
+        macros = target_context.macros or {}
+        daily_calories = target_context.calories_target or 0
+
+        def get_macro_g(macro_dict):
+            return macro_dict.get("g") or macro_dict.get("max_g") or macro_dict.get("min_g") or 0
+
+        daily_protein = get_macro_g(macros.get("proteins", {}))
+        daily_carbs = get_macro_g(macros.get("carbohydrates", {}))
+        daily_fat = get_macro_g(macros.get("fats", {}))
+        per_meal_targets = {}
+        for meal_name in meal_structure.meals:
+            w = meal_structure.energy_weight.get(meal_name, 0)
+            per_meal_targets[meal_name] = {
+                "calories": round(daily_calories * w, 1),
+                "protein_g": round(daily_protein * w, 1),
+                "carbs_g": round(daily_carbs * w, 1) if daily_carbs > 0 else None,
+                "fat_g": round(daily_fat * w, 1) if daily_fat > 0 else None,
+            }
+        return ExchangeContext(
+            assessment_id=assessment_id,
+            exchanges_per_meal=ex.exchanges_per_meal or {},
+            per_meal_targets=per_meal_targets,
+            notes=ex.notes,
+            daily_exchange_allocation=ex.daily_exchange_allocation,
+        )
+
+    def _load_ayurveda_context(self, assessment_id: UUID) -> AyurvedaContext:
+        """Build AyurvedaContext from persisted Ayurveda profile."""
+        ayu = self.ayurveda_repo.get_by_assessment_id(assessment_id)
+        if not ayu:
+            return AyurvedaContext(assessment_id=assessment_id)
+        return AyurvedaContext(
+            assessment_id=assessment_id,
+            dosha_primary=ayu.dosha_primary,
+            dosha_secondary=ayu.dosha_secondary,
+            vikriti_notes=ayu.vikriti_notes,
+            lifestyle_guidelines=ayu.lifestyle_guidelines,
+        )
+
+    def run_from_target(
+        self,
+        assessment_id: UUID,
+        client_preferences: Optional[Dict[str, Any]] = None,
+        enable_ayurveda: Optional[bool] = None,
+        program_id: Optional[UUID] = None,
+        week_index: Optional[int] = None,
+        skip_recipe_llm: bool = False,
+    ) -> Dict[str, Any]:
+        """Run pipeline from target stage (reuse existing assessment, diagnosis, MNT)."""
+        if enable_ayurveda is not None:
+            self.enable_ayurveda = enable_ayurveda
+        self.execute_assessment_stage(assessment_id)
+        diagnosis_context = self._load_diagnosis_context(assessment_id)
+        mnt_context = self._load_mnt_context(assessment_id)
+        target_context = self.execute_target_stage(mnt_context, diagnosis_context, client_preferences)
+        meal_structure_context = self.execute_meal_structure_stage(target_context, client_preferences)
+        ayu_context = self.execute_ayurveda_stage(target_context, mnt_context)
+        exchange_context = self.execute_exchange_stage(
+            meal_structure_context, target_context, mnt_context, ayu_context, client_preferences
+        )
+        intervention_context = self.execute_intervention_stage(
+            mnt_context, target_context, exchange_context, ayu_context, diagnosis_context, client_preferences,
+            program_id=program_id, week_index=week_index,
+        )
+        recipe_context = self.execute_recipe_stage(
+            intervention_context,
+            exchange_context,
+            meal_structure_context,
+            mnt_context,
+            ayu_context,
+            client_preferences,
+            skip_recipe_llm=skip_recipe_llm,
+        )
+        self.state_machine.transition_to(ClientState.PLAN_GENERATED)
+        return {
+            "target": target_context,
+            "meal_structure": meal_structure_context,
+            "exchange": exchange_context,
+            "ayurveda": ayu_context,
+            "intervention": intervention_context,
+            "recipe": recipe_context,
+        }
+
+    def run_from_meal_structure(
+        self,
+        assessment_id: UUID,
+        client_preferences: Optional[Dict[str, Any]] = None,
+        enable_ayurveda: Optional[bool] = None,
+        program_id: Optional[UUID] = None,
+        week_index: Optional[int] = None,
+        skip_recipe_llm: bool = False,
+    ) -> Dict[str, Any]:
+        """Run pipeline from meal structure stage (reuse existing target, diagnosis, MNT)."""
+        if enable_ayurveda is not None:
+            self.enable_ayurveda = enable_ayurveda
+        self.execute_assessment_stage(assessment_id)
+        diagnosis_context = self._load_diagnosis_context(assessment_id)
+        mnt_context = self._load_mnt_context(assessment_id)
+        target_context = self._load_target_context(assessment_id)
+        meal_structure_context = self.execute_meal_structure_stage(
+            target_context, client_preferences
+        )
+        ayu_context = self.execute_ayurveda_stage(target_context, mnt_context)
+        exchange_context = self.execute_exchange_stage(
+            meal_structure_context, target_context, mnt_context, ayu_context, client_preferences
+        )
+        intervention_context = self.execute_intervention_stage(
+            mnt_context, target_context, exchange_context, ayu_context, diagnosis_context, client_preferences,
+            program_id=program_id, week_index=week_index,
+        )
+        recipe_context = self.execute_recipe_stage(
+            intervention_context,
+            exchange_context,
+            meal_structure_context,
+            mnt_context,
+            ayu_context,
+            client_preferences,
+            skip_recipe_llm=skip_recipe_llm,
+        )
+        self.state_machine.transition_to(ClientState.PLAN_GENERATED)
+        return {
+            "meal_structure": meal_structure_context,
+            "exchange": exchange_context,
+            "ayurveda": ayu_context,
+            "intervention": intervention_context,
+            "recipe": recipe_context,
+        }
+
+    def run_from_existing(
+        self,
+        assessment_id: UUID,
+        client_preferences: Optional[Dict[str, Any]] = None,
+        enable_ayurveda: Optional[bool] = None,
+        program_id: Optional[UUID] = None,
+        week_index: Optional[int] = None,
+        skip_recipe_llm: bool = False,
+    ) -> Dict[str, Any]:
+        """Run only intervention and recipe (reuse existing target, meal structure, exchange, Ayurveda)."""
+        if enable_ayurveda is not None:
+            self.enable_ayurveda = enable_ayurveda
+        self.execute_assessment_stage(assessment_id)
+        mnt_context = self._load_mnt_context(assessment_id)
+        target_context = self._load_target_context(assessment_id)
+        meal_structure_context = self._load_meal_structure_context(assessment_id)
+        exchange_context = self._load_exchange_context(assessment_id, meal_structure_context, target_context)
+        ayu_context = self._load_ayurveda_context(assessment_id)
+        diagnosis_context = self._load_diagnosis_context(assessment_id)
+        intervention_context = self.execute_intervention_stage(
+            mnt_context, target_context, exchange_context, ayu_context, diagnosis_context, client_preferences,
+            program_id=program_id, week_index=week_index,
+        )
+        recipe_context = self.execute_recipe_stage(
+            intervention_context,
+            exchange_context,
+            meal_structure_context,
+            mnt_context,
+            ayu_context,
+            client_preferences,
+            skip_recipe_llm=skip_recipe_llm,
+        )
+        self.state_machine.transition_to(ClientState.PLAN_GENERATED)
+        return {
             "intervention": intervention_context,
             "recipe": recipe_context,
         }

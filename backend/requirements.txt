@@ -2,6 +2,8 @@
 fastapi==0.109.0
 uvicorn[standard]==0.27.0
 python-multipart==0.0.6
+# Starlette TestClient passes app= into httpx.Client; httpx 0.28+ removed that kwarg (use Starlette>=0.38 + FastAPI bump, or keep httpx<0.28).
+httpx>=0.24.1,<0.28.0
 
 # Database
 sqlalchemy==2.0.25
@@ -43,6 +45,7 @@ numpy>=1.24.0
 langchain>=0.1.0
 langchain-community>=0.0.10
 langchain-openai>=0.0.5
+langgraph>=0.0.20
 openai>=1.12.0
 tiktoken>=0.5.2
 

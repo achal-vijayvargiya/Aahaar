@@ -18,6 +18,8 @@ from app.platform.data.repositories.platform_nutrition_target_repository import 
 from app.platform.data.repositories.platform_ayurveda_profile_repository import PlatformAyurvedaProfileRepository
 from app.platform.core.orchestration.ncp_orchestrator import NCPOrchestrator
 from app.platform.core.context import InterventionContext, MNTContext, TargetContext, AyurvedaContext
+from app.platform.core.agentic import run_weekly_plan
+from app.platform.data.repositories.platform_program_repository import PlatformProgramRepository
 
 router = APIRouter(prefix="/plans", tags=["Platform Plans"])
 
@@ -29,6 +31,7 @@ class PlanGenerateRequest(BaseModel):
     assessment_id: UUID
     client_preferences: Optional[Dict[str, Any]] = None
     enable_ayurveda: Optional[bool] = True
+    skip_recipe_llm: Optional[bool] = False
 
 
 class PlanResponse(BaseModel):
@@ -37,11 +40,33 @@ class PlanResponse(BaseModel):
     client_id: UUID
     assessment_id: UUID
     plan_version: Optional[int]
+    program_id: Optional[UUID] = None
+    week_index: Optional[int] = None
     status: Optional[str]  # active | archived | draft
     meal_plan: Optional[Dict[str, Any]]
     explanations: Optional[Dict[str, Any]]
     constraints_snapshot: Optional[Dict[str, Any]]
     created_at: str
+
+
+class PlanGenerateWeekRequest(BaseModel):
+    """Weekly plan generation request (supervisor)."""
+    client_id: UUID
+    assessment_id: UUID
+    program_id: Optional[UUID] = None
+    week_index: Optional[int] = None
+    feedback: Optional[Dict[str, Any]] = None
+    enable_ayurveda: Optional[bool] = True
+    skip_recipe_llm: Optional[bool] = False
+
+
+class PlanGenerateWeekResponse(BaseModel):
+    """Weekly plan generation response."""
+    plan_id: Optional[UUID] = None
+    plan_version: Optional[int] = None
+    pipeline_mode: Optional[str] = None
+    error: Optional[str] = None
+    plan: Optional[PlanResponse] = None
 
 
 class PlanUpdateRequest(BaseModel):
@@ -90,7 +115,8 @@ async def generate_plan(
     pipeline = orchestrator.execute_full_pipeline(
         assessment_id=plan_request.assessment_id,
         client_preferences=plan_request.client_preferences,
-        enable_ayurveda=plan_request.enable_ayurveda
+        enable_ayurveda=plan_request.enable_ayurveda,
+        skip_recipe_llm=bool(plan_request.skip_recipe_llm),
     )
 
     intervention: InterventionContext = pipeline["intervention"]
@@ -109,11 +135,80 @@ async def generate_plan(
         client_id=plan_record.client_id,
         assessment_id=plan_record.assessment_id,
         plan_version=plan_record.plan_version,
+        program_id=getattr(plan_record, "program_id", None),
+        week_index=getattr(plan_record, "week_index", None),
         status=plan_record.status,
         meal_plan=plan_record.meal_plan,
         explanations=plan_record.explanations,
         constraints_snapshot=plan_record.constraints_snapshot,
         created_at=str(plan_record.created_at),
+    )
+
+
+@router.post("/generate-week", response_model=PlanGenerateWeekResponse, status_code=status.HTTP_201_CREATED)
+async def generate_week_plan(
+    request: PlanGenerateWeekRequest,
+    db: Session = Depends(get_db),
+):
+    """
+    Generate a weekly diet plan via the supervisor (feedback-driven, partial or full pipeline).
+    Accepts program_id and week_index to link the plan to a multi-week program.
+    """
+    client_repo = PlatformClientRepository(db)
+    if client_repo.get_by_id(request.client_id) is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Client not found")
+    assessment_repo = PlatformAssessmentRepository(db)
+    if assessment_repo.get_by_id(request.assessment_id) is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Assessment not found")
+
+    result = run_weekly_plan(
+        db=db,
+        client_id=request.client_id,
+        assessment_id=request.assessment_id,
+        user_feedback=request.feedback or {},
+        program_id=request.program_id,
+        week_index=request.week_index,
+        enable_ayurveda=bool(request.enable_ayurveda),
+        skip_recipe_llm=bool(request.skip_recipe_llm),
+    )
+
+    error = result.get("error")
+    plan_id_str = result.get("plan_id")
+    plan_record = None
+    if plan_id_str:
+        plan_repo = PlatformDietPlanRepository(db)
+        try:
+            plan_record = plan_repo.get_by_id(UUID(plan_id_str))
+        except (ValueError, TypeError):
+            pass
+    if plan_record is None and not error:
+        plan_repo = PlatformDietPlanRepository(db)
+        plans = plan_repo.get_by_assessment_id(request.assessment_id)
+        if plans:
+            plan_record = sorted(plans, key=lambda p: p.plan_version or 1, reverse=True)[0]
+
+    plan_response = None
+    if plan_record:
+        plan_response = PlanResponse(
+            id=plan_record.id,
+            client_id=plan_record.client_id,
+            assessment_id=plan_record.assessment_id,
+            plan_version=plan_record.plan_version,
+            program_id=getattr(plan_record, "program_id", None),
+            week_index=getattr(plan_record, "week_index", None),
+            status=plan_record.status,
+            meal_plan=plan_record.meal_plan,
+            explanations=plan_record.explanations,
+            constraints_snapshot=plan_record.constraints_snapshot,
+            created_at=str(plan_record.created_at),
+        )
+
+    return PlanGenerateWeekResponse(
+        plan_id=UUID(result["plan_id"]) if result.get("plan_id") else None,
+        plan_version=result.get("plan_version"),
+        pipeline_mode=result.get("pipeline_mode"),
+        error=error,
+        plan=plan_response,
     )
 
 
@@ -255,6 +350,8 @@ async def generate_intervention_only(
         client_id=plan_record.client_id,
         assessment_id=plan_record.assessment_id,
         plan_version=plan_record.plan_version,
+        program_id=getattr(plan_record, "program_id", None),
+        week_index=getattr(plan_record, "week_index", None),
         status=plan_record.status,
         meal_plan=plan_record.meal_plan,
         explanations=plan_record.explanations,
@@ -292,6 +389,8 @@ async def get_plan(
         client_id=plan.client_id,
         assessment_id=plan.assessment_id,
         plan_version=plan.plan_version,
+        program_id=getattr(plan, "program_id", None),
+        week_index=getattr(plan, "week_index", None),
         status=plan.status,
         meal_plan=plan.meal_plan,
         explanations=plan.explanations,
@@ -334,6 +433,8 @@ async def get_client_plans(
             client_id=p.client_id,
             assessment_id=p.assessment_id,
             plan_version=p.plan_version,
+            program_id=getattr(p, "program_id", None),
+            week_index=getattr(p, "week_index", None),
             status=p.status,
             meal_plan=p.meal_plan,
             explanations=p.explanations,
@@ -377,6 +478,8 @@ async def get_active_plan(
         client_id=plan.client_id,
         assessment_id=plan.assessment_id,
         plan_version=plan.plan_version,
+        program_id=getattr(plan, "program_id", None),
+        week_index=getattr(plan, "week_index", None),
         status=plan.status,
         meal_plan=plan.meal_plan,
         explanations=plan.explanations,
@@ -426,6 +529,8 @@ async def update_plan(
         client_id=updated.client_id,
         assessment_id=updated.assessment_id,
         plan_version=updated.plan_version,
+        program_id=getattr(updated, "program_id", None),
+        week_index=getattr(updated, "week_index", None),
         status=updated.status,
         meal_plan=updated.meal_plan,
         explanations=updated.explanations,
@@ -488,6 +593,8 @@ async def archive_plan(
         client_id=updated.client_id,
         assessment_id=updated.assessment_id,
         plan_version=updated.plan_version,
+        program_id=getattr(updated, "program_id", None),
+        week_index=getattr(updated, "week_index", None),
         status=updated.status,
         meal_plan=updated.meal_plan,
         explanations=updated.explanations,

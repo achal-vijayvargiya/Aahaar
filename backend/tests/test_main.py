@@ -3,9 +3,9 @@ import pytest
 from fastapi.testclient import TestClient
 
 
-def test_root_endpoint(client):
+def test_root_endpoint(app_client):
     """Test root endpoint."""
-    response = client.get("/")
+    response = app_client.get("/")
     assert response.status_code == 200
     data = response.json()
     assert "message" in data
@@ -13,20 +13,20 @@ def test_root_endpoint(client):
     assert data["message"] == "Welcome to DrAssistent API"
 
 
-def test_health_check(client):
+def test_health_check(app_client):
     """Test health check endpoint."""
-    response = client.get("/health")
+    response = app_client.get("/health")
     assert response.status_code == 200
     data = response.json()
     assert data["status"] == "healthy"
     assert "environment" in data
 
 
-def test_docs_available(client):
+def test_docs_available(app_client):
     """Test that API documentation is available."""
-    response = client.get("/docs")
+    response = app_client.get("/docs")
     assert response.status_code == 200
     
-    response = client.get("/redoc")
+    response = app_client.get("/redoc")
     assert response.status_code == 200
 

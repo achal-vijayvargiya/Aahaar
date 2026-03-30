@@ -22,6 +22,8 @@ class PlatformDietPlan(Base):
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4, index=True)
     client_id = Column(UUID(as_uuid=True), ForeignKey("platform_clients.id"), nullable=False)
     assessment_id = Column(UUID(as_uuid=True), ForeignKey("platform_assessments.id"), nullable=False)
+    program_id = Column(UUID(as_uuid=True), ForeignKey("platform_programs.id"), nullable=True)
+    week_index = Column(Integer, nullable=True)  # 1-based week within program; null for non-program plans
     plan_version = Column(Integer, nullable=True)
     status = Column(String, nullable=True)  # active | archived | draft
     meal_plan = Column(JSONB, nullable=True)
@@ -32,6 +34,7 @@ class PlatformDietPlan(Base):
     # Relationships
     client = relationship("PlatformClient", backref="diet_plans")
     assessment = relationship("PlatformAssessment", backref="diet_plans")
+    program = relationship("PlatformProgram", backref="diet_plans")
     
     def __repr__(self):
         return f"<PlatformDietPlan {self.id}>"
