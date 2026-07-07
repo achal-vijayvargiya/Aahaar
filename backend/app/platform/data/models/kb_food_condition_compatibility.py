@@ -49,11 +49,11 @@ class KBFoodConditionCompatibility(Base):
     
     # Indexes
     __table_args__ = (
-        Index('idx_food_condition', 'food_id', 'condition_id', unique=True),
-        Index('idx_food_id', 'food_id'),
-        Index('idx_condition_id', 'condition_id'),
-        Index('idx_compatibility', 'compatibility'),
-        Index('idx_status', 'status'),
+        Index('idx_foodcondcompat_food_condition', 'food_id', 'condition_id', unique=True),
+        Index('idx_foodcondcompat_food_id', 'food_id'),
+        Index('idx_foodcondcompat_condition_id', 'condition_id'),
+        Index('idx_foodcondcompat_compatibility', 'compatibility'),
+        Index('idx_foodcondcompat_status', 'status'),
     )
     
     def __repr__(self):

@@ -51,8 +51,8 @@ class KBNutritionDiagnosis(Base):
     review_date = Column(DateTime, nullable=True)
     
     __table_args__ = (
-        Index('idx_diagnosis_id', 'diagnosis_id'),
-        Index('idx_status', 'status'),
+        Index('idx_nutrdiag_diagnosis_id', 'diagnosis_id'),
+        Index('idx_nutrdiag_status', 'status'),
     )
     
     def __repr__(self):
