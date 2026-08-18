@@ -215,14 +215,107 @@ class DiagnosisEngine:
                     "evidence": match_result["evidence"]
                 })
         
+        # Include user-reported conditions from medical_history
+        user_reported_conditions = self._process_user_reported_conditions(
+            medical_history, client_context
+        )
+        
+        # Add user-reported conditions to the list
+        # They will be deduplicated later (keeping the one with higher severity)
+        conditions.extend(user_reported_conditions)
+        
         # Sort by severity (highest first) and remove duplicates
-        # (in case multiple thresholds match the same condition)
+        # (in case multiple thresholds match the same condition, or user-reported duplicates lab-found)
         conditions = self._deduplicate_conditions(conditions)
         
         # Apply hierarchical rules (e.g., don't diagnose prediabetes if diabetes is present)
         conditions = self._apply_hierarchical_rules(conditions, data_dict)
         
         return conditions
+    
+    def _process_user_reported_conditions(
+        self,
+        medical_history: Dict[str, Any],
+        client_context: Dict[str, Any]
+    ) -> List[Dict[str, Any]]:
+        """
+        Process user-reported conditions from medical_history.
+        
+        Args:
+            medical_history: Medical history dictionary containing user-reported conditions
+            client_context: Client context for eligibility validation
+            
+        Returns:
+            List of condition dictionaries with diagnosis_id, severity_score, and evidence
+        """
+        user_conditions = []
+        
+        # Extract conditions list from medical_history
+        reported_conditions = medical_history.get("conditions", [])
+        if not reported_conditions:
+            return user_conditions
+        
+        # Extract severity mapping if available
+        severity_mapping = medical_history.get("severity", {})
+        if not isinstance(severity_mapping, dict):
+            severity_mapping = {}
+        
+        # Create a map of condition_id -> condition_kb for quick lookup
+        kb_condition_map = {
+            condition_kb.get("condition_id"): condition_kb
+            for condition_kb in self.medical_kb
+            if condition_kb.get("condition_id")
+        }
+        
+        # Process each reported condition
+        for condition_id in reported_conditions:
+            if not condition_id or not isinstance(condition_id, str):
+                continue
+            
+            # Check if condition exists in knowledge base
+            condition_kb = kb_condition_map.get(condition_id)
+            if not condition_kb:
+                # Condition not found in KB - skip it (could log a warning in production)
+                continue
+            
+            # Check eligibility constraints if present
+            eligibility = condition_kb.get("eligibility_constraints", {})
+            if eligibility:
+                # Create a minimal data_dict for eligibility checks
+                data_dict = {}
+                if client_context.get("age") is not None:
+                    data_dict["age"] = client_context.get("age")
+                
+                if not self._check_eligibility_constraints(eligibility, client_context, data_dict):
+                    # Condition not eligible for this client - skip it
+                    continue
+            
+            # Get severity from user input or default to "moderate"
+            severity_level = severity_mapping.get(condition_id, "moderate")
+            if severity_level not in ["mild", "moderate", "severe"]:
+                severity_level = "moderate"  # Default to moderate if invalid
+            
+            # Convert severity level to numeric score (using base scores)
+            # For user-reported conditions, we use base scores without adjustment
+            base_scores = {
+                "mild": 5.0,
+                "moderate": 7.0,
+                "severe": 9.0
+            }
+            severity_score = base_scores.get(severity_level, 7.0)  # Default to moderate if invalid
+            
+            # Create condition entry
+            user_conditions.append({
+                "diagnosis_id": condition_id,
+                "severity_score": severity_score,
+                "evidence": {
+                    "source": "user_reported",
+                    "severity_level": severity_level,
+                    "note": f"Condition reported by user with {severity_level} severity"
+                }
+            })
+        
+        return user_conditions
     
     def _apply_hierarchical_rules(
         self, 
@@ -305,15 +398,39 @@ class DiagnosisEngine:
         
         # Labs - normalize key names
         lab_mappings = {
+            # Diabetes markers
             "HbA1c": ["HbA1c", "hba1c", "hba1c_percent"],
             "FBS": ["FBS", "fbs", "fasting_blood_sugar", "fasting_glucose"],
             "PPBS": ["PPBS", "ppbs", "postprandial_blood_sugar", "postprandial_glucose"],
             "OGTT_1h": ["OGTT_1h", "ogtt_1h", "ogtt_1hour"],
             "OGTT_2h": ["OGTT_2h", "ogtt_2h", "ogtt_2hour"],
+            "c_peptide": ["c_peptide", "cpeptide", "c_pep"],
+            # Lipid Profile
             "cholesterol": ["cholesterol", "total_cholesterol"],
             "triglycerides": ["triglycerides", "triglyceride"],
             "hdl": ["hdl", "HDL", "hdl_cholesterol"],
-            "c_peptide": ["c_peptide", "cpeptide", "c_pep"]
+            "ldl": ["ldl", "LDL", "ldl_cholesterol"],
+            # CBC (Complete Blood Count)
+            "hb": ["hb", "hemoglobin", "Hb"],
+            "rbc": ["rbc", "red_blood_cells", "RBC"],
+            "wbc": ["wbc", "white_blood_cells", "WBC"],
+            "platelets": ["platelets", "platelet_count"],
+            # LFT (Liver Function Tests)
+            "alt": ["alt", "ALT", "alanine_aminotransferase", "sgot"],
+            "ast": ["ast", "AST", "aspartate_aminotransferase", "sgpt"],
+            "bilirubin": ["bilirubin", "total_bilirubin"],
+            "albumin": ["albumin"],
+            # KFT (Kidney Function Tests)
+            "creatinine": ["creatinine", "serum_creatinine"],
+            "urea": ["urea", "BUN", "blood_urea_nitrogen"],
+            "egfr": ["egfr", "eGFR", "estimated_glomerular_filtration_rate"],
+            # Vitamins
+            "vitamin_d": ["vitamin_d", "vitamin_D", "25_oh_vitamin_d", "25_oh_d"],
+            "vitamin_b12": ["vitamin_b12", "vitamin_B12", "b12", "cobalamin"],
+            # Thyroid
+            "tsh": ["tsh", "TSH", "thyroid_stimulating_hormone"],
+            # Iron
+            "ferritin": ["ferritin", "serum_ferritin"]
         }
         
         for standard_key, variations in lab_mappings.items():
@@ -596,7 +713,24 @@ class DiagnosisEngine:
     
     def _get_evidence_source(self, param_name: str) -> str:
         """Determine evidence source type based on parameter name."""
-        lab_params = ["HbA1c", "FBS", "PPBS", "OGTT_1h", "OGTT_2h", "cholesterol", "triglycerides", "hdl", "c_peptide"]
+        lab_params = [
+            # Diabetes markers
+            "HbA1c", "FBS", "PPBS", "OGTT_1h", "OGTT_2h", "c_peptide",
+            # Lipid Profile
+            "cholesterol", "triglycerides", "hdl", "ldl",
+            # CBC
+            "hb", "rbc", "wbc", "platelets",
+            # LFT
+            "alt", "ast", "bilirubin", "albumin",
+            # KFT
+            "creatinine", "urea", "egfr",
+            # Vitamins
+            "vitamin_d", "vitamin_b12",
+            # Thyroid
+            "tsh",
+            # Iron
+            "ferritin"
+        ]
         vital_params = ["bp_systolic", "bp_diastolic"]
         anthropometry_params = ["bmi", "waist_circumference"]
         

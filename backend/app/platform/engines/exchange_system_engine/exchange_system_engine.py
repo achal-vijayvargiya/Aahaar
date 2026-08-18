@@ -363,17 +363,12 @@ class ExchangeSystemEngine:
         Returns:
             Dictionary of category_id -> exchange count for this meal
         """
-        # Use ONLY mandatory exchange categories from UI (no other categories)
-        if not mandatory_exchange_categories:
-            return {}
-        
-        category_nutrition = {}
         core_config = get_core_food_groups()
         if not core_config:
             return {}
-        
+
         core_groups = core_config.get("core_food_groups", [])
-        
+
         # Build a map of all categories for quick lookup
         all_categories_map = {}
         for group in core_groups:
@@ -385,22 +380,31 @@ class ExchangeSystemEngine:
                         "calories": float(nutrition.get("calories", 0)),
                         "protein_g": float(nutrition.get("protein_g", 0)),
                     }
-        
-        # Only include mandatory categories in category_nutrition
-        mandatory_category_set = set(mandatory_exchange_categories)
-        for cat_id in mandatory_exchange_categories:
+
+        if not all_categories_map:
+            return {}
+
+        # UI / user may pin categories per meal; full NCP pipeline passes none — use all KB categories
+        effective_categories = list(mandatory_exchange_categories) if mandatory_exchange_categories else list(
+            all_categories_map.keys()
+        )
+
+        category_nutrition = {}
+        for cat_id in effective_categories:
             if cat_id in all_categories_map:
                 category_nutrition[cat_id] = all_categories_map[cat_id]
         
         if not category_nutrition:
             return {}
-        
-        # Initialize meal_exchanges (start with 0.5 minimum for all mandatory categories)
+
         meal_exchanges = {}
-        for cat_id in mandatory_exchange_categories:
-            if cat_id in category_nutrition:
-                meal_exchanges[cat_id] = 0.5  # Start with minimum 0.5 exchange
-        
+        user_specified_mandatory = bool(mandatory_exchange_categories)
+        if user_specified_mandatory:
+            # User pinned categories: guarantee at least 0.5 exchange each
+            for cat_id in effective_categories:
+                if cat_id in category_nutrition:
+                    meal_exchanges[cat_id] = 0.5
+
         # Calculate initial nutrition from minimum exchanges
         def calculate_nutrition(exchanges: Dict[str, float]) -> Tuple[float, float]:
             calories = 0.0

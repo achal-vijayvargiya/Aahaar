@@ -68,7 +68,8 @@ class MealStructureEngine:
         self,
         target_context: TargetContext,
         assessment_snapshot: Dict[str, Any],
-        client_preferences: Optional[Dict[str, Any]] = None
+        client_preferences: Optional[Dict[str, Any]] = None,
+        overrides: Optional[Dict[str, Any]] = None,
     ) -> MealStructureContext:
         """
         Generate meal structure.
@@ -77,6 +78,7 @@ class MealStructureEngine:
             target_context: Target context with nutrition targets
             assessment_snapshot: Assessment snapshot with client context
             client_preferences: Optional behavioral preferences override
+            overrides: Optional overrides (meal_count, meals, energy_weight); validated; invalid values ignored
             
         Returns:
             MealStructureContext with meal structure
@@ -91,16 +93,23 @@ class MealStructureEngine:
             client_preferences
         )
         nutrition_targets = self._extract_nutrition_targets(target_context)
-        
-        # Step 2: Determine meal count
+        overrides = overrides or {}
+
+        # Step 2: Determine meal count (allow override if valid)
         meal_count = self._determine_meal_count(
             nutrition_targets.target_calories,
             behavioral_prefs
         )
-        
-        # Step 3: Assign meal names
+        if "meal_count" in overrides and isinstance(overrides["meal_count"], int):
+            oc = overrides["meal_count"]
+            if 3 <= oc <= 6:
+                meal_count = oc
+
+        # Step 3: Assign meal names (allow override if valid)
         meal_names = self._assign_meal_names(meal_count, behavioral_prefs)
-        
+        if "meals" in overrides and isinstance(overrides["meals"], list) and len(overrides["meals"]) == meal_count:
+            meal_names = [str(m) for m in overrides["meals"]]
+
         # Step 4: Calculate timing windows
         timing_windows = self._calculate_timing_windows(
             meal_names,
@@ -108,17 +117,24 @@ class MealStructureEngine:
             behavioral_prefs,
             assessment_snapshot  # Pass for Ayurveda constraints (Bug 7.1)
         )
-        
-        # Step 5: Calculate energy weights (relative allocation, sum = 1.0)
-        # Extract goals from assessment snapshot for weight loss adjustments
+
+        # Step 5: Calculate energy weights (allow override if valid: dict, sum = 1.0, keys match meals)
         goals = assessment_snapshot.get("goals", {}) if assessment_snapshot else {}
-        
         energy_weight = self._calculate_energy_weights(
             meal_names,
-            goals=goals,  # Pass goals for weight loss adjustments
-            assessment_snapshot=assessment_snapshot  # Pass for rule selection
+            goals=goals,
+            assessment_snapshot=assessment_snapshot
         )
-        
+        if "energy_weight" in overrides and isinstance(overrides["energy_weight"], dict):
+            ew = overrides["energy_weight"]
+            if set(ew.keys()) == set(meal_names):
+                try:
+                    total = sum(float(ew[k]) for k in meal_names)
+                    if 0.99 <= total <= 1.01 and all(0 <= float(ew[k]) <= 1 for k in meal_names):
+                        energy_weight = {k: float(ew[k]) for k in meal_names}
+                except (TypeError, ValueError):
+                    pass
+
         # Step 6: Validate structure
         validation_flags = self._validate_structure(
             energy_weight,
@@ -126,7 +142,7 @@ class MealStructureEngine:
             behavioral_prefs,
             client_context
         )
-        
+
         return MealStructureContext(
             assessment_id=target_context.assessment_id,
             meal_count=meal_count,

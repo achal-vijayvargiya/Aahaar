@@ -31,6 +31,7 @@ from app.platform.data.models.platform_exchange_allocation import PlatformExchan
 from app.platform.data.models.platform_ayurveda_profile import PlatformAyurvedaProfile
 from app.platform.data.models.platform_monitoring_record import PlatformMonitoringRecord
 from app.platform.data.models.platform_decision_log import PlatformDecisionLog
+from app.platform.data.models.platform_food_allocation_approval import PlatformFoodAllocationApproval
 
 
 def clear_ncp_data_for_client(db: Session, client_id):
@@ -76,7 +77,16 @@ def clear_ncp_data_for_client(db: Session, client_id):
         db.delete(plan)
     print(f"  Deleted {len(diet_plans)} diet plan(s)")
     
-    # 3. Delete meal structures (references assessment_id)
+    # 3. Delete food allocation approvals (references assessment_id and plan_id)
+    # Delete by assessment_id first
+    food_approvals = db.query(PlatformFoodAllocationApproval).filter(
+        PlatformFoodAllocationApproval.assessment_id.in_(assessment_ids)
+    ).all()
+    for approval in food_approvals:
+        db.delete(approval)
+    print(f"  Deleted {len(food_approvals)} food allocation approval(s)")
+    
+    # 4. Delete meal structures (references assessment_id)
     meal_structures = db.query(PlatformMealStructure).filter(
         PlatformMealStructure.assessment_id.in_(assessment_ids)
     ).all()
@@ -84,7 +94,7 @@ def clear_ncp_data_for_client(db: Session, client_id):
         db.delete(meal_structure)
     print(f"  Deleted {len(meal_structures)} meal structure(s)")
     
-    # 4. Delete exchange allocations (references assessment_id)
+    # 5. Delete exchange allocations (references assessment_id)
     # Use with_entities to only select id to avoid loading columns that may not exist in DB
     exchange_allocation_ids = db.query(PlatformExchangeAllocation.id).filter(
         PlatformExchangeAllocation.assessment_id.in_(assessment_ids)
@@ -96,7 +106,7 @@ def clear_ncp_data_for_client(db: Session, client_id):
         ).delete(synchronize_session=False)
         print(f"  Deleted {len(exchange_allocation_ids)} exchange allocation(s)")
     
-    # 5. Delete diagnoses (references assessment_id)
+    # 6. Delete diagnoses (references assessment_id)
     diagnoses = db.query(PlatformDiagnosis).filter(
         PlatformDiagnosis.assessment_id.in_(assessment_ids)
     ).all()
@@ -104,7 +114,7 @@ def clear_ncp_data_for_client(db: Session, client_id):
         db.delete(diagnosis)
     print(f"  Deleted {len(diagnoses)} diagnosis(es)")
     
-    # 6. Delete MNT constraints (references assessment_id)
+    # 7. Delete MNT constraints (references assessment_id)
     mnt_constraints = db.query(PlatformMNTConstraint).filter(
         PlatformMNTConstraint.assessment_id.in_(assessment_ids)
     ).all()
@@ -112,7 +122,7 @@ def clear_ncp_data_for_client(db: Session, client_id):
         db.delete(constraint)
     print(f"  Deleted {len(mnt_constraints)} MNT constraint(s)")
     
-    # 7. Delete nutrition targets (references assessment_id)
+    # 8. Delete nutrition targets (references assessment_id)
     nutrition_targets = db.query(PlatformNutritionTarget).filter(
         PlatformNutritionTarget.assessment_id.in_(assessment_ids)
     ).all()
@@ -120,7 +130,7 @@ def clear_ncp_data_for_client(db: Session, client_id):
         db.delete(target)
     print(f"  Deleted {len(nutrition_targets)} nutrition target(s)")
     
-    # 8. Delete ayurveda profiles (references assessment_id)
+    # 9. Delete ayurveda profiles (references assessment_id)
     ayurveda_profiles = db.query(PlatformAyurvedaProfile).filter(
         PlatformAyurvedaProfile.assessment_id.in_(assessment_ids)
     ).all()
@@ -128,7 +138,7 @@ def clear_ncp_data_for_client(db: Session, client_id):
         db.delete(profile)
     print(f"  Deleted {len(ayurveda_profiles)} ayurveda profile(s)")
     
-    # 9. Delete decision logs (references entity_id which could be assessment_id)
+    # 10. Delete decision logs (references entity_id which could be assessment_id)
     decision_logs = db.query(PlatformDecisionLog).filter(
         PlatformDecisionLog.entity_id.in_(assessment_ids)
     ).all()
@@ -136,7 +146,7 @@ def clear_ncp_data_for_client(db: Session, client_id):
         db.delete(log)
     print(f"  Deleted {len(decision_logs)} decision log(s)")
     
-    # 10. Delete assessments
+    # 11. Delete assessments
     for assessment in assessments:
         db.delete(assessment)
     print(f"  Deleted {len(assessments)} assessment(s)")

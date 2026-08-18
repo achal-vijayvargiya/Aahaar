@@ -5,7 +5,7 @@ Assessment and intake endpoints for the platform.
 from datetime import datetime
 from typing import Optional, Dict, Any, List
 from uuid import UUID
-from fastapi import APIRouter, Depends, HTTPException, status, Query
+from fastapi import APIRouter, Depends, HTTPException, status, Query, UploadFile, File
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 from sqlalchemy.orm import Session
 
@@ -31,6 +31,9 @@ from app.platform.engines.food_engine.food_engine import FoodEngine
 from app.platform.engines.recipe_engine.meal_allocation_engine import MealAllocationEngine
 from app.platform.engines.recipe_engine.recipe_generation_engine import RecipeGenerationEngine
 from app.platform.data.repositories.platform_food_allocation_approval_repository import PlatformFoodAllocationApprovalRepository
+from app.platform.ai.extraction.blood_report_extraction import BloodReportExtractor
+from app.platform.api.auth.auth import get_current_active_user
+from app.platform.data.models.platform_user import PlatformUser
 
 router = APIRouter(prefix="/assessments", tags=["Platform Assessments"])
 
@@ -191,14 +194,56 @@ def transform_intake_to_assessment_snapshot(
         labs = {}
         blood_report = intake_data["blood_report"]
         if isinstance(blood_report, dict):
-            if blood_report.get("hb"):
+            # CBC
+            if blood_report.get("hb") is not None:
                 labs["hb"] = blood_report["hb"]
-            if blood_report.get("rbc"):
+            if blood_report.get("rbc") is not None:
                 labs["rbc"] = blood_report["rbc"]
-            if blood_report.get("wbc"):
+            if blood_report.get("wbc") is not None:
                 labs["wbc"] = blood_report["wbc"]
-            if blood_report.get("platelets"):
+            if blood_report.get("platelets") is not None:
                 labs["platelets"] = blood_report["platelets"]
+            # FBS + HbA1c
+            if blood_report.get("fbs") is not None:
+                labs["fbs"] = blood_report["fbs"]
+            if blood_report.get("hba1c") is not None:
+                labs["hba1c"] = blood_report["hba1c"]
+            # Lipid Profile
+            if blood_report.get("cholesterol") is not None:
+                labs["cholesterol"] = blood_report["cholesterol"]
+            if blood_report.get("triglycerides") is not None:
+                labs["triglycerides"] = blood_report["triglycerides"]
+            if blood_report.get("hdl") is not None:
+                labs["hdl"] = blood_report["hdl"]
+            if blood_report.get("ldl") is not None:
+                labs["ldl"] = blood_report["ldl"]
+            # LFT
+            if blood_report.get("alt") is not None:
+                labs["alt"] = blood_report["alt"]
+            if blood_report.get("ast") is not None:
+                labs["ast"] = blood_report["ast"]
+            if blood_report.get("bilirubin") is not None:
+                labs["bilirubin"] = blood_report["bilirubin"]
+            if blood_report.get("albumin") is not None:
+                labs["albumin"] = blood_report["albumin"]
+            # KFT
+            if blood_report.get("creatinine") is not None:
+                labs["creatinine"] = blood_report["creatinine"]
+            if blood_report.get("urea") is not None:
+                labs["urea"] = blood_report["urea"]
+            if blood_report.get("egfr") is not None:
+                labs["egfr"] = blood_report["egfr"]
+            # Vitamins
+            if blood_report.get("vitamin_d") is not None:
+                labs["vitamin_d"] = blood_report["vitamin_d"]
+            if blood_report.get("vitamin_b12") is not None:
+                labs["vitamin_b12"] = blood_report["vitamin_b12"]
+            # TSH
+            if blood_report.get("tsh") is not None:
+                labs["tsh"] = blood_report["tsh"]
+            # Ferritin
+            if blood_report.get("ferritin") is not None:
+                labs["ferritin"] = blood_report["ferritin"]
         if labs:
             clinical_data["labs"] = labs
     
@@ -214,13 +259,18 @@ def transform_intake_to_assessment_snapshot(
     # Medical history
     medical_history: Dict[str, Any] = {}
     conditions = []
+    severity_mapping: Dict[str, str] = {}
     
     # From diagnosed_conditions array
     if intake_data.get("diagnosed_conditions"):
         if isinstance(intake_data["diagnosed_conditions"], list):
             for cond in intake_data["diagnosed_conditions"]:
                 if isinstance(cond, dict) and cond.get("condition"):
-                    conditions.append(cond["condition"])
+                    condition_id = cond["condition"]
+                    conditions.append(condition_id)
+                    # Extract severity if available
+                    if cond.get("severity"):
+                        severity_mapping[condition_id] = cond["severity"]
                 elif isinstance(cond, str):
                     conditions.append(cond)
     
@@ -235,6 +285,16 @@ def transform_intake_to_assessment_snapshot(
     
     if conditions:
         medical_history["conditions"] = list(set(conditions))  # Remove duplicates
+    
+    # Store severity mapping if available
+    # Also check if severity is already in medical_history (from UI snapshot)
+    if intake_data.get("medical_history") and isinstance(intake_data["medical_history"], dict):
+        existing_severity = intake_data["medical_history"].get("severity")
+        if isinstance(existing_severity, dict):
+            severity_mapping.update(existing_severity)
+    
+    if severity_mapping:
+        medical_history["severity"] = severity_mapping
     
     # Surgery history
     if intake_data.get("surgery_history"):
@@ -3317,4 +3377,86 @@ async def get_ncp_status(
         },
         "current_step": current_step
     }
+
+
+@router.post("/extract-blood-report", status_code=status.HTTP_200_OK)
+async def extract_blood_report(
+    file: UploadFile = File(...),
+    db: Session = Depends(get_db),
+    current_user: PlatformUser = Depends(get_current_active_user),
+):
+    """
+    Extract blood report values from uploaded document using OCR and LLM.
+    
+    Requires authentication (OCR/LLM is costly).
+    
+    Args:
+        file: Uploaded file (PDF or image)
+        db: Database session
+        current_user: Authenticated platform user
+        
+    Returns:
+        Dictionary with extracted blood report values:
+        - report_date: Date of the report (YYYY-MM-DD or null)
+        - hb, rbc, wbc, platelets: CBC values
+        - fbs, hba1c: Diabetes markers
+        - cholesterol, triglycerides, hdl, ldl: Lipid profile
+        - alt, ast, bilirubin, albumin: LFT values
+        - creatinine, urea, egfr: KFT values
+        - vitamin_d, vitamin_b12: Vitamin levels
+        - tsh: Thyroid function
+        - ferritin: Iron storage
+        
+    Raises:
+        HTTPException:
+            - 401 if unauthenticated
+            - 400 for invalid file type or extraction errors
+            - 500 for processing errors
+    """
+    # Validate file type
+    allowed_extensions = ['.pdf', '.png', '.jpg', '.jpeg', '.tiff', '.bmp']
+    file_extension = None
+    for ext in allowed_extensions:
+        if file.filename and file.filename.lower().endswith(ext):
+            file_extension = ext
+            break
+    
+    if not file_extension:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=f"Unsupported file type. Allowed types: {', '.join(allowed_extensions)}"
+        )
+    
+    try:
+        # Read file content
+        file_content = await file.read()
+        
+        if len(file_content) == 0:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Uploaded file is empty"
+            )
+        
+        # Initialize extractor
+        extractor = BloodReportExtractor()
+        
+        # Process file and extract values
+        extracted_values = extractor.process_file(file_content, file_extension)
+        
+        return {
+            "success": True,
+            "blood_report": extracted_values,
+            "message": "Blood report values extracted successfully"
+        }
+        
+    except ValueError as e:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=str(e)
+        )
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Failed to extract blood report: {str(e)}"
+        )
 

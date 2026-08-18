@@ -21,8 +21,11 @@ print("=" * 70 + "\n")
 # Check log file
 import os
 from pathlib import Path
+from datetime import datetime
 
-log_file = Path("logs/app.log")
+# Log files are named: app-YYYY-MM-DD.log
+today = datetime.now().strftime("%Y-%m-%d")
+log_file = Path(f"logs/app-{today}.log")
 if log_file.exists():
     print(f"✅ Log file exists: {log_file.absolute()}")
     print(f"📝 Log file size: {log_file.stat().st_size} bytes")
@@ -37,6 +40,7 @@ if log_file.exists():
         print("-" * 70)
 else:
     print(f"❌ Log file not found: {log_file.absolute()}")
+    print(f"   Expected format: logs/app-{today}.log")
 
 print("\n✅ Logging test complete!\n")
 

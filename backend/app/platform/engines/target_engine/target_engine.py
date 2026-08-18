@@ -96,7 +96,8 @@ class TargetEngine:
         self,
         client_profile: Dict[str, Any],
         mnt_context: MNTContext,
-        activity_level: Optional[str] = None
+        activity_level: Optional[str] = None,
+        overrides: Optional[Dict[str, Any]] = None,
     ) -> Dict[str, Any]:
         """
         Calculate calorie target using IBW-based method.
@@ -138,7 +139,27 @@ class TargetEngine:
         logger.info(f"  Energy = {ibw:.2f} kg × {activity_factor} kcal/kg IBW = {base_calories:.2f} kcal")
         
         calories_target = base_calories
-        
+
+        # Apply user overrides (optional): explicit value or adjustment pct
+        overrides = overrides or {}
+        if isinstance(overrides, dict):
+            if "calories_target" in overrides and overrides["calories_target"] is not None:
+                try:
+                    override_cal = float(overrides["calories_target"])
+                    if 800 <= override_cal <= 4000:
+                        calories_target = override_cal
+                        logger.info(f"[Calorie Calculation] Applied override calories_target: {calories_target:.2f} kcal")
+                except (TypeError, ValueError):
+                    pass
+            elif "calories_adjustment_pct" in overrides and overrides["calories_adjustment_pct"] is not None:
+                try:
+                    pct = float(overrides["calories_adjustment_pct"])
+                    if -50 <= pct <= 50:
+                        calories_target = calories_target * (1.0 + pct / 100.0)
+                        logger.info(f"[Calorie Calculation] Applied calories_adjustment_pct {pct}% → {calories_target:.2f} kcal")
+                except (TypeError, ValueError):
+                    pass
+
         # Apply MNT calorie constraints if present
         macro_constraints = mnt_context.macro_constraints or {}
         calorie_constraints = macro_constraints.get("calories", {})
@@ -349,7 +370,8 @@ class TargetEngine:
         client_profile: Dict[str, Any],
         mnt_context: MNTContext,
         activity_level: Optional[str] = None,
-        diagnosis_context: Optional[Any] = None
+        diagnosis_context: Optional[Any] = None,
+        overrides: Optional[Dict[str, Any]] = None,
     ) -> TargetContext:
         """
         Calculate all nutrition targets.
@@ -358,14 +380,18 @@ class TargetEngine:
             client_profile: Client profile with age, gender, height, weight
             mnt_context: MNT context with constraints
             activity_level: Activity level for energy calculation
+            diagnosis_context: Optional diagnosis for adaptive calculations
+            overrides: Optional overrides (calories_target, calories_adjustment_pct); validated and clamped to MNT
             
         Returns:
             TargetContext with calculated calories, macros, and key micros
         """
         logger.info(f"[Target Calculation] Starting target calculation")
         
-        # Calculate calories
-        calories_info = self.calculate_calories(client_profile, mnt_context, activity_level)
+        # Calculate calories (with optional overrides)
+        calories_info = self.calculate_calories(
+            client_profile, mnt_context, activity_level, overrides=overrides
+        )
         calories_target = calories_info.get("calories_target")
         calculation_source = calories_info.get("calculation_source")
         
