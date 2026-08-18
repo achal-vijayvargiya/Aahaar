@@ -1,0 +1,32 @@
+---
+description: Client delivery path — DietPlanView, seven_day_plan, platform PDF export, recipe polish. Apply when working on plan UI, reporting, recipe engine delivery, or agent tasks under .cursor/agent-tasks/
+globs: "{aahaar-wellness-hub/src/pages/DietPlanView.tsx,aahaar-wellness-hub/src/components/NCPProcessFlow.tsx,backend/app/platform/engines/recipe_engine/**,backend/app/platform/api/plans/**,.cursor/agent-tasks/**,docs/delivery/**}"
+alwaysApply: false
+---
+
+# Client delivery constraints
+
+## Source of truth
+
+- Live recipe output lives at `platform_diet_plans.meal_plan.seven_day_plan`.
+- Shape comes from `RecipeGenerationEngine.generate_recipes_for_meal_plan` — not from `sample_7day_output.json` / `meal_frames.json` (stale).
+- Day keys: `day_1` … `day_7`. Each meal may have `recipe`, `allocated_foods`, `total_nutrition`, `validation`.
+
+## Do
+
+- Prefer platform APIs under `/api/v1/platform/...`.
+- Reuse one mapper for DietPlanView and NCP recipe step UI.
+- Add/adjust tests for every delivery task; run the tests named in the task file.
+- Keep changes scoped to the assigned agent task.
+
+## Do not
+
+- Do not bolt client PDF onto legacy `app/routers/diet_plans.py` export.
+- Do not implement admin stubs, mobile NCP, MealPlanNarrator ABC, or blood-report work in delivery tasks.
+- Do not invent a new meal-plan schema; map the existing `seven_day_plan`.
+- Do not commit secrets or force-push.
+
+## Done means
+
+- Code + tests green for the task’s acceptance criteria.
+- Short summary of files changed and how to verify manually.
