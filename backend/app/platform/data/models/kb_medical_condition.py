@@ -50,9 +50,9 @@ class KBMedicalCondition(Base):
     
     # Indexes
     __table_args__ = (
-        Index('idx_condition_id', 'condition_id'),
-        Index('idx_category', 'category'),
-        Index('idx_status', 'status'),
+        Index('idx_medcond_condition_id', 'condition_id'),
+        Index('idx_medcond_category', 'category'),
+        Index('idx_medcond_status', 'status'),
     )
     
     def __repr__(self):
