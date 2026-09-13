@@ -45,8 +45,8 @@ class KBLabThreshold(Base):
     
     # Indexes
     __table_args__ = (
-        Index('idx_lab_name', 'lab_name'),
-        Index('idx_status', 'status'),
+        Index('idx_labthreshold_lab_name', 'lab_name'),
+        Index('idx_labthreshold_status', 'status'),
     )
     
     def __repr__(self):

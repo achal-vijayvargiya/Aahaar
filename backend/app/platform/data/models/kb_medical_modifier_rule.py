@@ -52,10 +52,10 @@ class KBMedicalModifierRule(Base):
     
     # Indexes
     __table_args__ = (
-        Index('idx_modifier_id', 'modifier_id'),
-        Index('idx_condition_id', 'condition_id'),
-        Index('idx_priority', 'priority'),
-        Index('idx_status', 'status'),
+        Index('idx_modrule_modifier_id', 'modifier_id'),
+        Index('idx_modrule_condition_id', 'condition_id'),
+        Index('idx_modrule_priority', 'priority'),
+        Index('idx_modrule_status', 'status'),
     )
     
     def __repr__(self):

@@ -59,9 +59,9 @@ class KBMNTRule(Base):
     review_date = Column(DateTime, nullable=True)
     
     __table_args__ = (
-        Index('idx_rule_id', 'rule_id'),
-        Index('idx_priority_level', 'priority_level'),
-        Index('idx_status', 'status'),
+        Index('idx_mntrule_rule_id', 'rule_id'),
+        Index('idx_mntrule_priority_level', 'priority_level'),
+        Index('idx_mntrule_status', 'status'),
     )
     
     def __repr__(self):
