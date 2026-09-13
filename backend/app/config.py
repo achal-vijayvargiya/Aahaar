@@ -1,6 +1,7 @@
 """
 Configuration settings for the application.
 """
+import os
 from typing import List, Union
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from pydantic import Field
@@ -47,11 +48,27 @@ class Settings(BaseSettings):
 
 settings = Settings()
 
-# CORS Origins - separate constant (not part of Settings to avoid .env parsing issues)
-BACKEND_CORS_ORIGINS = [
-    "http://localhost:3000",
-    "http://localhost:5173",
-    "http://localhost:8080",
-    "http://localhost:8081"
-]
+# CORS Origins - supports both environment variable (production) and defaults (development)
+def get_cors_origins() -> List[str]:
+    """
+    Get CORS origins from environment variable or use defaults.
+    
+    In production (Render/Vercel), set BACKEND_CORS_ORIGINS env var:
+    BACKEND_CORS_ORIGINS=https://your-app.vercel.app,https://www.your-domain.com
+    """
+    cors_env = os.getenv("BACKEND_CORS_ORIGINS", "")
+    if cors_env:
+        # Production: parse comma-separated origins from env
+        origins = [origin.strip() for origin in cors_env.split(",") if origin.strip()]
+        return origins
+    else:
+        # Development: default localhost origins
+        return [
+            "http://localhost:3000",
+            "http://localhost:5173",
+            "http://localhost:8080",
+            "http://localhost:8081"
+        ]
+
+BACKEND_CORS_ORIGINS = get_cors_origins()
 
