@@ -28,14 +28,9 @@ COPY . .
 # Create logs directory
 RUN mkdir -p logs
 
-# Wait for database script
-COPY docker-entrypoint.sh /docker-entrypoint.sh
-RUN chmod +x /docker-entrypoint.sh
-
-# Expose port
+# Expose port (Render will use $PORT env var)
 EXPOSE 8000
 
-# Use entrypoint script
-ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+# Production command (no --reload)
+CMD uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}
 

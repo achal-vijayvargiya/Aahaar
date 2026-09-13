@@ -1,6 +1,7 @@
 """
 Configuration settings for the application.
 """
+import os
 from typing import List, Union
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from pydantic import Field
@@ -25,7 +26,7 @@ class Settings(BaseSettings):
     
     # OpenRouter AI Configuration
     OPENROUTER_API_KEY: str = "sk-or-v1-placeholder-get-from-openrouter-ai"
-    DIET_PLAN_MODEL: str = "anthropic/claude-3.5-sonnet"  # or "meta-llama/llama-3.1-70b-instruct"
+    DIET_PLAN_MODEL: str = "openai/gpt-4o-mini"
     DIET_PLAN_TEMPERATURE: float = 0.7
     # Food Enrichment Model - Use qwen/qwen-2.5-72b-instruct or qwen/qwen-2.5-7b-instruct
     # Note: qwen-2.5-32b-instruct does NOT exist. Available: 7B and 72B versions
@@ -47,11 +48,27 @@ class Settings(BaseSettings):
 
 settings = Settings()
 
-# CORS Origins - separate constant (not part of Settings to avoid .env parsing issues)
-BACKEND_CORS_ORIGINS = [
-    "http://localhost:3000",
-    "http://localhost:5173",
-    "http://localhost:8080",
-    "http://localhost:8081"
-]
+# CORS Origins - supports both environment variable (production) and defaults (development)
+def get_cors_origins() -> List[str]:
+    """
+    Get CORS origins from environment variable or use defaults.
+    
+    In production (Render/Vercel), set BACKEND_CORS_ORIGINS env var:
+    BACKEND_CORS_ORIGINS=https://your-app.vercel.app,https://www.your-domain.com
+    """
+    cors_env = os.getenv("BACKEND_CORS_ORIGINS", "")
+    if cors_env:
+        # Production: parse comma-separated origins from env
+        origins = [origin.strip() for origin in cors_env.split(",") if origin.strip()]
+        return origins
+    else:
+        # Development: default localhost origins
+        return [
+            "http://localhost:3000",
+            "http://localhost:5173",
+            "http://localhost:8080",
+            "http://localhost:8081"
+        ]
+
+BACKEND_CORS_ORIGINS = get_cors_origins()
 

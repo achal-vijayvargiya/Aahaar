@@ -1,0 +1,45 @@
+services:
+  # FastAPI Backend Web Service
+  - type: web
+    name: aahaar-api
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    region: oregon
+    branch: main
+    healthCheckPath: /health
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: DEBUG
+        value: False
+      - key: LOG_LEVEL
+        value: INFO
+      - key: DATABASE_URL
+        sync: false  # Set manually in Render dashboard (from Neon)
+      - key: SECRET_KEY
+        sync: false  # Set manually in Render dashboard (generate strong key)
+      - key: OPENROUTER_API_KEY
+        sync: false  # Set manually in Render dashboard
+      - key: DIET_PLAN_MODEL
+        value: openai/gpt-4o-mini
+      - key: DIET_PLAN_TEMPERATURE
+        value: 0.7
+      - key: FOOD_ENRICHMENT_MODEL
+        value: qwen/qwen-2.5-72b-instruct
+      - key: FOOD_ENRICHMENT_TEMPERATURE
+        value: 0.3
+      - key: BACKEND_CORS_ORIGINS
+        value: https://your-app.vercel.app,https://www.your-domain.com
+        # Update after deploying to Vercel with actual URL
+      - key: PORT
+        value: 8000
+    buildCommand: cd /app && pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+
+# Note: Free tier limitations
+# - Service spins down after 15 minutes of inactivity
+# - First request after spin-down may take 30-60 seconds
+# - 750 hours/month of runtime (sufficient for demos)
+# - Automatic HTTPS with render.com subdomain
